@@ -50,13 +50,13 @@ BRANCH=$(grep "default revision" "${MANIFEST}" \
         | sed 's/^ *//g;s/<default revision=\"refs\/heads\///g;s/\"//g')
 STAGINGBRANCH="staging/${BRANCH}_${OPERATION}-${NEWTAG}"
 
-# Build list of LineageOS forked repos
-PROJECTPATHS=$(grep "name=\"LineageOS/" "${MANIFEST}" | sed -n 's/.*path="\([^"]\+\)".*/\1/p')
+# Build list of CalyxOS forked repos
+PROJECTPATHS=$(grep "name=\"CalyxOS/" "${MANIFEST}" | sed -n 's/.*path="\([^"]\+\)".*/\1/p')
 
 echo "#### Old tag = ${OLDTAG} Branch = ${BRANCH} Staging branch = ${STAGINGBRANCH} ####"
 
 # Make sure manifest and forked repos are in a consistent state
-echo "#### Verifying there are no uncommitted changes on LineageOS forked AOSP projects ####"
+echo "#### Verifying there are no uncommitted changes on CalyxOS forked AOSP projects ####"
 for PROJECTPATH in ${PROJECTPATHS} .repo/manifests; do
     cd "${TOP}/${PROJECTPATH}"
     if [[ -n "$(git status --porcelain)" ]]; then
