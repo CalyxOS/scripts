@@ -41,7 +41,7 @@ if [ ! -e "build/envsetup.sh" ]; then
 fi
 
 # Source build environment (needed for aospremote)
-. build/envsetup.sh
+. envsetup.sh
 
 TOP="${ANDROID_BUILD_TOP}"
 MERGEDREPOS="${TOP}/merged_repos.txt"
