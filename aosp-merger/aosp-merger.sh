@@ -85,7 +85,7 @@ for PROJECTPATH in ${PROJECTPATHS}; do
 
     # Check if we've actually changed anything before attempting to merge
     # If we haven't, just "git reset --hard" to the tag
-    if [[ -z "$(git diff HEAD ${OLDTAG})" ]]; then
+    if [[ -z "$(git log HEAD ${OLDTAG})" ]]; then
         git reset --hard "${NEWTAG}"
         echo -e "reset\t\t${PROJECTPATH}" | tee -a "${MERGEDREPOS}"
         continue
