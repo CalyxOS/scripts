@@ -102,9 +102,10 @@ for PROJECTPATH in ${PROJECTPATHS}; do
     git merge-base --is-ancestor "${OLDTAG}" "${NEWTAG}"
     # If no, force rebase.
     if [[ "$?" -eq 1 ]]; then
-        echo -n "#### Project ${PROJECTPATH} old tag ${OLD} is not an ancestor "
-        echo    "of new tag ${NEWTAG}, forcing rebase ####"
-        PROJECTOPERATION="rebase"
+        echo "Not forcing rebase"
+        #echo -n "#### Project ${PROJECTPATH} old tag ${OLD} is not an ancestor "
+        #echo    "of new tag ${NEWTAG}, forcing rebase ####"
+        #PROJECTOPERATION="rebase"
     fi
 
     if [[ "${PROJECTOPERATION}" == "merge" ]]; then
