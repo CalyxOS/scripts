@@ -1,0 +1,10 @@
+readonly prev_branch=android12
+readonly branch=android12
+
+readonly prev_aosp_tag=android-12.0.0_r1
+readonly aosp_tag=android-12.0.0_r14
+
+readonly prev_aosp_build_id=SP1A.210812.015
+readonly aosp_build_id=SD1A.210817.037
+
+readonly lineage_branch=lineage-19.0
