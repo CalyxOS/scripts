@@ -9,12 +9,12 @@ readonly kernel=google_msm-4.14
 readonly prev_kernel_tag=
 readonly kernel_tag=android-12.0.0_r0.13 # Nov 2021
 
-readonly image_url=
-readonly image_sha256=
+readonly image_url="https://dl.google.com/dl/android/aosp/sunfish-sp1a.211105.002-factory-db7c9cbd.zip"
+readonly image_sha256="db7c9cbd3b214b44f3333265c2db3a13928e69e54e2a520dc0ab2ea848b81dcd"
 
-readonly flash_url=
+readonly flash_url="https://flash.android.com/build/7743617?target=sunfish-user&signed"
 
-readonly ota_url=
-readonly ota_sha256=
+readonly ota_url="https://dl.google.com/dl/android/aosp/sunfish-ota-sp1a.211105.002-87e16c1f.zip"
+readonly ota_sha256="87e16c1f905e3a8c383b4599eaa1441410abf457731de39c778410148cb2ea4b"
 
-readonly security_patch=
+readonly security_patch="2021-11-05"

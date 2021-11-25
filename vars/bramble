@@ -9,12 +9,12 @@ readonly kernel=google_redbull
 readonly prev_kernel_tag=
 readonly kernel_tag=android-12.0.0_r0.14 # Nov 2021
 
-readonly image_url=
-readonly image_sha256=
+readonly image_url="https://dl.google.com/dl/android/aosp/bramble-sp1a.211105.003-factory-39b4b71c.zip"
+readonly image_sha256="39b4b71c13710b5718e0e7f063e193b0428746ceb39e1f06eb1a5fd9c1bc626f"
 
-readonly flash_url=
+readonly flash_url="https://flash.android.com/build/7757856?target=bramble-user&signed"
 
-readonly ota_url=
-readonly ota_sha256=
+readonly ota_url="https://dl.google.com/dl/android/aosp/bramble-ota-sp1a.211105.003-8ac6d937.zip"
+readonly ota_sha256="8ac6d937ba1a74da319ff3898babe605f81de3c0cd072e4443eade69ee01295e"
 
-readonly security_patch=
+readonly security_patch="2021-11-05"
