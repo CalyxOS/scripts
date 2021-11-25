@@ -1,0 +1,10 @@
+readonly prev_build_id=
+readonly build_id=SD1A.210817.037 # Nov 2021
+
+readonly prev_aosp_tag=
+readonly aosp_tag=android-12.0.0_r14 # Nov 2021
+
+readonly kernel=google_raviole
+
+readonly prev_kernel_tag=
+readonly kernel_tag=android-12.0.0_r0.17 # Nov 2021
