@@ -9,12 +9,12 @@ readonly kernel=google_msm-4.9
 readonly prev_kernel_tag=
 readonly kernel_tag=android-12.0.0_r0.2 # Oct 2021
 
-readonly image_url=
-readonly image_sha256=
+readonly image_url="https://dl.google.com/dl/android/aosp/crosshatch-sp1a.210812.015-factory-6dae03f8.zip"
+readonly image_sha256="6dae03f8e91644f6ee0b9e872faaee2b43312c490f05934940c68074dced303a"
 
-readonly flash_url=
+readonly flash_url="https://flash.android.com/build/7679548?target=crosshatch-user&signed"
 
-readonly ota_url=
-readonly ota_sha256=
+readonly ota_url="https://dl.google.com/dl/android/aosp/crosshatch-ota-sp1a.210812.015-3f7cc066.zip"
+readonly ota_sha256="3f7cc066ac58e8d99bade37fd5d44bbdea6df562077752b47c673d795a2f3b69"
 
-readonly security_patch=
+readonly security_patch="2021-10-05"

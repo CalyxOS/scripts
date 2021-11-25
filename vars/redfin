@@ -9,12 +9,12 @@ readonly kernel=google_redbull
 readonly prev_kernel_tag=
 readonly kernel_tag=android-12.0.0_r0.14 # Nov 2021
 
-readonly image_url=
-readonly image_sha256=
+readonly image_url="https://dl.google.com/dl/android/aosp/redfin-sp1a.211105.003-factory-5ccedb8a.zip"
+readonly image_sha256="5ccedb8aca3dee1e60876721e30646b1731be986b3661d21de5360d4f045992c"
 
-readonly flash_url=
+readonly flash_url="https://flash.android.com/build/7757856?target=redfin-user&signed"
 
-readonly ota_url=
-readonly ota_sha256=
+readonly ota_url="https://dl.google.com/dl/android/aosp/redfin-ota-sp1a.211105.003-ccd55531.zip"
+readonly ota_sha256="ccd55531dcc6318580761bfceaebcf4ce5ba9ef9a303f3008ca2806050cbceeb"
 
-readonly security_patch=
+readonly security_patch="2021-11-05"
