@@ -9,12 +9,12 @@ readonly kernel=google_msm-4.9
 readonly prev_kernel_tag=
 readonly kernel_tag=android-12.0.0_r0.11 # Nov 2021
 
-readonly image_url=
-readonly image_sha256=
+readonly image_url="https://dl.google.com/dl/android/aosp/bonito-sp1a.211105.002-factory-246867a1.zip"
+readonly image_sha256="246867a1f6f9e020038d34460bee499e94e74d9d4ffa5b7cd31743faeafb7fe0"
 
-readonly flash_url=
+readonly flash_url="https://flash.android.com/build/7743617?target=bonito-user&signed"
 
-readonly ota_url=
-readonly ota_sha256=
+readonly ota_url="https://dl.google.com/dl/android/aosp/bonito-ota-sp1a.211105.002-69fc7ce6.zip"
+readonly ota_sha256="69fc7ce6b1e0f8dc217142cb2caab801b843f6955f297fcea3bcc236e8749225"
 
-readonly security_patch=
+readonly security_patch="2021-11-05"

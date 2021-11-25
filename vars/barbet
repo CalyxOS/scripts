@@ -9,12 +9,12 @@ readonly kernel=google_barbet
 readonly prev_kernel_tag=
 readonly kernel_tag=android-12.0.0_r0.15 # Nov 2021
 
-readonly image_url=
-readonly image_sha256=
+readonly image_url="https://dl.google.com/dl/android/aosp/barbet-sp1a.211105.003-factory-6bcf0828.zip"
+readonly image_sha256="6bcf0828fe9210271459073184d814686ed3478c6d71233be18c2a046626882e"
 
-readonly flash_url=
+readonly flash_url="https://flash.android.com/build/7757856?target=barbet-user&signed"
 
-readonly ota_url=
-readonly ota_sha256=
+readonly ota_url="https://dl.google.com/dl/android/aosp/barbet-ota-sp1a.211105.003-3348a750.zip"
+readonly ota_sha256="3348a750ceefb4c4e0222ef550f55baa561327003439d135edc758fddf2a67ab"
 
-readonly security_patch=
+readonly security_patch="2021-11-05"
