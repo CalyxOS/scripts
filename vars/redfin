@@ -1,0 +1,20 @@
+readonly prev_build_id=SP1A.210812.015 # Oct 2021
+readonly build_id=SP1A.211105.003 # Nov 2021
+
+readonly prev_aosp_tag=android-12.0.0_r1 # Oct 2021
+readonly aosp_tag=android-12.0.0_r10 # Nov 2021
+
+readonly kernel=google_redbull
+
+readonly prev_kernel_tag=
+readonly kernel_tag=android-12.0.0_r0.14 # Nov 2021
+
+readonly image_url=
+readonly image_sha256=
+
+readonly flash_url=
+
+readonly ota_url=
+readonly ota_sha256=
+
+readonly security_patch=
