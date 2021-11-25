@@ -9,12 +9,12 @@ readonly kernel=google_raviole
 readonly prev_kernel_tag=
 readonly kernel_tag=android-12.0.0_r0.17 # Nov 2021
 
-readonly image_url=
-readonly image_sha256=
+readonly image_url="https://dl.google.com/dl/android/aosp/raven-sd1a.210817.037-factory-0827bca4.zip"
+readonly image_sha256="0827bca482a4fc8620032c3e5144699ff505a01e7fcd1821686b1c71c8ac0f03"
 
-readonly flash_url=
+readonly flash_url="https://flash.android.com/build/7862242?target=raven-user&signed"
 
-readonly ota_url=
-readonly ota_sha256=
+readonly ota_url="https://dl.google.com/dl/android/aosp/raven-ota-sd1a.210817.037-1543ec70.zip"
+readonly ota_sha256="1543ec70cdd0cbca70f47335c305625d97b00b0a819fc84bd21d9300ea765e14"
 
-readonly security_patch=
+readonly security_patch="2021-11-05"
