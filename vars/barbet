@@ -18,3 +18,19 @@ readonly ota_url="https://dl.google.com/dl/android/aosp/barbet-ota-sp1a.211105.0
 readonly ota_sha256="3348a750ceefb4c4e0222ef550f55baa561327003439d135edc758fddf2a67ab"
 
 readonly security_patch="2021-11-05"
+
+# Usage: ${firmware_partitions[@]}
+readonly firmware_partitions=(
+  abl
+  aop
+  devcfg
+  hyp
+  keymaster
+  qupfw
+  tz
+  uefisecapp
+  xbl
+  xbl_config
+  featenabler
+  modem
+)

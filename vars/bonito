@@ -18,3 +18,19 @@ readonly ota_url="https://dl.google.com/dl/android/aosp/bonito-ota-sp1a.211105.0
 readonly ota_sha256="69fc7ce6b1e0f8dc217142cb2caab801b843f6955f297fcea3bcc236e8749225"
 
 readonly security_patch="2021-11-05"
+
+# Usage: ${firmware_partitions[@]}
+readonly firmware_partitions=(
+  abl
+  aop
+  cmnlib
+  cmnlib64
+  devcfg
+  hyp
+  keymaster
+  qupfw
+  tz
+  xbl
+  xbl_config
+  modem
+)

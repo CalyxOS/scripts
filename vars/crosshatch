@@ -18,3 +18,19 @@ readonly ota_url="https://dl.google.com/dl/android/aosp/crosshatch-ota-sp1a.2108
 readonly ota_sha256="3f7cc066ac58e8d99bade37fd5d44bbdea6df562077752b47c673d795a2f3b69"
 
 readonly security_patch="2021-10-05"
+
+# Usage: ${firmware_partitions[@]}
+readonly firmware_partitions=(
+  abl
+  aop
+  cmnlib
+  cmnlib64
+  devcfg
+  hyp
+  keymaster
+  qupfw
+  tz
+  xbl
+  xbl_config
+  modem
+)
