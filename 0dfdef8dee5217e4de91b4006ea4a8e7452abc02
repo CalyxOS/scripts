@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d8092ff1_0945ca63",
+        "filename": "pixel/firmware.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-12-02T23:10:47Z",
+      "side": 1,
+      "message": "Needs to be added to prebuilts, and full path used.",
+      "revId": "0dfdef8dee5217e4de91b4006ea4a8e7452abc02",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2c4794e0_533a38fa",
+        "filename": "pixel/firmware.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-12-02T23:10:47Z",
+      "side": 1,
+      "message": "Need to use full extract-utils path",
+      "revId": "0dfdef8dee5217e4de91b4006ea4a8e7452abc02",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
