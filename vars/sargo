@@ -18,3 +18,19 @@ readonly ota_url="https://dl.google.com/dl/android/aosp/sargo-ota-sp1a.211105.00
 readonly ota_sha256="8abcf6075847c28b1c9775e67b90d43051dbe13dc29f0eaaccd37750193ce755"
 
 readonly security_patch="2021-11-05"
+
+# Usage: ${firmware_partitions[@]}
+readonly firmware_partitions=(
+  abl
+  aop
+  cmnlib
+  cmnlib64
+  devcfg
+  hyp
+  keymaster
+  qupfw
+  tz
+  xbl
+  xbl_config
+  modem
+)
