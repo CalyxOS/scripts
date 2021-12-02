@@ -18,3 +18,19 @@ readonly ota_url="https://dl.google.com/dl/android/aosp/blueline-ota-sp1a.210812
 readonly ota_sha256="cee465f51c930684b8b2b0354eba2ba83e5001b92c03a74036ccc9ceebd972fb"
 
 readonly security_patch="2021-10-05"
+
+# Usage: ${firmware_partitions[@]}
+readonly firmware_partitions=(
+  abl
+  aop
+  cmnlib
+  cmnlib64
+  devcfg
+  hyp
+  keymaster
+  qupfw
+  tz
+  xbl
+  xbl_config
+  modem
+)

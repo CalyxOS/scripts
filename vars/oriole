@@ -18,3 +18,16 @@ readonly ota_url="https://dl.google.com/dl/android/aosp/oriole-ota-sd1a.210817.0
 readonly ota_sha256="933c0db24a2434eebbaaea0a77f07f3096e0c55c18cb42d9d05e06cb85c97b1a"
 
 readonly security_patch="2021-11-05"
+
+# Usage: ${firmware_partitions[@]}
+readonly firmware_partitions=(
+  bl1
+  pbl
+  bl2
+  abl
+  bl31
+  tzsw
+  gsa
+  ldfw
+  modem
+)

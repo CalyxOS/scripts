@@ -18,3 +18,19 @@ readonly ota_url="https://dl.google.com/dl/android/aosp/bramble-ota-sp1a.211105.
 readonly ota_sha256="8ac6d937ba1a74da319ff3898babe605f81de3c0cd072e4443eade69ee01295e"
 
 readonly security_patch="2021-11-05"
+
+# Usage: ${firmware_partitions[@]}
+readonly firmware_partitions=(
+  abl
+  aop
+  devcfg
+  hyp
+  keymaster
+  qupfw
+  tz
+  uefisecapp
+  xbl
+  xbl_config
+  featenabler
+  modem
+)

@@ -18,3 +18,16 @@ readonly ota_url="https://dl.google.com/dl/android/aosp/raven-ota-sd1a.210817.03
 readonly ota_sha256="1543ec70cdd0cbca70f47335c305625d97b00b0a819fc84bd21d9300ea765e14"
 
 readonly security_patch="2021-11-05"
+
+# Usage: ${firmware_partitions[@]}
+readonly firmware_partitions=(
+  bl1
+  pbl
+  bl2
+  abl
+  bl31
+  tzsw
+  gsa
+  ldfw
+  modem
+)

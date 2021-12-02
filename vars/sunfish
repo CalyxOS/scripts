@@ -18,3 +18,18 @@ readonly ota_url="https://dl.google.com/dl/android/aosp/sunfish-ota-sp1a.211105.
 readonly ota_sha256="87e16c1f905e3a8c383b4599eaa1441410abf457731de39c778410148cb2ea4b"
 
 readonly security_patch="2021-11-05"
+
+# Usage: ${firmware_partitions[@]}
+readonly firmware_partitions=(
+  abl
+  aop
+  devcfg
+  hyp
+  keymaster
+  qupfw
+  tz
+  uefisecapp
+  xbl
+  xbl_config
+  modem
+)

@@ -18,3 +18,19 @@ readonly ota_url="https://dl.google.com/dl/android/aosp/redfin-ota-sp1a.211105.0
 readonly ota_sha256="ccd55531dcc6318580761bfceaebcf4ce5ba9ef9a303f3008ca2806050cbceeb"
 
 readonly security_patch="2021-11-05"
+
+# Usage: ${firmware_partitions[@]}
+readonly firmware_partitions=(
+  abl
+  aop
+  devcfg
+  hyp
+  keymaster
+  qupfw
+  tz
+  uefisecapp
+  xbl
+  xbl_config
+  featenabler
+  modem
+)
