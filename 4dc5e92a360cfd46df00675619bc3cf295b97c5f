@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d4851557_33427d5f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-12-03T10:07:27Z",
+      "side": 1,
+      "message": "Output looks ok\n\nDon\u0027t know if this is right though, hence the \"fix\"",
+      "revId": "4dc5e92a360cfd46df00675619bc3cf295b97c5f",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
