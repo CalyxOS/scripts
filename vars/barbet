@@ -1,23 +1,23 @@
-readonly prev_build_id=SP1A.210812.015 # Oct 2021
-readonly build_id=SP1A.211105.003 # Nov 2021
+readonly prev_build_id=SP1A.211105.003 # Nov 2021
+readonly build_id=SQ1A.211205.008 # Dec 2021
 
-readonly prev_aosp_tag=android-12.0.0_r1 # Oct 2021
-readonly aosp_tag=android-12.0.0_r10 # Nov 2021
+readonly prev_aosp_tag="android-12.0.0_r10"
+readonly aosp_tag="android-12.0.0_r16"
 
 readonly kernel=google_barbet
 
 readonly prev_kernel_tag=
 readonly kernel_tag=android-12.0.0_r0.15 # Nov 2021
 
-readonly image_url="https://dl.google.com/dl/android/aosp/barbet-sp1a.211105.003-factory-6bcf0828.zip"
-readonly image_sha256="6bcf0828fe9210271459073184d814686ed3478c6d71233be18c2a046626882e"
+readonly image_url="https://dl.google.com/dl/android/aosp/barbet-sq1a.211205.008-factory-458927f7.zip"
+readonly image_sha256="458927f7fc5be44a12f9d984aec625d2c5b822a0f83e386de99e8566327e16cb"
 
-readonly flash_url="https://flash.android.com/build/7757856?target=barbet-user&signed"
+readonly flash_url="https://flash.android.com/build/7888514?target=barbet-user&signed"
 
-readonly ota_url="https://dl.google.com/dl/android/aosp/barbet-ota-sp1a.211105.003-3348a750.zip"
-readonly ota_sha256="3348a750ceefb4c4e0222ef550f55baa561327003439d135edc758fddf2a67ab"
+readonly ota_url="https://dl.google.com/dl/android/aosp/barbet-ota-sq1a.211205.008-b4b48cf4.zip"
+readonly ota_sha256="b4b48cf4ae0a590b7342b7efb8c353d987a50472b2463003ed782d4ff07e7b50"
 
-readonly security_patch="2021-11-05"
+readonly security_patch="2021-12-05"
 
 # Usage: ${firmware_partitions[@]}
 readonly firmware_partitions=(
