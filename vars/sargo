@@ -1,23 +1,23 @@
-readonly prev_build_id=SP1A.210812.015 # Oct 2021
-readonly build_id=SP1A.211105.002 # Nov 2021
+readonly prev_build_id=SP1A.211105.002 # Nov 2021
+readonly build_id=SQ1A.211205.008 # Dec 2021
 
-readonly prev_aosp_tag=android-12.0.0_r1 # Oct 2021
-readonly aosp_tag=android-12.0.0_r8 # Nov 2021
+readonly prev_aosp_tag="android-12.0.0_r8"
+readonly aosp_tag="android-12.0.0_r16"
 
 readonly kernel=google_msm-4.9
 
 readonly prev_kernel_tag=
 readonly kernel_tag=android-12.0.0_r0.11 # Nov 2021
 
-readonly image_url="https://dl.google.com/dl/android/aosp/sargo-sp1a.211105.002-factory-97327041.zip"
-readonly image_sha256="973270419450f44b881eaa9ca236057801df7fb9775fb6aabd4f7dfe876b6948"
+readonly image_url="https://dl.google.com/dl/android/aosp/sargo-sq1a.211205.008-factory-2358b75b.zip"
+readonly image_sha256="2358b75baa08a1100a3fb34c18c1affaff613a6d144fdcdcfc281642001d749c"
 
-readonly flash_url="https://flash.android.com/build/7743617?target=sargo-user&signed"
+readonly flash_url="https://flash.android.com/build/7888514?target=sargo-user&signed"
 
-readonly ota_url="https://dl.google.com/dl/android/aosp/sargo-ota-sp1a.211105.002-8abcf607.zip"
-readonly ota_sha256="8abcf6075847c28b1c9775e67b90d43051dbe13dc29f0eaaccd37750193ce755"
+readonly ota_url="https://dl.google.com/dl/android/aosp/sargo-ota-sq1a.211205.008-aba2bb35.zip"
+readonly ota_sha256="aba2bb35e02a1ff34506ed8322e2d5e9d85e1d16c48417b604b26fae52cad362"
 
-readonly security_patch="2021-11-05"
+readonly security_patch="2021-12-05"
 
 # Usage: ${firmware_partitions[@]}
 readonly firmware_partitions=(

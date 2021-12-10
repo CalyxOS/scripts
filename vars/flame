@@ -1,23 +1,23 @@
-readonly prev_build_id=SP1A.210812.015 # Oct 2021
-readonly build_id=SP1A.211105.002 # Nov 2021
+readonly prev_build_id=SP1A.211105.002 # Nov 2021
+readonly build_id=SQ1A.211205.008 # Dec 2021
 
-readonly prev_aosp_tag=android-12.0.0_r1 # Oct 2021
-readonly aosp_tag=android-12.0.0_r8 # Nov 2021
+readonly prev_aosp_tag="android-12.0.0_r8"
+readonly aosp_tag="android-12.0.0_r16"
 
 readonly kernel=google_msm-4.14
 
 readonly prev_kernel_tag=
 readonly kernel_tag=android-12.0.0_r0.12 # Nov 2021
 
-readonly image_url="https://dl.google.com/dl/android/aosp/flame-sp1a.211105.002-factory-3218b9ee.zip"
-readonly image_sha256="3218b9eedeae389815218a2ce2840fae3be0caeb3a94e6aedcc7be8c4881bc85"
+readonly image_url="https://dl.google.com/dl/android/aosp/flame-sq1a.211205.008-factory-7bed982f.zip"
+readonly image_sha256="7bed982fdbda4b191cea868e31cbf7c68d3ab6ff1befbbd3e517ab7dec2004ea"
 
-readonly flash_url="https://flash.android.com/build/7743617?target=flame-user&signed"
+readonly flash_url="https://flash.android.com/build/7888514?target=flame-user&signed"
 
-readonly ota_url="https://dl.google.com/dl/android/aosp/flame-ota-sp1a.211105.002-1218a6f2.zip"
-readonly ota_sha256="1218a6f2951c1da0ece4aeddc19dee534938241c09f937aa10a584d4c495a813"
+readonly ota_url="https://dl.google.com/dl/android/aosp/flame-ota-sq1a.211205.008-6a18ec22.zip"
+readonly ota_sha256="6a18ec22ff07d0c02f001946ed67864826fe93442fb0e75e385fcd794e4d80c9"
 
-readonly security_patch="2021-11-05"
+readonly security_patch="2021-12-05"
 
 # Usage: ${firmware_partitions[@]}
 readonly firmware_partitions=(
