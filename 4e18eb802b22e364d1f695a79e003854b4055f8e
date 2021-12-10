@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "43571ae4_39666ac4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 10
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-12-10T16:09:07Z",
+      "side": 1,
+      "message": "Room for improvements, but does the job for now.\n\nIn the future, will move config to the variables once they\u0027re merged.",
+      "revId": "4e18eb802b22e364d1f695a79e003854b4055f8e",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
