@@ -1,8 +1,8 @@
 #!/bin/bash
 #
-# all:
+# device:
 #
-#   Do it all!
+#   Do it all for one device
 #
 #
 ##############################################################################
@@ -35,12 +35,19 @@ source "${vars_path}/devices"
 
 device() {
   local device="${1}"
-  local script_path="${2}"
+  source "${vars_path}/${device}"
+  local factory_dir="${work_dir}/${device}/${build_id}/factory/${device}-${build_id,,}"
 
-  "${script_path}/device.sh" "${device}"
+  "${script_path}/download.sh" "${device}"
+  "${script_path}/extract-factory-image.sh" "${device}"
+
+  pushd "${top}"
+  device/google/${device}/extract-files.sh "${factory_dir}/image"
+  popd
+
+  "${script_path}/firmware.sh" "${device}"
+  "${script_path}/carriersettings.sh" "${device}"
 }
-
-export -f device
 
 # error message
 # ARG1: error message for STDERR
@@ -56,10 +63,10 @@ help_message() {
 }
 
 main() {
-  if [[ $# -ne 0 ]] ; then
-    parallel device ::: "${@}" ::: "${script_path}"
+  if [[ $# -eq 1 ]] ; then
+    device "${1}"
   else
-    parallel device ::: ${devices[@]} ::: "${script_path}"
+    error_m
   fi
 }
 
