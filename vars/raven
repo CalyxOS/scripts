@@ -1,23 +1,23 @@
-readonly prev_build_id=
-readonly build_id=SD1A.210817.037 # Nov 2021
+readonly prev_build_id=SD1A.210817.037 # Nov 2021
+readonly build_id=SQ1D.211205.016.A1 # Dec 2021
 
-readonly prev_aosp_tag=
-readonly aosp_tag=android-12.0.0_r14 # Nov 2021
+readonly prev_aosp_tag="android-12.0.0_r14"
+readonly aosp_tag="android-12.0.0_r18"
 
 readonly kernel=google_raviole
 
 readonly prev_kernel_tag=
 readonly kernel_tag=android-12.0.0_r0.17 # Nov 2021
 
-readonly image_url="https://dl.google.com/dl/android/aosp/raven-sd1a.210817.037-factory-0827bca4.zip"
-readonly image_sha256="0827bca482a4fc8620032c3e5144699ff505a01e7fcd1821686b1c71c8ac0f03"
+readonly image_url="https://dl.google.com/dl/android/aosp/raven-sq1d.211205.016.a1-factory-86d212b2.zip"
+readonly image_sha256="86d212b21f8f6a13dac286e3246b859801ec27923d3d9e4b20218a1722e3d243"
 
-readonly flash_url="https://flash.android.com/build/7862242?target=raven-user&signed"
+readonly flash_url="https://flash.android.com/build/7957957?target=raven-user&signed"
 
-readonly ota_url="https://dl.google.com/dl/android/aosp/raven-ota-sd1a.210817.037-1543ec70.zip"
-readonly ota_sha256="1543ec70cdd0cbca70f47335c305625d97b00b0a819fc84bd21d9300ea765e14"
+readonly ota_url="https://dl.google.com/dl/android/aosp/raven-ota-sq1d.211205.016.a1-81234517.zip"
+readonly ota_sha256="8123451727768bc1777e5bb56c333c2674ea1a688e174aef2fdee759e442c1ce"
 
-readonly security_patch="2021-11-05"
+readonly security_patch="2021-12-05"
 
 # Usage: ${firmware_partitions[@]}
 readonly firmware_partitions=(
