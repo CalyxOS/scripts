@@ -6,8 +6,8 @@ readonly aosp_tag="android-12.0.0_r16"
 
 readonly kernel=google_msm-4.14
 
-readonly prev_kernel_tag=
-readonly kernel_tag=android-12.0.0_r0.12 # Nov 2021
+readonly prev_kernel_tag=android-12.0.0_r0.12 # Nov 2021
+readonly kernel_tag=android-12.0.0_r0.22 # Dec 2021
 
 readonly image_url="https://dl.google.com/dl/android/aosp/coral-sq1a.211205.008-factory-d82cc3cc.zip"
 readonly image_sha256="d82cc3cc0de0b7e4670a8c081f6b3ae8380d4128f0f0580d4936df6ace7213ef"

@@ -6,8 +6,8 @@ readonly aosp_tag="android-12.0.0_r16"
 
 readonly kernel=google_msm-4.9
 
-readonly prev_kernel_tag=
-readonly kernel_tag=android-12.0.0_r0.11 # Nov 2021
+readonly prev_kernel_tag=android-12.0.0_r0.11 # Nov 2021
+readonly kernel_tag=android-12.0.0_r0.21 # Dec 2021
 
 readonly image_url="https://dl.google.com/dl/android/aosp/bonito-sq1a.211205.008-factory-4c96f820.zip"
 readonly image_sha256="4c96f820b8367dac8dbb42b1b9115b2251b610db98b903a6680d145ac12be5fa"

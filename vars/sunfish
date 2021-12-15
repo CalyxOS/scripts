@@ -6,8 +6,8 @@ readonly aosp_tag="android-12.0.0_r16"
 
 readonly kernel=google_msm-4.14
 
-readonly prev_kernel_tag=
-readonly kernel_tag=android-12.0.0_r0.13 # Nov 2021
+readonly prev_kernel_tag=android-12.0.0_r0.13 # Nov 2021
+readonly kernel_tag=android-12.0.0_r0.23 # Dec 2021
 
 readonly image_url="https://dl.google.com/dl/android/aosp/sunfish-sq1a.211205.008-factory-2a1f8ab3.zip"
 readonly image_sha256="2a1f8ab325d2af3567e27a553818116b1d67fede59d4274d06e47ee4152cc0a2"
