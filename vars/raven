@@ -6,8 +6,8 @@ readonly aosp_tag="android-12.0.0_r18"
 
 readonly kernel=google_raviole
 
-readonly prev_kernel_tag=
-readonly kernel_tag=android-12.0.0_r0.17 # Nov 2021
+readonly prev_kernel_tag=android-12.0.0_r0.17 # Nov 2021
+readonly kernel_tag=android-12.0.0_r0.26 # Dec 2021
 
 readonly image_url="https://dl.google.com/dl/android/aosp/raven-sq1d.211205.016.a1-factory-86d212b2.zip"
 readonly image_sha256="86d212b21f8f6a13dac286e3246b859801ec27923d3d9e4b20218a1722e3d243"
