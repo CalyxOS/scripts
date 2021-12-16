@@ -64,7 +64,8 @@ select_kernel_config() {
     ;;
   raviole)
     export DEVICE_KERNEL_BUILD_CONFIG=raviole/private/gs-google/build.config.slider
-	export BUILD_KERNEL=1
+    export BUILD_KERNEL=1
+    export LTO=full
     ;;
   *)
     echo "Unsupported kernel ${kernel}"
