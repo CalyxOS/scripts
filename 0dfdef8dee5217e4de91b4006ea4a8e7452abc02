@@ -18,6 +18,24 @@
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "73ddbd94_f2658504",
+        "filename": "pixel/firmware.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-12-22T20:55:46Z",
+      "side": 1,
+      "message": "Will do it in a follow up, this works, was used to extract current images, and I don\u0027t want to re-do 20 commits.\n\nThis is just our internal scripts repo so that\u0027s fine I\u0027d say.",
+      "parentUuid": "d8092ff1_0945ca63",
+      "revId": "0dfdef8dee5217e4de91b4006ea4a8e7452abc02",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "2c4794e0_533a38fa",
@@ -31,6 +49,24 @@
       "writtenOn": "2021-12-02T23:10:47Z",
       "side": 1,
       "message": "Need to use full extract-utils path",
+      "revId": "0dfdef8dee5217e4de91b4006ea4a8e7452abc02",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "bb1d8d23_cb16463c",
+        "filename": "pixel/firmware.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-12-22T20:55:46Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2c4794e0_533a38fa",
       "revId": "0dfdef8dee5217e4de91b4006ea4a8e7452abc02",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
