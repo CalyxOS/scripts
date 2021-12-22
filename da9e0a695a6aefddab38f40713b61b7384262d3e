@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9162bb2d_9ddb7507",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2021-12-22T20:43:21Z",
+      "side": 1,
+      "message": "Used it for a couple ASBs.\n\nShould send upstream too.",
+      "revId": "da9e0a695a6aefddab38f40713b61b7384262d3e",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
