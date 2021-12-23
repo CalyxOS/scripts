@@ -58,16 +58,18 @@ setup_rro_overlay() {
 
 setup_makefiles() {
   local mk_path="${vendor_path}/${device}-vendor.mk"
-  
-  echo >> "${mk_path}"
-  echo "PRODUCT_COPY_FILES += \\" >> "${mk_path}"
-  echo "  vendor/google/${device}/proprietary/product/etc/apns-conf.xml:\$(TARGET_COPY_OUT_PRODUCT)/etc/apns-conf.xml" >> "${mk_path}"
-  echo >> "${mk_path}"
 
-  echo >> "${mk_path}"
-  echo "PRODUCT_PACKAGES += \\" >> "${mk_path}"
-  echo "  CarrierConfigOverlay" >> "${mk_path}"
-  echo >> "${mk_path}"
+  local exists=$(grep carriersettings "${mk_path}")
+  if [[ -z "${exists}" ]]; then
+    echo >> "${mk_path}"
+    echo "# carriersettings" >> "${mk_path}"
+    echo "PRODUCT_COPY_FILES += \\" >> "${mk_path}"
+    echo "  vendor/google/${device}/proprietary/product/etc/apns-conf.xml:\$(TARGET_COPY_OUT_PRODUCT)/etc/apns-conf.xml" >> "${mk_path}"
+    echo >> "${mk_path}"
+    echo "PRODUCT_PACKAGES += \\" >> "${mk_path}"
+    echo "  CarrierConfigOverlay" >> "${mk_path}"
+    echo >> "${mk_path}"
+  fi
 }
 
 # error message
