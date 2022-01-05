@@ -1,0 +1,10 @@
+# Usage: ${kernels[@]}
+readonly kernels=(
+  crosshatch
+  bonito
+  coral
+  sunfish
+  redbull
+  barbet
+  raviole
+)
