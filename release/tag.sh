@@ -25,9 +25,9 @@ readonly script_path="$(cd "$(dirname "$0")";pwd -P)"
 readonly top="${script_path}/../../../"
 
 if [[ -e "${top}/build_kernel.sh" ]]; then
-  readonly excluded_repos='device_google_[[:alpha:]]*-kernel|CalyxOS/scripts|CalyxOS/kernel_manifest'
+  readonly excluded_repos='CalyxOS/kernel_manifest'
 else
-  readonly excluded_repos='NONE'
+  readonly excluded_repos='CalyxOS/platform_manifest'
 fi
 
 ## HELP MESSAGE (USAGE INFO)
