@@ -25,7 +25,7 @@ readonly script_path="$(cd "$(dirname "$0")";pwd -P)"
 readonly top="${script_path}/../../../"
 
 if [[ -e "${top}/build_kernel.sh" ]]; then
-  readonly excluded_repos='device_google_[[:alpha:]]*-kernel'
+  readonly excluded_repos='device_google_[[:alpha:]]*-kernel|calyx/scripts'
 else
   readonly excluded_repos='NONE'
 fi
@@ -41,7 +41,7 @@ handle_repos() {
   pushd "${top}"
   repo sync -dj16
   repo manifest -r -o m/tag-${version}.xml
-  local repos=`repo list | grep CalyxOS | grep -v "${excluded_repos}" | cut -d : -f 1 | tr -d ' '`
+  local repos=`repo list | grep CalyxOS | grep -Ev "${excluded_repos}" | cut -d : -f 1 | tr -d ' '`
   for repo in ${repos}; do
    tag_repo "${repo}" "${version}" "${msgfile}"
   done
