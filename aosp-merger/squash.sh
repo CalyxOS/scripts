@@ -41,13 +41,16 @@ if [ ! -e "build/envsetup.sh" ]; then
     exit 1
 fi
 
-# Source build environment (needed for aospremote)
-. build/envsetup.sh
+### CONSTANTS ###
+readonly script_path="$(cd "$(dirname "$0")";pwd -P)"
+readonly vars_path="${script_path}/../vars/"
 
-TOP="${ANDROID_BUILD_TOP}"
+source "${vars_path}/common"
+
+TOP="${script_path}/../../.."
 MERGEDREPOS="${TOP}/merged_repos.txt"
 MANIFEST="${TOP}/.repo/manifests/default.xml"
-BRANCH=$(git -C ${TOP}/.repo/manifests.git config --get branch.default.merge | sed 's#refs/heads/##g')
+BRANCH="${aosp_branch}"
 STAGINGBRANCH="staging/${BRANCH}_${OPERATION}-${NEWTAG}"
 SQUASHBRANCH="squash/${BRANCH}_${OPERATION}-${NEWTAG}"
 
