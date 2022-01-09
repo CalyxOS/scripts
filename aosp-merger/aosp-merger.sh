@@ -43,6 +43,7 @@ fi
 # Source build environment (needed for aospremote)
 . build/envsetup.sh
 
+SCRIPT_PATH="$(cd "$(dirname "$0")";pwd -P)"
 TOP="${ANDROID_BUILD_TOP}"
 MERGEDREPOS="${TOP}/merged_repos.txt"
 MANIFEST="${TOP}/.repo/manifests/default.xml"
@@ -76,49 +77,5 @@ repo abandon "${STAGINGBRANCH}"
 
 # Iterate over each forked project
 for PROJECTPATH in ${PROJECTPATHS}; do
-    cd "${TOP}/${PROJECTPATH}"
-    repo start "${STAGINGBRANCH}" .
-    aospremote | grep -v "Remote 'aosp' created"
-    git fetch -q --tags aosp "${NEWTAG}"
-
-    PROJECTOPERATION="${OPERATION}"
-
-    # Check if we've actually changed anything before attempting to merge
-    # If we haven't, just "git reset --hard" to the tag
-    if [[ -z "$(git diff HEAD ${OLDTAG})" ]]; then
-        git reset --hard "${NEWTAG}"
-        echo -e "reset\t\t${PROJECTPATH}" | tee -a "${MERGEDREPOS}"
-        continue
-    fi
-
-    # Was there any change upstream? Skip if not.
-    if [[ -z "$(git diff ${OLDTAG} ${NEWTAG})" ]]; then
-        echo -e "nochange\t\t${PROJECTPATH}" | tee -a "${MERGEDREPOS}"
-        continue
-    fi
-
-    # Determine whether OLDTAG is an ancestor of NEWTAG
-    # ie is history consistent.
-    git merge-base --is-ancestor "${OLDTAG}" "${NEWTAG}"
-    # If no, force rebase.
-    if [[ "$?" -eq 1 ]]; then
-        echo "Not forcing rebase"
-        #echo -n "#### Project ${PROJECTPATH} old tag ${OLD} is not an ancestor "
-        #echo    "of new tag ${NEWTAG}, forcing rebase ####"
-        #PROJECTOPERATION="rebase"
-    fi
-
-    if [[ "${PROJECTOPERATION}" == "merge" ]]; then
-        echo "#### Merging ${NEWTAG} into ${PROJECTPATH} ####"
-        git merge --no-edit --log "${NEWTAG}"
-    elif [[ "${PROJECTOPERATION}" == "rebase" ]]; then
-        echo "#### Rebasing ${PROJECTPATH} onto ${NEWTAG} ####"
-        git rebase --onto "${NEWTAG}" "${OLDTAG}"
-    fi
-
-    CONFLICT=""
-    if [[ -n "$(git status --porcelain)" ]]; then
-        CONFLICT="conflict-"
-    fi
-    echo -e "${CONFLICT}${PROJECTOPERATION}\t\t${PROJECTPATH}" | tee -a "${MERGEDREPOS}"
+    "${SCRIPT_PATH}"/_merger.sh "${PROJECTPATH}" "${@}" | tee -a "${MERGEDREPOS}"
 done
