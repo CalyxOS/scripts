@@ -15,8 +15,6 @@
 # limitations under the License.
 #
 
-set -x
-
 usage() {
     echo "Usage ${0} <projectpath> <merge|rebase> <oldaosptag> <newaosptag>"
 }
