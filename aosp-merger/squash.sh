@@ -75,5 +75,5 @@ for PROJECTPATH in ${PROJECTPATHS}; do
     git branch --set-upstream-to=m/${BRANCH}
     git reset --soft HEAD~1
     git add .
-    git commit -m "[SQUASH] Merge ${NEWTAG}" -m "$(git log ${STAGINGBRANCH} -1 --pretty=%s)" -m "$(git log ${STAGINGBRANCH} -1 --pretty=%b | grep Change-Id:)"
+    git commit -m "[SQUASH] $(git log ${STAGINGBRANCH} -1 --pretty=%s)" -m "$(git log ${STAGINGBRANCH} -1 --pretty=%b)" -m "$(git log ${STAGINGBRANCH} -1 --pretty=%b | grep Change-Id:)"
 done
