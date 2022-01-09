@@ -1,6 +1,6 @@
 # Entire file updated manually
-readonly prev_branch=android12
-readonly branch=android12
+readonly prev_aosp_branch=android12
+readonly aosp_branch=android12
 
 readonly prev_aosp_tag=android-12.0.0_r18 # Dec 2021, Pixel 6
 readonly aosp_tag=android-12.0.0_r26 # Jan 2022, QC Pixels
