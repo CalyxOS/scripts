@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # SPDX-FileCopyrightText: 2017, 2020-2021 The LineageOS Project
-# SPDX-FileCopyrightText: 2021 The Calyx Institute
+# SPDX-FileCopyrightText: 2021-2022 The Calyx Institute
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -65,5 +65,5 @@ for PROJECTPATH in ${PROJECTPATHS}; do
     git branch --set-upstream-to=m/${BRANCH}
     git reset --soft HEAD~1
     git add .
-    git commit -m "[SQUASH] Merge ${NEWTAG}" -m "$(git log ${STAGINGBRANCH} -1 --pretty=%s)" -m "$(git log ${STAGINGBRANCH} -1 --pretty=%b | grep Change-Id:)"
+    git commit -m "[SQUASH] $(git log ${STAGINGBRANCH} -1 --pretty=%s)" -m "$(git log ${STAGINGBRANCH} -1 --pretty=%b)"
 done
