@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dbbf4fd9_060fd012",
+        "filename": "carriersettings-extractor/carriersettings_extractor.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 1000034
+      },
+      "writtenOn": "2022-01-10T19:05:42Z",
+      "side": 0,
+      "message": "was deprecated, now gone.",
+      "range": {
+        "startLine": 79,
+        "startChar": 37,
+        "endLine": 79,
+        "endChar": 41
+      },
+      "revId": "50d17b0359e4ac028c6e83c06e3bdfe02cbb7491",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}

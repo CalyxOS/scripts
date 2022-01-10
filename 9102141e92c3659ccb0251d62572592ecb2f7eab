@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d856eb78_a7d125a7",
+        "filename": "carriersettings-extractor/carriersettings_extractor.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 1000034
+      },
+      "writtenOn": "2022-01-10T19:05:42Z",
+      "side": 1,
+      "message": "this is the only function change.\nDiffing output xml results in added IMS apns, so it\u0027s likely good",
+      "range": {
+        "startLine": 101,
+        "startChar": 0,
+        "endLine": 101,
+        "endChar": 62
+      },
+      "revId": "9102141e92c3659ccb0251d62572592ecb2f7eab",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8ed8735d_2c25a532",
+        "filename": "carriersettings-extractor/carriersettings_extractor.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 214,
+      "author": {
+        "id": 1000034
+      },
+      "writtenOn": "2022-01-10T19:05:42Z",
+      "side": 1,
+      "message": "note: there\u0027s support for more APNs, but old impl handled only one, and I don\u0027t know what logic picks the other ones ( if any, because I couldn\u0027t find them )\nSo let\u0027s stick to first available entry",
+      "range": {
+        "startLine": 214,
+        "startChar": 46,
+        "endLine": 214,
+        "endChar": 65
+      },
+      "revId": "9102141e92c3659ccb0251d62572592ecb2f7eab",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
