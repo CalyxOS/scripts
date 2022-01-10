@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0948f63c_c0b4a86e",
+        "filename": "aosp-merger/aosp-merger.sh",
+        "patchSetId": 4
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-01-10T18:03:00Z",
+      "side": 1,
+      "message": "FTR, I moved this here to avoid needed envsetup.sh in the helper.\n\nIt would be fine now, but this works too.",
+      "revId": "5b6131753f100191ff354dd75c69ae60c48b70f0",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
