@@ -30,3 +30,9 @@ readonly firmware_partitions=(
   xbl_config
   modem
 )
+
+# Usage: ${device_repos[@]}
+device_repos=(
+  # common repos in coral
+)
+
