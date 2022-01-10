@@ -30,6 +30,10 @@ readonly vars_path="${script_path}/../vars"
 
 source "${vars_path}/common"
 
+# make sure we have consistent and readable commit messages
+export LC_MESSAGES=C
+export LC_TIME=C
+
 ## HELP MESSAGE (USAGE INFO)
 # TODO
 
