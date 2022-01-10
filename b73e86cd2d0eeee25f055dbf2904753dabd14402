@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a5b6b316_995f63b2",
+        "filename": "aosp-merger/upload-squash.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-01-10T14:33:43Z",
+      "side": 1,
+      "message": "Remove this. We can then also get rid of envsetup.sh",
+      "revId": "b73e86cd2d0eeee25f055dbf2904753dabd14402",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1ff2bdc5_534d6ca0",
+        "filename": "aosp-merger/upload-squash.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-01-10T14:33:43Z",
+      "side": 1,
+      "message": "Let\u0027s use repo so we never ever accidentally push.\n\n`repo upload --cbr -y -o topic\u003d`\n\nWe use a different topic name as well, meh.",
+      "revId": "b73e86cd2d0eeee25f055dbf2904753dabd14402",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
