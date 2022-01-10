@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5cf5bc6e_2cba5484",
+        "filename": "aosp-merger/_merge_helper.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-01-10T18:26:20Z",
+      "side": 1,
+      "message": "Dunno if this is the best check, but it definitely should work.",
+      "revId": "9de07806537c041fd2a1906841d3c38ad22fe93d",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
