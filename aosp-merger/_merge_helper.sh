@@ -58,7 +58,7 @@ fi
 git merge-base --is-ancestor "${OLDTAG}" "${NEWTAG}"
 # If no, print a warning message.
 if [[ "$?" -eq 1 ]]; then
-    echo -n "#### Warning: project ${PROJECTPATH} old tag ${OLD} is not an ancestor "
+    echo -n "#### Warning: project ${PROJECTPATH} old tag ${OLDTAG} is not an ancestor "
     echo    "of new tag ${NEWTAG} ####"
 fi
 
