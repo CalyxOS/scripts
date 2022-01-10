@@ -79,6 +79,8 @@ main() {
     export MERGEDREPOS="${TOP}/merged_repos.txt"
 
     merge_aosp_forks
+    # Run this to print list of conflicting repos
+    grep conflict-merge "${MERGEDREPOS}"
     read -p "Waiting for conflict resolution before squashing. Press enter when done."
     read -p "Once more, just to be safe"
     squash_aosp_merge
