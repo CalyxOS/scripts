@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d1618723_66906395",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-01-10T18:14:16Z",
+      "side": 1,
+      "message": "No longer duplicated, should be removed from message.\n\nIt threw me off, I had to look at PS1",
+      "revId": "9fe9e8631dead0804dfe3e08d950935f4359b7ab",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
