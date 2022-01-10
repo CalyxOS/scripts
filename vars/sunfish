@@ -1,23 +1,23 @@
-readonly prev_build_id=SP1A.211105.002 # Nov 2021
-readonly build_id=SQ1A.211205.008 # Dec 2021
+readonly prev_build_id=SQ1A.211205.008 # Dec 2021
+readonly build_id=SQ1A.220105.002 # Jan 2022
 
-readonly prev_aosp_tag="android-12.0.0_r8"
-readonly aosp_tag="android-12.0.0_r16"
+readonly prev_aosp_tag="android-12.0.0_r16"
+readonly aosp_tag="android-12.0.0_r26"
 
 readonly kernel=google_msm-4.14
 
 readonly prev_kernel_tag=android-12.0.0_r0.13 # Nov 2021
 readonly kernel_tag=android-12.0.0_r0.23 # Dec 2021
 
-readonly image_url="https://dl.google.com/dl/android/aosp/sunfish-sq1a.211205.008-factory-2a1f8ab3.zip"
-readonly image_sha256="2a1f8ab325d2af3567e27a553818116b1d67fede59d4274d06e47ee4152cc0a2"
+readonly image_url="https://dl.google.com/dl/android/aosp/sunfish-sq1a.220105.002-factory-8f5138d8.zip"
+readonly image_sha256="8f5138d8da3c16117e771f80679938ba97824126c6859b15c1c909a38075fd24"
 
-readonly flash_url="https://flash.android.com/build/7888514?target=sunfish-user&signed"
+readonly flash_url="https://flash.android.com/build/7961164?target=sunfish-user&signed"
 
-readonly ota_url="https://dl.google.com/dl/android/aosp/sunfish-ota-sq1a.211205.008-a28fc82f.zip"
-readonly ota_sha256="a28fc82f7352df0c2ab98cd2d857469439dceae4a1c241257e7f5d3a6a4172c1"
+readonly ota_url="https://dl.google.com/dl/android/aosp/sunfish-ota-sq1a.220105.002-66cfb70f.zip"
+readonly ota_sha256="66cfb70f0e2e11506d199d36110e0bcf78914298629a9b427eb1920ab95f6239"
 
-readonly security_patch="2021-12-05"
+readonly security_patch="2022-01-05"
 
 # Usage: ${firmware_partitions[@]}
 readonly firmware_partitions=(
