@@ -1,23 +1,23 @@
-readonly prev_build_id=SP1A.211105.002 # Nov 2021
-readonly build_id=SQ1A.211205.008 # Dec 2021
+readonly prev_build_id=SQ1A.211205.008 # Dec 2021
+readonly build_id=SQ1A.220105.002 # Jan 2022
 
-readonly prev_aosp_tag="android-12.0.0_r8"
-readonly aosp_tag="android-12.0.0_r16"
+readonly prev_aosp_tag="android-12.0.0_r16"
+readonly aosp_tag="android-12.0.0_r26"
 
 readonly kernel=google_msm-4.14
 
 readonly prev_kernel_tag=android-12.0.0_r0.12 # Nov 2021
 readonly kernel_tag=android-12.0.0_r0.22 # Dec 2021
 
-readonly image_url="https://dl.google.com/dl/android/aosp/coral-sq1a.211205.008-factory-d82cc3cc.zip"
-readonly image_sha256="d82cc3cc0de0b7e4670a8c081f6b3ae8380d4128f0f0580d4936df6ace7213ef"
+readonly image_url="https://dl.google.com/dl/android/aosp/coral-sq1a.220105.002-factory-2ce64cb5.zip"
+readonly image_sha256="2ce64cb55b48943116ccd96767418767a7f15a12b13c22b0b641b5cb209557f4"
 
-readonly flash_url="https://flash.android.com/build/7888514?target=coral-user&signed"
+readonly flash_url="https://flash.android.com/build/7961164?target=coral-user&signed"
 
-readonly ota_url="https://dl.google.com/dl/android/aosp/coral-ota-sq1a.211205.008-75829399.zip"
-readonly ota_sha256="75829399995cab62ad45ca3dc6e310457303b64c9284defdd779cd2ef7f442cb"
+readonly ota_url="https://dl.google.com/dl/android/aosp/coral-ota-sq1a.220105.002-9bc7001d.zip"
+readonly ota_sha256="9bc7001dc4623bc32de326778001f68086c13350df552fa199c9ad572c84525b"
 
-readonly security_patch="2021-12-05"
+readonly security_patch="2022-01-05"
 
 # Usage: ${firmware_partitions[@]}
 readonly firmware_partitions=(
