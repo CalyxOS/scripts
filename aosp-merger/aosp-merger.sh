@@ -95,6 +95,8 @@ help_message() {
 main() {
   if [ "$#" -eq 0 ]; then
     export MERGEDREPOS="${TOP}/merged_repos.txt"
+    # Remove any existing list of merged repos file
+    rm -f "${MERGEDREPOS}"
 
     merge_aosp_forks
     # Run this to print list of conflicting repos
@@ -108,6 +110,8 @@ main() {
     unset MERGEDREPOS
   elif [ "${1}" = "aosp" ]; then
     export MERGEDREPOS="${TOP}/merged_repos_aosp.txt"
+    # Remove any existing list of merged repos file
+    rm -f "${MERGEDREPOS}"
 
     merge_aosp
 
@@ -115,6 +119,8 @@ main() {
   elif [ "${1}" = "devices" ]; then
     for device in ${devices[@]}; do
       export MERGEDREPOS="${TOP}/merged_repos_${device}.txt"
+      # Remove any existing list of merged repos file
+      rm -f "${MERGEDREPOS}"
 
       merge_pixel_device "${device}"
       # Run this to print list of conflicting repos
