@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "808e38d8_79337016",
+        "filename": "aosp-merger/push-merge.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-01-10T14:32:38Z",
+      "side": 1,
+      "message": "I\u0027d add a \u0027read -p \"Pushing $stagingbranch to $branch\". Press enter to confirm\" here just to be safe.",
+      "revId": "f7fce5c77769b44a904ac3f944aa2ece82caaed2",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
