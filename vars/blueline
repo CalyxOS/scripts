@@ -1,5 +1,5 @@
 readonly prev_build_id=SP1A.210812.015 # Oct 2021
-readonly build_id=SP1A.210812.015 # Oct 2021
+readonly build_id=SP1A.210812.016.A2 # Oct 2021
 
 readonly prev_aosp_tag=android-12.0.0_r1 # Oct 2021
 readonly aosp_tag=android-12.0.0_r1 # Oct 2021
