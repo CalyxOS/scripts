@@ -33,6 +33,24 @@
       "message": "Update.",
       "revId": "dc59d0823514d78ffb377776cca50f0db6745eca",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1ac88d71_6a93ffe2",
+        "filename": "aosp-merger/merge-aosp.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2022-01-10T14:39:12Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "16f4dfeb_09ad20a3",
+      "revId": "dc59d0823514d78ffb377776cca50f0db6745eca",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
