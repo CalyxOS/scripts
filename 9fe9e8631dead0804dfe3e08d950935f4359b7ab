@@ -16,6 +16,24 @@
       "message": "No longer duplicated, should be removed from message.\n\nIt threw me off, I had to look at PS1",
       "revId": "9fe9e8631dead0804dfe3e08d950935f4359b7ab",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f24a9a40_afa34c8a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-01-10T18:24:43Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d1618723_66906395",
+      "revId": "9fe9e8631dead0804dfe3e08d950935f4359b7ab",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
