@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f1945869_b91c5de0",
+        "filename": "aosp-merger/merge-aosp.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-01-10T14:34:19Z",
+      "side": 1,
+      "message": "Since this is confusing, let\u0027s change old / new names, and add an example here.",
+      "revId": "dc59d0823514d78ffb377776cca50f0db6745eca",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "16f4dfeb_09ad20a3",
+        "filename": "aosp-merger/merge-aosp.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-01-10T14:34:19Z",
+      "side": 1,
+      "message": "Update.",
+      "revId": "dc59d0823514d78ffb377776cca50f0db6745eca",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
