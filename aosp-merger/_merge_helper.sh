@@ -50,7 +50,7 @@ PROJECTOPERATION="${OPERATION}"
 if [[ -z "$(git diff ${OLDTAG} ${NEWTAG})" ]]; then
     echo -e "nochange\t\t${PROJECTPATH}" | tee -a "${MERGEDREPOS}"
     repo abandon "${STAGINGBRANCH}" .
-    exit 1
+    exit 0
 fi
 
 # Determine whether OLDTAG is an ancestor of NEWTAG
@@ -71,7 +71,7 @@ if [[ "${PROJECTOPERATION}" == "merge" ]]; then
     if [[ -z "$(git diff HEAD HEAD~1)" ]]; then
         echo -e "nochange\t\t${PROJECTPATH}" | tee -a "${MERGEDREPOS}"
         repo abandon "${STAGINGBRANCH}" .
-        exit 1
+        exit 0
     fi
 elif [[ "${PROJECTOPERATION}" == "rebase" ]]; then
     echo "#### Rebasing ${PROJECTPATH} onto ${NEWTAG} ####"
