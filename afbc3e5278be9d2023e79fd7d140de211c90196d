@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "086cb6ce_710fa7f5",
+        "filename": "aosp-merger/_merge_helper.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-01-10T20:36:19Z",
+      "side": 1,
+      "message": "Ah I only changed this.",
+      "revId": "afbc3e5278be9d2023e79fd7d140de211c90196d",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
