@@ -51,7 +51,7 @@ PROJECTOPERATION="${OPERATION}"
 if [[ -z "$(git diff ${OLDTAG} ${NEWTAG})" ]]; then
     echo -e "nochange\t\t${PROJECTPATH}"
     repo abandon "${STAGINGBRANCH}" .
-    continue
+    exit 1
 fi
 
 # Determine whether OLDTAG is an ancestor of NEWTAG
