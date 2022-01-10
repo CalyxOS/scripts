@@ -16,6 +16,24 @@
       "message": "I\u0027d add a \u0027read -p \"Pushing $stagingbranch to $branch\". Press enter to confirm\" here just to be safe.",
       "revId": "f7fce5c77769b44a904ac3f944aa2ece82caaed2",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8b2ede0f_0830d2c8",
+        "filename": "aosp-merger/push-merge.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-01-10T18:15:27Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "808e38d8_79337016",
+      "revId": "f7fce5c77769b44a904ac3f944aa2ece82caaed2",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
