@@ -29,6 +29,7 @@ readonly script_path="$(cd "$(dirname "$0")";pwd -P)"
 readonly vars_path="${script_path}/../vars"
 
 source "${vars_path}/common"
+source "${vars_path}/devices"
 
 TOP="${script_path}/../../.."
 
@@ -42,22 +43,43 @@ export LC_TIME=C
 ### FUNCTIONS ###
 
 merge_aosp() {
-  "${script_path}"/merge-aosp.sh merge "${aosp_tag}" "${prev_aosp_tag}"
+  export STAGINGBRANCH="staging/${common_aosp_tag}_merge-${prev_common_aosp_tag}"
+  "${script_path}"/merge-aosp.sh merge "${common_aosp_tag}" "${prev_common_aosp_tag}"
 }
 
 merge_aosp_forks() {
-  "${script_path}"/merge-aosp-forks.sh merge "${prev_aosp_tag}" "${aosp_tag}"
+  export STAGINGBRANCH="staging/${calyxos_branch}_merge-${common_aosp_tag}"
+  "${script_path}"/merge-aosp-forks.sh merge "${prev_common_aosp_tag}" "${common_aosp_tag}"
 }
 
 squash_aosp_merge() {
+  "${script_path}"/squash.sh merge "${prev_common_aosp_tag}" "${common_aosp_tag}"
+}
+
+upload_squash_aosp_to_review() {
+  "${script_path}"/upload-squash.sh merge "${prev_common_aosp_tag}" "${common_aosp_tag}"
+}
+
+push_aosp_merge() {
+  "${script_path}"/push-merge.sh merge "${prev_common_aosp_tag}" "${common_aosp_tag}"
+}
+
+merge_pixel_device() {
+  export STAGINGBRANCH="staging/${calyxos_branch}_merge-${aosp_tag}"
+  for repo in ${device_repos[@]}; do
+    "${script_path}"/_merge_helper.sh "${repo}" merge "${prev_aosp_tag}" "${aosp_tag}"
+  done
+}
+
+squash_pixel_device() {
   "${script_path}"/squash.sh merge "${prev_aosp_tag}" "${aosp_tag}"
 }
 
-upload_squash_to_review() {
+upload_squash_device_to_review() {
   "${script_path}"/upload-squash.sh merge "${prev_aosp_tag}" "${aosp_tag}"
 }
 
-push_merge() {
+push_device_merge() {
   "${script_path}"/push-merge.sh merge "${prev_aosp_tag}" "${aosp_tag}"
 }
 
@@ -79,10 +101,12 @@ main() {
     export MERGEDREPOS="${TOP}/merged_repos.txt"
 
     merge_aosp_forks
+    # Run this to print list of conflicting repos
+    cat "${MERGEDREPOS}" | grep -w conflict-merge || true
     read -p "Waiting for conflict resolution before squashing. Press enter when done."
     read -p "Once more, just to be safe"
     squash_aosp_merge
-    upload_squash_to_review
+    upload_squash_aosp_to_review
     echo "Don't forget to update the manifest!"
 
     unset MERGEDREPOS
@@ -92,12 +116,39 @@ main() {
     merge_aosp
 
     unset MERGEDREPOS
+  elif [ "${1}" = "devices" ]; then
+    for device in ${devices[@]}; do
+      (
+      source "${vars_path}/${device}"
+      export MERGEDREPOS="${TOP}/merged_repos_${device}.txt"
+
+      merge_pixel_device
+      # Run this to print list of conflicting repos
+      cat "${MERGEDREPOS}" | grep -w conflict-merge || true
+      read -p "Waiting for conflict resolution before squashing. Press enter when done."
+      read -p "Once more, just to be safe"
+      squash_pixel_device
+      upload_squash_device_to_review
+
+      unset MERGEDREPOS
+      )
+    done
   elif [ "${1}" = "submit-platform" ]; then
     export MERGEDREPOS="${TOP}/merged_repos.txt"
 
-    push_merge
+    push_aosp_merge
 
     unset MERGEDREPOS
+  elif [ "${1}" = "submit-devices" ]; then
+    for device in ${devices[@]}; do
+      (
+      source "${vars_path}/${device}"
+      export MERGEDREPOS="${TOP}/merged_repos_${device}.txt"
+
+      push_device_merge
+
+      unset MERGEDREPOS
+      )
   fi
 }
 

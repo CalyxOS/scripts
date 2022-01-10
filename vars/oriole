@@ -34,3 +34,8 @@ readonly firmware_partitions=(
 
 # Need OTA zip for firmware, not supported by image_unpacker yet
 readonly needs_ota=true
+
+# Usage: ${device_repos[@]}
+device_repos=(
+  # common repos in raven
+)

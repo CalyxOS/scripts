@@ -33,3 +33,10 @@ readonly firmware_partitions=(
   xbl_config
   modem
 )
+
+# Usage: ${device_repos[@]}
+device_repos=(
+  device/google/coral
+  device/google/coral-sepolicy
+)
+
