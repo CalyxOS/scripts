@@ -37,25 +37,20 @@ readonly vars_path="${script_path}/../vars"
 
 source "${vars_path}/common"
 
-# Source build environment (needed for aospremote)
-. build/envsetup.sh
-
 TOP="${ANDROID_BUILD_TOP}"
-MERGEDREPOS="${TOP}/merged_repos.txt"
+MERGEDREPOS="${TOP}/merged_repos_aosp.txt"
 MANIFEST="${TOP}/.repo/manifests/default.xml"
-BRANCH="${calyxos_branch}"
-export STAGINGBRANCH="staging/${BRANCH}_${OPERATION}-${NEWTAG}"
+export STAGINGBRANCH="staging/${OLDTAG}_${OPERATION}-${NEWTAG}"
 
-# Build list of CalyxOS forked repos
-PROJECTPATHS=$(grep "name=\"CalyxOS/" "${MANIFEST}" | sed -n 's/.*path="\([^"]\+\)".*/\1/p')
+# Build list of AOSP repos
+PROJECTPATHS=$(grep "remote=\"aosp" "${MANIFEST}" | grep -v "clone-depth=\"1" | sed -n 's/.*path="\([^"]\+\)".*/\1/p')
 
-echo "#### Old tag = ${OLDTAG} Branch = ${BRANCH} Staging branch = ${STAGINGBRANCH} ####"
+echo "#### Old tag = ${OLDTAG} New tag = ${NEWTAG} Staging branch = ${STAGINGBRANCH} ####"
 
 # Make sure manifest and forked repos are in a consistent state
-echo "#### Verifying there are no uncommitted changes on CalyxOS forked AOSP projects ####"
+echo "#### Verifying there are no uncommitted changes on AOSP projects ####"
 for PROJECTPATH in ${PROJECTPATHS} .repo/manifests; do
     cd "${TOP}/${PROJECTPATH}"
-    aospremote | grep -v "Remote 'aosp' created"
     if [[ -n "$(git status --porcelain)" ]]; then
         echo "Path ${PROJECTPATH} has uncommitted changes. Please fix."
         exit 1
