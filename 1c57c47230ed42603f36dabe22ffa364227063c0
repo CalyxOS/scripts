@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "16d76d3d_5f6571c4",
+        "filename": "carriersettings-extractor/carriersettings_extractor.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-01-11T17:03:03Z",
+      "side": 1,
+      "message": "I copy pasted this comment from above but it\u0027s not valid.\n\nNeeded otherwise things still fail.\n\nDiffs look sane with this.",
+      "revId": "1c57c47230ed42603f36dabe22ffa364227063c0",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
