@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "75c6d8dc_93bc9d41",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-01-11T16:18:51Z",
+      "side": 1,
+      "message": "The device kernel\u003d isn\u0027t used right now, but doesn\u0027t hurt leaving it in",
+      "revId": "2cad0b644adf632b8123a70562d90936e05673af",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
