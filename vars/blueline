@@ -4,10 +4,7 @@ readonly build_id=SP1A.210812.016.A2 # Oct 2021
 readonly prev_aosp_tag="android-12.0.0_r1"
 readonly aosp_tag="android-12.0.0_r25"
 
-readonly kernel=google_msm-4.9
-
-readonly prev_kernel_tag=
-readonly kernel_tag=android-12.0.0_r0.2 # Oct 2021
+readonly kernel=msm-4.9
 
 readonly image_url="https://dl.google.com/dl/android/aosp/blueline-sp1a.210812.016.a2-factory-0e1330df.zip"
 readonly image_sha256="0e1330dfe4606b92fb441592f1f9e1d8a0a3bd99ade19df6e21cbb003a9593d8"

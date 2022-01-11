@@ -4,10 +4,7 @@ readonly build_id=SQ1D.211205.016.A1 # Dec 2021
 readonly prev_aosp_tag="android-12.0.0_r14"
 readonly aosp_tag="android-12.0.0_r18"
 
-readonly kernel=google_raviole
-
-readonly prev_kernel_tag=android-12.0.0_r0.17 # Nov 2021
-readonly kernel_tag=android-12.0.0_r0.26 # Dec 2021
+readonly kernel=raviole
 
 readonly image_url="https://dl.google.com/dl/android/aosp/oriole-sq1d.211205.016.a1-factory-f588dce8.zip"
 readonly image_sha256="f588dce824359427508a3459d7e4cc20bf21f7db368867dea74a9c04649220b9"
