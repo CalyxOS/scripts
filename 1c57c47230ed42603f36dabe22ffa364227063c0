@@ -34,6 +34,24 @@
       "parentUuid": "16d76d3d_5f6571c4",
       "revId": "1c57c47230ed42603f36dabe22ffa364227063c0",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4073d20a_7a65b23b",
+        "filename": "carriersettings-extractor/carriersettings_extractor.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-01-11T20:41:11Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "bd800322_6735b12a",
+      "revId": "1c57c47230ed42603f36dabe22ffa364227063c0",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
