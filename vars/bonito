@@ -4,10 +4,7 @@ readonly build_id=SQ1A.220105.002 # Jan 2022
 readonly prev_aosp_tag="android-12.0.0_r16"
 readonly aosp_tag="android-12.0.0_r26"
 
-readonly kernel=google_msm-4.9
-
-readonly prev_kernel_tag=android-12.0.0_r0.11 # Nov 2021
-readonly kernel_tag=android-12.0.0_r0.21 # Dec 2021
+readonly kernel=msm-4.9
 
 readonly image_url="https://dl.google.com/dl/android/aosp/bonito-sq1a.220105.002-factory-4f5ed95d.zip"
 readonly image_sha256="4f5ed95d5ad5e02180e05b5965ef827fa59d6cedef40355a5bad3ce4ba353cba"
