@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "220d9790_fe4c4cf3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-01-11T21:10:36Z",
+      "side": 1,
+      "message": "Should send upstream.\n\nWe\u0027ve diverged significantly though so it won\u0027t be trivial, but won\u0027t be too bad either since the changes are obvious.\n\nCan ask if they\u0027d like this as-is",
+      "revId": "dc0e2a3ea7d5d036a2efe931ad31c94a05866982",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
