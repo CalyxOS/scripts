@@ -63,4 +63,5 @@ for PROJECTPATH in ${PROJECTPATHS}; do
     git checkout "${STAGINGBRANCH}"
     calyxremote | grep -v "Remote 'calyx' created"
     git push calyx HEAD:refs/heads/"${BRANCH}"
+    git push calyx ${NEWTAG}
 done
