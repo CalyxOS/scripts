@@ -93,13 +93,13 @@ def main():
                 settings = MultiCarrierSettings()
                 settings.ParseFromString(pb.read())
                 for setting in settings.setting:
-                    if setting.canonicalName not in all_settings:
-                        all_settings[setting.canonicalName] = setting
+                    assert setting.canonicalName not in all_settings
+                    all_settings[setting.canonicalName] = setting
             else:
                 setting = CarrierSettings()
                 setting.ParseFromString(pb.read())
-                if setting.canonicalName not in all_settings:
-                    all_settings[setting.canonicalName] = setting
+                assert setting.canonicalName not in all_settings
+                all_settings[setting.canonicalName] = setting
 
     carrier_config_root = ET.Element('carrier_config_list')
 
