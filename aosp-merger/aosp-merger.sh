@@ -118,6 +118,8 @@ help_message() {
 
 main() {
   if [ "$#" -eq 0 ]; then
+    readonly manifest="${TOP}"/.repo/manifests/snippets/default.xml
+
     export MERGEDREPOS="${TOP}/merged_repos.txt"
     # Remove any existing list of merged repos file
     rm -f "${MERGEDREPOS}"
@@ -129,7 +131,10 @@ main() {
     read -p "Once more, just to be safe"
     squash_aosp_merge
     upload_squash_aosp_to_review
-    echo "Don't forget to update the manifest!"
+
+    sed -i "s/$prev_common_aosp_tag/$common_aosp_tag/g" ${manifest}
+    echo "Updated tag in ${manifest}"
+    echo "Don't forget to verify with AOSP platform/manifest for any new repos."
 
     unset MERGEDREPOS
   elif [ "${1}" = "aosp" ]; then
@@ -179,6 +184,11 @@ main() {
       read -p "Once more, just to be safe"
       squash_pixel_kernel
       upload_squash_kernel_to_review
+
+      sed -i "s/$prev_kernel_tag/$kernel_tag/g" ${manifest}
+      echo "Updated tag in ${manifest}"
+      echo "Don't forget to verify with AOSP kernel/manifest for any new repos."
+      echo "Don't forget to update default.xml"
 
       unset MERGEDREPOS
       )
