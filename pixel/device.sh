@@ -47,6 +47,8 @@ device() {
 
   "${script_path}/firmware.sh" "${device}"
   "${script_path}/carriersettings.sh" "${device}"
+
+  echo "${build_id,,}" > vendor/google/${device}/build_id.txt
 }
 
 # error message
