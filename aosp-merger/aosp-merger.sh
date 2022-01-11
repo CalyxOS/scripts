@@ -197,7 +197,7 @@ main() {
     read -p "Waiting for conflict resolution. Press enter when done."
     post_aosp_merge
     upload_aosp_merge_to_review
-    echo "Don't forget to update the manifest!"
+    echo "Don't forget to run aosp-merger/update-tags.sh"
 
     unset MERGEDREPOS
   elif [ "${1}" = "aosp" ]; then
@@ -250,6 +250,7 @@ main() {
       read -p "Waiting for conflict resolution. Press enter when done."
       post_pixel_kernel_merge
       upload_pixel_kernel_to_review
+      echo "Don't forget to run aosp-merger/update-tags.sh kernels"
 
       unset MERGEDREPOS
       )
