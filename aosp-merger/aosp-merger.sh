@@ -187,6 +187,8 @@ help_message() {
 
 main() {
   if [ "$#" -eq 0 ]; then
+    readonly manifest="${TOP}"/.repo/manifests/snippets/default.xml
+
     export MERGEDREPOS="${TOP}/merged_repos.txt"
     # Remove any existing list of merged repos file
     rm -f "${MERGEDREPOS}"
@@ -197,7 +199,9 @@ main() {
     read -p "Waiting for conflict resolution. Press enter when done."
     post_aosp_merge
     upload_aosp_merge_to_review
-    echo "Don't forget to update the manifest!"
+    sed -i "s/$prev_common_aosp_tag/$common_aosp_tag/g" ${manifest}
+    echo "Updated tag in ${manifest}"
+    echo "Don't forget to verify with AOSP platform/manifest for any new repos."
 
     unset MERGEDREPOS
   elif [ "${1}" = "aosp" ]; then
@@ -233,8 +237,9 @@ main() {
       source "${vars_path}/${kernel_short}"
 
       if [ "${merge_method}" = "merge" ]; then
-        readonly manifest="${TOP}"/.repo/manifests/snippets/${kernel_short}.xml
-        readonly device_kernel_repos=$(grep "name=\"CalyxOS/" "${manifest}" \
+        readonly manifest="${TOP}"/.repo/manifests/snippets/default.xml
+        readonly kmanifest="${TOP}"/.repo/manifests/snippets/${kernel}.xml
+        readonly device_kernel_repos=$(grep "name=\"CalyxOS/" "${kmanifest}" \
             | sed -n 's/.*path="\([^"]\+\)".*/\1/p')
       else
         readonly device_kernel_repos="${kernel}"
@@ -250,6 +255,13 @@ main() {
       read -p "Waiting for conflict resolution. Press enter when done."
       post_pixel_kernel_merge
       upload_pixel_kernel_to_review
+
+      if [ "${merge_method}" = "merge" ]; then
+        sed -i "s/$prev_kernel_tag/$kernel_tag/g" ${manifest}
+        sed -i "s/$prev_kernel_tag/$kernel_tag/g" ${kmanifest}
+        echo "Updated tag in ${manifest} and ${kmanifest}"
+        echo "Don't forget to verify with AOSP kernel/manifest for any new repos."
+      fi
 
       unset MERGEDREPOS
       )
