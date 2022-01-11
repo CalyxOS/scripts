@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "09cd4bad_9f659442",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000034
+      },
+      "writtenOn": "2022-01-11T20:58:43Z",
+      "side": 1,
+      "message": "yeah this is how I expect the settings should be handled",
+      "revId": "bed4094301681c026b6742c304c1e1232d5bb45b",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
