@@ -16,6 +16,23 @@
       "message": "yeah this is how I expect the settings should be handled",
       "revId": "bed4094301681c026b6742c304c1e1232d5bb45b",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "57e6db14_f3c81a67",
+        "filename": "carriersettings-extractor/carriersettings_extractor.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 1000034
+      },
+      "writtenOn": "2022-01-11T21:01:21Z",
+      "side": 1,
+      "message": "all_settings will always be empty, or will contain only values from others so I don\u0027t think the assert has any real meaning",
+      "revId": "bed4094301681c026b6742c304c1e1232d5bb45b",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
