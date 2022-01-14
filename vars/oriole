@@ -1,20 +1,20 @@
-readonly prev_build_id=SD1A.210817.037 # Nov 2021
-readonly build_id=SQ1D.211205.016.A1 # Dec 2021
+readonly prev_build_id=SQ1D.211205.016.A1 # Dec 2021
+readonly build_id=SQ1D.220105.007 # Jan 2022
 
-readonly prev_aosp_tag="android-12.0.0_r14"
-readonly aosp_tag="android-12.0.0_r18"
+readonly prev_aosp_tag="android-12.0.0_r18"
+readonly aosp_tag="android-12.0.0_r27"
 
 readonly kernel=raviole
 
-readonly image_url="https://dl.google.com/dl/android/aosp/oriole-sq1d.211205.016.a1-factory-f588dce8.zip"
-readonly image_sha256="f588dce824359427508a3459d7e4cc20bf21f7db368867dea74a9c04649220b9"
+readonly image_url="https://dl.google.com/dl/android/aosp/oriole-sq1d.220105.007-factory-eab95d36.zip"
+readonly image_sha256="eab95d3650d5c2edb8da889e3417c696f69f2f2ea4c271cd4ad111a976d08ea0"
 
-readonly flash_url="https://flash.android.com/build/7957957?target=oriole-user&signed"
+readonly flash_url="https://flash.android.com/build/8030436?target=oriole-user&signed"
 
-readonly ota_url="https://dl.google.com/dl/android/aosp/oriole-ota-sq1d.211205.016.a1-4fa45f8d.zip"
-readonly ota_sha256="4fa45f8d5e442b4632b74d8615ad2189af2276b9334f44e15cd1e216e301646f"
+readonly ota_url="https://dl.google.com/dl/android/aosp/oriole-ota-sq1d.220105.007-0e8d793c.zip"
+readonly ota_sha256="0e8d793cb52b350772c48db20705fead678cf1bc9af6ccb43f88860a440917e4"
 
-readonly security_patch="2021-12-05"
+readonly security_patch="2022-01-05"
 
 # Usage: ${firmware_partitions[@]}
 readonly firmware_partitions=(
