@@ -6,6 +6,9 @@ readonly aosp_tag="android-12.0.0_r26"
 
 readonly kernel=msm-4.14
 
+readonly prev_build_number="7888514"
+readonly build_number="7961164"
+
 readonly image_url="https://dl.google.com/dl/android/aosp/flame-sq1a.220105.002-factory-635ac9dd.zip"
 readonly image_sha256="635ac9dd5a096f4f3eb4e26b1553063681bbb225c57f600ba9dc14e64eba53a3"
 

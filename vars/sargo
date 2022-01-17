@@ -6,6 +6,9 @@ readonly aosp_tag="android-12.0.0_r26"
 
 readonly kernel=msm-4.9
 
+readonly prev_build_number="7888514"
+readonly build_number="7961164"
+
 readonly image_url="https://dl.google.com/dl/android/aosp/sargo-sq1a.220105.002-factory-500674e4.zip"
 readonly image_sha256="500674e470a607a5d41f1809779521c032ed4b19322eec294774771400f42188"
 

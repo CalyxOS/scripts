@@ -6,6 +6,9 @@ readonly aosp_tag="android-12.0.0_r27"
 
 readonly kernel=raviole
 
+readonly prev_build_number="7957957"
+readonly build_number="8030436"
+
 readonly image_url="https://dl.google.com/dl/android/aosp/raven-sq1d.220105.007-factory-d8f6b8a4.zip"
 readonly image_sha256="d8f6b8a4ff4865c9ebf08096a6263bfa4a3116e1fdd7f07770299055ec59fe26"
 

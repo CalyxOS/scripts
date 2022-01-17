@@ -6,6 +6,9 @@ readonly aosp_tag="android-12.0.0_r27"
 
 readonly kernel=raviole
 
+readonly prev_build_number="7957957"
+readonly build_number="8030436"
+
 readonly image_url="https://dl.google.com/dl/android/aosp/oriole-sq1d.220105.007-factory-eab95d36.zip"
 readonly image_sha256="eab95d3650d5c2edb8da889e3417c696f69f2f2ea4c271cd4ad111a976d08ea0"
 
