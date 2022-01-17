@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8c9c629e_d778687e",
+        "filename": "pixel/build-desc-fingerprint.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-01-17T21:57:15Z",
+      "side": 1,
+      "message": "Kinda like makefile $(wildcard)",
+      "revId": "3dfe22cdb458e4c02267db4e773da12df150d2d6",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
