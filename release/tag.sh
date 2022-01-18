@@ -24,11 +24,7 @@ trap 'error_m interrupted!' SIGINT
 readonly script_path="$(cd "$(dirname "$0")";pwd -P)"
 readonly top="${script_path}/../../../"
 
-if [[ -e "${top}/build_kernel.sh" ]]; then
-  readonly excluded_repos='CalyxOS/kernel_manifest'
-else
-  readonly excluded_repos='CalyxOS/platform_manifest'
-fi
+readonly excluded_repos='CalyxOS/device_google_wahoo-kernel|CalyxOS/platform_manifest'
 
 ## HELP MESSAGE (USAGE INFO)
 # TODO
