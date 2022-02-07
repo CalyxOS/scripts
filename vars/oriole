@@ -1,5 +1,5 @@
-readonly prev_build_id=SQ1D.211205.016.A1 # Dec 2021
-readonly build_id=SQ1D.220105.007 # Jan 2022
+readonly prev_build_id=SQ1D.220105.007 # Jan 2022
+readonly build_id=SQ1D.220205.003 # Feb 2022
 
 readonly prev_aosp_tag="android-12.0.0_r18"
 readonly aosp_tag="android-12.0.0_r27"
