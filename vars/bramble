@@ -1,23 +1,23 @@
-readonly prev_build_id=SQ1A.211205.008 # Dec 2021
-readonly build_id=SQ1A.220105.002 # Jan 2022
+readonly prev_build_id=SQ1A.220105.002 # Jan 2022
+readonly build_id=SQ1A.220205.002 # Feb 2022
 
-readonly prev_aosp_tag="android-12.0.0_r16"
-readonly aosp_tag="android-12.0.0_r26"
+readonly prev_aosp_tag="android-12.0.0_r26"
+readonly aosp_tag="android-12.0.0_r28"
 
 readonly kernel=redbull
 
-readonly prev_build_number="7888514"
-readonly build_number="7961164"
+readonly prev_build_number="7961164"
+readonly build_number="8010174"
 
-readonly image_url="https://dl.google.com/dl/android/aosp/bramble-sq1a.220105.002-factory-23886e60.zip"
-readonly image_sha256="23886e602a30f5275a8762a544db7d3c592d74afd4011a8cfb247d8523a93fc6"
+readonly image_url="https://dl.google.com/dl/android/aosp/bramble-sq1a.220205.002-factory-d2deade9.zip"
+readonly image_sha256="d2deade9b7bb6de91a23f65111d16bde821df2798be27eff80ea9673459bc3b9"
 
-readonly flash_url="https://flash.android.com/build/7961164?target=bramble-user&signed"
+readonly flash_url="https://flash.android.com/build/8010174?target=bramble-user&signed"
 
-readonly ota_url="https://dl.google.com/dl/android/aosp/bramble-ota-sq1a.220105.002-f9dff78e.zip"
-readonly ota_sha256="f9dff78ee2d24f58102ad356c32e6d54d6ed856c6f2aea35fc6c7fae06cfa303"
+readonly ota_url="https://dl.google.com/dl/android/aosp/bramble-ota-sq1a.220205.002-4a5e41c5.zip"
+readonly ota_sha256="4a5e41c59154f691bfb8fa9767fdd836611efaf03ffcf69ff4e4290b00487bb8"
 
-readonly security_patch="2022-01-05"
+readonly security_patch="2022-02-05"
 
 # Usage: ${firmware_partitions[@]}
 readonly firmware_partitions=(
