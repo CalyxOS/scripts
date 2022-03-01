@@ -8,5 +8,8 @@ readonly variables, meant for usage by all scripts
 ### devices
 * List of supported devices
 
-### $device
+#### pixels
+* List of supported Pixels
+
+#### $device
 * Device-specific variables
