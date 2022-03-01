@@ -1,2 +1,6 @@
+# Pixel 6
+
+# Updated manually
+
 readonly prev_kernel_tag=android-12.0.0_r0.36 # Jan 2022
 readonly kernel_tag=android-12.0.0_r0.42 # Feb 2022
