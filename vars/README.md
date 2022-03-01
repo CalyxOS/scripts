@@ -13,3 +13,9 @@ readonly variables, meant for usage by all scripts
 
 #### $device
 * Device-specific variables
+
+### device_kernels
+* Kernels we support building, stored in device/google/${device_kernel}-kernel
+
+### kernel_repos
+* The repos used to build the above kernels, sometimes shared across multiple devices

@@ -1,5 +1,5 @@
-# Usage: ${kernels[@]}
-readonly kernels=(
+# Usage: ${device_kernels[@]}
+readonly device_kernels=(
   crosshatch
   bonito
   coral

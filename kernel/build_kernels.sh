@@ -25,15 +25,15 @@ readonly script_path="$(cd "$(dirname "$(realpath "$0")")";pwd -P)"
 readonly vars_path="${script_path}/../vars/"
 readonly top="${script_path}/../../../"
 
-source "${vars_path}/kernels"
+source "${vars_path}/device_kernels"
 
 ## HELP MESSAGE (USAGE INFO)
 # TODO
 
 ### FUNCTIONS ###
-build_kernels() {
+build_device_kernels() {
   pushd "${top}"
-  for kernel in ${kernels[@]}; do
+  for kernel in ${device_kernels[@]}; do
     ./build_kernel.sh "${kernel}"
   done
   popd
@@ -53,7 +53,7 @@ help_message() {
 }
 
 main() {
-  build_kernels
+  build_device_kernels
 }
 
 ### RUN PROGRAM ###
