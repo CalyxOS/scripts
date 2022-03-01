@@ -1,4 +1,4 @@
-# All supported devices
+# Google Pixels
 # Usage: ${devices[@]}
 readonly devices=(
   crosshatch
