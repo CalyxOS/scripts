@@ -16,6 +16,23 @@
       "message": "Just for testing, grabbed values from https://developer.android.com/about/versions/12/download\n\n",
       "revId": "5ac6f4b7a2159199b4a4e87062c4b1cd3631ff9d",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "71aff5a3_c8eabc9e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-03-04T00:18:12Z",
+      "side": 1,
+      "message": "extract-files is fine. diff https://zifb.in/l3rN6Z6zLv",
+      "revId": "5ac6f4b7a2159199b4a4e87062c4b1cd3631ff9d",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
