@@ -1,13 +1,13 @@
 # Entire file updated manually
 readonly prev_calyxos_branch=android12
-readonly calyxos_branch=android12
+readonly calyxos_branch=android12L
 
-readonly prev_common_aosp_tag=android-12.0.0_r29 # Feb 2022, Pixel 6
-readonly common_aosp_tag=android-12.0.0_r32 # Feb 2022, Pixel 6, take two
+readonly prev_common_aosp_tag=android-12.0.0_r32 # Feb 2022, Pixel 6, take two
+readonly common_aosp_tag=android-12.1.0_r1 # Mar 2022, QC Pixels
 
-readonly prev_common_aosp_build_id=SQ1D.220205.003 # Feb 2022, Pixel 6
-readonly common_aosp_build_id=SQ1D.220205.004 # Feb 2022, Pixel 6, take two
+readonly prev_common_aosp_build_id=SQ1D.220205.004 # Feb 2022, Pixel 6, take two
+readonly common_aosp_build_id=android-12.1.0_r1 # Mar 2022, QC Pixels
 
-readonly topic=feb22-2
+readonly topic=12L
 
 readonly lineageos_branch=lineage-19.0
