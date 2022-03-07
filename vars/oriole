@@ -29,10 +29,10 @@ readonly build_id=SQ1D.220205.004 # Feb 2022, take two
 
 # Updated automatically via pixel/update-device-vars.sh
 
-readonly prev_aosp_tag="android-12.0.0_r29"
-readonly aosp_tag="android-12.0.0_r32"
+readonly prev_aosp_tag="android-12.0.0_r32"
+readonly aosp_tag="unknown"
 
-readonly prev_build_number="8069835"
+readonly prev_build_number="8151327"
 readonly build_number="8151327"
 
 readonly image_url="https://dl.google.com/dl/android/aosp/oriole-sq1d.220205.004-factory-eb39151c.zip"
@@ -43,4 +43,4 @@ readonly flash_url="https://flash.android.com/build/8151327?target=oriole-user&s
 readonly ota_url="https://dl.google.com/dl/android/aosp/oriole-ota-sq1d.220205.004-36ba07e7.zip"
 readonly ota_sha256="36ba07e7ae6fac9c18bf1e545e1ef113feba8c1acef2010afa818f62c6f7b0be"
 
-readonly security_patch="2022-02-05"
+readonly security_patch="unknown"
