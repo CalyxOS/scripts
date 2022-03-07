@@ -25,23 +25,23 @@ readonly kernel=msm-4.9
 
 # Updated manually
 
-readonly prev_build_id=SQ1A.220105.002 # Jan 2022
-readonly build_id=SQ1A.220205.002 # Feb 2022
+readonly prev_build_id=SQ1A.220205.002 # Feb 2022
+readonly build_id=SP2A.220305.012 # Mar 2022
 
 # Updated automatically via pixel/update-device-vars.sh
 
-readonly prev_aosp_tag="android-12.0.0_r26"
-readonly aosp_tag="android-12.0.0_r28"
+readonly prev_aosp_tag="android-12.0.0_r28"
+readonly aosp_tag="android-12.1.0_r1"
 
-readonly prev_build_number="7961164"
-readonly build_number="8010174"
+readonly prev_build_number="8010174"
+readonly build_number="8177914"
 
-readonly image_url="https://dl.google.com/dl/android/aosp/sargo-sq1a.220205.002-factory-6e9afc3a.zip"
-readonly image_sha256="6e9afc3aa858326ea2717c4f3c70f45def214dd0efc75e08694624e9833d1ea0"
+readonly image_url="https://dl.google.com/dl/android/aosp/sargo-sp2a.220305.012-factory-6a43e833.zip"
+readonly image_sha256="6a43e8336e38043a0659d92e2e0f28add66dc82d56a4298f901bd2cd2191c940"
 
-readonly flash_url="https://flash.android.com/build/8010174?target=sargo-user&signed"
+readonly flash_url="https://flash.android.com/build/8177914?target=sargo-user&signed"
 
-readonly ota_url="https://dl.google.com/dl/android/aosp/sargo-ota-sq1a.220205.002-e3707c91.zip"
-readonly ota_sha256="e3707c916e76b40d79eca057a8aaf0ed2a99a25d08c8df7424448d0fcaa1db8e"
+readonly ota_url="https://dl.google.com/dl/android/aosp/sargo-ota-sp2a.220305.012-66210901.zip"
+readonly ota_sha256="662109017074fd71c3f8603375680ebc8fcc0745bcfe92a4094356203cff817b"
 
-readonly security_patch="2022-02-05"
+readonly security_patch="2022-03-05"
