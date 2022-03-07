@@ -16,6 +16,24 @@
       "message": "Why not put the manual part at the top of the file?",
       "revId": "110a0f8127d038105ea6263f3c51c9ee531cd002",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b19f44b2_734e5d5c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-03-07T18:36:08Z",
+      "side": 1,
+      "message": "I was torn between that and what I did, this way all monthly changing variables are the end.",
+      "parentUuid": "ec291fdc_57327eac",
+      "revId": "110a0f8127d038105ea6263f3c51c9ee531cd002",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
