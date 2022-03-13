@@ -1,10 +1,10 @@
 # Usage: ${device_kernels[@]}
 readonly device_kernels=(
-  crosshatch
-  bonito
-  coral
-  sunfish
-  redbull
-  barbet
   raviole
+  barbet
+  redbull
+  sunfish
+  coral
+  bonito
+  crosshatch
 )
