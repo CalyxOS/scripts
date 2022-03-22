@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "21cb387d_a316b4a4",
+        "filename": "vars/common",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-03-22T11:43:03Z",
+      "side": 0,
+      "message": "derp",
+      "revId": "d1d5596a69757f18820aa73829513e9f7159bbf6",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
