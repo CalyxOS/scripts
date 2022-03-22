@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "425b2f07_22639ee5",
+        "filename": "vars/raviole",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-03-22T11:46:10Z",
+      "side": 1,
+      "message": "No change in any repo, they\u0027re identical.",
+      "revId": "be4e93981d0b3dde166cde8772658f9fde1a94e6",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
