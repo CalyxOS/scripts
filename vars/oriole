@@ -24,23 +24,23 @@ readonly needs_ota=true
 
 # Updated manually
 
-readonly prev_build_id=SQ1D.220205.004 # Feb 2022, take two
-readonly build_id=S2B3.220205.007.A1 # 12L Beta 3
+readonly prev_build_id=S2B3.220205.007.A1 # 12L Beta 3
+readonly build_id=SP2A.220305.013.A3 # Mar 2022
 
 # Updated automatically via pixel/update-device-vars.sh
 
-readonly prev_aosp_tag="android-12.0.0_r32"
-readonly aosp_tag="unknown"
+readonly prev_aosp_tag="unknown"
+readonly aosp_tag="android-12.1.0_r2"
 
-readonly prev_build_number="8151327"
-readonly build_number="8133516"
+readonly prev_build_number="8133516"
+readonly build_number="8229987"
 
-readonly image_url="https://dl.google.com/developers/android/sc/images/factory/oriole-s2b3.220205.007.a1-factory-6549410e.zip"
-readonly image_sha256="6549410e59c4602ddf71f3a377d6357390d13dd2b849b217404cca30dc5f28df"
+readonly image_url="https://dl.google.com/dl/android/aosp/oriole-sp2a.220305.013.a3-factory-8bea92d1.zip"
+readonly image_sha256="8bea92d1215036b9d6d3f8e04c9cd07857ff46d810207cfcbdfcf65670b1c5f6"
 
-readonly flash_url="unknown"
+readonly flash_url="https://flash.android.com/build/8229987?target=oriole-user&signed"
 
-readonly ota_url="https://dl.google.com/developers/android/sc/images/ota/oriole-ota-s2b3.220205.007.a1-cc557a1a.zip"
-readonly ota_sha256="cc557a1ae0faa3d213754ce8bfad4f676f94e4a9990dfe026e009529b03555fa"
+readonly ota_url="https://dl.google.com/dl/android/aosp/oriole-ota-sp2a.220305.013.a3-d7b50e71.zip"
+readonly ota_sha256="d7b50e710759d7cfcac7ca4057970ff4a4395ee61c750ce51af4159bf3fba873"
 
-readonly security_patch="2022-02-05"
+readonly security_patch="2022-03-05"
