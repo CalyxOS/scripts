@@ -61,8 +61,8 @@ def get_aosp_tag_for_build_id(aosp_tags, wanted_build_id):
                 if found_build_id == wanted_build_id:
                     print('new_aosp_tag="{0}"'.format(aosp_tag))
                     return aosp_tag
-        print('new_aosp_tag="unknown"')
-        return 'unknown'
+    print('new_aosp_tag="unknown"')
+    return 'unknown'
 
 def get_security_patch_for_aosp_tag(aosp_tag):
     try:
