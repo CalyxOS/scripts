@@ -44,4 +44,3 @@ readonly ota_url="https://dl.google.com/dl/android/aosp/flame-ota-sp2a.220405.00
 readonly ota_sha256="4cfe45f79eaf6914f618ed11e6943a612623c0a31c51bd02cd35324df37c1242"
 
 readonly security_patch="2022-04-05"
-

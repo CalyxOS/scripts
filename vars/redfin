@@ -48,4 +48,3 @@ readonly ota_url="https://dl.google.com/dl/android/aosp/redfin-ota-sp2a.220405.0
 readonly ota_sha256="7d56639f816a8382ae0cb5a8da2920eb3d314b74c9438555c5e6031044be530b"
 
 readonly security_patch="2022-04-05"
-
