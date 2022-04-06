@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8425778d_fbd9b380",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2022-04-06T20:05:59Z",
+      "side": 1,
+      "message": "Found this annoying when picking ASB updates to lineage vars",
+      "revId": "78de9ccc3824f241271080d00f814e01bc9e03f7",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
