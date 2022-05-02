@@ -28,8 +28,8 @@ readonly kernel=redbull
 
 # Updated manually
 
-readonly prev_build_id=SP2A.220305.012 # Mar 2022
-readonly build_id=SP2A.220405.003 # Apr 2022
+readonly prev_build_id=SP2A.220405.003 # Apr 2022
+readonly build_id=SP2A.220505.002 # May 2022
 
 # Updated automatically via pixel/update-device-vars.sh
 
