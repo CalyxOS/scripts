@@ -1,8 +1,6 @@
-# Google Pixels
+# Google Pixels, currently supported in AOSP
 # Usage: ${devices[@]}
 readonly devices=(
-  crosshatch
-  blueline
   bonito
   sargo
   coral
