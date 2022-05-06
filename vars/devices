@@ -13,4 +13,8 @@ readonly devices=(
   sargo
   crosshatch
   blueline
+  FP4
+  kebab
+  lemonade
+  lemonadep
 )
