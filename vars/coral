@@ -30,6 +30,8 @@ readonly build_id=SQ3A.220605.009.A1 # Jun 2022
 
 # Updated automatically via pixel/update-device-vars.sh
 
+readonly aosp_branch="unknown"
+
 readonly prev_aosp_tag="android-12.1.0_r5"
 readonly aosp_tag="android-12.1.0_r7"
 

@@ -31,6 +31,8 @@ readonly build_id=SP2A.220505.006 # May 2022
 
 # Updated automatically via pixel/update-device-vars.sh
 
+readonly aosp_branch="unknown"
+
 readonly prev_aosp_tag="android-12.1.0_r5"
 readonly aosp_tag="android-12.1.0_r6"
 

@@ -63,6 +63,10 @@ main() {
       source "${dv}"
       ${script_path}/get-new-device-vars.py -b "${build_id}" -d "${d}"> "${tmp}"
       source "${tmp}"
+      if [[ "${new_aosp_branch}" != "${aosp_branch}" ]]; then
+        sed -i "/ prev_aosp_branch=/c\readonly prev_aosp_branch=\"$aosp_branch\"" "${dv}"
+        sed -i "/ aosp_branch=/c\readonly aosp_branch=\"$new_aosp_branch\"" "${dv}"
+      fi
       if [[ "${new_aosp_tag}" != "${aosp_tag}" ]]; then
         sed -i "/ prev_aosp_tag=/c\readonly prev_aosp_tag=\"$aosp_tag\"" "${dv}"
         sed -i "/ aosp_tag=/c\readonly aosp_tag=\"$new_aosp_tag\"" "${dv}"
