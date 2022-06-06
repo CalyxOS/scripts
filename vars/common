@@ -2,6 +2,9 @@
 readonly prev_calyxos_branch=android12
 readonly calyxos_branch=android12L
 
+readonly prev_common_aosp_branch=android12L-release # May 2022, Pixels 3a - 6
+readonly common_aosp_branch=android12-qpr3-s1-release # Jun 2022, Pixels 4 - 5, and 6 VZW
+
 readonly prev_common_aosp_tag=android-12.1.0_r5 # May 2022, Pixels 3a - 6
 readonly common_aosp_tag=android-12.1.0_r7 # Jun 2022, Pixels 4 - 5, and 6 VZW
 
