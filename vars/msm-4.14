@@ -2,5 +2,7 @@
 
 # Updated manually
 
+readonly kernel_branch="android-msm-4.14-android12-qpr3" # Jun 2022
+
 readonly prev_kernel_tag=android-12.1.0_r0.19 # May 2022
 readonly kernel_tag=android-12.1.0_r0.25 # Jun 2022
