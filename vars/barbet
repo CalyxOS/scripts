@@ -30,8 +30,8 @@ readonly kernel=barbet
 readonly prev_kernel_tag=android-12.1.0_r0.15 # Apr 2022
 readonly kernel_tag=android-12.1.0_r0.21 # May 2022
 
-readonly prev_build_id=SP2A.220405.003 # Apr 2022
-readonly build_id=SP2A.220505.002 # May 2022
+readonly prev_build_id=SP2A.220505.002 # May 2022
+readonly build_id=SP3A.220605.009.A1 # Jun 2022
 
 # Updated automatically via pixel/update-device-vars.sh
 
