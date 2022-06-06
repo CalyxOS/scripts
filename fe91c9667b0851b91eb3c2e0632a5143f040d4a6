@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8430fe70_d58ccf23",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-06-06T20:29:45Z",
+      "side": 1,
+      "message": "Next month, maybe.\n\n12.1.0 (SP2A.220505.006, May 2022)",
+      "revId": "fe91c9667b0851b91eb3c2e0632a5143f040d4a6",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
