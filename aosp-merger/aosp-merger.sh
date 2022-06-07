@@ -53,12 +53,12 @@ merge_aosp_forks() {
   "${script_path}"/merge-aosp-forks.sh merge "${prev_common_aosp_tag}" "${common_aosp_tag}"
 }
 
-squash_aosp_merge() {
-  "${script_path}"/squash.sh merge "${prev_common_aosp_tag}" "${common_aosp_tag}"
+push_aosp_upstream() {
+  "${script_path}"/push-upstream.sh "${common_aosp_tag}" "${common_aosp_branch}"
 }
 
-upload_squash_aosp_to_review() {
-  "${script_path}"/upload-squash.sh merge "${prev_common_aosp_tag}" "${common_aosp_tag}"
+upload_aosp_merge_to_review() {
+  "${script_path}"/upload-merge.sh merge "${prev_common_aosp_tag}" "${common_aosp_tag}"
 }
 
 push_aosp_merge() {
@@ -72,12 +72,12 @@ merge_pixel_device() {
   done
 }
 
-squash_pixel_device() {
-  "${script_path}"/squash.sh merge "${prev_aosp_tag}" "${aosp_tag}"
+push_pixel_device_upstream() {
+  "${script_path}"/push-upstream.sh "${aosp_tag}" "${aosp_branch}"
 }
 
-upload_squash_device_to_review() {
-  "${script_path}"/upload-squash.sh merge "${prev_aosp_tag}" "${aosp_tag}"
+upload_device_merge_to_review() {
+  "${script_path}"/upload-merge.sh merge "${prev_aosp_tag}" "${aosp_tag}"
 }
 
 push_device_merge() {
@@ -91,12 +91,12 @@ merge_pixel_kernel() {
   done
 }
 
-squash_pixel_kernel() {
-  "${script_path}"/squash.sh merge "${prev_kernel_tag}" "${kernel_tag}"
+push_pixel_kernel_upstream() {
+  "${script_path}"/push-upstream.sh "${kernel_tag}" "${kernel_branch}"
 }
 
-upload_squash_kernel_to_review() {
-  "${script_path}"/upload-squash.sh merge "${prev_kernel_tag}" "${kernel_tag}"
+upload_kernel_merge_to_review() {
+  "${script_path}"/upload-merge.sh merge "${prev_kernel_tag}" "${kernel_tag}"
 }
 
 push_kernel_merge() {
@@ -125,10 +125,10 @@ main() {
     merge_aosp_forks
     # Run this to print list of conflicting repos
     cat "${MERGEDREPOS}" | grep -w conflict-merge || true
-    read -p "Waiting for conflict resolution before squashing. Press enter when done."
+    read -p "Waiting for conflict resolution. Press enter when done."
     read -p "Once more, just to be safe"
-    squash_aosp_merge
-    upload_squash_aosp_to_review
+    push_aosp_upstream
+    upload_aosp_merge_to_review
     echo "Don't forget to update the manifest!"
 
     unset MERGEDREPOS
@@ -151,10 +151,10 @@ main() {
       merge_pixel_device
       # Run this to print list of conflicting repos
       cat "${MERGEDREPOS}" | grep -w conflict-merge || true
-      read -p "Waiting for conflict resolution before squashing. Press enter when done."
+      read -p "Waiting for conflict resolution. Press enter when done."
       read -p "Once more, just to be safe"
-      squash_pixel_device
-      upload_squash_device_to_review
+      push_pixel_device_upstream
+      upload_device_merge_to_review
 
       unset MERGEDREPOS
       )
@@ -175,10 +175,10 @@ main() {
       merge_pixel_kernel
       # Run this to print list of conflicting repos
       cat "${MERGEDREPOS}" | grep -w conflict-merge || true
-      read -p "Waiting for conflict resolution before squashing. Press enter when done."
+      read -p "Waiting for conflict resolution. Press enter when done."
       read -p "Once more, just to be safe"
-      squash_pixel_kernel
-      upload_squash_kernel_to_review
+      push_pixel_kernel_upstream
+      upload_kernel_merge_to_review
 
       unset MERGEDREPOS
       )

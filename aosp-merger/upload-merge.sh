@@ -33,12 +33,12 @@ source "${vars_path}/common"
 
 TOP="${script_path}/../../.."
 BRANCH="${calyxos_branch}"
-SQUASHBRANCH="squash/${BRANCH}_${OPERATION}-${NEWTAG}"
+STAGINGBRANCH="staging/${BRANCH}_${OPERATION}-${NEWTAG}"
 
 # List of merged repos
 PROJECTPATHS=$(cat ${MERGEDREPOS} | grep -w merge | awk '{printf "%s\n", $2}')
 
-echo "#### Branch = ${BRANCH} Squash branch = ${SQUASHBRANCH} ####"
+echo "#### Branch = ${BRANCH} Staging branch = ${STAGINGBRANCH} ####"
 
 # Make sure manifest and forked repos are in a consistent state
 echo "#### Verifying there are no uncommitted changes on CalyxOS forked AOSP projects ####"
@@ -54,7 +54,7 @@ echo "#### Verification complete - no uncommitted changes found ####"
 # Iterate over each forked project
 for PROJECTPATH in ${PROJECTPATHS}; do
     cd "${TOP}/${PROJECTPATH}"
-    echo "#### Pushing ${PROJECTPATH} squash to review ####"
-    git checkout "${SQUASHBRANCH}"
+    echo "#### Pushing ${PROJECTPATH} merge to review ####"
+    git checkout "${STAGINGBRANCH}"
     repo upload -c -y -o topic="${topic}" .
 done

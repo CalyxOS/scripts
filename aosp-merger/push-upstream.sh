@@ -7,7 +7,7 @@
 #
 
 usage() {
-    echo "Usage ${0} <merge|rebase> <oldaosptag> <newaosptag>"
+    echo "Usage ${0} <upstreambranch>"
 }
 
 # Verify argument count
@@ -16,14 +16,8 @@ if [ "$#" -ne 3 ]; then
     exit 1
 fi
 
-OPERATION="${1}"
-OLDTAG="${2}"
-NEWTAG="${3}"
-
-if [ "${OPERATION}" != "merge" -a "${OPERATION}" != "rebase" ]; then
-    usage
-    exit 1
-fi
+NEWTAG="${1}"
+UPSTREAMBRANCH="${2}"
 
 ### CONSTANTS ###
 readonly script_path="$(cd "$(dirname "$0")";pwd -P)"
@@ -32,9 +26,6 @@ readonly vars_path="${script_path}/../vars"
 source "${vars_path}/common"
 
 TOP="${script_path}/../../.."
-BRANCH="${calyxos_branch}"
-STAGINGBRANCH="staging/${BRANCH}_${OPERATION}-${NEWTAG}"
-SQUASHBRANCH="squash/${BRANCH}_${OPERATION}-${NEWTAG}"
 
 # List of merged repos
 PROJECTPATHS=$(cat ${MERGEDREPOS} | grep -w merge | awk '{printf "%s\n", $2}')
@@ -55,11 +46,6 @@ echo "#### Verification complete - no uncommitted changes found ####"
 # Iterate over each forked project
 for PROJECTPATH in ${PROJECTPATHS}; do
     cd "${TOP}/${PROJECTPATH}"
-    echo "#### Squashing ${PROJECTPATH} ####"
-    repo abandon "${SQUASHBRANCH}" .
-    git checkout -b "${SQUASHBRANCH}" "${STAGINGBRANCH}"
-    git branch --set-upstream-to=m/"${BRANCH}"
-    git reset --soft HEAD~1
-    git add .
-    git commit -m "[SQUASH] $(git log ${STAGINGBRANCH} -1 --pretty=%s)" -m "$(git log ${STAGINGBRANCH} -1 --pretty=%b)"
+    echo "#### Pushing upstream for ${PROJECTPATH} ####"
+    git push calyx ${NEWTAG}^{commit}:refs/heads/upstream/${UPSTREAMBRANCH}
 done
