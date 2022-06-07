@@ -53,12 +53,20 @@ merge_aosp_forks() {
   "${script_path}"/merge-aosp-forks.sh merge "${prev_common_aosp_tag}" "${common_aosp_tag}"
 }
 
-squash_aosp_merge() {
-  "${script_path}"/squash.sh merge "${prev_common_aosp_tag}" "${common_aosp_tag}"
+post_aosp_merge() {
+  if [ "${merge_method}" = "merge" ]; then
+    "${script_path}"/push-upstream.sh "${common_aosp_tag}" "${common_aosp_branch}"
+  else
+    "${script_path}"/squash.sh merge "${prev_common_aosp_tag}" "${common_aosp_tag}"
+  fi
 }
 
-upload_squash_aosp_to_review() {
-  "${script_path}"/upload-squash.sh merge "${prev_common_aosp_tag}" "${common_aosp_tag}"
+upload_aosp_merge_to_review() {
+  if [ "${merge_method}" = "merge" ]; then
+    "${script_path}"/upload-merge.sh merge "${common_aosp_tag}"
+  else
+    "${script_path}"/upload-squash.sh merge "${prev_common_aosp_tag}" "${common_aosp_tag}"
+  fi
 }
 
 push_aosp_merge() {
@@ -72,12 +80,20 @@ merge_pixel_device() {
   done
 }
 
-squash_pixel_device() {
-  "${script_path}"/squash.sh merge "${prev_aosp_tag}" "${aosp_tag}"
+post_pixel_device_merge() {
+  if [ "${merge_method}" = "merge" ]; then
+     "${script_path}"/push-upstream.sh "${aosp_tag}" "${aosp_branch}"
+  else
+    "${script_path}"/squash.sh merge "${prev_aosp_tag}" "${aosp_tag}"
+  fi
 }
 
-upload_squash_device_to_review() {
-  "${script_path}"/upload-squash.sh merge "${prev_aosp_tag}" "${aosp_tag}"
+upload_pixel_device_to_review() {
+  if [ "${merge_method}" = "merge" ]; then
+    "${script_path}"/upload-merge.sh merge "${aosp_tag}"
+  else
+    "${script_path}"/upload-squash.sh merge "${prev_aosp_tag}" "${aosp_tag}"
+  fi
 }
 
 push_device_merge() {
@@ -91,12 +107,20 @@ merge_pixel_kernel() {
   done
 }
 
-squash_pixel_kernel() {
-  "${script_path}"/squash.sh merge "${prev_kernel_tag}" "${kernel_tag}"
+post_pixel_kernel_merge() {
+  if [ "${merge_method}" = "merge" ]; then
+    "${script_path}"/push-upstream.sh "${kernel_tag}" "${kernel_branch}"
+  else
+    "${script_path}"/squash.sh merge "${prev_kernel_tag}" "${kernel_tag}"
+  fi
 }
 
-upload_squash_kernel_to_review() {
-  "${script_path}"/upload-squash.sh merge "${prev_kernel_tag}" "${kernel_tag}"
+upload_pixel_kernel_to_review() {
+  if [ "${merge_method}" = "merge" ]; then
+    "${script_path}"/upload-merge.sh merge "${kernel_tag}"
+  else
+    "${script_path}"/upload-squash.sh merge "${prev_kernel_tag}" "${kernel_tag}"
+  fi
 }
 
 push_kernel_merge() {
@@ -125,10 +149,9 @@ main() {
     merge_aosp_forks
     # Run this to print list of conflicting repos
     cat "${MERGEDREPOS}" | grep -w conflict-merge || true
-    read -p "Waiting for conflict resolution before squashing. Press enter when done."
-    read -p "Once more, just to be safe"
-    squash_aosp_merge
-    upload_squash_aosp_to_review
+    read -p "Waiting for conflict resolution. Press enter when done."
+    post_aosp_merge
+    upload_aosp_merge_to_review
     echo "Don't forget to update the manifest!"
 
     unset MERGEDREPOS
@@ -151,10 +174,9 @@ main() {
       merge_pixel_device
       # Run this to print list of conflicting repos
       cat "${MERGEDREPOS}" | grep -w conflict-merge || true
-      read -p "Waiting for conflict resolution before squashing. Press enter when done."
-      read -p "Once more, just to be safe"
-      squash_pixel_device
-      upload_squash_device_to_review
+      read -p "Waiting for conflict resolution. Press enter when done."
+      post_pixel_device_merge
+      upload_pixel_device_to_review
 
       unset MERGEDREPOS
       )
@@ -175,10 +197,9 @@ main() {
       merge_pixel_kernel
       # Run this to print list of conflicting repos
       cat "${MERGEDREPOS}" | grep -w conflict-merge || true
-      read -p "Waiting for conflict resolution before squashing. Press enter when done."
-      read -p "Once more, just to be safe"
-      squash_pixel_kernel
-      upload_squash_kernel_to_review
+      read -p "Waiting for conflict resolution. Press enter when done."
+      post_pixel_kernel_merge
+      upload_pixel_kernel_to_review
 
       unset MERGEDREPOS
       )
