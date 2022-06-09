@@ -57,7 +57,7 @@ post_aosp_merge() {
   if [ "${merge_method}" = "merge" ]; then
     "${script_path}"/push-upstream.sh "${common_aosp_tag}" "${common_aosp_branch}"
   else
-    "${script_path}"/squash.sh merge "${prev_common_aosp_tag}" "${common_aosp_tag}"
+    "${script_path}"/squash.sh merge "${prev_common_aosp_tag}" "${common_aosp_tag}" false
   fi
 }
 
@@ -65,7 +65,7 @@ upload_aosp_merge_to_review() {
   if [ "${merge_method}" = "merge" ]; then
     "${script_path}"/upload-merge.sh merge "${common_aosp_tag}"
   else
-    "${script_path}"/upload-squash.sh merge "${prev_common_aosp_tag}" "${common_aosp_tag}"
+    "${script_path}"/upload-squash.sh merge "${prev_common_aosp_tag}" "${common_aosp_tag}" false
   fi
 }
 
@@ -76,15 +76,19 @@ push_aosp_merge() {
 merge_pixel_device() {
   export STAGINGBRANCH="staging/${calyxos_branch}_merge-${aosp_tag}"
   for repo in ${device_repos[@]}; do
-    "${script_path}"/_merge_helper.sh "${repo}" merge "${prev_aosp_tag}" "${aosp_tag}"
+    if [ "${merge_method}" = "merge" ]; then
+      "${script_path}"/_merge_helper.sh "${repo}" merge "${prev_aosp_tag}" "${aosp_tag}"
+    else
+      "${script_path}"/_subtree_merge_helper.sh "${repo}" "${prev_aosp_tag}" "${aosp_tag}"
+    fi
   done
 }
 
 post_pixel_device_merge() {
   if [ "${merge_method}" = "merge" ]; then
-     "${script_path}"/push-upstream.sh "${aosp_tag}" "${aosp_branch}"
+    "${script_path}"/push-upstream.sh "${aosp_tag}" "${aosp_branch}"
   else
-    "${script_path}"/squash.sh merge "${prev_aosp_tag}" "${aosp_tag}"
+    "${script_path}"/squash.sh merge "${prev_aosp_tag}" "${aosp_tag}" true
   fi
 }
 
@@ -92,7 +96,7 @@ upload_pixel_device_to_review() {
   if [ "${merge_method}" = "merge" ]; then
     "${script_path}"/upload-merge.sh merge "${aosp_tag}"
   else
-    "${script_path}"/upload-squash.sh merge "${prev_aosp_tag}" "${aosp_tag}"
+    "${script_path}"/upload-squash.sh merge "${prev_aosp_tag}" "${aosp_tag}" true
   fi
 }
 
@@ -103,7 +107,11 @@ push_device_merge() {
 merge_pixel_kernel() {
   export STAGINGBRANCH="staging/${calyxos_branch}_merge-${kernel_tag}"
   for repo in ${device_kernel_repos}; do
-    "${script_path}"/_merge_helper.sh "${repo}" merge "${prev_kernel_tag}" "${kernel_tag}"
+    if [ "${merge_method}" = "merge" ]; then
+      "${script_path}"/_merge_helper.sh "${repo}" merge "${prev_kernel_tag}" "${kernel_tag}"
+    else
+      "${script_path}"/_subtree_merge_helper.sh "${repo}" "${prev_kernel_tag}" "${kernel_tag}"
+    fi
   done
 }
 
@@ -111,7 +119,7 @@ post_pixel_kernel_merge() {
   if [ "${merge_method}" = "merge" ]; then
     "${script_path}"/push-upstream.sh "${kernel_tag}" "${kernel_branch}"
   else
-    "${script_path}"/squash.sh merge "${prev_kernel_tag}" "${kernel_tag}"
+    "${script_path}"/squash.sh merge "${prev_kernel_tag}" "${kernel_tag}" true
   fi
 }
 
@@ -119,7 +127,7 @@ upload_pixel_kernel_to_review() {
   if [ "${merge_method}" = "merge" ]; then
     "${script_path}"/upload-merge.sh merge "${kernel_tag}"
   else
-    "${script_path}"/upload-squash.sh merge "${prev_kernel_tag}" "${kernel_tag}"
+    "${script_path}"/upload-squash.sh merge "${prev_kernel_tag}" "${kernel_tag}" true
   fi
 }
 
@@ -186,9 +194,13 @@ main() {
       (
       source "${vars_path}/${kernel}"
 
-      readonly manifest="${TOP}"/.repo/manifests/snippets/${kernel}.xml
-      readonly device_kernel_repos=$(grep "name=\"CalyxOS/" "${manifest}" \
-          | sed -n 's/.*path="\([^"]\+\)".*/\1/p')
+      if [ "${merge_method}" = "merge" ]; then
+        readonly manifest="${TOP}"/.repo/manifests/snippets/${kernel}.xml
+        readonly device_kernel_repos=$(grep "name=\"CalyxOS/" "${manifest}" \
+            | sed -n 's/.*path="\([^"]\+\)".*/\1/p')
+      else
+        readonly device_kernel_repos="kernel/google/${kernel}"
+      fi
 
       export MERGEDREPOS="${TOP}/merged_repos_${kernel}.txt"
       # Remove any existing list of merged repos file
