@@ -202,7 +202,7 @@ main() {
         readonly device_kernel_repos="kernel/google/${kernel}"
       fi
 
-      export MERGEDREPOS="${TOP}/merged_repos_${kernel}.txt"
+      export MERGEDREPOS="${TOP}/merged_repos_${kernel}_kernel.txt"
       # Remove any existing list of merged repos file
       rm -f "${MERGEDREPOS}"
 
@@ -237,7 +237,7 @@ main() {
     for kernel in ${kernel_repos[@]}; do
       (
       source "${vars_path}/${kernel}"
-      export MERGEDREPOS="${TOP}/merged_repos_${kernel}.txt"
+      export MERGEDREPOS="${TOP}/merged_repos_${kernel}_kernel.txt"
 
       push_kernel_merge
 
