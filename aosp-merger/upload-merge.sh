@@ -7,22 +7,27 @@
 #
 
 usage() {
-    echo "Usage ${0} <merge|rebase> <newaosptag>"
+    echo "Usage ${0} -b <branch-suffix>"
 }
 
 # Verify argument count
-if [ "$#" -ne 2 ]; then
+if [ "${#}" -eq 0 ]; then
     usage
     exit 1
 fi
 
-OPERATION="${1}"
-NEWTAG="${2}"
-
-if [ "${OPERATION}" != "merge" -a "${OPERATION}" != "rebase" ]; then
-    usage
-    exit 1
-fi
+while [ "${#}" -gt 0 ]; do
+    case "${1}" in
+        -b | --branch-suffix )
+                BRANCHSUFFIX="${2}"; shift
+                ;;
+        * )
+                usage
+                exit 1
+                ;;
+    esac
+    shift
+done
 
 ### CONSTANTS ###
 readonly script_path="$(cd "$(dirname "$0")";pwd -P)"
@@ -32,7 +37,7 @@ source "${vars_path}/common"
 
 TOP="${script_path}/../../.."
 BRANCH="${calyxos_branch}"
-STAGINGBRANCH="staging/${BRANCH}_${OPERATION}-${NEWTAG}"
+STAGINGBRANCH="staging/${BRANCHSUFFIX}"
 
 # List of merged repos
 PROJECTPATHS=$(cat ${MERGEDREPOS} | grep -w merge | awk '{printf "%s\n", $2}')
