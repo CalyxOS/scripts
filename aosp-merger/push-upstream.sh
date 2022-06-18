@@ -1,23 +1,36 @@
 #!/bin/bash
 #
-# SPDX-FileCopyrightText: 2017, 2020-2021 The LineageOS Project
+# SPDX-FileCopyrightText: 2017, 2020-2022 The LineageOS Project
 # SPDX-FileCopyrightText: 2021-2022 The Calyx Institute
 #
 # SPDX-License-Identifier: Apache-2.0
 #
 
 usage() {
-    echo "Usage ${0} <newtag> <upstreambranch>"
+    echo "Usage ${0} -n <newtag> -b <upstream-branch>"
 }
 
 # Verify argument count
-if [ "$#" -ne 2 ]; then
+if [ "${#}" -eq 0 ]; then
     usage
     exit 1
 fi
 
-NEWTAG="${1}"
-UPSTREAMBRANCH="${2}"
+while [ "${#}" -gt 0 ]; do
+    case "${1}" in
+        -n | --new-tag )
+                NEWTAG="${2}"; shift
+                ;;
+        -b | --upstream-branch )
+                UPSTREAMBRANCH="${2}"; shift
+                ;;
+        * )
+                usage
+                exit 1
+                ;;
+    esac
+    shift
+done
 
 ### CONSTANTS ###
 readonly script_path="$(cd "$(dirname "$0")";pwd -P)"
@@ -26,6 +39,7 @@ readonly vars_path="${script_path}/../vars"
 source "${vars_path}/common"
 
 TOP="${script_path}/../../.."
+BRANCH="${calyxos_branch}"
 
 # List of merged repos
 PROJECTPATHS=$(cat ${MERGEDREPOS} | grep -w merge | awk '{printf "%s\n", $2}')
