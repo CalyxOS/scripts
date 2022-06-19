@@ -36,8 +36,11 @@ readonly vars_path="${script_path}/../vars"
 source "${vars_path}/common"
 
 TOP="${script_path}/../../.."
-BRANCH="${calyxos_branch}"
 STAGINGBRANCH="staging/${BRANCHSUFFIX}"
+BRANCH=$(git config --get branch.${STAGINGBRANCH}.merge | sed 's|refs/heads/||')
+if [ -z "${BRANCH}" ]; then
+    BRANCH="${calyxos_branch}"
+fi
 
 # Source build environment (needed for calyxremote)
 source "${TOP}/build/envsetup.sh"
