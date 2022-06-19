@@ -39,12 +39,11 @@ readonly vars_path="${script_path}/../vars"
 source "${vars_path}/common"
 
 TOP="${script_path}/../../.."
-BRANCH="${calyxos_branch}"
 
 # List of merged repos
 PROJECTPATHS=$(cat ${MERGEDREPOS} | grep -w merge | awk '{printf "%s\n", $2}')
 
-echo "#### Branch = ${BRANCH} Upstream branch = ${UPSTREAMBRANCH} ####"
+echo "#### Upstream branch = ${UPSTREAMBRANCH} ####"
 read -p "Press enter to continue."
 
 # Make sure manifest and forked repos are in a consistent state
