@@ -44,9 +44,12 @@ readonly vars_path="${script_path}/../vars"
 source "${vars_path}/common"
 
 TOP="${script_path}/../../.."
-BRANCH="${calyxos_branch}"
 STAGINGBRANCH="staging/${BRANCHSUFFIX}"
 SQUASHBRANCH="squash/${BRANCHSUFFIX}"
+BRANCH=$(git config --get branch.${STAGINGBRANCH}.merge | sed 's|refs/heads/||')
+if [ -z "${BRANCH}" ]; then
+    BRANCH="${calyxos_branch}"
+fi
 
 # List of merged repos
 PROJECTPATHS=$(cat ${MERGEDREPOS} | grep -w merge | awk '{printf "%s\n", $2}')
