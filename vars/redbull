@@ -2,7 +2,8 @@
 
 # Updated manually
 
-readonly kernel_branch="android-msm-redbull-4.19-android12-qpr3" # Jun 2022
+readonly prev_kernel_branch="android-msm-redbull-4.19-android12-qpr3" # Jun 2022
+readonly kernel_branch="android-msm-redbull-4.19-android12-qpr3" # Jul 2022
 
-readonly prev_kernel_tag=android-12.1.0_r0.20 # May 2022
-readonly kernel_tag=android-12.1.0_r0.26 # Jun 2022
+readonly prev_kernel_tag=android-12.1.0_r0.26 # Jun 2022
+readonly kernel_tag=android-12.1.0_r0.33 # Jul 2022

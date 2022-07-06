@@ -24,25 +24,25 @@ readonly needs_ota=true
 
 # Updated manually
 
-readonly prev_build_id=SP2A.220505.002 # May 2022
-readonly build_id=SQ3A.220605.009.B1 # Jun 2022
+readonly prev_build_id="SQ3A.220605.009.B1"
+readonly build_id="SQ3A.220705.003"
 
 # Updated automatically via pixel/update-device-vars.sh
 
-readonly aosp_branch="android12-qpr3-s2-release"
+readonly aosp_branch="android12-qpr3-release"
 
-readonly prev_aosp_tag="android-12.1.0_r5"
-readonly aosp_tag="android-12.1.0_r8"
+readonly prev_aosp_tag="android-12.1.0_r8"
+readonly aosp_tag="android-12.1.0_r10"
 
-readonly prev_build_number="8353555"
-readonly build_number="8650216"
+readonly prev_build_number="8650216"
+readonly build_number="8671607"
 
-readonly image_url="https://dl.google.com/dl/android/aosp/oriole-sq3a.220605.009.b1-factory-80f98167.zip"
-readonly image_sha256="80f981677f6e2aa8fa288b4c9cbb5717da785c172bda47cee12201366c418f78"
+readonly image_url="https://dl.google.com/dl/android/aosp/oriole-sq3a.220705.003-factory-4ec7503a.zip"
+readonly image_sha256="4ec7503a01bb5cef06446e882c259fcf2cb70a0a44d3355e13cec7c940255e3a"
 
-readonly flash_url="https://flash.android.com/build/8650216?target=oriole-user&signed"
+readonly flash_url="https://flash.android.com/build/8671607?target=oriole-user&signed"
 
-readonly ota_url="https://dl.google.com/dl/android/aosp/oriole-ota-sq3a.220605.009.b1-e5bb789d.zip"
-readonly ota_sha256="e5bb789d835082352aa71ec48045cdefaab2b9ec788a958c2fd698c3d23e9abb"
+readonly ota_url="https://dl.google.com/dl/android/aosp/oriole-ota-sq3a.220705.003-17fec7eb.zip"
+readonly ota_sha256="17fec7eb2217c801d4bffd43d109901f108f5464d3f9a43d82fac1f4227c4a3c"
 
-readonly security_patch="2022-06-05"
+readonly security_patch="2022-07-05"

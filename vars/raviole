@@ -2,13 +2,15 @@
 
 # Updated manually
 
-readonly kernel_branch="android-gs-raviole-5.10-android12-qpr3" # Jun 2022
+readonly prev_kernel_branch="android-gs-raviole-5.10-android12-qpr3" # Jun 2022
+readonly kernel_branch="android-gs-raviole-5.10-android12-qpr3" # Jul 2022
 
-readonly prev_kernel_tag=android-12.1.0_r0.22 # May 2022
-readonly kernel_tag=android-12.1.0_r0.28 # Jun 2022
+readonly prev_kernel_tag=android-12.1.0_r0.28 # Jun 2022
+readonly kernel_tag=android-12.1.0_r0.35 # Jul 2022
 
 # Match with version string in commit message of prebuilt kernel
-readonly gki_branch="android12-5.10-2022-03" # Jun 2022
+readonly prev_gki_branch="android12-5.10-2022-03" # Jun 2022
+readonly gki_branch="android12-5.10-2022-03" # Jul 2022
 
-readonly prev_gki_tag=android12-5.10-2021-12_r8 # May 2022
-readonly gki_tag=android12-5.10-2022-03_r2 # Jun 2022
+readonly prev_gki_tag=android12-5.10-2022-03_r2 # Jun 2022
+readonly gki_tag=android12-5.10-2022-03_r5 # Jul 2022
