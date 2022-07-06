@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e93e5cf8_07ea7056",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-07-06T19:55:35Z",
+      "side": 1,
+      "message": "These scripts could share more but for now at least it co-exists\n\nLet\u0027s see how jul goes",
+      "revId": "153fcf3f1da443dbda31e30b9db17d0692c414ee",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
