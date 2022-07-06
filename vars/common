@@ -14,3 +14,5 @@ readonly common_aosp_build_id=SQ3A.220605.009.A1 # Jun 2022, Pixels 4 - 5, and 6
 readonly topic=jun22
 
 readonly lineageos_branch=lineage-19.1
+
+readonly merge_method="merge"
