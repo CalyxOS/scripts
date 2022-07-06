@@ -28,25 +28,25 @@ readonly needs_ota=true
 
 # Updated manually
 
-readonly prev_build_id=SQ3A.220605.009.A1 # Jun 2022
-readonly build_id=SQ3A.220705.003.A1 # Jul 2022
+readonly prev_build_id="SQ3A.220605.009.B1"
+readonly build_id="SQ3A.220705.003"
 
 # Updated automatically via pixel/update-device-vars.sh
 
-readonly aosp_branch="android12-qpr3-s4-release"
+readonly aosp_branch="android12-qpr3-release"
 
 readonly prev_aosp_tag="android-12.1.0_r8"
-readonly aosp_tag="android-12.1.0_r11"
+readonly aosp_tag="android-12.1.0_r10"
 
 readonly prev_build_number="8650216"
-readonly build_number="8672226"
+readonly build_number="8671607"
 
-readonly image_url="https://dl.google.com/dl/android/aosp/raven-sq3a.220705.003.a1-factory-152f6a65.zip"
-readonly image_sha256="152f6a658ae314583a46a7ed6d1f4befe927d5d0616549f90e163102dd4fea3b"
+readonly image_url="https://dl.google.com/dl/android/aosp/raven-sq3a.220705.003-factory-1c48ad3e.zip"
+readonly image_sha256="1c48ad3e8799f6040172e2d0c72e02f59af44502228e85beb0b5ba568bb2d272"
 
-readonly flash_url="https://flash.android.com/build/8672226?target=raven-user&signed"
+readonly flash_url="https://flash.android.com/build/8671607?target=raven-user&signed"
 
-readonly ota_url="https://dl.google.com/dl/android/aosp/raven-ota-sq3a.220705.003.a1-20816bd9.zip"
-readonly ota_sha256="20816bd9302b4a2332a54f6bfa1c4484c2ffea7ec7381134f2e77f0f4c67df90"
+readonly ota_url="https://dl.google.com/dl/android/aosp/raven-ota-sq3a.220705.003-e66e2df3.zip"
+readonly ota_sha256="e66e2df393d5a0f885f62d2de086dcd80cdcf8eb28d567f4582ff67756876170"
 
 readonly security_patch="2022-07-05"
