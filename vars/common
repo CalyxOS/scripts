@@ -2,16 +2,16 @@
 readonly prev_calyxos_branch=android12
 readonly calyxos_branch=android12L
 
-readonly prev_common_aosp_branch=android12L-release # May 2022, Pixels 3a - 6
-readonly common_aosp_branch=android12-qpr3-s1-release # Jun 2022, Pixels 4 - 5, and 6 VZW
+readonly prev_common_aosp_branch=android12-qpr3-s1-release # Jun 2022, Pixels 4 - 5, and 6 VZW
+readonly common_aosp_branch=android12-qpr3-s4-release # Jul 2022, Pixels 4 - 6
 
-readonly prev_common_aosp_tag=android-12.1.0_r5 # May 2022, Pixels 3a - 6
-readonly common_aosp_tag=android-12.1.0_r7 # Jun 2022, Pixels 4 - 5, and 6 VZW
+readonly prev_common_aosp_tag=android-12.1.0_r7 # Jun 2022, Pixels 4 - 5, and 6 VZW
+readonly common_aosp_tag=android-12.1.0_r11 # Jul 2022, Pixels 4 - 5, and 6 VZW
 
-readonly prev_common_aosp_build_id=SP2A.220505.002 # May 2022, Pixels 3a - 6
-readonly common_aosp_build_id=SQ3A.220605.009.A1 # Jun 2022, Pixels 4 - 5, and 6 VZW
+readonly prev_common_aosp_build_id=SQ3A.220605.009.A1 # Jun 2022, Pixels 4 - 5, and 6 VZW
+readonly common_aosp_build_id=SQ3A.220705.003.A1 # Jul 2022, Pixels 4 - 5, and 6 VZW
 
-readonly topic=jun22
+readonly topic=jul22
 
 readonly lineageos_branch=lineage-19.1
 
