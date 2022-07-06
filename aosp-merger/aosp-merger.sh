@@ -174,7 +174,7 @@ main() {
       merge_pixel_device
       # Run this to print list of conflicting repos
       cat "${MERGEDREPOS}" | grep -w conflict-merge || true
-    read -p "Waiting for conflict resolution. Press enter when done."
+      read -p "Waiting for conflict resolution. Press enter when done."
       post_pixel_device_merge
       upload_pixel_device_to_review
 
@@ -197,7 +197,7 @@ main() {
       merge_pixel_kernel
       # Run this to print list of conflicting repos
       cat "${MERGEDREPOS}" | grep -w conflict-merge || true
-    read -p "Waiting for conflict resolution. Press enter when done."
+      read -p "Waiting for conflict resolution. Press enter when done."
       post_pixel_kernel_merge
       upload_pixel_kernel_to_review
 
