@@ -25,7 +25,7 @@ device_repos=(
 
 readonly kernel=barbet
 
-# Updated manually
+# Updated semi-manually via pixel/update-any-var.sh
 
 readonly prev_kernel_branch="android-msm-barbet-4.19-android12-qpr3" # Jun 2022
 readonly kernel_branch="android-msm-barbet-4.19-android12-qpr3" # Jul 2022
