@@ -22,7 +22,7 @@ readonly kernel=raviole
 # Need OTA zip for firmware, not supported by image_unpacker yet
 readonly needs_ota=true
 
-# Updated manually
+# Updated semi-manually via pixel/update-any-var.sh
 
 readonly prev_build_id="SQ3A.220605.009.B1"
 readonly build_id="SQ3A.220705.003"
