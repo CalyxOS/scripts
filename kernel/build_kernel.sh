@@ -22,8 +22,8 @@ trap 'error_m interrupted!' SIGINT
 
 ### CONSTANTS ###
 readonly script_path="$(cd "$(dirname "$(realpath "$0")")";pwd -P)"
-readonly vars_path="${script_path}/../vars/"
-readonly top="${script_path}/../../../"
+readonly vars_path="${script_path}/../vars"
+readonly top="${script_path}/../../.."
 
 readonly kernel="${1}"
 shift

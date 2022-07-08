@@ -22,7 +22,7 @@ trap 'error_m interrupted!' SIGINT
 
 ### CONSTANTS ###
 readonly script_path="$(cd "$(dirname "$0")";pwd -P)"
-readonly top="${script_path}/../../../"
+readonly top="${script_path}/../../.."
 
 if [[ -e "${top}/build_kernel.sh" ]]; then
   readonly excluded_repos='CalyxOS/kernel_manifest'
