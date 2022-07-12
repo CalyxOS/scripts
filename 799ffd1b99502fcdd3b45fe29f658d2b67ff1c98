@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7f8190ed_fd084b1a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2022-07-12T19:15:16Z",
+      "side": 1,
+      "message": "I don\u0027t really like this because I usually update the tags and sync before merging, not after (I would have to resync and checkout the merge branches again)",
+      "revId": "799ffd1b99502fcdd3b45fe29f658d2b67ff1c98",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
