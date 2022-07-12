@@ -47,7 +47,7 @@ echo "#### Upstream branch = ${UPSTREAMBRANCH} ####"
 read -p "Press enter to continue."
 
 # Make sure manifest and forked repos are in a consistent state
-echo "#### Verifying there are no uncommitted changes on CalyxOS forked AOSP projects ####"
+echo "#### Verifying there are no uncommitted changes on forked AOSP projects ####"
 for PROJECTPATH in ${PROJECTPATHS} .repo/manifests; do
     cd "${TOP}/${PROJECTPATH}"
     if [[ -n "$(git status --porcelain)" ]]; then
