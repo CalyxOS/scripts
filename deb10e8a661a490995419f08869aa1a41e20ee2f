@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ff4c4d01_0dc8573e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-07-12T21:39:48Z",
+      "side": 1,
+      "message": "I was going to say we won\u0027t have this but then I realised it\u0027s not like AOSP hasn\u0027t force pushed tags before, and we go by GPG signature anyway",
+      "revId": "deb10e8a661a490995419f08869aa1a41e20ee2f",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
