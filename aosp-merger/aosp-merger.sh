@@ -52,36 +52,36 @@ merge_aosp() {
 
 # Merge AOSP to forks
 merge_aosp_forks() {
-  "${script_path}"/merge-aosp-forks.sh --old-tag "${prev_common_aosp_tag}" --new-tag "${common_aosp_tag}" --branch-suffix "${calyxos_branch}_merge-${common_aosp_tag}"
+  "${script_path}"/merge-aosp-forks.sh --old-tag "${prev_common_aosp_tag}" --new-tag "${common_aosp_tag}" --branch-suffix "${os_branch}_merge-${common_aosp_tag}"
 }
 
 post_aosp_merge() {
   if [ "${merge_method}" = "merge" ]; then
     "${script_path}"/push-upstream.sh --new-tag "${common_aosp_tag}" --upstream-branch "${common_aosp_branch}"
   else
-    "${script_path}"/squash.sh --branch-suffix "${calyxos_branch}_merge-${common_aosp_tag}"
+    "${script_path}"/squash.sh --branch-suffix "${os_branch}_merge-${common_aosp_tag}"
   fi
 }
 
 upload_aosp_merge_to_review() {
   if [ "${merge_method}" = "merge" ]; then
-    "${script_path}"/upload-merge.sh --branch-suffix "${calyxos_branch}_merge-${common_aosp_tag}"
+    "${script_path}"/upload-merge.sh --branch-suffix "${os_branch}_merge-${common_aosp_tag}"
   else
-    "${script_path}"/upload-squash.sh --branch-suffix "${calyxos_branch}_merge-${common_aosp_tag}"
+    "${script_path}"/upload-squash.sh --branch-suffix "${os_branch}_merge-${common_aosp_tag}"
   fi
 }
 
 push_aosp_merge() {
-  "${script_path}"/push-merge.sh --branch-suffix "${calyxos_branch}_merge-${common_aosp_tag}"
+  "${script_path}"/push-merge.sh --branch-suffix "${os_branch}_merge-${common_aosp_tag}"
 }
 
 # Merge AOSP to pixel device forks
 merge_pixel_device() {
   for repo in ${device_repos[@]}; do
     if [ "${merge_method}" = "merge" ]; then
-      "${script_path}"/_merge_helper.sh --project-path "${repo}" --old-tag "${prev_aosp_tag}" --new-tag "${aosp_tag}" --branch-suffix "${calyxos_branch}_merge-${aosp_tag}"
+      "${script_path}"/_merge_helper.sh --project-path "${repo}" --old-tag "${prev_aosp_tag}" --new-tag "${aosp_tag}" --branch-suffix "${os_branch}_merge-${aosp_tag}"
     else
-      "${script_path}"/_subtree_merge_helper.sh --project-path "${repo}" --old-tag "${prev_aosp_tag}" --new-tag "${aosp_tag}" --branch-suffix "${calyxos_branch}_merge-${aosp_tag}"
+      "${script_path}"/_subtree_merge_helper.sh --project-path "${repo}" --old-tag "${prev_aosp_tag}" --new-tag "${aosp_tag}" --branch-suffix "${os_branch}_merge-${aosp_tag}"
     fi
   done
 }
@@ -90,29 +90,29 @@ post_pixel_device_merge() {
   if [ "${merge_method}" = "merge" ]; then
     "${script_path}"/push-upstream.sh --new-tag "${aosp_tag}" --upstream-branch "${aosp_branch}"
   else
-    "${script_path}"/squash.sh --new-tag "${aosp_tag}" --branch-suffix "${calyxos_branch}_merge-${aosp_tag}" --pixel
+    "${script_path}"/squash.sh --new-tag "${aosp_tag}" --branch-suffix "${os_branch}_merge-${aosp_tag}" --pixel
   fi
 }
 
 upload_pixel_device_to_review() {
   if [ "${merge_method}" = "merge" ]; then
-    "${script_path}"/upload-merge.sh --branch-suffix "${calyxos_branch}_merge-${aosp_tag}"
+    "${script_path}"/upload-merge.sh --branch-suffix "${os_branch}_merge-${aosp_tag}"
   else
-    "${script_path}"/upload-squash.sh --branch-suffix "${calyxos_branch}_merge-${aosp_tag}" --pixel
+    "${script_path}"/upload-squash.sh --branch-suffix "${os_branch}_merge-${aosp_tag}" --pixel
   fi
 }
 
 push_device_merge() {
-  "${script_path}"/push-merge.sh --branch-suffix "${calyxos_branch}_merge-${aosp_tag}"
+  "${script_path}"/push-merge.sh --branch-suffix "${os_branch}_merge-${aosp_tag}"
 }
 
 # Merge AOSP to pixel kernel forks
 merge_pixel_kernel() {
   for repo in ${device_kernel_repos}; do
     if [ "${merge_method}" = "merge" ]; then
-      "${script_path}"/_merge_helper.sh --project-path "${repo}" --old-tag "${prev_kernel_tag}" --new-tag "${kernel_tag}" --branch-suffix "${calyxos_branch}_merge-${kernel_tag}"
+      "${script_path}"/_merge_helper.sh --project-path "${repo}" --old-tag "${prev_kernel_tag}" --new-tag "${kernel_tag}" --branch-suffix "${os_branch}_merge-${kernel_tag}"
     else
-      "${script_path}"/_subtree_merge_helper.sh --project-path "${repo}" --old-tag "${prev_kernel_tag}" --new-tag "${kernel_tag}" --branch-suffix "${calyxos_branch}_merge-${kernel_tag}"
+      "${script_path}"/_subtree_merge_helper.sh --project-path "${repo}" --old-tag "${prev_kernel_tag}" --new-tag "${kernel_tag}" --branch-suffix "${os_branch}_merge-${kernel_tag}"
     fi
   done
 }
@@ -121,20 +121,20 @@ post_pixel_kernel_merge() {
   if [ "${merge_method}" = "merge" ]; then
     "${script_path}"/push-upstream.sh --new-tag "${kernel_tag}" --upstream-branch "${kernel_branch}"
   else
-    "${script_path}"/squash.sh --new-tag "${kernel_tag}" --branch-suffix "${calyxos_branch}_merge-${kernel_tag}" --pixel
+    "${script_path}"/squash.sh --new-tag "${kernel_tag}" --branch-suffix "${os_branch}_merge-${kernel_tag}" --pixel
   fi
 }
 
 upload_pixel_kernel_to_review() {
   if [ "${merge_method}" = "merge" ]; then
-    "${script_path}"/upload-merge.sh --branch-suffix "${calyxos_branch}_merge-${kernel_tag}"
+    "${script_path}"/upload-merge.sh --branch-suffix "${os_branch}_merge-${kernel_tag}"
   else
-    "${script_path}"/upload-squash.sh --branch-suffix "${calyxos_branch}_merge-${kernel_tag}" --pixel
+    "${script_path}"/upload-squash.sh --branch-suffix "${os_branch}_merge-${kernel_tag}" --pixel
   fi
 }
 
 push_kernel_merge() {
-  "${script_path}"/push-merge.sh --branch-suffix "${calyxos_branch}_merge-${kernel_tag}"
+  "${script_path}"/push-merge.sh --branch-suffix "${os_branch}_merge-${kernel_tag}"
 }
 
 # Merge CLO to forks
