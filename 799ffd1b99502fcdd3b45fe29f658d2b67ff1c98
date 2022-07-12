@@ -16,6 +16,24 @@
       "message": "I don\u0027t really like this because I usually update the tags and sync before merging, not after (I would have to resync and checkout the merge branches again)",
       "revId": "799ffd1b99502fcdd3b45fe29f658d2b67ff1c98",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "54819343_decc4254",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-07-12T19:17:03Z",
+      "side": 1,
+      "message": "A separate option would handle that.\n\nAlso, this updates tags for things we don\u0027t update.\n\nI have an alias locally to sync those easily\n\n```\nalias aosp-repos\u003d\u0027repo list | grep -v CalyxOS | grep -v LineageOS | cut -d : -f 1 | tr -d \u0027 \u0027\u0027\n```",
+      "parentUuid": "7f8190ed_fd084b1a",
+      "revId": "799ffd1b99502fcdd3b45fe29f658d2b67ff1c98",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
