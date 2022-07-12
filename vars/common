@@ -1,6 +1,6 @@
 # Entire file updated manually
-readonly prev_calyxos_branch=android12
-readonly calyxos_branch=android12L
+readonly prev_os_branch=android12
+readonly os_branch=android12L
 
 readonly prev_common_aosp_branch=android12-qpr3-s1-release # Jun 2022, Pixels 4 - 5, and 6 VZW
 readonly common_aosp_branch=android12-qpr3-s4-release # Jul 2022, Pixels 4 - 6
