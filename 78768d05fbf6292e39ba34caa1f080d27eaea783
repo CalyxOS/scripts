@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6b4152aa_daf23280",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2022-07-14T09:41:31Z",
+      "side": 1,
+      "message": "For upload-squash.sh this was needed because we changed branches (staging/ -\u003e squash/), upload-merge.sh doesn\u0027t need it.",
+      "revId": "78768d05fbf6292e39ba34caa1f080d27eaea783",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
