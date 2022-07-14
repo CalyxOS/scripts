@@ -51,8 +51,7 @@ source "${TOP}/build/envsetup.sh"
 # List of merged repos
 PROJECTPATHS=$(cat ${MERGEDREPOS} | grep -w merge | awk '{printf "%s\n", $2}')
 
-echo "#### Upstream branch = ${UPSTREAMBRANCH} ####"
-read -p "Press enter to continue."
+read -p "Press enter to begin pushing upstream branch."
 
 # Make sure manifest and forked repos are in a consistent state
 echo "#### Verifying there are no uncommitted changes on forked AOSP projects ####"
@@ -75,7 +74,7 @@ for PROJECTPATH in ${PROJECTPATHS}; do
             UPSTREAMBRANCH="${lineageos_branch}"
         fi
     fi
-    echo "#### Pushing upstream for ${PROJECTPATH} ####"
+    echo "#### Pushing upstream branch ${UPSTREAMBRANCH} for ${PROJECTPATH} ####"
     calyxremote | grep -v "Remote 'calyx' created"
     if [ "${LINEAGE}" = true ]; then
         git push calyx lineage/${UPSTREAMBRANCH}:refs/heads/upstream/${UPSTREAMBRANCH}
