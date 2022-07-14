@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fa7a6ca8_941880c8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2022-07-14T09:42:25Z",
+      "side": 1,
+      "message": "Not sure if we want to pull the whole file from lineage here and keep updating it. This is just needed so the script doesn\u0027t error out while sourcing, we will never merge qcom tags downstream.",
+      "revId": "074e61aeb66d12f1817e15b229a53dd60245c5f8",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
