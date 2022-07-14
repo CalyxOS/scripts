@@ -18,6 +18,24 @@
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "89e3c69d_eddf3323",
+        "filename": "aosp-merger/_merge_helper.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-07-14T12:57:00Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6674fcbd_150983c7",
+      "revId": "924ef7675ec439d35eed6a71887255eae9a3b208",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "34c1b0c6_61f7865e",
@@ -31,6 +49,24 @@
       "writtenOn": "2022-07-14T10:02:03Z",
       "side": 1,
       "message": "68-72 -\u003e git fetch lineage ${LINEAGEBRANCH}",
+      "revId": "924ef7675ec439d35eed6a71887255eae9a3b208",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "76a39258_a08839f1",
+        "filename": "aosp-merger/_merge_helper.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-07-14T12:57:00Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "34c1b0c6_61f7865e",
       "revId": "924ef7675ec439d35eed6a71887255eae9a3b208",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
