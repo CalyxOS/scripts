@@ -57,6 +57,10 @@ source "${vars_path}/common"
 readonly hook="${script_path}/prepare-commit-msg"
 
 TOP="${script_path}/../../.."
+
+# Source build environment (needed for lineageremote)
+source "${TOP}/build/envsetup.sh"
+
 BRANCH="${os_branch}"
 STAGINGBRANCH="staging/${BRANCHSUFFIX}"
 
@@ -64,7 +68,15 @@ cd "${TOP}/${PROJECTPATH}"
 # Ditch any existing staging branches
 repo abandon "${STAGINGBRANCH}" . 2>/dev/null
 repo start "${STAGINGBRANCH}" .
-if [ -f ".gitupstream" ]; then
+if [ -f ".gitupstream-lineage" ]; then
+    if [[ $(grep -q "${lineageos_branch}" .gitupstream-lineage) ]]; then
+        LINEAGEBRANCH="$(cat .gitupstream-lineage | cut -d ' ' -f 2)"
+    else
+        LINEAGEBRANCH="${lineageos_branch}"
+    fi
+    lineageremote
+    git fetch lineage "${LINEAGEBRANCH}"
+elif [ -f ".gitupstream" ]; then
     git fetch -q --force --tags "$(cat .gitupstream)" "${NEWTAG}"
 else
     git fetch -q --force --tags aosp "${NEWTAG}"
@@ -93,7 +105,11 @@ fi
 
 if [[ "${OPERATION}" == "merge" ]]; then
     echo "#### Merging ${NEWTAG} into ${PROJECTPATH} ####"
-    git merge --no-commit --log "${NEWTAG}" && git commit --no-edit
+    if [ -f ".gitupstream-lineage" ]; then
+        git merge --no-commit --log lineage/"${LINEAGEBRANCH}" && git commit --no-edit
+    else
+        git merge --no-commit --log "${NEWTAG}" && git commit --no-edit
+    fi
 
     # Check if we've actually changed anything after the merge
     # If we haven't, just abandon the branch
