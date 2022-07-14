@@ -68,7 +68,6 @@ echo "#### Verification complete - no uncommitted changes found ####"
 for PROJECTPATH in ${PROJECTPATHS}; do
     cd "${TOP}/${PROJECTPATH}"
     echo "#### Pushing ${PROJECTPATH} merge to review ####"
-    git checkout "${STAGINGBRANCH}"
     repo upload -c -y --no-verify -o topic="${TOPIC}" .
 done
 
