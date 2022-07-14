@@ -154,6 +154,23 @@ push_clo_merge() {
   "${script_path}"/push-merge.sh --branch-suffix "${os_branch}_merge-${1}"
 }
 
+# Merge LineageOS to forks
+merge_lineage() {
+  "${script_path}"/_merge_helper.sh --project-path "${repo}" --new-tag "${lineageos_branch}" --branch-suffix "${os_branch}_merge-${lineageos_branch}"
+}
+
+post_lineage_merge() {
+  "${script_path}"/push-upstream.sh --lineage
+}
+
+upload_lineage_merge_to_review() {
+  "${script_path}"/upload-merge.sh --branch-suffix "${os_branch}_merge-${lineageos_branch}" --lineage
+}
+
+push_lineage_merge() {
+  "${script_path}"/push-merge.sh --branch-suffix "${os_branch}_merge-${lineageos_branch}" --lineage
+}
+
 # error message
 # ARG1: error message for STDERR
 # ARG2: error status
@@ -255,6 +272,24 @@ main() {
       unset MERGEDREPOS
       )
     done
+  elif [ "${1}" = "lineage" ]; then
+    export MERGEDREPOS="${TOP}/merged_repos_lineage.txt"
+    # Remove any existing list of merged repos file
+    rm -f "${MERGEDREPOS}"
+
+    for repo in $(repo list -p -g lineage); do
+      (
+      merge_lineage
+      )
+    done
+
+    # Run this to print list of conflicting repos
+    cat "${MERGEDREPOS}" | grep -w conflict-merge || true
+    read -p "Waiting for conflict resolution. Press enter when done."
+    post_lineage_merge
+    upload_lineage_merge_to_review
+
+    unset MERGEDREPOS
   elif [ "${1}" = "submit-platform" ]; then
     export MERGEDREPOS="${TOP}/merged_repos.txt"
 
@@ -295,6 +330,12 @@ main() {
       unset MERGEDREPOS
       )
     done
+  elif [ "${1}" = "submit-lineage" ]; then
+    export MERGEDREPOS="${TOP}/merged_repos_lineage.txt"
+
+    push_lineage_merge
+
+    unset MERGEDREPOS
   fi
 }
 
