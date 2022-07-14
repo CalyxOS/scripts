@@ -61,3 +61,5 @@ for PROJECTPATH in ${PROJECTPATHS}; do
     git checkout "${STAGINGBRANCH}"
     repo upload -c -y --no-verify -o topic="${topic}" .
 done
+
+printf '\n\n'

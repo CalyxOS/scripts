@@ -73,3 +73,5 @@ for PROJECTPATH in ${PROJECTPATHS}; do
     git checkout "${SQUASHBRANCH}"
     repo upload -c -y --no-verify -o topic="${TOPIC}" .
 done
+
+printf '\n\n'
