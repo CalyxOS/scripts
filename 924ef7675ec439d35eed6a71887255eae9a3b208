@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6674fcbd_150983c7",
+        "filename": "aosp-merger/_merge_helper.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-07-14T10:02:03Z",
+      "side": 1,
+      "message": "LINEAGEREMOTE\u003d$(cat .gitupstream-lineage | cut -d \u0027 \u0027 -f 1)\nLINEAGEBRANCH\u003d$(cat .gitupstream-lineage | cut -d \u0027 \u0027 -f 2)\nLINEAGEBANCH\u003d${LINEAGEBRANCH:-${lineageos_branch}}\n\ngit remote add lineage ${LINEAGEREMOTE}\n\nThat part of the logic could live in envsetup too. The Branch logic lives here",
+      "revId": "924ef7675ec439d35eed6a71887255eae9a3b208",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "34c1b0c6_61f7865e",
+        "filename": "aosp-merger/_merge_helper.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-07-14T10:02:03Z",
+      "side": 1,
+      "message": "68-72 -\u003e git fetch lineage ${LINEAGEBRANCH}",
+      "revId": "924ef7675ec439d35eed6a71887255eae9a3b208",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
