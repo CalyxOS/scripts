@@ -7,7 +7,7 @@
 #
 
 usage() {
-    echo "Usage ${0} -b <branch-suffix>"
+    echo "Usage ${0} -b <branch-suffix> --lineage"
 }
 
 # Verify argument count
@@ -16,10 +16,15 @@ if [ "${#}" -eq 0 ]; then
     exit 1
 fi
 
+LINEAGE=false
+
 while [ "${#}" -gt 0 ]; do
     case "${1}" in
         -b | --branch-suffix )
                 BRANCHSUFFIX="${2}"; shift
+                ;;
+        -l | --lineage )
+                LINEAGE=true; shift
                 ;;
         * )
                 usage
@@ -37,6 +42,11 @@ source "${vars_path}/common"
 
 TOP="${script_path}/../../.."
 STAGINGBRANCH="staging/${BRANCHSUFFIX}"
+if [ "${LINEAGE}" = true ]; then
+    TOPIC="${lineageos_branch}_$(date -u +%Y%m%d)"
+else
+    TOPIC="${topic}"
+fi
 
 # List of merged repos
 PROJECTPATHS=$(cat ${MERGEDREPOS} | grep -w merge | awk '{printf "%s\n", $2}')
@@ -58,5 +68,5 @@ echo "#### Verification complete - no uncommitted changes found ####"
 for PROJECTPATH in ${PROJECTPATHS}; do
     cd "${TOP}/${PROJECTPATH}"
     echo "#### Pushing ${PROJECTPATH} merge to review ####"
-    repo upload -c -y --no-verify -o topic="${topic}" .
+    repo upload -c -y --no-verify -o topic="${TOPIC}" .
 done
