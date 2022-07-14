@@ -7,7 +7,7 @@
 #
 
 usage() {
-    echo "Usage ${0} -n <newtag> -b <upstream-branch>"
+    echo "Usage ${0} -n <newtag> -b <upstream-branch> --lineage"
 }
 
 # Verify argument count
@@ -16,6 +16,8 @@ if [ "${#}" -eq 0 ]; then
     exit 1
 fi
 
+LINEAGE=false
+
 while [ "${#}" -gt 0 ]; do
     case "${1}" in
         -n | --new-tag )
@@ -23,6 +25,9 @@ while [ "${#}" -gt 0 ]; do
                 ;;
         -b | --upstream-branch )
                 UPSTREAMBRANCH="${2}"; shift
+                ;;
+        -l | --lineage )
+                LINEAGE=true; shift
                 ;;
         * )
                 usage
@@ -39,6 +44,9 @@ readonly vars_path="${script_path}/../vars"
 source "${vars_path}/common"
 
 TOP="${script_path}/../../.."
+
+# Source build environment (needed for calyxremote)
+source "${TOP}/build/envsetup.sh"
 
 # List of merged repos
 PROJECTPATHS=$(cat ${MERGEDREPOS} | grep -w merge | awk '{printf "%s\n", $2}')
@@ -61,5 +69,10 @@ echo "#### Verification complete - no uncommitted changes found ####"
 for PROJECTPATH in ${PROJECTPATHS}; do
     cd "${TOP}/${PROJECTPATH}"
     echo "#### Pushing upstream for ${PROJECTPATH} ####"
-    git push calyx ${NEWTAG}^{commit}:refs/heads/upstream/${UPSTREAMBRANCH}
+    calyxremote | grep -v "Remote 'calyx' created"
+    if [ "${LINEAGE}" = true ]; then
+        git push calyx FETCH_HEAD:refs/heads/upstream/${UPSTREAMBRANCH}
+    else
+        git push calyx ${NEWTAG}^{commit}:refs/heads/upstream/${UPSTREAMBRANCH}
+    fi
 done

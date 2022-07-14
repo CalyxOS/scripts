@@ -7,7 +7,7 @@
 #
 
 usage() {
-    echo "Usage ${0} -b <branch-suffix>"
+    echo "Usage ${0} -b <branch-suffix> --lineage"
 }
 
 # Verify argument count
@@ -16,10 +16,15 @@ if [ "${#}" -eq 0 ]; then
     exit 1
 fi
 
+LINEAGE=false
+
 while [ "${#}" -gt 0 ]; do
     case "${1}" in
         -b | --branch-suffix )
                 BRANCHSUFFIX="${2}"; shift
+                ;;
+        -l | --lineage )
+                LINEAGE=true; shift
                 ;;
         * )
                 usage
@@ -71,5 +76,7 @@ for PROJECTPATH in ${PROJECTPATHS}; do
     git checkout "${STAGINGBRANCH}"
     calyxremote | grep -v "Remote 'calyx' created"
     git push calyx HEAD:refs/heads/"${BRANCH}"
-    git push calyx ${NEWTAG}
+    if [ "${LINEAGE}" = false ]; then
+        git push calyx ${NEWTAG}
+    fi
 done

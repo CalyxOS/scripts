@@ -64,7 +64,13 @@ cd "${TOP}/${PROJECTPATH}"
 # Ditch any existing staging branches
 repo abandon "${STAGINGBRANCH}" . 2>/dev/null
 repo start "${STAGINGBRANCH}" .
-if [ -f ".gitupstream" ]; then
+if [ -f ".gitupstream-lineage" ]; then
+    if [[ $(grep -q "${lineageos_branch}" .gitupstream-lineage) ]]; then
+        git fetch -q --force "$(cat .gitupstream-lineage)"
+    else
+        git fetch -q --force "$(cat .gitupstream-lineage)" "${NEWTAG}"
+    fi
+elif [ -f ".gitupstream" ]; then
     git fetch -q --force --tags "$(cat .gitupstream)" "${NEWTAG}"
 else
     git fetch -q --force --tags aosp "${NEWTAG}"
@@ -93,7 +99,11 @@ fi
 
 if [[ "${OPERATION}" == "merge" ]]; then
     echo "#### Merging ${NEWTAG} into ${PROJECTPATH} ####"
-    git merge --no-commit --log "${NEWTAG}" && git commit --no-edit
+    if [ -f ".gitupstream-lineage" ]; then
+        git merge --no-commit --log FETCH_HEAD && git commit --no-edit
+    else
+        git merge --no-commit --log "${NEWTAG}" && git commit --no-edit
+    fi
 
     # Check if we've actually changed anything after the merge
     # If we haven't, just abandon the branch
