@@ -72,9 +72,14 @@ select_kernel_config() {
     export BUILD_KERNEL=1
     export LTO=full
     ;;
+  bluejay)
+    export DEVICE_KERNEL_BUILD_CONFIG=bluejay/private/devices/google/bluejay/build.config.bluejay
+    export BUILD_KERNEL=1
+    export LTO=full
+    ;;
   *)
     echo "Unsupported kernel ${kernel}"
-    echo "Support kernels: crosshatch bonito coral sunfish redbull barbet raviole"
+    echo "Support kernels: crosshatch bonito coral sunfish redbull barbet raviole bluejay"
     exit
     ;;
   esac
@@ -82,9 +87,9 @@ select_kernel_config() {
 
 build_kernel() {
   pushd "${top}"
-  # raviole is built differently, gki
-  if [[ "${kernel}" == "raviole" ]]; then
-    raviole/private/gs-google/build_slider.sh "${@}"
+  # raviole/bluejay is built differently, gki
+  if [[ "${kernel}" == "raviole" || "${kernel}" == "bluejay" ]]; then
+    "${kernel}/private/gs-google/build_slider.sh" "${@}"
   else
     build/build.sh "${@}"
   fi
@@ -92,8 +97,8 @@ build_kernel() {
 }
 
 copy_kernel() {
-  # raviole is built differently, gki
-  if [[ "${kernel}" == "raviole" ]]; then
+  # raviole/bluejay is built differently, gki
+  if [[ "${kernel}" == "raviole" || "${kernel}" == "bluejay" ]]; then
     cp -a "${OUT_DIR}/mixed/dist/"* "${top}/device/google/${kernel}-kernel/"
   else
     cp -a "${OUT_DIR}/dist/"* "${top}/device/google/${kernel}-kernel/"
