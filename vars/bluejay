@@ -1,0 +1,48 @@
+# Pixel 6a
+
+# Usage: ${firmware_partitions[@]}
+readonly firmware_partitions=(
+  bl1
+  pbl
+  bl2
+  abl
+  bl31
+  tzsw
+  gsa
+  ldfw
+  modem
+)
+# Usage: ${device_repos[@]}
+device_repos=(
+  device/google/bluejay-sepolicy
+)
+
+readonly kernel=raviole
+
+# Need OTA zip for firmware, not supported by image_unpacker yet
+readonly needs_ota=true
+
+# Updated semi-manually via pixel/update-any-var.sh
+
+readonly prev_build_id="NA"
+readonly build_id="SD2A.220601.004"
+
+# Updated automatically via pixel/update-device-vars.sh
+
+readonly aosp_branch="android12L-d2-release"
+
+readonly prev_aosp_tag="NA"
+readonly aosp_tag="android-12.1.0_r13"
+
+readonly prev_build_number="NA"
+readonly build_number="8804960"
+
+readonly image_url="https://dl.google.com/dl/android/aosp/bluejay-sd2a.220601.004-factory-5ecedd46.zip"
+readonly image_sha256="5ecedd46a2c981f40b940366fcf1b810ede60d3c81cd581243cb38f255d52f6f"
+
+readonly flash_url="https://flash.android.com/build/8804960?target=bluejay-user&signed"
+
+readonly ota_url="https://dl.google.com/dl/android/aosp/bluejay-ota-sd2a.220601.004-a53caf37.zip"
+readonly ota_sha256="a53caf37f76731525ed1d809d48950d585713bb0475a027fe78b4e12fd7b0f53"
+
+readonly security_patch="2022-06-05"
