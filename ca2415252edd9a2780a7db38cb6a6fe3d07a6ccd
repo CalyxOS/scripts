@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e238131a_06e3b720",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-08-02T22:27:17Z",
+      "side": 1,
+      "message": "I think I\u0027ll try to keep r12/r13 as prev build and try an update to r18 / the global build just to make sure it\u0027s all in place.",
+      "revId": "ca2415252edd9a2780a7db38cb6a6fe3d07a6ccd",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "ecd79a6b_3a58c65f",
@@ -14,6 +31,24 @@
       "writtenOn": "2022-08-02T22:26:24Z",
       "side": 1,
       "message": "bluejay",
+      "revId": "ca2415252edd9a2780a7db38cb6a6fe3d07a6ccd",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b48a8e99_3f0b1307",
+        "filename": "vars/bluejay",
+        "patchSetId": 6
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-08-02T22:27:17Z",
+      "side": 1,
+      "message": "Or no, this will cause issues, IIRC it\u0027s used for merging.\n\nWe\u0027ll figure it out when the next ASB is released I guess.",
+      "parentUuid": "ecd79a6b_3a58c65f",
       "revId": "ca2415252edd9a2780a7db38cb6a6fe3d07a6ccd",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
