@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ecd79a6b_3a58c65f",
+        "filename": "vars/bluejay",
+        "patchSetId": 6
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-08-02T22:26:24Z",
+      "side": 1,
+      "message": "bluejay",
+      "revId": "ca2415252edd9a2780a7db38cb6a6fe3d07a6ccd",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
