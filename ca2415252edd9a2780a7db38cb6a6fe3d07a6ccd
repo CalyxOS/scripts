@@ -51,6 +51,24 @@
       "parentUuid": "ecd79a6b_3a58c65f",
       "revId": "ca2415252edd9a2780a7db38cb6a6fe3d07a6ccd",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5e4bdcd8_1ff44c33",
+        "filename": "vars/bluejay",
+        "patchSetId": 6
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-08-04T23:39:54Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b48a8e99_3f0b1307",
+      "revId": "ca2415252edd9a2780a7db38cb6a6fe3d07a6ccd",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
