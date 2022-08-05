@@ -14,6 +14,7 @@ readonly firmware_partitions=(
 )
 # Usage: ${device_repos[@]}
 device_repos=(
+  device/google/bluejay
   device/google/bluejay-sepolicy
 )
 
