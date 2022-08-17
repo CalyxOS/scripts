@@ -2,7 +2,6 @@
 readonly device_kernels=(
   bluejay
   raviole
-  barbet
   redbull
   sunfish
   coral

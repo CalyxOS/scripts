@@ -1,18 +1,18 @@
 # Entire file updated manually
-readonly prev_calyxos_branch=android12
-readonly calyxos_branch=android12L
+readonly prev_calyxos_branch=android12L
+readonly calyxos_branch=android13
 
-readonly prev_common_aosp_branch=android12-qpr3-s1-release # Jun 2022, Pixels 4 - 5, and 6 VZW
-readonly common_aosp_branch=android12-qpr3-s4-release # Jul 2022, Pixels 4 - 6
+readonly prev_common_aosp_branch=android12-qpr3-s4-release # Jul 2022, Pixels 4 - 6
+readonly common_aosp_branch=android13-security-release # Aug 2022, Pixels 4 - 6
 
-readonly prev_common_aosp_tag=android-12.1.0_r7 # Jun 2022, Pixels 4 - 5, and 6 VZW
-readonly common_aosp_tag=android-12.1.0_r11 # Jul 2022, Pixels 4 - 5, and 6 VZW
+readonly prev_common_aosp_tag=android-12.1.0_r11 # Jul 2022, Pixels 4 - 5, and 6 VZW
+readonly common_aosp_tag=android-13.0.0_r1 # Aug 2022, Pixels 4 - 6
 
-readonly prev_common_aosp_build_id=SQ3A.220605.009.A1 # Jun 2022, Pixels 4 - 5, and 6 VZW
-readonly common_aosp_build_id=SQ3A.220705.003.A1 # Jul 2022, Pixels 4 - 5, and 6 VZW
+readonly prev_common_aosp_build_id=SQ3A.220705.003.A1 # Jul 2022, Pixels 4 - 5, and 6 VZW
+readonly common_aosp_build_id=TP1A.220624.014 # Aug 2022, Pixels 4 - 6
 
-readonly topic=jul22
+readonly topic=aug22
 
-readonly lineageos_branch=lineage-19.1
+readonly lineageos_branch=lineage-20.0
 
 readonly merge_method="merge"
