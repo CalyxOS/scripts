@@ -46,6 +46,30 @@
       },
       "revId": "3381f74e7fd2aaf84d0f9b61d2bd2de292eecb1c",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a248f765_c3cd4039",
+        "filename": "carriersettings-extractor/carriersettings_extractor.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1000065
+      },
+      "writtenOn": "2022-08-19T12:29:20Z",
+      "side": 1,
+      "message": "Move to the top before all functions?",
+      "parentUuid": "6c252be5_c2dad1e8",
+      "range": {
+        "startLine": 46,
+        "startChar": 0,
+        "endLine": 60,
+        "endChar": 56
+      },
+      "revId": "3381f74e7fd2aaf84d0f9b61d2bd2de292eecb1c",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
