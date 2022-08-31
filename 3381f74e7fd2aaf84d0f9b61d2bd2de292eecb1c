@@ -70,6 +70,30 @@
       },
       "revId": "3381f74e7fd2aaf84d0f9b61d2bd2de292eecb1c",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "eba4fd36_adebe7b0",
+        "filename": "carriersettings-extractor/carriersettings_extractor.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-08-31T15:58:40Z",
+      "side": 1,
+      "message": "This is also fine.",
+      "parentUuid": "a248f765_c3cd4039",
+      "range": {
+        "startLine": 46,
+        "startChar": 0,
+        "endLine": 60,
+        "endChar": 56
+      },
+      "revId": "3381f74e7fd2aaf84d0f9b61d2bd2de292eecb1c",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
