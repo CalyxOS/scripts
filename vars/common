@@ -1,17 +1,17 @@
 # Entire file updated manually
-readonly prev_calyxos_branch=android12L
+readonly prev_calyxos_branch=android13
 readonly calyxos_branch=android13
 
-readonly prev_common_aosp_branch=android12-qpr3-s4-release # Jul 2022, Pixels 4 - 6
-readonly common_aosp_branch=android13-s1-release # Aug 2022, Pixel 6a
+readonly prev_common_aosp_branch=android13-s1-release # Aug 2022, Pixel 6a
+readonly common_aosp_branch=android13-release # Sep 2022, Pixel 4 - 6
 
-readonly prev_common_aosp_tag=android-12.1.0_r11 # Jul 2022, Pixels 4 - 5, and 6 VZW
-readonly common_aosp_tag=android-13.0.0_r3 # Aug 2022, Pixel 6a
+readonly prev_common_aosp_tag=android-13.0.0_r3 # Aug 2022, Pixel 6a
+readonly common_aosp_tag=android-13.0.0_r4 # Sep 2022, Pixel 4 - 6
 
-readonly prev_common_aosp_build_id=SQ3A.220705.003.A1 # Jul 2022, Pixels 4 - 5, and 6 VZW
-readonly common_aosp_build_id=TP1A.220624.021.A1 # Aug 2022, Pixel 6a
+readonly prev_common_aosp_build_id=TP1A.220624.021.A1 # Aug 2022, Pixel 6a
+readonly common_aosp_build_id=TP1A.220905.004 # Sep 2022, Pixel  4 - 6
 
-readonly topic=aug22
+readonly topic=sep22
 
 readonly lineageos_branch=lineage-20.0
 
