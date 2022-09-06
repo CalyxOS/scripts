@@ -28,8 +28,8 @@ readonly needs_ota=true
 
 # Updated semi-manually via pixel/update-any-var.sh
 
-readonly prev_build_id="SQ3A.220705.004"
-readonly build_id="TP1A.220624.021"
+readonly prev_build_id="TP1A.220624.021"
+readonly build_id="TP1A.220905.004"
 
 # Updated automatically via pixel/update-device-vars.sh
 
