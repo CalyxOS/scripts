@@ -1,6 +1,6 @@
 # Entire file updated manually
-readonly prev_calyxos_branch=android13
-readonly calyxos_branch=android13
+readonly prev_os_branch=android13
+readonly os_branch=android13
 
 readonly prev_common_aosp_branch=android13-release # Sep 2022, Pixel 4 - 6
 readonly common_aosp_branch=android13-s3-release # Sep 2022, Pixel 6a
