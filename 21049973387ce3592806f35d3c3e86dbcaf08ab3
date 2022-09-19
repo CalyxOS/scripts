@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5274f533_d94db52a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-09-19T14:40:34Z",
+      "side": 1,
+      "message": "Haven\u0027t used push here at all btw, since we setup the upstream branches",
+      "revId": "21049973387ce3592806f35d3c3e86dbcaf08ab3",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
