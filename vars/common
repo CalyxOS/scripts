@@ -5,14 +5,14 @@ readonly os_branch=android13
 readonly prev_device_branch=android13
 readonly device_branch=android13
 
-readonly prev_common_aosp_branch=android13-release # Sep 2022, Pixel 4 - 6
-readonly common_aosp_branch=android13-s3-release # Sep 2022, Pixel 6a
+readonly prev_common_aosp_branch=android13-s3-release # Sep 2022, Pixel 6a
+readonly common_aosp_branch=android13-release # Oct 2022, Pixel 6a
 
-readonly prev_common_aosp_tag=android-13.0.0_r4 # Sep 2022, Pixel 4 - 6
-readonly common_aosp_tag=android-13.0.0_r6 # Sep 2022, Pixel 6a
+readonly prev_common_aosp_tag=android-13.0.0_r6 # Sep 2022, Pixel 6a
+readonly common_aosp_tag=android-13.0.0_r8 # Oct 2022, Pixel 6a
 
-readonly prev_common_aosp_build_id=TP1A.220905.004 # Sep 2022, Pixel 4 - 6
-readonly common_aosp_build_id=TP1A.220905.004.A2 # Sep 2022, Pixel 6a
+readonly prev_common_aosp_build_id=TP1A.220905.004.A2 # Sep 2022, Pixel 6a
+readonly common_aosp_build_id=TP1A.221005.003 # Oct 2022, Pixel 6a
 
 readonly topic=sep22
 
