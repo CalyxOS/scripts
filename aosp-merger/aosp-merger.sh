@@ -228,17 +228,18 @@ main() {
   elif [ "${1}" = "kernels" ]; then
     for kernel in ${kernel_repos[@]}; do
       (
-      source "${vars_path}/${kernel}"
+      readonly kernel_short="$(echo ${kernel} | cut -d / -f 3)"
+      source "${vars_path}/${kernel_short}"
 
       if [ "${merge_method}" = "merge" ]; then
-        readonly manifest="${TOP}"/.repo/manifests/snippets/${kernel}.xml
+        readonly manifest="${TOP}"/.repo/manifests/snippets/${kernel_short}.xml
         readonly device_kernel_repos=$(grep "name=\"CalyxOS/" "${manifest}" \
             | sed -n 's/.*path="\([^"]\+\)".*/\1/p')
       else
-        readonly device_kernel_repos="kernel/google/${kernel}"
+        readonly device_kernel_repos="${kernel}"
       fi
 
-      export MERGEDREPOS="${TOP}/merged_repos_${kernel}_kernel.txt"
+      export MERGEDREPOS="${TOP}/merged_repos_${kernel_short}_kernel.txt"
       # Remove any existing list of merged repos file
       rm -f "${MERGEDREPOS}"
 
@@ -310,8 +311,9 @@ main() {
   elif [ "${1}" = "submit-kernels" ]; then
     for kernel in ${kernel_repos[@]}; do
       (
-      source "${vars_path}/${kernel}"
-      export MERGEDREPOS="${TOP}/merged_repos_${kernel}_kernel.txt"
+      readonly kernel_short="$(echo ${kernel} | cut -d / -f 3)"
+      source "${vars_path}/${kernel_short}"
+      export MERGEDREPOS="${TOP}/merged_repos_${kernel_short}_kernel.txt"
 
       push_kernel_merge
 
