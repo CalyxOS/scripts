@@ -1,6 +1,6 @@
-# Pixel 6
+# Pixel 6, 6 Pro, 6a
 
-# Updated manually
+# Updated semi-manually via pixel/update-any-var.sh
 
 readonly prev_kernel_branch="android-gs-raviole-5.10-android12-qpr3" # Jun 2022
 readonly kernel_branch="android-gs-raviole-5.10-android12-qpr3" # Jul 2022
