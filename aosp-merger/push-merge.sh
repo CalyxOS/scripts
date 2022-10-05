@@ -46,14 +46,6 @@ source "${vars_path}/common"
 
 TOP="${script_path}/../../.."
 STAGINGBRANCH="staging/${BRANCHSUFFIX}"
-if [ "${PIXEL}" = true ]; then
-    BRANCH="${device_branch}"
-else
-    BRANCH=$(git config --get branch.${STAGINGBRANCH}.merge | sed 's|refs/heads/||')
-    if [ -z "${BRANCH}" ]; then
-        BRANCH="${os_branch}"
-    fi
-fi
 
 # Source build environment (needed for calyxremote)
 source "${TOP}/build/envsetup.sh"
@@ -61,7 +53,7 @@ source "${TOP}/build/envsetup.sh"
 # List of merged repos
 PROJECTPATHS=$(cat ${MERGEDREPOS} | grep -w merge | awk '{printf "%s\n", $2}')
 
-echo "#### Branch = ${BRANCH} Staging branch = ${STAGINGBRANCH} ####"
+echo "#### Staging branch = ${STAGINGBRANCH} ####"
 
 # Make sure manifest and forked repos are in a consistent state
 echo "#### Verifying there are no uncommitted changes on forked AOSP projects ####"
@@ -75,11 +67,21 @@ done
 echo "#### Verification complete - no uncommitted changes found ####"
 
 echo "#### $(basename ${MERGEDREPOS}) ####"
-read -p "Pushing ${STAGINGBRANCH} to ${BRANCH}. Press enter to confirm."
+read -p "Pushing ${STAGINGBRANCH}. Press enter to confirm."
 
 # Iterate over each forked project
 for PROJECTPATH in ${PROJECTPATHS}; do
     cd "${TOP}/${PROJECTPATH}"
+
+    if [ "${PIXEL}" = true ]; then
+        BRANCH="${device_branch}"
+    else
+        BRANCH=$(git config --get branch.${STAGINGBRANCH}.merge | sed 's|refs/heads/||')
+        if [ -z "${BRANCH}" ]; then
+            BRANCH="${os_branch}"
+        fi
+    fi
+
     echo "#### Submitting ${PROJECTPATH} merge ####"
     git checkout "${STAGINGBRANCH}"
     calyxremote | grep -v "Remote 'calyx' created"
