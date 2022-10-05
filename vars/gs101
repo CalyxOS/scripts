@@ -2,15 +2,15 @@
 
 # Updated semi-manually via pixel/update-any-var.sh
 
-readonly prev_kernel_branch="android-gs-raviole-5.10-android12-qpr3" # Jun 2022
-readonly kernel_branch="android-gs-raviole-5.10-android12-qpr3" # Jul 2022
+readonly prev_kernel_branch="NA"
+readonly kernel_branch="android-gs-bluejay-5.10-android13" # Oct 2022
 
-readonly prev_kernel_tag=android-12.1.0_r0.28 # Jun 2022
-readonly kernel_tag=android-12.1.0_r0.35 # Jul 2022
+readonly prev_kernel_tag="NA"
+readonly kernel_tag=android-13.0.0_r0.20 # Oct 2022
 
 # Match with version string in commit message of prebuilt kernel
-readonly prev_gki_branch="android12-5.10-2022-03" # Jun 2022
-readonly gki_branch="android12-5.10-2022-03" # Jul 2022
+readonly prev_gki_branch="NA"
+readonly gki_branch="android13-5.10-2022-05" # Oct 2022
 
-readonly prev_gki_tag=android12-5.10-2022-03_r2 # Jun 2022
-readonly gki_tag=android12-5.10-2022-03_r5 # Jul 2022
+readonly prev_gki_tag="NA"
+readonly gki_tag=android13-5.10-2022-05_r8 # Oct 2022

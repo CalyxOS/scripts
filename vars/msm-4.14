@@ -2,8 +2,8 @@
 
 # Updated semi-manually via pixel/update-any-var.sh
 
-readonly prev_kernel_branch="android-msm-4.14-android12-qpr3" # Jun 2022
-readonly kernel_branch="android-msm-4.14-android12-qpr3" # Jul 2022
+readonly prev_kernel_branch="NA"
+readonly kernel_branch="android-msm-sunfish-4.14-android13" # Oct 2022
 
-readonly prev_kernel_tag=android-12.1.0_r0.25 # Jun 2022
-readonly kernel_tag=android-12.1.0_r0.32 # Jul 2022
+readonly prev_kernel_tag="NA"
+readonly kernel_tag=android-13.0.0_r0.17 # Oct 2022
