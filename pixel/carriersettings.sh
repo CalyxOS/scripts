@@ -53,7 +53,7 @@ readonly vendorxml_path="${vendor_path}/rro_overlays/CarrierConfigOverlay/res/xm
 carriersettings() {
   mkdir -p "${apnsconf_path}"
   mkdir -p "${vendorxml_path}"
-  python3 "${carriersettingspy}" -i "${carriersettings_input_path}" -a "${apnsconf_path}" -v "${vendorxml_path}"
+  echo "Skipping" python3 "${carriersettingspy}" -i "${carriersettings_input_path}" -a "${apnsconf_path}" -v "${vendorxml_path}"
 }
 
 setup_rro_overlay() {
