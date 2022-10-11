@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cb818258_6faf033f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-10-11T17:50:08Z",
+      "side": 1,
+      "message": "https://review.calyxos.org/q/topic:cs-oct22",
+      "revId": "9f42b84e550b4972bf0d597e4e169d63176d373c",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
