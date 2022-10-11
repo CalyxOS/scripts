@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "78f6f8f9_63e88a54",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-10-11T18:51:25Z",
+      "side": 1,
+      "message": "Merging given vendor/ commits are merged.\n\nThis seems to work ok, definitely not any worse than with the 12 XML, and definitely better than the 13 XML without this.\n\nCan do further improvements as needed on top.",
+      "revId": "41f1a369f7609292600f0f0e039bf5c0b9566114",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
