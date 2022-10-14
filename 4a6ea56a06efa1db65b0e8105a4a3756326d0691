@@ -36,6 +36,23 @@
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "b02f99fa_d1e2443b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-10-14T23:37:29Z",
+      "side": 1,
+      "message": "This one should be ready too, I think.",
+      "revId": "4a6ea56a06efa1db65b0e8105a4a3756326d0691",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "3bf38d0a_cd4c996f",
