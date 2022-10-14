@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3bf38d0a_cd4c996f",
+        "filename": "vars/panther",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-10-14T21:47:07Z",
+      "side": 1,
+      "message": "`tools/extract-utils/extract_ota.py -l panther-ota-td1a.220804.031-8236abf4.zip`\n\n```\nabl\nbl1\nbl2\nbl31\nboot\ndtbo\ngsa\ninit_boot\nldfw\nmodem\npbl\nproduct\npvmfw\nsystem\nsystem_dlkm\nsystem_ext\ntzsw\nvbmeta\nvbmeta_system\nvbmeta_vendor\nvendor\nvendor_boot\nvendor_dlkm\nvendor_kernel_boot\n```\n\n`git-diff --no-ext-diff /tmp/raven /tmp/panther`\n\n```\ndiff --git a/tmp/raven b/tmp/panther\nindex c4d2dfc..55caddc 100644\n--- a/tmp/raven\n+++ b/tmp/panther\n@@ -5,11 +5,14 @@ bl31\n boot\n dtbo\n gsa\n+init_boot\n ldfw\n modem\n pbl\n product\n+pvmfw\n system\n+system_dlkm\n system_ext\n tzsw\n vbmeta\n@@ -18,3 +21,4 @@ vbmeta_vendor\n vendor\n vendor_boot\n vendor_dlkm\n+vendor_kernel_boot\n```",
+      "revId": "4a6ea56a06efa1db65b0e8105a4a3756326d0691",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
