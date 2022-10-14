@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f062803b_3903e2fe",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-10-14T21:47:43Z",
+      "side": 1,
+      "message": "TODO: See if `pvmfw` is part of bootloader",
+      "revId": "4a6ea56a06efa1db65b0e8105a4a3756326d0691",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "3bf38d0a_cd4c996f",
