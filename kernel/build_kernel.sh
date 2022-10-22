@@ -67,9 +67,7 @@ select_kernel_config() {
     ;;
   redbull)
     export BUILD_CONFIG=redbull/private/msm-google/build.config.redbull.vintf
-    ;;
-  barbet)
-    export BUILD_CONFIG=barbet/private/msm-google/build.config.redbull.vintf
+    export KLEAF_SUPPRESS_BUILD_SH_DEPRECATION_WARNING=1
     ;;
   raviole)
     export DEVICE_KERNEL_BUILD_CONFIG=raviole/private/gs-google/build.config.slider
@@ -83,7 +81,7 @@ select_kernel_config() {
     ;;
   *)
     echo "Unsupported kernel ${kernel}"
-    echo "Support kernels: crosshatch bonito coral sunfish redbull barbet raviole bluejay"
+    echo "Support kernels: crosshatch bonito coral sunfish redbull raviole bluejay"
     exit
     ;;
   esac
