@@ -59,9 +59,11 @@ select_kernel_config() {
     ;;
   coral)
     export BUILD_CONFIG=msm-4.14/private/msm-google/build.config.floral
+    export KLEAF_SUPPRESS_BUILD_SH_DEPRECATION_WARNING=1
     ;;
   sunfish)
     export BUILD_CONFIG=msm-4.14/private/msm-google/build.config.sunfish
+    export KLEAF_SUPPRESS_BUILD_SH_DEPRECATION_WARNING=1
     ;;
   redbull)
     export BUILD_CONFIG=redbull/private/msm-google/build.config.redbull.vintf
