@@ -70,12 +70,12 @@ select_kernel_config() {
     export KLEAF_SUPPRESS_BUILD_SH_DEPRECATION_WARNING=1
     ;;
   raviole)
-    export DEVICE_KERNEL_BUILD_CONFIG=raviole/private/gs-google/build.config.slider
+    export DEVICE_KERNEL_BUILD_CONFIG=gs101/private/gs-google/build.config.slider
     export BUILD_KERNEL=1
     export LTO=full
     ;;
   bluejay)
-    export DEVICE_KERNEL_BUILD_CONFIG=bluejay/private/devices/google/bluejay/build.config.bluejay
+    export DEVICE_KERNEL_BUILD_CONFIG=gs101/private/devices/google/bluejay/build.config.bluejay
     export BUILD_KERNEL=1
     export LTO=full
     ;;
@@ -91,7 +91,7 @@ build_kernel() {
   pushd "${top}"
   # raviole/bluejay is built differently, gki
   if [[ "${kernel}" == "raviole" || "${kernel}" == "bluejay" ]]; then
-    "${kernel}/private/gs-google/build_slider.sh" "${@}"
+    gs101/private/gs-google/build_slider.sh "${@}"
   else
     build/build.sh "${@}"
   fi
