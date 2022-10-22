@@ -51,9 +51,11 @@ select_kernel_config() {
   case ${kernel} in
   crosshatch)
     export BUILD_CONFIG=msm-4.9/private/msm-google/build.config.bluecross
+    export KLEAF_SUPPRESS_BUILD_SH_DEPRECATION_WARNING=1
     ;;
   bonito)
     export BUILD_CONFIG=msm-4.9/private/msm-google/build.config.bonito
+    export KLEAF_SUPPRESS_BUILD_SH_DEPRECATION_WARNING=1
     ;;
   coral)
     export BUILD_CONFIG=msm-4.14/private/msm-google/build.config.floral
