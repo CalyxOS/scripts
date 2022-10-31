@@ -30,24 +30,25 @@ readonly script_path="$(cd "$(dirname "$(realpath "$0")")";pwd -P)"
 readonly vars_path="${script_path}/../vars"
 readonly top="${script_path}/../../.."
 
-readonly kernel="${1}"
-shift
+source "${vars_path}/device_kernels"
 
 if [ -z ${OUT_DIR_COMMON_BASE-} ]; then
-  readonly OUT_DIR="${top}/out/${kernel}"
+  readonly OUT_DIR_BASE="${top}/out"
 else
-  readonly OUT_DIR="${OUT_DIR_COMMON_BASE}/$(basename "$(realpath "${top}")")/${kernel}"
+  readonly OUT_DIR_BASE="${OUT_DIR_COMMON_BASE}/$(basename "$(realpath "${top}")")"
 fi
-
-export KERNEL_OUT_DIR="${OUT_DIR}"
-export OUT_DIR
 
 ## HELP MESSAGE (USAGE INFO)
 # TODO
 
 ### FUNCTIONS ###
 
-select_kernel_config() {
+setup_kernel() {
+  readonly kernel="${1}"
+
+  export OUT_DIR="${OUT_DIR_BASE}/${kernel}"
+  export KERNEL_OUT_DIR="${OUT_DIR}"
+
   case ${kernel} in
   crosshatch)
     export BUILD_CONFIG=msm-4.9/private/msm-google/build.config.bluecross
@@ -92,7 +93,11 @@ select_kernel_config() {
   esac
 }
 
+export -f setup_kernel
+
 build_kernel() {
+  readonly kernel="${1}"
+
   pushd "${top}"
   # raviole/bluejay/pantah is built differently, gki
   if [[ "${kernel}" == "raviole" || "${kernel}" == "bluejay" ]]; then
@@ -105,7 +110,11 @@ build_kernel() {
   popd
 }
 
+export -f build_kernel
+
 copy_kernel() {
+  readonly kernel="${1}"
+
   # raviole/bluejay/pantah is built differently, gki
   if [[ "${kernel}" == "raviole" || "${kernel}" == "bluejay" || "${kernel}" == "pantah" ]]; then
     cp -a "${OUT_DIR}/mixed/dist/"* "${top}/device/google/${kernel}-kernel/"
@@ -114,6 +123,18 @@ copy_kernel() {
   fi
   echo " Files copied to ${top}/device/google/${kernel}-kernel/"
 }
+
+export -f copy_kernel
+
+handle_kernel() {
+  readonly kernel="${1}"
+
+  setup_kernel "${kernel}"
+  build_kernel "${kernel}" "${@}"
+  copy_kernel "${kernel}"
+}
+
+export -f handle_kernel
 
 # error message
 # ARG1: error message for STDERR
@@ -129,9 +150,21 @@ help_message() {
 }
 
 main() {
-  select_kernel_config
-  build_kernel "${@}"
-  copy_kernel
+  kernels_to_build=()
+  for arg in "${@}"; do
+    case "${arg}" in
+    crosshatch|bonito|coral|sunfish|redbull|raviole|bluejay|pantah)
+      echo
+      kernels_to_build+="${1}"
+      echo
+      shift
+      ;;
+    esac
+  done
+  if [[ ${#kernels_to_build[@]} -eq 0 ]]; then
+    kernels_to_build=(${device_kernels[@]})
+  fi
+  parallel --tag --line-buffer -j1 handle_kernel ::: "${kernels_to_build[@]}" ::: "${@}"
 }
 
 ### RUN PROGRAM ###
