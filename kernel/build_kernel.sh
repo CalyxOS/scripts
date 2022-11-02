@@ -105,6 +105,12 @@ build_kernel() {
   popd
 }
 
+clean_kernel() {
+  rm -rf "${top}/device/google/${kernel}-kernel/*"
+  git -C "${top}/device/google/${kernel}-kernel/" checkout -- kernel-headers
+  git -C "${top}/device/google/${kernel}-kernel/" checkout -- */kernel-headers
+}
+
 copy_kernel() {
   # raviole/bluejay/pantah is built differently, gki
   if [[ "${kernel}" == "raviole" || "${kernel}" == "bluejay" || "${kernel}" == "pantah" ]]; then
@@ -131,6 +137,7 @@ help_message() {
 main() {
   select_kernel_config
   build_kernel "${@}"
+  clean_kernel
   copy_kernel
 }
 
