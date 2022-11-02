@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "05e645f7_0917c31f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-11-02T21:28:28Z",
+      "side": 1,
+      "message": "Test: touch device/google/*-kernel/foo.ko; ./build_kernels.sh # check git status",
+      "revId": "d10bcc9cf5b5be3ff12b79c520f4eb3115b42558",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3423268f_0a1f941f",
+        "filename": "kernel/build_kernel.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-11-02T21:28:28Z",
+      "side": 1,
+      "message": "80 chars.\n\nDo you have any idea how long I\u0027ve waited to comment this on one of your commits? :P",
+      "revId": "d10bcc9cf5b5be3ff12b79c520f4eb3115b42558",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
