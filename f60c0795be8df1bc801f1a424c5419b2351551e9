@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b5af9716_46988fee",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-11-02T12:40:11Z",
+      "side": 1,
+      "message": "just run `PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION\u003dpython` for now.\n\n* Not sure if this is backwards compatible\n* `system/update_engine` needs this too for `scripts/update_payload` used by `tools/extract-utils`",
+      "revId": "f60c0795be8df1bc801f1a424c5419b2351551e9",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
