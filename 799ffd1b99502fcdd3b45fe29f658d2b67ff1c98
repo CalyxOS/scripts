@@ -34,6 +34,24 @@
       "parentUuid": "7f8190ed_fd084b1a",
       "revId": "799ffd1b99502fcdd3b45fe29f658d2b67ff1c98",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a14fbdc5_44cb40ad",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-11-08T20:52:21Z",
+      "side": 1,
+      "message": "It could also be a separate script - but the point being we shouldn\u0027t be doing this manually.",
+      "parentUuid": "54819343_decc4254",
+      "revId": "799ffd1b99502fcdd3b45fe29f658d2b67ff1c98",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
