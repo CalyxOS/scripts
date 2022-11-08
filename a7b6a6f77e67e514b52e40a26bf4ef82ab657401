@@ -16,6 +16,24 @@
       "message": "I was proposing adding GKIs here directly, so that we can get auto merging.",
       "revId": "a7b6a6f77e67e514b52e40a26bf4ef82ab657401",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c633db8b_79d497d0",
+        "filename": "vars/kernel_repos",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2022-11-08T21:18:12Z",
+      "side": 1,
+      "message": "With the current manifest there are no GKI kernel repos to merge, we track the gki git revision directly from the normal kernel repos.\n\nIf we want to have separate repos (which will only be needed in case of urgent CVE patches), we are going to have to make new repos for gs101 and gs201 gki, which still don\u0027t have matching tags in AOSP (gs101 is older gki) and I wouldn\u0027t want to upgrade gki version on gs101 while the non-gki kernel is still on older version.\n\nThe question is, do we want to have single gki repository and potentially break things or just make split repositories and follow stock kernel updates with potentially zero breakage?",
+      "parentUuid": "ff3f1313_d0fdd1ae",
+      "revId": "a7b6a6f77e67e514b52e40a26bf4ef82ab657401",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
