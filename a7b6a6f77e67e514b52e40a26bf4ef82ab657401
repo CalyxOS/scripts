@@ -34,6 +34,24 @@
       "parentUuid": "ff3f1313_d0fdd1ae",
       "revId": "a7b6a6f77e67e514b52e40a26bf4ef82ab657401",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a073e670_291b0fe8",
+        "filename": "vars/kernel_repos",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-11-08T21:18:44Z",
+      "side": 1,
+      "message": "Can merge this, and then later, when we try GKIs\n\nHopefully one works, and we can just have a new kernel \"gki-5.10\", and setup auto merging for that like any other kenrel.\n\nIt\u0027s manual now which sucks.",
+      "parentUuid": "ff3f1313_d0fdd1ae",
+      "revId": "a7b6a6f77e67e514b52e40a26bf4ef82ab657401",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
