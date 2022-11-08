@@ -52,6 +52,24 @@
       "parentUuid": "ff3f1313_d0fdd1ae",
       "revId": "a7b6a6f77e67e514b52e40a26bf4ef82ab657401",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8363103e_ddb28013",
+        "filename": "vars/kernel_repos",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-11-08T22:31:15Z",
+      "side": 1,
+      "message": "Looks like we managed to comment at the same time so I totally missed yours till I saw the email.\n\nI\u0027d say we definitely need to fork - sometimes there are urgent CVEs, and we wouldn\u0027t want to waste time forking then.\n\nThen the next question is do we split GKI or unify and potentially uprev.\n\nI\u0027m tempted to try it because it really should work.\n\nnon-gki kernel isn\u0027t really a kernel though - it\u0027s just out of tree modules. Kernel is GKI.\n\nThe breakage could come from just normal upstream linux stable commits. We don\u0027t merge latest stable on other devices because it\u0027d just cause conflicts with google. However here it\u0027s a separate repo without any patches so that makes it a lot easier.\n\nI think I\u0027d like to quickly\n\n1. Try gs201 GKI version on gs101\n2. Try latest GKI on both. That\u0027d be https://android.googlesource.com/kernel/common/+/refs/tags/ASB-2022-11-01_13-5.10 currently.\n3. Fallback to same version as Google\n\n1 and 2 have to a. build b. boot before we can even discuss anything further. If they fail at those we can quickly just move to 3 and leave this discussion behind for the time being.\n\nIf they do work then let\u0027s discuss further.",
+      "parentUuid": "a073e670_291b0fe8",
+      "revId": "a7b6a6f77e67e514b52e40a26bf4ef82ab657401",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
