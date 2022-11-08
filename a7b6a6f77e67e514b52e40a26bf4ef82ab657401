@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ff3f1313_d0fdd1ae",
+        "filename": "vars/kernel_repos",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-11-08T21:07:36Z",
+      "side": 1,
+      "message": "I was proposing adding GKIs here directly, so that we can get auto merging.",
+      "revId": "a7b6a6f77e67e514b52e40a26bf4ef82ab657401",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
