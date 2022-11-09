@@ -73,16 +73,22 @@ select_kernel_config() {
     export DEVICE_KERNEL_BUILD_CONFIG=gs101/private/gs-google/build.config.slider
     export BUILD_KERNEL=1
     export LTO=full
+    export KMI_SYMBOL_LIST_STRICT_MODE=0
+    export ENABLE_STRICT_KMI=0
     ;;
   bluejay)
     export DEVICE_KERNEL_BUILD_CONFIG=gs101/private/devices/google/bluejay/build.config.bluejay
     export BUILD_KERNEL=1
     export LTO=full
+    export KMI_SYMBOL_LIST_STRICT_MODE=0
+    export ENABLE_STRICT_KMI=0
     ;;
   pantah)
     export DEVICE_KERNEL_BUILD_CONFIG=gs201/private/gs-google/build.config.cloudripper
     export BUILD_KERNEL=1
     export LTO=full
+    export KMI_SYMBOL_LIST_STRICT_MODE=0
+    export ENABLE_STRICT_KMI=0
     ;;
   *)
     echo "Unsupported kernel ${kernel}"
