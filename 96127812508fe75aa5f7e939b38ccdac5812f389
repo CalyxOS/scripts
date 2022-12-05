@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1d77d63e_16f555b4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2022-12-05T22:37:43Z",
+      "side": 1,
+      "message": "10s might be a bit too much, but does work reliably.\n\n",
+      "revId": "96127812508fe75aa5f7e939b38ccdac5812f389",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
