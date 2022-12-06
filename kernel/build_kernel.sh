@@ -81,7 +81,7 @@ select_kernel_config() {
     ;;
   pantah)
     export DEVICE_KERNEL_BUILD_CONFIG=gs201/private/gs-google/build.config.cloudripper
-    export BUILD_KERNEL=1
+    export BUILD_AOSP_KERNEL=1
     export LTO=full
     ;;
   *)
