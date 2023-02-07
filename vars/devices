@@ -17,4 +17,5 @@ readonly devices=(
   crosshatch
   blueline
   FP4
+  axolotl
 )
