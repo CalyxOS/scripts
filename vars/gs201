@@ -2,15 +2,15 @@
 
 # Updated semi-manually via pixel/update-any-var.sh
 
-readonly prev_kernel_branch="android-gs-pantah-5.10-android13-qpr1" # Jan 2023
-readonly kernel_branch="android-gs-pantah-5.10-android13-qpr1" # Feb 2023
+readonly prev_kernel_branch="android-gs-pantah-5.10-android13-qpr1" # Feb 2023
+readonly kernel_branch="android-gs-pantah-5.10-android13-qpr2-beta" # Mar 2023
 
-readonly prev_kernel_tag=android-13.0.0_r0.55 # Jan 2023
-readonly kernel_tag=android-13.0.0_r0.60 # Feb 2023
+readonly prev_kernel_tag=android-13.0.0_r0.60 # Feb 2023
+readonly kernel_tag=android-t-qpr2-beta-3.2_r0.6 # Mar 2023
 
 # Match with version string in commit message of prebuilt kernel
-readonly prev_gki_branch="android13-5.10-2022-09_r4" # Jan 2023
-readonly gki_branch="android13-5.10-2022-09_r5" # Feb 2023
+readonly prev_gki_branch="android13-5.10-2022-09_r5" # Feb 2023
+readonly gki_branch="android13-5.10-2022-12_r3" # Mar 2023
 
-readonly prev_gki_tag=android-13.0.0_r0.55 # Jan 2023
-readonly gki_tag=android-13.0.0_r0.60 # Feb 2023
+readonly prev_gki_tag=android-13.0.0_r0.60 # Feb 2023
+readonly gki_tag=android-t-qpr2-beta-3.2_r0.6 # Mar 2023
