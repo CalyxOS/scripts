@@ -11,10 +11,10 @@ readonly common_aosp_branch=android13-qpr1-release # Feb 2023, Supported Pixels
 readonly prev_common_aosp_tag=android-13.0.0_r20 # Jan 2023, Pixel 6, 6 Pro, 7 Pro
 readonly common_aosp_tag=android-13.0.0_r30 # Feb 2023, Supported Pixels
 
-readonly prev_common_aosp_build_id=TQ1A.230105.002 # Jan 2023, Pixel 6, 6 Pro, 7 Pro
-readonly common_aosp_build_id=TQ1A.230205.002 # Feb 2023, Supported Pixels
+readonly prev_common_aosp_build_id=TQ1A.230205.002 # Feb 2023, Supported Pixels
+readonly common_aosp_build_id=TQ2A.230305.008.C1 # Mar 2023, Pixel 4a - 6a, 7 Pro
 
-readonly topic=feb23
+readonly topic=mar23
 
 readonly lineageos_branch=lineage-20.0
 
