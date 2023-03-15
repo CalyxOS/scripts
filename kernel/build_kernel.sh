@@ -71,12 +71,12 @@ select_kernel_config() {
     ;;
   raviole)
     export DEVICE_KERNEL_BUILD_CONFIG=gs101/private/gs-google/build.config.slider
-    export BUILD_KERNEL=1
+    export BUILD_AOSP_KERNEL=1
     export LTO=full
     ;;
   bluejay)
     export DEVICE_KERNEL_BUILD_CONFIG=gs101/private/devices/google/bluejay/build.config.bluejay
-    export BUILD_KERNEL=1
+    export BUILD_AOSP_KERNEL=1
     export LTO=full
     ;;
   pantah)
