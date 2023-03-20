@@ -14,7 +14,7 @@ readonly common_aosp_tag=android-13.0.0_r35 # Mar 2023, Pixel 4a - 5a, 7 Pro
 readonly prev_common_aosp_build_id=TQ1A.230205.002 # Feb 2023, Supported Pixels
 readonly common_aosp_build_id=TQ2A.230305.008.C1 # Mar 2023, Pixel 4a - 5a, 7 Pro
 
-readonly topic=mar23
+readonly topic=mar23-1
 
 readonly lineageos_branch=lineage-20.0
 
