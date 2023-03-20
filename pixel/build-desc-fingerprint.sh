@@ -64,8 +64,10 @@ main() {
       local dv="${vars_path}/${d}"
       source "${dv}"
       local mk="$(ls ${top}/device/google/*/calyx_${d}.mk)"
-      sed -i "s/${prev_build_id}/${build_id}/g" "${mk}"
-      sed -i "s/${prev_build_number}/${build_number}/g" "${mk}"
+      desc="${d}-user 13 ${build_id} ${build_number} release-keys"
+      fingerprint="google/${d}/${d}:13/${build_id}/${build_number}:user/release-keys"
+      sed -i "/PRIVATE_BUILD_DESC/c\    PRIVATE_BUILD_DESC=\"${desc}\"" "${mk}"
+      sed -i "/BUILD_FINGERPRINT/c\BUILD_FINGERPRINT\ :=\ ${fingerprint}" "${mk}"
     )
   done
 
