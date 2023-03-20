@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a8799bc9_a4e416ed",
+        "filename": "pixel/build-desc-fingerprint.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-03-20T23:28:22Z",
+      "side": 1,
+      "message": "We\u0027ll need to update the 13 here every year, but we had to do it in every device either way.",
+      "revId": "284d05fc6ea0e4b77744692b600189b5f2423bd4",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
