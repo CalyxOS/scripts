@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ff18f7d7_355d1a69",
+        "filename": "aosp-merger/_merge_helper.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2023-03-24T17:46:51Z",
+      "side": 1,
+      "message": "This was changed to match `lineage-20`, it should also still match `lineage-20.0` without overcomplicating this part of the script",
+      "range": {
+        "startLine": 72,
+        "startChar": 18,
+        "endLine": 72,
+        "endChar": 41
+      },
+      "revId": "a57dda10d19f3e74b147cb55b144c0916ea25c27",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "47bda5eb_92328959",
+        "filename": "aosp-merger/push-upstream.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2023-03-24T17:46:51Z",
+      "side": 1,
+      "message": "This was changed to match `lineage-20`, it should also still match `lineage-20.0` without overcomplicating this part of the script",
+      "range": {
+        "startLine": 71,
+        "startChar": 22,
+        "endLine": 71,
+        "endChar": 45
+      },
+      "revId": "a57dda10d19f3e74b147cb55b144c0916ea25c27",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
