@@ -26,6 +26,23 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "22fa5f19_8e27aa9a",
+        "filename": "aosp-merger/aosp-merger.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 160,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-03-24T20:59:58Z",
+      "side": 1,
+      "message": "These changes will conflict with upstream now, right.",
+      "revId": "a57dda10d19f3e74b147cb55b144c0916ea25c27",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "47bda5eb_92328959",
         "filename": "aosp-merger/push-upstream.sh",
         "patchSetId": 1
