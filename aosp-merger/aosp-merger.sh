@@ -33,6 +33,7 @@ source "${vars_path}/common"
 source "${vars_path}/pixels"
 source "${vars_path}/kernel_repos"
 source "${vars_path}/qcom"
+source "${vars_path}/lineage_devices"
 
 TOP="${script_path}/../../.."
 
@@ -156,7 +157,7 @@ push_clo_merge() {
 
 # Merge LineageOS to forks
 merge_lineage() {
-  "${script_path}"/_merge_helper.sh --project-path "${repo}" --new-tag "${lineageos_branch}" --branch-suffix "${os_branch}_merge-${lineageos_branch}"
+  "${script_path}"/_merge_helper.sh --project-path "${repo}" --new-tag "${1}" --branch-suffix "${os_branch}_merge-${1}"
 }
 
 post_lineage_merge() {
@@ -164,11 +165,11 @@ post_lineage_merge() {
 }
 
 upload_lineage_merge_to_review() {
-  "${script_path}"/upload-merge.sh --branch-suffix "${os_branch}_merge-${lineageos_branch}" --lineage
+  "${script_path}"/upload-merge.sh --branch-suffix "${os_branch}_merge-${1}" --lineage
 }
 
 push_lineage_merge() {
-  "${script_path}"/push-merge.sh --branch-suffix "${os_branch}_merge-${lineageos_branch}" --lineage
+  "${script_path}"/push-merge.sh --branch-suffix "${os_branch}_merge-${1}" --lineage
 }
 
 # error message
@@ -280,7 +281,7 @@ main() {
 
     for repo in $(repo list -p -g lineage); do
       (
-      merge_lineage
+      merge_lineage "${lineageos_branch}"
       )
     done
 
@@ -288,9 +289,32 @@ main() {
     cat "${MERGEDREPOS}" | grep -w conflict-merge || true
     read -p "Waiting for conflict resolution. Press enter when done."
     post_lineage_merge
-    upload_lineage_merge_to_review
+    upload_lineage_merge_to_review "${lineageos_branch}"
 
     unset MERGEDREPOS
+  elif [ "${1}" = "lineage-devices" ]; then
+    for device in ${lineage_devices[@]}; do
+      (
+      source "${vars_path}/${device}"
+      export MERGEDREPOS="${TOP}/merged_repos_${device}.txt"
+      # Remove any existing list of merged repos file
+      rm -f "${MERGEDREPOS}"
+
+      for repo in ${device_repos[@]}; do
+        (
+        merge_lineage "${lineageos_device_branch}"
+        )
+      done
+
+      # Run this to print list of conflicting repos
+      cat "${MERGEDREPOS}" | grep -w conflict-merge || true
+      read -p "Waiting for conflict resolution. Press enter when done."
+      post_lineage_merge
+      upload_lineage_merge_to_review "${lineageos_device_branch}"
+
+      unset MERGEDREPOS
+      )
+    done
   elif [ "${1}" = "submit-platform" ]; then
     export MERGEDREPOS="${TOP}/merged_repos.txt"
 
@@ -331,9 +355,20 @@ main() {
   elif [ "${1}" = "submit-lineage" ]; then
     export MERGEDREPOS="${TOP}/merged_repos_lineage.txt"
 
-    push_lineage_merge
+    push_lineage_merge "${lineageos_branch}"
 
     unset MERGEDREPOS
+  elif [ "${1}" = "submit-lineage-devices" ]; then
+    for device in ${lineage_devices[@]}; do
+      (
+      source "${vars_path}/${device}"
+      export MERGEDREPOS="${TOP}/merged_repos_${device}.txt"
+
+      push_lineage_merge "${lineageos_device_branch}"
+
+      unset MERGEDREPOS
+      )
+    done
   fi
 }
 

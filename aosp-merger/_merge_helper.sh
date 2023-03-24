@@ -69,7 +69,7 @@ cd "${TOP}/${PROJECTPATH}"
 repo abandon "${STAGINGBRANCH}" .
 repo start "${STAGINGBRANCH}" .
 if [ -f ".gitupstream-lineage" ]; then
-    if grep -q "${lineageos_branch}" .gitupstream-lineage; then
+    if grep -q "${lineageos_device_branch}" .gitupstream-lineage; then
         LINEAGEBRANCH="$(cat .gitupstream-lineage | cut -d ' ' -f 2)"
     else
         LINEAGEBRANCH="${lineageos_branch}"

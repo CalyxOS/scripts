@@ -1,1 +1,7 @@
 # Fairphone 4
+
+# Usage: ${device_repos[@]}
+device_repos=(
+  device/fairphone/FP4
+  kernel/fairphone/sm7225
+)

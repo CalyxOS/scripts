@@ -68,7 +68,7 @@ echo "#### Verification complete - no uncommitted changes found ####"
 for PROJECTPATH in ${PROJECTPATHS}; do
     cd "${TOP}/${PROJECTPATH}"
     if [ "${LINEAGE}" = true ]; then
-        if grep -q "${lineageos_branch}" .gitupstream-lineage; then
+        if grep -q "${lineageos_device_branch}" .gitupstream-lineage; then
             UPSTREAMBRANCH="$(cat .gitupstream-lineage | cut -d ' ' -f 2)"
         else
             UPSTREAMBRANCH="${lineageos_branch}"
