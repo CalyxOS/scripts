@@ -16,8 +16,8 @@
 ### SET ###
 
 # use bash strict mode
-set -euo pipefail
-
+set -eo pipefail
+# No set -u due to OFFICIAL_BUILD check
 
 ### TRAPS ###
 
@@ -30,7 +30,6 @@ readonly script_path="$(cd "$(dirname "$0")";pwd -P)"
 readonly top="${script_path}/../../.."
 readonly mk="${top}/vendor/calyx/config/version.mk"
 
-
 ## HELP MESSAGE (USAGE INFO)
 # TODO
 
@@ -41,7 +40,12 @@ get_build_number() {
   readonly major=$(cat "${mk}" | grep ^PRODUCT_VERSION_MAJOR | awk '{printf "%s\n", $3}')
   readonly minor=$(cat "${mk}" | grep ^PRODUCT_VERSION_MINOR | awk '{printf "%s\n", $3}')
   readonly patch=$(cat "${mk}" | grep ^PRODUCT_VERSION_PATCH | awk '{printf "%s\n", $3}')
-  echo $((${year} * 1000000 + ${major} * 100000 +${minor} * 1000 + ${patch} * 10))
+  version=$((${year} * 1000000 + ${major} * 100000 +${minor} * 1000 + ${patch} * 10))
+  if [[ -n ${OFFICIAL_BUILD} ]]; then
+    echo "${version}"
+  else
+    echo $((${version} - 1))
+  fi
 }
 
 # error message
