@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fc4dc88f_e4dd0886",
+        "filename": "release/version.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-03-28T17:08:28Z",
+      "side": 1,
+      "message": "Here\u0027s to hoping we never end up making 10 builds in a month.\n\nCurrent record is 8, I think.",
+      "revId": "e1f7be3e103e21123f6085db4a05094966476949",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
