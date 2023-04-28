@@ -1,0 +1,31 @@
+readonly android_manifest_url="https://android.googlesource.com/platform/manifest"
+
+# Updated manually
+readonly -A modules_to_apps=(
+  [adb]="com.android.adbd"
+  [ads]="com.android.adservices"
+  [art]="com.android.art"
+  [ase]="com.android.appsearch"
+  [cbr]="com.android.cellbroadcast"
+  [con]="com.android.conscrypt"
+# DocumentsUI is not currently handled modularly
+#  [doc]="com.android.documentsui"
+  [ext]="com.android.extservices"
+  [ips]="com.android.ipsec"
+  [med]="com.android.media"
+  [mpr]="com.android.mediaprovider"
+# NetworkStack is not currently handled modularly
+#  [net]="NetworkStack CaptivePortalLogin"
+  [neu]="com.android.neuralnetworks"
+  [per]="com.android.permission"
+  [res]="com.android.resolv"
+  [sch]="com.android.scheduling"
+  [sdk]="com.android.sdkext"
+  [sta]="com.android.os.statsd"
+  [swc]="com.android.media.swcodec"
+  [tet]="com.android.tethering"
+# Google uses numbered tzdata package names for different Android versions. AOSP does not.
+  [tz4]="com.android.tzdata"
+  [uwb]="com.android.uwb"
+  [wif]="com.android.wifi"
+)
