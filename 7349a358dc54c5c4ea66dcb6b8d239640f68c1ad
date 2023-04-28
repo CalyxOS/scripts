@@ -16,6 +16,24 @@
       "message": "Pretty rough at the moment, but adding you in case you get an opportunity to look and notice anything that needs to be done differently, etc.\n\nThe idea is to be able to clone the scripts repo in an AOSP build dir and then just run e.g. `calyx/scripts/apex/build_modules.sh com.android.permission` and have it do everything necessary to download and build the latest tag for that module, or even supply no arguments and have it do it for all modules listed in `vars/apex`.\n\nDoesn\u0027t consider how to use patches yet but shouldn\u0027t be hard to add",
       "revId": "7349a358dc54c5c4ea66dcb6b8d239640f68c1ad",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "38a178ea_d613aead",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-04-28T21:27:51Z",
+      "side": 1,
+      "message": "Thanks! Left some comments, please don\u0027t address any of them just yet, let\u0027s talk through it first? because there\u0027ll definitely be a lot of changes.\n\n\u003e Doesn\u0027t consider how to use patches yet but shouldn\u0027t be hard to add\n\nWe usually don\u0027t work with patches. Chromium was the only exception, but even that\u0027s using signed tags for the production builds now.\n\nWe\u0027ll have tagged repos with merges of the aml tags.\n\nI.e., if we have changes to packages/modules/waffles, then we\u0027d create a new branch (or branches as needed) based on the aml tags, and then apply our changes on top.\n\nThen, we\u0027d have a custom manifest based on the AOSP aml manifest, with just one change - the repo for packages/modules/waffles is fetched from CalyxOS.\n\n\npatches are just too fragile and a pain to deal with. This setup will take some work in the start, but once it\u0027s set it should be pretty smooth going fowrard, just like the AOSP merges are these days 😊",
+      "parentUuid": "0a192842_1925fe12",
+      "revId": "7349a358dc54c5c4ea66dcb6b8d239640f68c1ad",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
