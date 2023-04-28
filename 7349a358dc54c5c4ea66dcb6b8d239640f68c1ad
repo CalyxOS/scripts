@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0a192842_1925fe12",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-04-28T21:05:36Z",
+      "side": 1,
+      "message": "Pretty rough at the moment, but adding you in case you get an opportunity to look and notice anything that needs to be done differently, etc.\n\nThe idea is to be able to clone the scripts repo in an AOSP build dir and then just run e.g. `calyx/scripts/apex/build_modules.sh com.android.permission` and have it do everything necessary to download and build the latest tag for that module, or even supply no arguments and have it do it for all modules listed in `vars/apex`.\n\nDoesn\u0027t consider how to use patches yet but shouldn\u0027t be hard to add",
+      "revId": "7349a358dc54c5c4ea66dcb6b8d239640f68c1ad",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
