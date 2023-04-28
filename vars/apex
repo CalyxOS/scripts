@@ -1,0 +1,17 @@
+readonly manifest_dir=.repo/manifests
+readonly default_target_build_archs="
+  arm64
+  x86_64
+"
+# %s is replaced by architecture
+readonly default_dist_dir="out/dist/mainline_modules_%s"
+readonly default_target_build_apps="
+    com.android.permission
+    com.android.mediaprovider
+    com.android.tzdata4
+"
+
+# Ensure build variant and type are not set in case this environmet
+# is reused from other builds, as they may be incorrect.
+unset TARGET_BUILD_VARIANT
+unset TARGET_BUILD_TYPE

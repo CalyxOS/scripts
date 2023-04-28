@@ -1,0 +1,43 @@
+# Updated 2023-04-25 via manual regex replacement, sorting, and review of:
+# git -C "$manifest_dir" for-each-ref --sort=-taggerdate --format='%(refname:short) %(contents:subject)' 'refs/tags/aml_*'
+declare -A MODULE_TO_SHORTNAME=(
+    [com.android.adbd]="adb"
+    [com.android.adservices]="ads"
+    [com.android.appsearch]="ase"
+    [com.android.art]="art"
+    # com.android.captiveportallogin is same shortname as com.android.networkstack
+    [com.android.captiveportallogin]="net"
+    [com.android.cellbroadcast]="cbr"
+    [com.android.conscrypt]="con"
+    [com.android.extservices]="ext"
+
+    # go variants share a shortname with non-go variants, if any
+    [com.android.go.documentsui]="doc"
+    [com.android.go.os.statsd]="sta"
+    [com.android.go.tzdata4]="tz4"
+
+    [com.android.ipsec]="ips"
+    [com.android.media.swcodec]="swc"
+    [com.android.media]="med"
+    [com.android.mediaprovider]="mpr"
+    # com.android.networkstack is same shortname as com.android.captiveportallogin
+    [com.android.networkstack]="net"
+    [com.android.neuralnetworks]="neu"
+    [com.android.os.statsd]="sta"
+    [com.android.permission]="per"
+    [com.android.resolv]="res"
+    [com.android.scheduling]="sch"
+    [com.android.sdkext]="sdk"
+    [com.android.tethering]="tet"
+    [com.android.tzdata2]="tz2"
+    [com.android.tzdata3]="tz3"
+    [com.android.tzdata4]="tz4"
+    [com.android.uwb]="uwb"
+    [com.android.wifi]="wif"
+
+    # [com.google.android.tzdata4]="tz4"
+)
+
+declare -A MODULE_NAME_WORKAROUND_MAP=(
+    [com.android.tzdata4]="com.android.tzdata"
+)
