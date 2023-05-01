@@ -26,7 +26,6 @@ readonly kernel=msm-4.9
 
 # Updated semi-manually via pixel/update-any-var.sh
 
-readonly prev_build_id=SP1A.210812.016.C1 # Feb 2022
 readonly build_id=SP1A.210812.016.C2 # Jun 2022
 
 # Updated automatically via pixel/update-device-vars.sh
@@ -36,7 +35,6 @@ readonly aosp_branch="android12-s5-release"
 readonly prev_aosp_tag="android-12.0.0_r31"
 readonly aosp_tag="android-12.0.0_r34"
 
-readonly prev_build_number="8029091"
 readonly build_number="8618562"
 
 readonly image_url="https://dl.google.com/dl/android/aosp/crosshatch-sp1a.210812.016.c2-factory-27f59137.zip"
