@@ -36,6 +36,24 @@
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "6a065716_d6f2fcdc",
+        "filename": "pixel/get-new-device-vars.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-05-01T18:41:54Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "26a2aa05_1ea43574",
+      "revId": "688f1db287edc2e48b27e54e6e7a67927e1398dd",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d0dc3b5a_a70b131e",
