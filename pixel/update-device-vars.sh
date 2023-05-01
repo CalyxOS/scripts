@@ -3,7 +3,6 @@
 # SPDX-FileCopyrightText: 2022 The Calyx Institute
 #
 # SPDX-License-Identifier: Apache-2.0
-
 #
 # update-vars:
 #
@@ -32,6 +31,7 @@ readonly vars_path="${script_path}/../vars"
 readonly tmp_dir="${TMPDIR:-/tmp}/pixel"
 
 source "${vars_path}/pixels"
+source "${vars_path}/common"
 
 ## HELP MESSAGE (USAGE INFO)
 # TODO
@@ -66,7 +66,7 @@ main() {
       local tmp=$(mktemp "${tmp_dir}/${d}.XXXXXXXXXX")
       local dv="${vars_path}/${d}"
       source "${dv}"
-      ${script_path}/get-new-device-vars.py -b "${build_id}" -d "${d}"> "${tmp}"
+      ${script_path}/get-new-device-vars.py -b "${build_id}" -d "${d}" -t ${aosp_tag_match} -br ${os_branch}> "${tmp}"
       source "${tmp}"
       if [[ "${new_aosp_branch}" != "${aosp_branch}" ]]; then
         sed -i "/ prev_aosp_branch=/c\readonly prev_aosp_branch=\"$aosp_branch\"" "${dv}"
