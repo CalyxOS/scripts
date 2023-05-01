@@ -16,6 +16,24 @@
       "message": "Unnecessary change",
       "revId": "794af7a10b3c57df9941a68c77f5c796d982d0d8",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "411a49fa_7e041914",
+        "filename": "pixel/update-device-vars.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-05-01T20:50:06Z",
+      "side": 0,
+      "message": "Done",
+      "parentUuid": "d85f9d3c_a764a8d3",
+      "revId": "794af7a10b3c57df9941a68c77f5c796d982d0d8",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
