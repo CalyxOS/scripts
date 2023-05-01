@@ -1,4 +1,6 @@
 # Entire file updated manually
+readonly android_version=13
+
 readonly prev_os_branch=android13
 readonly os_branch=android13
 
