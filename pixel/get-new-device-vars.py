@@ -103,6 +103,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('-b', '--build_id', help="Build ID", type=str, required=True)
     parser.add_argument('-d', '--device', help="Device codename", type=str, required=True)
+    # TODO Use vars/common for the below
     parser.add_argument('-t', '--tags_match', default="android-13.0", help='Android version tag to match', type=str)
     parser.add_argument('-br', '--branch_match', default="android13", help='Android version branch to match', type=str)
     args = parser.parse_args()
