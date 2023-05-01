@@ -26,7 +26,6 @@ readonly kernel=msm-4.9
 
 # Updated semi-manually via pixel/update-any-var.sh
 
-readonly prev_build_id="SP2A.220505.006"
 readonly build_id="SP2A.220505.008"
 
 # Updated automatically via pixel/update-device-vars.sh
@@ -36,7 +35,6 @@ readonly aosp_branch="android12L-release"
 readonly prev_aosp_tag="android-12.1.0_r6"
 readonly aosp_tag="android-12.1.0_r27"
 
-readonly prev_build_number="8561491"
 readonly build_number="8782922"
 
 readonly image_url="https://dl.google.com/dl/android/aosp/bonito-sp2a.220505.008-factory-db19d2aa.zip"
