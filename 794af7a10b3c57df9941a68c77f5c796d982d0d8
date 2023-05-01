@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d85f9d3c_a764a8d3",
+        "filename": "pixel/update-device-vars.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2023-05-01T20:41:41Z",
+      "side": 0,
+      "message": "Unnecessary change",
+      "revId": "794af7a10b3c57df9941a68c77f5c796d982d0d8",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
