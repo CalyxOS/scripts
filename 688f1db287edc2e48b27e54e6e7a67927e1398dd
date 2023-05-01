@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f3e2b9f0_edd59cda",
+        "filename": "pixel/get-new-device-vars.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-05-01T18:30:02Z",
+      "side": 1,
+      "message": "What do we use here? android-${android_version}.0 ? New var?",
+      "revId": "688f1db287edc2e48b27e54e6e7a67927e1398dd",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d0dc3b5a_a70b131e",
+        "filename": "pixel/get-new-device-vars.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-05-01T18:30:02Z",
+      "side": 1,
+      "message": "This is ${os_branch}\n\nThe easier way would be to remove defaults and just update the call sites.",
+      "revId": "688f1db287edc2e48b27e54e6e7a67927e1398dd",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
