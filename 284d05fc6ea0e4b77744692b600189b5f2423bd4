@@ -16,6 +16,24 @@
       "message": "We\u0027ll need to update the 13 here every year, but we had to do it in every device either way.",
       "revId": "284d05fc6ea0e4b77744692b600189b5f2423bd4",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0fdcb58a_b242ce35",
+        "filename": "pixel/build-desc-fingerprint.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2023-05-01T18:19:48Z",
+      "side": 1,
+      "message": "Not the biggest fan but we should document this and get-new-device-vars.py version change if we go this route",
+      "parentUuid": "a8799bc9_a4e416ed",
+      "revId": "284d05fc6ea0e4b77744692b600189b5f2423bd4",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
