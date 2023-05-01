@@ -69,6 +69,24 @@
       "parentUuid": "d0dc3b5a_a70b131e",
       "revId": "688f1db287edc2e48b27e54e6e7a67927e1398dd",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "18df1a59_1418f4e4",
+        "filename": "pixel/get-new-device-vars.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-05-01T18:39:35Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d0dc3b5a_a70b131e",
+      "revId": "688f1db287edc2e48b27e54e6e7a67927e1398dd",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
