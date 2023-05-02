@@ -106,13 +106,20 @@ build_kernel() {
 }
 
 clean_kernel() {
-  find "${top}/device/google/${kernel}-kernel/" -maxdepth 1 ! \( -name .gitreview -o -name .gitignore \) -type f -exec rm -f {} +
+  if [[ "${kernel}" == "redbull" ]]; then
+    local dir="${top}/device/google/${kernel}-kernel/vintf/"
+  else
+    local dir="${top}/device/google/${kernel}-kernel/"
+  fi
+  find "${dir}" -maxdepth 1 ! \( -name .gitreview -o -name .gitignore \) -type f -exec rm -f {} +
 }
 
 copy_kernel() {
   # raviole/bluejay/pantah is built differently, gki
   if [[ "${kernel}" == "raviole" || "${kernel}" == "bluejay" || "${kernel}" == "pantah" ]]; then
     cp -a "${OUT_DIR}/mixed/dist/"* "${top}/device/google/${kernel}-kernel/"
+  elif [[ "${kernel}" == "redbull" ]]; then
+    cp -a "${OUT_DIR}/dist/"* "${top}/device/google/${kernel}-kernel/vintf/"
   else
     cp -a "${OUT_DIR}/dist/"* "${top}/device/google/${kernel}-kernel/"
   fi
