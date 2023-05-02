@@ -1,8 +1,8 @@
-# Pixel 7, 7 Pro
+# Pixel 6, 6 Pro, 6a, 7, 7 Pro GKI
 
 # Updated semi-manually via pixel/update-any-var.sh
-
-readonly kernel_branch="android-gs-pantah-5.10-android13-qpr2"
+# Match with version string in commit message of prebuilt kernel
+readonly kernel_branch="android13-5.10-2022-12_r8" # May 2023
 
 readonly prev_kernel_tag=android-13.0.0_r0.70 # Apr 2023
 readonly kernel_tag=android-13.0.0_r0.75 # May 2023
