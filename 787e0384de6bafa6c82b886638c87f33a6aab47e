@@ -16,6 +16,24 @@
       "message": "This won\u0027t work now",
       "revId": "787e0384de6bafa6c82b886638c87f33a6aab47e",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a48502df_0aba964a",
+        "filename": "kernel/build_kernel.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2023-05-02T18:22:57Z",
+      "side": 1,
+      "message": "Just add a redbull specific case then?",
+      "parentUuid": "dea236f0_2ea2cf06",
+      "revId": "787e0384de6bafa6c82b886638c87f33a6aab47e",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
