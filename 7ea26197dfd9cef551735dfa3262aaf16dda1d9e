@@ -16,6 +16,24 @@
       "message": "Just waiting on kernel",
       "revId": "7ea26197dfd9cef551735dfa3262aaf16dda1d9e",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a29e3f10_d52fe7bc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-05-02T15:41:13Z",
+      "side": 1,
+      "message": "16967: Temporarily switch to prebuilt kernel for supported Pixels | https://review.calyxos.org/c/CalyxOS/platform_manifest/+/16967",
+      "parentUuid": "c1f1707f_09357e77",
+      "revId": "7ea26197dfd9cef551735dfa3262aaf16dda1d9e",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
