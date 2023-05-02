@@ -70,7 +70,6 @@ main() {
       ${script_path}/get-new-device-vars.py -b "${build_id}" -d "${d}" -t ${aosp_tag_match} -br ${os_branch}> "${tmp}"
       source "${tmp}"
       if [[ "${new_aosp_branch}" != "${aosp_branch}" ]]; then
-        sed -i "/ prev_aosp_branch=/c\readonly prev_aosp_branch=\"$aosp_branch\"" "${dv}"
         sed -i "/ aosp_branch=/c\readonly aosp_branch=\"$new_aosp_branch\"" "${dv}"
       fi
       if [[ "${new_aosp_tag}" != "${aosp_tag}" ]]; then
