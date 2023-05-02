@@ -52,9 +52,7 @@ handle_repos() {
    tag_repo "${repo}" "${version}" "${msgfile}"
   done
   read -p "Press enter to start pushing"
-  for repo in ${repos}; do
-   push_repo "${repo}" "${version}"
-  done
+  parallel push_repos {} "${version}" ::: "${repos}"
   popd
 }
 
