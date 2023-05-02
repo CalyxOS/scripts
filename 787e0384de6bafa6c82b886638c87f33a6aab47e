@@ -34,6 +34,24 @@
       "parentUuid": "dea236f0_2ea2cf06",
       "revId": "787e0384de6bafa6c82b886638c87f33a6aab47e",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1ad87dcb_038eb9cc",
+        "filename": "kernel/build_kernel.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2023-05-02T18:51:05Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a48502df_0aba964a",
+      "revId": "787e0384de6bafa6c82b886638c87f33a6aab47e",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
