@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "048c1c00_d48a5083",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-05-02T17:50:53Z",
+      "side": 1,
+      "message": "Will unify gs101 and gs201, and split gki in a followup",
+      "revId": "d59b4b0f0af02db5bf27e2bf3aaec7adb48bedea",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
