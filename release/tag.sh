@@ -52,9 +52,7 @@ handle_repos() {
    tag_repo "${repo}" "${version}" "${msgfile}"
   done
   read -p "Press enter to start pushing"
-  for repo in ${repos}; do
-   push_repo "${repo}" "${version}"
-  done
+  parallel push_repo {} "${version}" ::: "${repos}"
   popd
 }
 
@@ -70,6 +68,8 @@ push_repo() {
   local version="${2}"
   git -C "${repo}" push calyx "${version}"
 }
+
+export -f push_repo
 
 # error message
 # ARG1: error message for STDERR
