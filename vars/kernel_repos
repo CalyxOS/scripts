@@ -1,5 +1,6 @@
 # Usage: ${kernel_repos[@]}
 readonly kernel_repos=(
+  kernel/google/gki-5.10
   kernel/google/gs201/private/gs-google
   kernel/google/gs101/private/gs-google
   kernel/google/redbull
