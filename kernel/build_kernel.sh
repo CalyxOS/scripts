@@ -113,6 +113,8 @@ copy_kernel() {
   # raviole/bluejay/pantah is built differently, gki
   if [[ "${kernel}" == "raviole" || "${kernel}" == "bluejay" || "${kernel}" == "pantah" ]]; then
     cp -a "${OUT_DIR}/mixed/dist/"* "${top}/device/google/${kernel}-kernel/"
+  elif [[ "${kernel}" == "redbull" ]]; then
+    cp -a "${OUT_DIR}/dist/"* "${top}/device/google/${kernel}-kernel/vintf/"
   else
     cp -a "${OUT_DIR}/dist/"* "${top}/device/google/${kernel}-kernel/"
   fi
