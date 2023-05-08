@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "985b35d5_e65029b4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-05-08T15:24:44Z",
+      "side": 1,
+      "message": "The other comments make sense to me too.",
+      "revId": "ee980b4c5bb79b2f9640f3d91c85ebe1b8186a76",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "d8e4ed57_5d6a8c94",
@@ -31,6 +48,24 @@
       "writtenOn": "2023-04-28T21:27:51Z",
       "side": 1,
       "message": "Wonder if there\u0027s a better way. Maybe check if the module metadata version is higher (or not equal) compared to what we know in AOSP 13 (that can just be a hardcoded var)",
+      "revId": "ee980b4c5bb79b2f9640f3d91c85ebe1b8186a76",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d36f8832_ed1c8f8d",
+        "filename": "apex/build_module.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-05-08T15:24:44Z",
+      "side": 1,
+      "message": "This was only meant to prevent accidentally running the script in a regular AOSP / CalyxOS build environment, in case the user of the script did not understand that it will need to check out another branch and possibly mess up any changes they\u0027re currently working on.\n\n`packages/modules/ModuleMetadata` does seem like a good source of information too though, at least via git, if we end up wanting to do this.",
+      "parentUuid": "4221c24a_d051fa6e",
       "revId": "ee980b4c5bb79b2f9640f3d91c85ebe1b8186a76",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
@@ -69,6 +104,24 @@
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "abcfe5c7_cd44a6e9",
+        "filename": "vars/apex",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-05-08T15:24:44Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "2668150d_67449650",
+      "revId": "ee980b4c5bb79b2f9640f3d91c85ebe1b8186a76",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "f2c52bcb_3d886c81",
@@ -82,6 +135,24 @@
       "writtenOn": "2023-04-28T21:27:51Z",
       "side": 1,
       "message": "We have (planned) changes to this module.",
+      "revId": "ee980b4c5bb79b2f9640f3d91c85ebe1b8186a76",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e649a17f_d2babfb3",
+        "filename": "vars/apex",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-05-08T15:24:44Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "f2c52bcb_3d886c81",
       "revId": "ee980b4c5bb79b2f9640f3d91c85ebe1b8186a76",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
@@ -116,6 +187,42 @@
       "writtenOn": "2023-04-28T21:27:51Z",
       "side": 1,
       "message": "com.android.tzdata, AOSP doesn\u0027t have the 4.\n\nI like doing it this way, we can keep adding modules here as we work on them.",
+      "revId": "ee980b4c5bb79b2f9640f3d91c85ebe1b8186a76",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9cdbb0d1_3685f4d5",
+        "filename": "vars/apex",
+        "patchSetId": 3
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-05-08T15:24:44Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "6ef7fc5f_a0988666",
+      "revId": "ee980b4c5bb79b2f9640f3d91c85ebe1b8186a76",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bbf721a5_60ab4024",
+        "filename": "vars/apex",
+        "patchSetId": 3
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-05-08T15:24:44Z",
+      "side": 1,
+      "message": "Oops, yes, needs to be changed.",
+      "parentUuid": "fe6d98e1_6bdc4b6b",
       "revId": "ee980b4c5bb79b2f9640f3d91c85ebe1b8186a76",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
