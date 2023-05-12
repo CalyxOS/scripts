@@ -19,12 +19,25 @@ device_repos=(
   device/google/lynx-sepolicy
 )
 
+readonly kernel=lynx
+
 # Need OTA zip for firmware, not supported by image_unpacker yet
 readonly needs_ota=true
 
 # Updated semi-manually via pixel/update-any-var.sh
 
 readonly build_id="TQ2B.230505.005.A1"
+
+readonly kernel_branch="android-gs-lynx-5.10-android13-qpr2-b"
+
+readonly prev_kernel_tag=na
+readonly kernel_tag=android-13.0.0_r0.77 # May 2023
+
+# Match with version string in commit message of prebuilt kernel
+readonly gki_branch="android13-5.10-2022-12_r8" # May 2023
+
+readonly prev_gki_tag=na
+readonly gki_tag=android-13.0.0_r0.77 # May 2023
 
 # Updated automatically via pixel/update-device-vars.sh
 
@@ -44,4 +57,3 @@ readonly ota_url="https://dl.google.com/dl/android/aosp/lynx-ota-tq2b.230505.005
 readonly ota_sha256="766dbd165309a3d90bd367dd73fd98a7b00799a1f7ff9834bca4f31b7a0869b6"
 
 readonly security_patch="2023-05-05"
-
