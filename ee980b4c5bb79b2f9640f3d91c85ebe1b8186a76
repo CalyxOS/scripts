@@ -37,6 +37,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "a16f9daf_f8b373a8",
+        "filename": "apex/build_module.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-05-22T13:57:28Z",
+      "side": 1,
+      "message": "So for 2, a vars file would contain the latest version tag available for a given module, e.g. aml_sta_330012345?\n\nDo we want or need our scripts to discover all existing mainline modules somehow (so, incorporate new ones, too), along with their abbreviated names, or can we work from a manually-updated list for those?",
+      "parentUuid": "d8e4ed57_5d6a8c94",
+      "revId": "ee980b4c5bb79b2f9640f3d91c85ebe1b8186a76",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "4221c24a_d051fa6e",
         "filename": "apex/build_module.sh",
         "patchSetId": 3
