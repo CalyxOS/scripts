@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "59925802_7491beb3",
+        "filename": "vars/apex_tags",
+        "patchSetId": 4
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-05-23T16:16:56Z",
+      "side": 1,
+      "message": "[com.android.adbd]\u003d\"aml_adb_331610000\"",
+      "revId": "52ba4a7b33fac0928ece9b162533365c192cb038",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
