@@ -71,6 +71,24 @@
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "13a2f6bb_51afb73b",
+        "filename": "apex/build_module.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-05-24T20:23:25Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "81f92271_cd2b7b32",
+      "revId": "ee980b4c5bb79b2f9640f3d91c85ebe1b8186a76",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4221c24a_d051fa6e",
@@ -106,6 +124,24 @@
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "5a8ffbf1_44e6d9e1",
+        "filename": "apex/build_module.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-05-24T20:23:25Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "d36f8832_ed1c8f8d",
+      "revId": "ee980b4c5bb79b2f9640f3d91c85ebe1b8186a76",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4b70d3d0_181582b1",
@@ -119,6 +155,24 @@
       "writtenOn": "2023-04-28T21:27:51Z",
       "side": 1,
       "message": "Minor ignorable thing:\n\nThis won\u0027t work for some of us using $OUT_DIR_COMMON_BASE (It\u0027s an AOSP feature), but I feel like we may be the only ones using it and Google has long since stopped.\n\nMike, I was thinking of just switching to direct mounts, already doing that for chromium.\n\ni.e., I have chromium on my src drive, and a separate drive for out, and a dataset on that mounted to chromium/src/out",
+      "revId": "ee980b4c5bb79b2f9640f3d91c85ebe1b8186a76",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "666f6950_d9c0dcaf",
+        "filename": "vars/apex",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-05-24T20:23:25Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "4b70d3d0_181582b1",
       "revId": "ee980b4c5bb79b2f9640f3d91c85ebe1b8186a76",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
@@ -263,6 +317,24 @@
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f4ba6b8a_3011cdd1",
+        "filename": "vars/apex",
+        "patchSetId": 3
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-05-24T20:23:25Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "bbf721a5_60ab4024",
+      "revId": "ee980b4c5bb79b2f9640f3d91c85ebe1b8186a76",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "fb41d11c_eff04658",
@@ -276,6 +348,24 @@
       "writtenOn": "2023-04-28T21:27:51Z",
       "side": 1,
       "message": "In the future (and this is a long ways out), if we support out of band (read outside the OS) Apex updates (likely via Lupin.Updater), we\u0027ll have to do the same. But that\u0027s a problem for then, just noting it for now.",
+      "revId": "ee980b4c5bb79b2f9640f3d91c85ebe1b8186a76",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f609f0f2_3cb8e67d",
+        "filename": "vars/apex_tags",
+        "patchSetId": 3
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-05-24T20:23:25Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "fb41d11c_eff04658",
       "revId": "ee980b4c5bb79b2f9640f3d91c85ebe1b8186a76",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
