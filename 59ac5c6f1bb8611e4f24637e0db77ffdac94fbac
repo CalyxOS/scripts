@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4d39a34f_0b2595fa",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-05-24T19:31:59Z",
+      "side": 1,
+      "message": "LGTM, minor nit.",
+      "revId": "59ac5c6f1bb8611e4f24637e0db77ffdac94fbac",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b6eab91f_4e91d811",
+        "filename": "vars/aml_tags",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-05-24T19:31:59Z",
+      "side": 1,
+      "message": "Could add a\n\n`# Updated automatically by aml/update_mainline_tags.sh` to the top here, from the script.",
+      "revId": "59ac5c6f1bb8611e4f24637e0db77ffdac94fbac",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
