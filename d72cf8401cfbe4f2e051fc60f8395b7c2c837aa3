@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b22a4a39_87f71f26",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-05-31T22:47:51Z",
+      "side": 1,
+      "message": "Not yet.\n\nAlso confirm that there\u0027s no new apex for those untouched (e.g. tz4)",
+      "revId": "d72cf8401cfbe4f2e051fc60f8395b7c2c837aa3",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
