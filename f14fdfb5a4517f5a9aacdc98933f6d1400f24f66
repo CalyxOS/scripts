@@ -16,6 +16,24 @@
       "message": "If there is an easy way to make it only put `eng.` for non-user builds, that might be nice; otherwise, this seems fine to me.",
       "revId": "f14fdfb5a4517f5a9aacdc98933f6d1400f24f66",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "303fc9b9_dda25bae",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-06-01T17:01:13Z",
+      "side": 1,
+      "message": "(I say that only because users building and signing their own builds may not be using OFFICIAL_BUILD, and they would be affected by this and its knock-on effects.)",
+      "parentUuid": "6e926b39_1624cb8b",
+      "revId": "f14fdfb5a4517f5a9aacdc98933f6d1400f24f66",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
