@@ -34,6 +34,24 @@
       "parentUuid": "6e926b39_1624cb8b",
       "revId": "f14fdfb5a4517f5a9aacdc98933f6d1400f24f66",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ea7896a5_f9649632",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-06-01T18:33:40Z",
+      "side": 1,
+      "message": "envsetup.sh is too early to know if user or userdebug, and it\u0027s not an issue, can just set yours. I\u0027ll make some tweaks to this that I have in mind later, but for now this shouldn\u0027t cause problems.",
+      "parentUuid": "303fc9b9_dda25bae",
+      "revId": "f14fdfb5a4517f5a9aacdc98933f6d1400f24f66",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
