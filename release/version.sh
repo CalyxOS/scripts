@@ -37,14 +37,15 @@ readonly mk="${top}/vendor/calyx/config/version.mk"
 
 get_build_number() {
   readonly year=$(date +%y)
+  readonly fulldate=$(date +%y%m%d%H%M)
   readonly major=$(cat "${mk}" | grep ^PRODUCT_VERSION_MAJOR | awk '{printf "%s\n", $3}')
   readonly minor=$(cat "${mk}" | grep ^PRODUCT_VERSION_MINOR | awk '{printf "%s\n", $3}')
   readonly patch=$(cat "${mk}" | grep ^PRODUCT_VERSION_PATCH | awk '{printf "%s\n", $3}')
-  version=$((${year} * 1000000 + ${major} * 100000 +${minor} * 1000 + ${patch} * 10))
   if [[ -n ${OFFICIAL_BUILD} ]]; then
+    version=$((${year} * 1000000 + ${major} * 100000 +${minor} * 1000 + ${patch} * 10))
     echo "${version}"
   else
-    echo $((${version} - 1))
+    echo "${fulldate}"
   fi
 }
 
