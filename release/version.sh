@@ -44,7 +44,7 @@ get_build_number() {
   if [[ -n ${OFFICIAL_BUILD} ]]; then
     echo "${version}"
   else
-    echo $((${version} - 1))
+    echo eng.$((${version} - 1))
   fi
 }
 
