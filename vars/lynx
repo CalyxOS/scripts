@@ -24,14 +24,14 @@ readonly needs_ota=true
 
 # Updated semi-manually via pixel/update-any-var.sh
 
-readonly build_id="TQ2B.230505.005.A1"
+readonly build_id="TQ3A.230605.012"
 
 # Updated automatically via pixel/update-device-vars.sh
 
-readonly aosp_branch="android13-qpr2-b-s1-release"
+readonly aosp_branch="android13-qpr3-release"
 
-readonly prev_aosp_tag="unknown"
-readonly aosp_tag="android-13.0.0_r49"
+readonly prev_aosp_tag="android-13.0.0_r50"
+readonly aosp_tag="android-13.0.0_r50"
 
 readonly build_number="9808202"
 
@@ -43,4 +43,4 @@ readonly flash_url="https://flash.android.com/build/9808202?target=lynx-user&sig
 readonly ota_url="https://dl.google.com/dl/android/aosp/lynx-ota-tq2b.230505.005.a1-766dbd16.zip"
 readonly ota_sha256="766dbd165309a3d90bd367dd73fd98a7b00799a1f7ff9834bca4f31b7a0869b6"
 
-readonly security_patch="2023-05-05"
+readonly security_patch="2023-06-05"
