@@ -26,14 +26,14 @@ readonly needs_ota=true
 
 # Updated semi-manually via pixel/update-any-var.sh
 
-readonly build_id="TQ2A.230505.002"
+readonly build_id="TQ3A.230605.010"
 
 # Updated automatically via pixel/update-device-vars.sh
 
 readonly aosp_branch="android13-qpr2-release"
 
-readonly prev_aosp_tag="android-13.0.0_r41"
-readonly aosp_tag="android-13.0.0_r43"
+readonly prev_aosp_tag="android-13.0.0_r43"
+readonly aosp_tag="android-13.0.0_r50"
 
 readonly build_number="9891397"
 
@@ -45,4 +45,4 @@ readonly flash_url="https://flash.android.com/build/9891397?target=bluejay-user&
 readonly ota_url="https://dl.google.com/dl/android/aosp/bluejay-ota-tq2a.230505.002-3749a0fa.zip"
 readonly ota_sha256="3749a0fac4b30a871d228553a77ab873778cc19b969c64c7f65c986032369ef6"
 
-readonly security_patch="2023-05-05"
+readonly security_patch="2023-06-05"
