@@ -28,7 +28,7 @@ readonly kernel=redbull
 
 # Updated semi-manually via pixel/update-any-var.sh
 
-readonly build_id="TQ2A.230505.002"
+readonly build_id="TQ3A.230605.011"
 
 # Updated automatically via pixel/update-device-vars.sh
 
