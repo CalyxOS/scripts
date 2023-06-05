@@ -27,14 +27,14 @@ readonly kernel=redbull
 
 # Updated semi-manually via pixel/update-any-var.sh
 
-readonly build_id="TQ2A.230505.002"
+readonly build_id="TQ3A.230605.011"
 
 # Updated automatically via pixel/update-device-vars.sh
 
 readonly aosp_branch="android13-qpr2-release"
 
-readonly prev_aosp_tag="android-13.0.0_r38"
-readonly aosp_tag="android-13.0.0_r43"
+readonly prev_aosp_tag="android-13.0.0_r43"
+readonly aosp_tag="android-13.0.0_r52"
 
 readonly build_number="9891397"
 
@@ -46,4 +46,4 @@ readonly flash_url="https://flash.android.com/build/9891397?target=bramble-user&
 readonly ota_url="https://dl.google.com/dl/android/aosp/bramble-ota-tq2a.230505.002-11bb2014.zip"
 readonly ota_sha256="11bb2014e60f6e5a65d52369da6a3582adeccb1e130da3c36ab3d26cae948971"
 
-readonly security_patch="2023-05-05"
+readonly security_patch="2023-06-05"
