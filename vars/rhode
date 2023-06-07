@@ -1,0 +1,7 @@
+# moto g52
+
+# Usage: ${device_repos[@]}
+device_repos=(
+  device/motorola/rhode
+  # common repos in devon
+)

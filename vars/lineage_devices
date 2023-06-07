@@ -3,4 +3,7 @@
 readonly lineage_devices=(
   FP4
   axolotl
+  devon
+  hawao
+  rhode
 )

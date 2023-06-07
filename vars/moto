@@ -1,0 +1,7 @@
+# Motorola devices
+# Usage: ${devices[@]}
+readonly devices=(
+  devon
+  hawao
+  rhode
+)
