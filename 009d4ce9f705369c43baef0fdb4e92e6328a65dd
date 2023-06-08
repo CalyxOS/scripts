@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8688a1f7_65301c41",
+        "filename": "carriersettings-extractor/carriersettings_extractor.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-06-08T00:06:38Z",
+      "side": 1,
+      "message": "Can we implement support for `moto_*` instead?",
+      "revId": "009d4ce9f705369c43baef0fdb4e92e6328a65dd",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
