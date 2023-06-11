@@ -48,15 +48,16 @@ device() {
 
   pushd "${top}"
   if [[ -f device/google/${device}/regen-vendor.sh ]]; then
+    device/google/${device}/regen-carriersettings.sh "${factory_dir}/image/product.img" device/google/${device}/proprietary-files-carriersettings.txt
     device/google/${device}/regen-vendor.sh "${factory_dir}/image/vendor.img" device/google/${device}/proprietary-files-vendor.txt
   else
+    device/google/*/${device}/regen-carriersettings.sh "${factory_dir}/image/product.img" device/google/*/${device}/proprietary-files-carriersettings.txt
     device/google/*/${device}/regen-vendor.sh "${factory_dir}/image/vendor.img" device/google/*/${device}/proprietary-files-vendor.txt
   fi
   device/google/${device}/extract-files.sh "${factory_dir}/image"
   popd
 
   "${script_path}/firmware.sh" "${device}"
-  "${script_path}/carriersettings.sh" "${device}"
 
   echo "${build_id}" > "${top}/vendor/google/${device}/build_id.txt"
 }
