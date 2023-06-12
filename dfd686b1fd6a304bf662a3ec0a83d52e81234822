@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cbff2417_6eb571b1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2023-06-12T09:47:20Z",
+      "side": 1,
+      "message": "Fails to extract modem on lynx, it thinks it is v1. qc_image_unpacker thinks it is v2...",
+      "revId": "dfd686b1fd6a304bf662a3ec0a83d52e81234822",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
