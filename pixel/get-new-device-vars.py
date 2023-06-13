@@ -109,9 +109,9 @@ def main():
     html_id = "{0}{1}".format(args.device, args.build_id.lower())
     handle_image(html_id)
     handle_ota(html_id)
-    get_aosp_branch_for_build_id(get_all_aosp_branches("{0}*".format(args.branch_match)), args.build_id.upper())
-    aosp_tag = get_aosp_tag_for_build_id(get_all_aosp_tags("{0}*".format(args.tags_match)), args.build_id.upper())
-    get_security_patch_for_aosp_tag(aosp_tag)
+    #get_aosp_branch_for_build_id(get_all_aosp_branches("{0}*".format(args.branch_match)), args.build_id.upper())
+    #aosp_tag = get_aosp_tag_for_build_id(get_all_aosp_tags("{0}*".format(args.tags_match)), args.build_id.upper())
+    #get_security_patch_for_aosp_tag(aosp_tag)
 
 if __name__ == "__main__":
     main()
