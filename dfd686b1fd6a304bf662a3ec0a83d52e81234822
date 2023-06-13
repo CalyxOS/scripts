@@ -16,6 +16,24 @@
       "message": "Fails to extract modem on lynx, it thinks it is v1. qc_image_unpacker thinks it is v2...",
       "revId": "dfd686b1fd6a304bf662a3ec0a83d52e81234822",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0d44c98f_720f1f15",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-06-13T13:48:29Z",
+      "side": 1,
+      "message": "This looks like a comment for gs_image_extractor.\n\nDoes fbpacktool not work as well or rather IIRC it didn\u0027t support modem.img at all?",
+      "parentUuid": "cbff2417_6eb571b1",
+      "revId": "dfd686b1fd6a304bf662a3ec0a83d52e81234822",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
