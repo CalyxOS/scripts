@@ -69,20 +69,12 @@ main() {
       source "${dv}"
       ${script_path}/get-new-device-vars.py -b "${build_id}" -d "${d}" -t ${aosp_tag_match} -br ${os_branch}> "${tmp}"
       source "${tmp}"
-      if [[ "${new_aosp_branch}" != "${aosp_branch}" ]]; then
-        sed -i "/ aosp_branch=/c\readonly aosp_branch=\"$new_aosp_branch\"" "${dv}"
-      fi
-      if [[ "${new_aosp_tag}" != "${aosp_tag}" ]]; then
-        sed -i "/ prev_aosp_tag=/c\readonly prev_aosp_tag=\"$aosp_tag\"" "${dv}"
-        sed -i "/ aosp_tag=/c\readonly aosp_tag=\"$new_aosp_tag\"" "${dv}"
-      fi
       sed -i "/ build_number=/c\readonly build_number=\"$new_build_number\"" "${dv}"
       sed -i "/ image_url=/c\readonly image_url=\"$new_image_url\"" "${dv}"
       sed -i "/ image_sha256=/c\readonly image_sha256=\"$new_image_sha256\"" "${dv}"
       sed -i "/ flash_url=/c\readonly flash_url=\"$new_flash_url\"" "${dv}"
       sed -i "/ ota_url=/c\readonly ota_url=\"$new_ota_url\"" "${dv}"
       sed -i "/ ota_sha256=/c\readonly ota_sha256=\"$new_ota_sha256\"" "${dv}"
-      sed -i "/ security_patch=/c\readonly security_patch=\"$new_security_patch\"" "${dv}"
     )
     sleep 10s
   done

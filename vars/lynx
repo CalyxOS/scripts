@@ -28,10 +28,10 @@ readonly build_id="TQ3A.230605.012"
 
 # Updated automatically via pixel/update-device-vars.sh
 
-readonly aosp_branch="android13-qpr3-release"
+readonly aosp_branch="android13-qpr2-b-s1-release"
 
-readonly prev_aosp_tag="android-13.0.0_r50"
-readonly aosp_tag="android-13.0.0_r50"
+readonly prev_aosp_tag="unknown"
+readonly aosp_tag="android-13.0.0_r49"
 
 readonly build_number="9808202"
 
