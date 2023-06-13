@@ -34,6 +34,24 @@
       "parentUuid": "cbff2417_6eb571b1",
       "revId": "dfd686b1fd6a304bf662a3ec0a83d52e81234822",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "674bd188_eabc2cf1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2023-06-13T15:12:50Z",
+      "side": 1,
+      "message": "None of the tools can extract gs modem.img",
+      "parentUuid": "0d44c98f_720f1f15",
+      "revId": "dfd686b1fd6a304bf662a3ec0a83d52e81234822",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
