@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0e05c8b5_59005534",
+        "filename": "vars/lynx",
+        "patchSetId": 1
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2023-06-14T13:13:47Z",
+      "side": 1,
+      "message": "This is supposed to be the kernel source name, not the device kernel",
+      "revId": "ae64f639bbc4f26549393d05a0cf5dc9ad703d44",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
