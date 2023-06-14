@@ -19,6 +19,8 @@ device_repos=(
   device/google/lynx-sepolicy
 )
 
+readonly kernel=gs201
+
 # Need OTA zip for firmware, not supported by image_unpacker yet
 readonly needs_ota=true
 
