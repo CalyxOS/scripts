@@ -24,8 +24,6 @@ device_repos=(
   device/google/redfin-sepolicy
 )
 
-readonly kernel=redbull
-
 # Updated semi-manually via pixel/update-any-var.sh
 
 readonly build_id="TQ3A.230605.011"

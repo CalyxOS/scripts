@@ -21,8 +21,6 @@ device_repos=(
   # common repos in crosshatch
 )
 
-readonly kernel=msm-4.9
-
 # Updated semi-manually via pixel/update-any-var.sh
 
 readonly build_id=SP1A.210812.016.C2 # Jun 2022

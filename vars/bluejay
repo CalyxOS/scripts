@@ -19,8 +19,6 @@ device_repos=(
   device/google/bluejay-sepolicy
 )
 
-readonly kernel=bluejay
-
 # Need OTA zip for firmware, not supported by image_unpacker yet
 readonly needs_ota=true
 

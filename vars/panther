@@ -18,8 +18,6 @@ device_repos=(
   # common repos in cheetah
 )
 
-readonly kernel=pantah
-
 # Need OTA zip for firmware, not supported by image_unpacker yet
 readonly needs_ota=true
 
