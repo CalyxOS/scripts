@@ -21,8 +21,6 @@ device_repos=(
   device/google/pantah
 )
 
-readonly kernel=pantah
-
 # Need OTA zip for firmware, not supported by image_unpacker yet
 readonly needs_ota=true
 
