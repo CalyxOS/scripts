@@ -15,6 +15,7 @@
 import collections
 
 #from google3.third_party.devsite.androidsource.en.docs.core.architecture.bootloader.tools.pixel.fw_unpack import packedstruct
+import packedstruct
 
 FBPACK_MAGIC = 0x4b504246   # "FBPK"  FastBook PacK
 FBPACK_VERSION = 2

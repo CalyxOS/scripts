@@ -21,7 +21,7 @@ from lxml.etree import XMLParser
 import yaml
 
 #from google3.third_party.devsite.androidsource.en.docs.core.architecture.bootloader.tools.pixel.fw_unpack import fbpack
-
+import fbpack
 
 def bytes_to_str(bstr):
   return bstr.decode().rstrip('\x00')
