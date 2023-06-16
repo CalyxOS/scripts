@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "faed18d9_bc92f2d2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-06-16T13:47:53Z",
+      "side": 1,
+      "message": "```\n[INFO] Processing 1 file(s) from $WORK_DIR/lynx/TQ3A.230605.012/factory/lynx-tq3a.230605.012/radio-lynx-g5300g-230323-230525-b-10200345.img\n0: modem (type:0x1 size:0x4c7a000 next:0x4c7a090)\n[INFO] 1 known images found from 1 input files\n[INFO] Extracted images files are available in \u0027$WORK_DIR/lynx/TQ3A.230605.012/firmware\u0027\n```",
+      "revId": "014a31ddfe379ff88d990a1e96298f7499d6f262",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
