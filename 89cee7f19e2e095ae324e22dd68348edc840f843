@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cb1bd077_638f9448",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2023-06-16T19:43:59Z",
+      "side": 1,
+      "message": "This is done for moto/match upstream lineage",
+      "revId": "89cee7f19e2e095ae324e22dd68348edc840f843",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
