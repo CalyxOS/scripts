@@ -52,6 +52,24 @@
       "parentUuid": "0d44c98f_720f1f15",
       "revId": "dfd686b1fd6a304bf662a3ec0a83d52e81234822",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "41e36bc5_252174f5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-06-16T13:46:10Z",
+      "side": 1,
+      "message": "Turns out qc_image_unpacker works just fine with gs modem.img",
+      "parentUuid": "674bd188_eabc2cf1",
+      "revId": "dfd686b1fd6a304bf662a3ec0a83d52e81234822",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
