@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "51c75842_ad62a05f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2023-06-16T19:45:26Z",
+      "side": 1,
+      "message": "Maybe hold this for the entire moto topic merge",
+      "revId": "f5fcd1bbda55707004c127aa5d61c71091174f96",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
