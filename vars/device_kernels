@@ -1,5 +1,6 @@
 # Usage: ${device_kernels[@]}
 readonly device_kernels=(
+  tangorpro
   lynx
   pantah
   bluejay

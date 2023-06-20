@@ -89,9 +89,14 @@ select_kernel_config() {
     export BUILD_AOSP_KERNEL=1
     export LTO=full
     ;;
+  tangorpro)
+    export DEVICE_KERNEL_BUILD_CONFIG=gs201/private/devices/google/tangorpro/build.config.tangorpro
+    export BUILD_AOSP_KERNEL=1
+    export LTO=full
+    ;;
   *)
     echo "Unsupported kernel ${kernel}"
-    echo "Support kernels: crosshatch bonito coral sunfish redbull raviole bluejay pantah lynx"
+    echo "Support kernels: crosshatch bonito coral sunfish redbull raviole bluejay pantah lynx tangorpro"
     exit
     ;;
   esac
@@ -102,7 +107,7 @@ build_kernel() {
   # raviole/bluejay/pantah is built differently, gki
   if [[ "${kernel}" == "raviole" || "${kernel}" == "bluejay" ]]; then
     gs101/private/gs-google/build_slider.sh "${@}"
-  elif [[ "${kernel}" == "pantah" || "${kernel}" == "lynx" ]]; then
+  elif [[ "${kernel}" == "pantah" || "${kernel}" == "lynx" || "${kernel}" == "tangorpro" ]]; then
     gs201/private/gs-google/build_slider.sh "${@}"
   else
     build/build.sh "${@}"
@@ -120,8 +125,9 @@ clean_kernel() {
 }
 
 copy_kernel() {
-  # raviole/bluejay/pantah/lynx is built differently, gki
-  if [[ "${kernel}" == "raviole" || "${kernel}" == "bluejay" || "${kernel}" == "pantah" || "${kernel}" == "lynx" ]]; then
+  # raviole/bluejay/pantah/lynx/tangorpro is built differently, gki
+  if [[ "${kernel}" == "raviole" || "${kernel}" == "bluejay" || "${kernel}" == "pantah" || "${kernel}" == "lynx"
+      || "${kernel}" == "tangorpro" ]]; then
     cp -a "${OUT_DIR}/mixed/dist/"* "${top}/device/google/${kernel}-kernel/"
   elif [[ "${kernel}" == "redbull" ]]; then
     cp -a "${OUT_DIR}/dist/"* "${top}/device/google/${kernel}-kernel/vintf/"
