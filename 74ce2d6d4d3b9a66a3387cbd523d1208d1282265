@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b73e4705_13ac023d",
+        "filename": "vars/tangorpro",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-06-20T21:48:07Z",
+      "side": 1,
+      "message": "wifi-only device, still present?",
+      "revId": "74ce2d6d4d3b9a66a3387cbd523d1208d1282265",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
