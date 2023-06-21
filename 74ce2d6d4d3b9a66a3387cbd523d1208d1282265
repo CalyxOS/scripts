@@ -34,6 +34,24 @@
       "parentUuid": "b73e4705_13ac023d",
       "revId": "74ce2d6d4d3b9a66a3387cbd523d1208d1282265",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0100a6ed_e8126d21",
+        "filename": "vars/tangorpro",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-06-21T10:28:01Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d0888c2e_67ee81b9",
+      "revId": "74ce2d6d4d3b9a66a3387cbd523d1208d1282265",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
