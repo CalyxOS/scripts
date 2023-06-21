@@ -56,7 +56,9 @@ readonly vendor_path="${top}/vendor/google/${device}"
 # typically bootloader and radio
 copy_factory_firmware() {
   cp "${factory_dir}"/bootloader-*.img "${vendor_path}/firmware/"
-  cp "${factory_dir}"/radio-*.img "${vendor_path}/firmware/"
+  if [[ -z ${wifi_only-} ]]; then
+    cp "${factory_dir}"/radio-*.img "${vendor_path}/firmware/"
+  fi
   cp "${factory_dir}"/image/android-info.txt "${vendor_path}/android-info.txt"
 }
 
@@ -65,9 +67,11 @@ copy_factory_firmware() {
 unpack_firmware() {
   local fbpk="${fbpk_version:-v1}"
 
-  # modem.img
-  "${qc_image_unpacker}" -i "${factory_dir}"/radio-*.img -o "${ota_firmware_dir}"
-  # Alternative: dd bs=4 skip=35
+  if [[ -z ${wifi_only-} ]]; then
+    # modem.img
+    "${qc_image_unpacker}" -i "${factory_dir}"/radio-*.img -o "${ota_firmware_dir}"
+    # Alternative: dd bs=4 skip=35
+  fi
 
   if [[ "$fbpk" == "v1" ]]; then
     # All other ${firmware_partitions[@]}
@@ -112,12 +116,16 @@ setup_makefiles() {
     sed -i /endif/d "${vendor_path}/Android.mk"
 
     local bootloader_version=$(cat "${vendor_path}/android-info.txt" | grep version-bootloader | cut -d = -f 2)
-    local radio_version=$(cat "${vendor_path}/android-info.txt" | grep version-baseband | cut -d = -f 2)
+    if [[ -z ${wifi_only-} ]]; then
+      local radio_version=$(cat "${vendor_path}/android-info.txt" | grep version-baseband | cut -d = -f 2)
+    fi
 
     echo >> "${vendor_path}/Android.mk"
     echo "# firmware" >> "${vendor_path}/Android.mk"
     echo "\$(call add-radio-file,firmware/bootloader-${device}-${bootloader_version,,}.img,version-bootloader)" >> "${vendor_path}/Android.mk"
-    echo "\$(call add-radio-file,firmware/radio-${device}-${radio_version,,}.img,version-baseband)" >> "${vendor_path}/Android.mk"
+    if [[ -z ${wifi_only-} ]]; then
+      echo "\$(call add-radio-file,firmware/radio-${device}-${radio_version,,}.img,version-baseband)" >> "${vendor_path}/Android.mk"
+    fi
 
     for fp in ${firmware_partitions[@]}; do
       echo "\$(call add-radio-file,firmware/${fp}.img)" >> "${vendor_path}/Android.mk"
