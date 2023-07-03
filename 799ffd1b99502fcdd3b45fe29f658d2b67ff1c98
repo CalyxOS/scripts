@@ -52,6 +52,24 @@
       "parentUuid": "54819343_decc4254",
       "revId": "799ffd1b99502fcdd3b45fe29f658d2b67ff1c98",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4a1ff17a_7f1581cd",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-07-03T20:04:09Z",
+      "side": 1,
+      "message": "Added separate script, we shouldn\u0027t be updating them manually anyways.",
+      "parentUuid": "a14fbdc5_44cb40ad",
+      "revId": "799ffd1b99502fcdd3b45fe29f658d2b67ff1c98",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
