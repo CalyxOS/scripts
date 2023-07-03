@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f86ffd19_2bcb5953",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-07-03T12:37:45Z",
+      "side": 1,
+      "message": "Waiting for July ASB.",
+      "revId": "fbaee47018d0d551830a99bee6a748aeac3c5031",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
