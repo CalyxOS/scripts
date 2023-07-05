@@ -30,7 +30,7 @@ readonly build_id="TQ3C.230605.010.C1"
 readonly aosp_branch="android13-qpr3-c-s1-release"
 
 readonly prev_aosp_tag="unknown"
-readonly aosp_tag="android-13.0.0_r58"
+readonly aosp_tag="android-13.0.0_r61"
 
 readonly build_number="10167124"
 
@@ -42,4 +42,4 @@ readonly flash_url="https://flash.android.com/build/10167124?target=felix-user&s
 readonly ota_url="https://dl.google.com/dl/android/aosp/felix-ota-tq3c.230605.010.c1-4f136d8d.zip"
 readonly ota_sha256="4f136d8d3667928c35240cbef5fe78d68f5469e420b7befc47647626a0af501e"
 
-readonly security_patch="2023-06-05"
+readonly security_patch="2023-07-05"
