@@ -16,6 +16,41 @@
       "message": "These changes are wrong, this file should be skipped",
       "revId": "83e32e4e9b14bca8ee21c8301680c277d7532c66",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8aab7db0_214c7388",
+        "filename": "vars/felix",
+        "patchSetId": 6
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-07-05T21:56:00Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e0fb5a71_beb80e0b",
+      "revId": "83e32e4e9b14bca8ee21c8301680c277d7532c66",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6371a0e0_0326e164",
+        "filename": "vars/tangorpro",
+        "patchSetId": 6
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-07-05T21:56:00Z",
+      "side": 1,
+      "message": "Somehow this didn\u0027t merge, said no change.\n\nChangelog (and git log) clearly show a change.",
+      "revId": "83e32e4e9b14bca8ee21c8301680c277d7532c66",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
