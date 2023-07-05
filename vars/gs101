@@ -4,11 +4,11 @@
 
 readonly kernel_branch="android-gs-bluejay-5.10-android13-qpr3"
 
-readonly prev_kernel_tag=android-13.0.0_r0.74 # May 2023
-readonly kernel_tag=android-13.0.0_r0.82 # Jun 2023
+readonly prev_kernel_tag=android-13.0.0_r0.82 # Jun 2023
+readonly kernel_tag=android-13.0.0_r0.100 # Jul 2023
 
 # Match with version string in commit message of prebuilt kernel
-readonly gki_branch="android13-5.10-2023-02_r5" # Jun 2023
+readonly gki_branch="android13-5.10-2023-02_r9" # Jul 2023
 
-readonly prev_gki_tag=android-13.0.0_r0.74 # May 2023
-readonly gki_tag=android-13.0.0_r0.82 # Jun 2023
+readonly prev_gki_tag=android-13.0.0_r0.82 # Jun 2023
+readonly gki_tag=android-13.0.0_r0.100 # Jul 2023
