@@ -16,6 +16,40 @@
       "message": "Used it for platform_manifest just now.",
       "revId": "859866ae0db483be9126b910e0e0788e3ef51c15",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e80bb739_cb8c26ab",
+        "filename": "aosp-merger/update-tags.sh",
+        "patchSetId": 6
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-07-05T21:56:56Z",
+      "side": 1,
+      "message": "Maybe also do snippets/*.xml ?",
+      "revId": "859866ae0db483be9126b910e0e0788e3ef51c15",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0f18ac4a_34d457f8",
+        "filename": "aosp-merger/update-tags.sh",
+        "patchSetId": 6
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-07-05T21:56:56Z",
+      "side": 1,
+      "message": "Not needed, and maybe we also do other files?",
+      "revId": "859866ae0db483be9126b910e0e0788e3ef51c15",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
