@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e0fb5a71_beb80e0b",
+        "filename": "vars/felix",
+        "patchSetId": 6
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2023-07-05T21:31:53Z",
+      "side": 1,
+      "message": "These changes are wrong, this file should be skipped",
+      "revId": "83e32e4e9b14bca8ee21c8301680c277d7532c66",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
