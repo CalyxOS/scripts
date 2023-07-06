@@ -41,11 +41,7 @@ get_build_number() {
   readonly minor=$(cat "${mk}" | grep ^PRODUCT_VERSION_MINOR | awk '{printf "%s\n", $3}')
   readonly patch=$(cat "${mk}" | grep ^PRODUCT_VERSION_PATCH | awk '{printf "%s\n", $3}')
   version=$((${year} * 1000000 + ${major} * 100000 +${minor} * 1000 + ${patch} * 10))
-  if [[ -n ${OFFICIAL_BUILD} ]]; then
-    echo "${version}"
-  else
-    echo "eng.${version}"
-  fi
+  echo "${version}"
 }
 
 # error message
