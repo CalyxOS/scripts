@@ -70,12 +70,12 @@ select_kernel_config() {
     export KLEAF_SUPPRESS_BUILD_SH_DEPRECATION_WARNING=1
     ;;
   raviole)
-    export DEVICE_KERNEL_BUILD_CONFIG=gs101/private/gs-google/build.config.slider
+    export DEVICE_KERNEL_BUILD_CONFIG=gs201/private/gs-google/build.config.slider
     export BUILD_AOSP_KERNEL=1
     export LTO=full
     ;;
   bluejay)
-    export DEVICE_KERNEL_BUILD_CONFIG=gs101/private/devices/google/bluejay/build.config.bluejay
+    export DEVICE_KERNEL_BUILD_CONFIG=gs201/private/devices/google/bluejay/build.config.bluejay
     export BUILD_AOSP_KERNEL=1
     export LTO=full
     ;;
@@ -110,9 +110,8 @@ select_kernel_config() {
 build_kernel() {
   pushd "${top}"
   # raviole/bluejay/pantah/lynx/tangorpro/felix is built differently, gki
-  if [[ "${kernel}" == "raviole" || "${kernel}" == "bluejay" ]]; then
-    gs101/private/gs-google/build_slider.sh "${@}"
-  elif [[ "${kernel}" == "pantah" || "${kernel}" == "lynx" || "${kernel}" == "tangorpro" || "${kernel}" == "felix" ]]; then
+  if [[ "${kernel}" == "raviole" || "${kernel}" == "bluejay" || "${kernel}" == "pantah" || "${kernel}" == "lynx"
+      || "${kernel}" == "tangorpro" || "${kernel}" == "felix" ]]; then
     gs201/private/gs-google/build_slider.sh "${@}"
   else
     build/build.sh "${@}"
