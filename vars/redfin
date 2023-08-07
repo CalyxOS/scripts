@@ -26,7 +26,7 @@ device_repos=(
 
 # Updated semi-manually via pixel/update-any-var.sh
 
-readonly build_id="TQ3A.230705.001"
+readonly build_id="TQ3A.230805.001"
 
 # Updated automatically via pixel/update-device-vars.sh
 
