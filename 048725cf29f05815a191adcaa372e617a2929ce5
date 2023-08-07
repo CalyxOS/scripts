@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "169ddcac_b34b1562",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-08-07T23:46:40Z",
+      "side": 1,
+      "message": "Pending\n\nfelix, tangorpro - device and kernel",
+      "revId": "048725cf29f05815a191adcaa372e617a2929ce5",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
