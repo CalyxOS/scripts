@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "83f986e7_350d71ad",
+        "filename": "vars/barbet",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-09-18T21:20:42Z",
+      "side": 1,
+      "message": "The \"unknown\" all over the place is an obvious problem.",
+      "revId": "3b85b3d986400ae9c169521a2673b24be9670335",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "05f0e254_0bf8712f",
+        "filename": "vars/barbet",
+        "patchSetId": 1
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-09-18T21:20:42Z",
+      "side": 1,
+      "message": "This isn\u0027t the previous tag...",
+      "revId": "3b85b3d986400ae9c169521a2673b24be9670335",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
