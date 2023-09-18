@@ -18,6 +18,24 @@
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f40a32cb_cca98021",
+        "filename": "vars/barbet",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-09-18T21:46:56Z",
+      "side": 1,
+      "message": "Might have been due to 429 throttling from Google. Re-did from another computer.",
+      "parentUuid": "83f986e7_350d71ad",
+      "revId": "3b85b3d986400ae9c169521a2673b24be9670335",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "05f0e254_0bf8712f",
@@ -31,6 +49,24 @@
       "writtenOn": "2023-09-18T21:20:42Z",
       "side": 1,
       "message": "This isn\u0027t the previous tag...",
+      "revId": "3b85b3d986400ae9c169521a2673b24be9670335",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e0b057e5_2c20c7b3",
+        "filename": "vars/barbet",
+        "patchSetId": 1
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-09-18T21:46:56Z",
+      "side": 1,
+      "message": "This was my mistake.",
+      "parentUuid": "05f0e254_0bf8712f",
       "revId": "3b85b3d986400ae9c169521a2673b24be9670335",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
