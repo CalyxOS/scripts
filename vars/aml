@@ -8,15 +8,16 @@ readonly -A modules_to_apps=(
   [ase]="com.android.appsearch"
   [cbr]="com.android.cellbroadcast"
   [con]="com.android.conscrypt"
-# DocumentsUI is not currently handled modularly
+# DocumentsUI is not currently provided as a prebuilt.
 #  [doc]="com.android.documentsui"
   [ext]="com.android.extservices"
   [ips]="com.android.ipsec"
   [med]="com.android.media"
   [mpr]="com.android.mediaprovider"
-# NetworkStack is not currently handled modularly
+# NetworkStack and CaptivePortalLogin are not currently provided as prebuilts.
 #  [net]="NetworkStack CaptivePortalLogin"
   [neu]="com.android.neuralnetworks"
+  [odp]="com.android.ondevicepersonalization"
   [per]="com.android.permission"
   [res]="com.android.resolv"
   [sch]="com.android.scheduling"
