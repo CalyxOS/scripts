@@ -1,31 +1,205 @@
+# Entire file updated manually.
+
+# AOSP manfest URL.
 readonly android_manifest_url="https://android.googlesource.com/platform/manifest"
 
-# Updated manually
+# Version of generated module SDK to use, when applicable.
+# Valid values at time of writing: R, S, Tiramisu, UpsideDownCake, latest.
+# This varies depending on module.
+readonly module_sdk_build=UpsideDownCake
+
+# Mapping of module names to their abbreviations used in mainline tags, if any.
+readonly -A modules_to_abbreviations=(
+  [adb]="adb"
+  [AdServices]="ads"
+  [art]="art"
+  [AppSearch]="ase"
+  [CaptivePortalLogin]="net"
+  [CellBroadcastService]="cbr"
+  [Connectivity]="tet"
+  [conscrypt]="con"
+  [DnsResolver]="res"
+# DocumentsUI is not currently provided as a prebuilt.
+#  [DocumentsUI]="doc"
+  [ExtServices]="ext"
+  [HealthFitness]="hef"
+  [IPsec]="ips"
+  [Media]="med"
+  [MediaProvider]="mpr"
+  [MediaSwCodec]="swc"
+  [NetworkStack]="net"
+  [NeuralNetworks]="neu"
+  [OnDevicePersonalization]="odp"
+  [Permission]="per"
+  [RemoteKeyProvisioning]="rkp"
+  [Scheduling]="sch"
+  [SdkExtensions]="sdk"
+  [StatsD]="sta"
+# TimezoneData has no known short name for 14 yet, but we can safely assume it will be tz5.
+  [TimezoneData]="tz5"
+  [Uwb]="uwb"
+  [Wifi]="wif"
+)
+
+# Mapping of module names to their app names.
 readonly -A modules_to_apps=(
   [adb]="com.android.adbd"
-  [ads]="com.android.adservices"
+  [AdServices]="com.android.adservices"
   [art]="com.android.art"
-  [ase]="com.android.appsearch"
-  [cbr]="com.android.cellbroadcast"
-  [con]="com.android.conscrypt"
-# DocumentsUI is not currently handled modularly
-#  [doc]="com.android.documentsui"
-  [ext]="com.android.extservices"
-  [ips]="com.android.ipsec"
-  [med]="com.android.media"
-  [mpr]="com.android.mediaprovider"
-# NetworkStack is not currently handled modularly
-#  [net]="NetworkStack CaptivePortalLogin"
-  [neu]="com.android.neuralnetworks"
-  [per]="com.android.permission"
-  [res]="com.android.resolv"
-  [sch]="com.android.scheduling"
-  [sdk]="com.android.sdkext"
-  [sta]="com.android.os.statsd"
-  [swc]="com.android.media.swcodec"
-  [tet]="com.android.tethering"
+  [AppSearch]="com.android.appsearch"
+# Bluetooth does not currently have any relevant tags.
+#  [Bluetooth]="com.android.btservices"
+  [CaptivePortalLogin]="CaptivePortalLogin"
+  [CellBroadcastService]="com.android.cellbroadcast"
+  [ConfigInfrastructure]="com.android.configinfrastructure"
+  [Connectivity]="com.android.tethering"
+  [conscrypt]="com.android.conscrypt"
+# DeviceLock is not updatable yet.
+#  [DeviceLock]="com.android.devicelock"
+  [DnsResolver]="com.android.resolv"
+# DocumentsUI is not currently provided as a prebuilt.
+#  [DocumentsUI]="com.android.documentsui"
+  [ExtServices]="com.android.extservices"
+  [HealthFitness]="com.android.healthfitness"
+  [IPsec]="com.android.ipsec"
+  [Media]="com.android.media"
+  [MediaProvider]="com.android.mediaprovider"
+  [MediaSwCodec]="com.android.media.swcodec"
+  [NetworkStack]="NetworkStack"
+  [NeuralNetworks]="com.android.neuralnetworks"
+  [OnDevicePersonalization]="com.android.ondevicepersonalization"
+  [Permission]="com.android.permission"
+  [RemoteKeyProvisioning]="com.android.rkpd"
+  [Scheduling]="com.android.scheduling"
+  [SdkExtensions]="com.android.sdkext"
+  [StatsD]="com.android.os.statsd"
 # Google uses numbered tzdata package names for different Android versions. AOSP does not.
-  [tz4]="com.android.tzdata"
-  [uwb]="com.android.uwb"
-  [wif]="com.android.wifi"
+  [TimezoneData]="com.android.tzdata"
+  [Uwb]="com.android.uwb"
+  [Wifi]="com.android.wifi"
+)
+
+# Mapping of module names to whether or not they produce compressible APEX (1=yes).
+# TODO: Determine this via bazel? It is in Android.bp files and/or has defaults per major release.
+readonly -A modules_to_compressible_apex=(
+  [adb]=1
+  [AdServices]=1
+  [art]=1
+  [AppSearch]=1
+  [CellBroadcastService]=1
+  [ConfigInfrastructure]=1
+  [Connectivity]=1
+  [conscrypt]=1
+  [DnsResolver]=1
+  [ExtServices]=1
+  [IPsec]=1
+  [Media]=1
+  [MediaProvider]=1
+  [MediaSwCodec]=1
+  [NeuralNetworks]=1
+  [OnDevicePersonalization]=1
+  [Permission]=1
+  [Scheduling]=1
+  [Uwb]=1
+  [Wifi]=1
+# Bluetooth does not currently have any relevant tags.
+#  [Bluetooth]=0
+# DeviceLock is not updatable yet.
+#  [DeviceLock]=0
+  [HealthFitness]=0
+  [RemoteKeyProvisioning]=0
+  [SdkExtensions]=0
+  [StatsD]=0
+  [TimezoneData]=0
+)
+
+# Mapping of module names to SDK directories under prebuilts/module_sdk.
+# When absent, there is no module SDK for the module.
+readonly -A modules_to_sdks=(
+  [AdServices]="AdServices"
+  [art]="art"
+  [AppSearch]="AppSearch"
+# Bluetooth does not currently have any relevant tags.
+#  [Bluetooth]="Bluetooth"
+  [ConfigInfrastructure]="ConfigInfrastructure"
+  [Connectivity]="Connectivity"
+  [conscrypt]="conscrypt"
+# DeviceLock is not updatable yet.
+#  [DeviceLock]="DeviceLock"
+  [HealthFitness]="HealthFitness"
+  [IPsec]="IPsec"
+  [Media]="Media"
+  [MediaProvider]="MediaProvider"
+  [OnDevicePersonalization]="OnDevicePersonalization"
+  [Permission]="Permission"
+  [RemoteKeyProvisioning]="RemoteKeyProvisioning"
+  [Scheduling]="Scheduling"
+  [SdkExtensions]="SdkExtensions"
+  [StatsD]="StatsD"
+  [Uwb]="Uwb"
+  [Wifi]="Wifi"
+)
+
+# Mapping of modules that require us to build and include an updated SDK for successful inclusion.
+# (1=yes.) Missing entries are assumed to not require this.
+readonly -A modules_requiring_updated_sdk=(
+  [art]=1
+  [AdServices]=1
+  [AppSearch]=1
+  [Connectivity]=1
+  [conscrypt]=1
+  [IPsec]=1
+  [Uwb]=1
+  [Wifi]=1
+)
+
+# Mapping of module names to local repository paths.
+readonly -A modules_to_repos=(
+  [adb]="packages/modules/adb"
+  [AdServices]="packages/modules/AdServices"
+  [art]="art"
+  [AppSearch]="packages/modules/AppSearch"
+# Bluetooth does not currently have any relevant tags.
+#  [Bluetooth]="packages/modules/Bluetooth"
+  [CaptivePortalLogin]="packages/modules/CaptivePortalLogin"
+  [CellBroadcastService]="packages/modules/CellBroadcastService"
+  [ConfigInfrastructure]="packages/modules/ConfigInfrastructure"
+  [Connectivity]="packages/modules/Connectivity"
+  [conscrypt]="external/conscrypt"
+# DeviceLock is not updatable yet.
+#  [DeviceLock]="packages/modules/DeviceLock"
+  [DnsResolver]="packages/modules/DnsResolver"
+# DocumentsUI is not currently provided as a prebuilt.
+#  [DocumentsUI]="packages/apps/DocumentsUI"
+  [ExtServices]="packages/modules/ExtServices"
+  [HealthFitness]="packages/modules/HealthFitness"
+  [IPsec]="packages/modules/IPsec"
+  [Media]="packages/modules/Media"
+  [MediaProvider]="packages/providers/MediaProvider"
+  [MediaSwCodec]="frameworks/av"
+  [NetworkStack]="packages/modules/NetworkStack"
+  [NeuralNetworks]="packages/modules/NeuralNetworks"
+  [OnDevicePersonalization]="packages/modules/OnDevicePersonalization"
+  [Permission]="packages/modules/Permission"
+  [RemoteKeyProvisioning]="packages/modules/RemoteKeyProvisioning"
+  [Scheduling]="packages/modules/Scheduling"
+  [SdkExtensions]="packages/modules/SdkExtensions"
+  [StatsD]="packages/modules/StatsD"
+  [TimezoneData]="system/timezone"
+  [Uwb]="packages/modules/Uwb"
+  [Wifi]="packages/modules/Wifi"
+)
+
+# Mapping of mainline modules to space-separated repos we have changed.
+# "." is a special path representing the module's repo path defined above.
+readonly -A modules_with_repo_changes=(
+  [Connectivity]=". frameworks/base"
+  [Permission]="."
+  [Wifi]="."
+)
+
+# Mapping of mainline modules to extra files to copy.
+# Extra files listings are separated by newlines. Source and destination are separated by colon (:).
+readonly -A modules_extra_files=(
+  [NetworkStack]="frameworks/base/data/etc/com.android.networkstack.xml:permissions_com.android.networkstack.xml"
 )
