@@ -34,6 +34,9 @@ readonly aml_tags_path="${vars_path}/aml_tags"
 readonly tags_header="# Updated automatically by aml/update_mainline_tags.sh"
 
 source "${vars_path}/aml"
+if [ -f "$aml_tags_path" ]; then
+  source "$aml_tags_path"
+fi
 
 ## HELP MESSAGE (USAGE INFO)
 # TODO
@@ -43,8 +46,9 @@ source "${vars_path}/aml"
 get_all_aml_tags_sorted() {
   # Sorted with the assumption that newer versions have version numbers that are
   # alphanumerically greater.
-  git ls-remote --refs --tags "$android_manifest_url" 'aml_*' | cut -d$'\t' -f2- | \
-    sed -e 's!^refs/tags/!!' | sort
+  git ls-remote --refs --tags "$android_manifest_url" '*_*' | cut -d$'\t' -f2- \
+    | sed -e 's:^refs/tags/::' | sed -n -r -e 's/^(.*_([0-9]+{9,}))$/\2 \1/p' \
+    | sort | cut -d' ' -f2-
 }
 
 main() {
@@ -61,7 +65,14 @@ main() {
   local -a modules_and_tags_lines=()
 
   for module in "${!modules_to_apps[@]}"; do
-    local tag="$(printf "%s" "$all_aml_tags" | grep -- "^aml_${module}_" | tail -n1)" || err=$?
+    local prev_tag="${modules_to_tags[$module]:-}"
+    if [ -n "$prev_tag" ]; then
+      prev_tag="^${prev_tag%_*}_\|"
+    fi
+    module_abbreviation="${modules_to_abbreviations[$module]:-NOPE_NO_ABBREVIATION}"
+    # Eligible tags start the same way as the previous tag, or start with aml_mod, or start with frc_.
+    # Whichever among these has the highest version number wins.
+    local tag="$(printf "%s" "$all_aml_tags" | grep -- "${prev_tag}^aml_${module_abbreviation}\|^frc_[0-9]" | tail -n1)" || err=$?
     if [ -z "$tag" -o $err -ne 0 ]; then
       [ $err -ne 0 ] || err=1
       echo "Failed to determine tag for $module; quitting..." >&2
