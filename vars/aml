@@ -14,8 +14,7 @@ readonly -A modules_to_apps=(
   [ips]="com.android.ipsec"
   [med]="com.android.media"
   [mpr]="com.android.mediaprovider"
-# NetworkStack and CaptivePortalLogin are not currently provided as prebuilts.
-#  [net]="NetworkStack CaptivePortalLogin"
+  [net]="NetworkStack CaptivePortalLogin"
   [neu]="com.android.neuralnetworks"
   [odp]="com.android.ondevicepersonalization"
   [per]="com.android.permission"
