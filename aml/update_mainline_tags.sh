@@ -34,6 +34,9 @@ readonly aml_tags_path="${vars_path}/aml_tags"
 readonly tags_header="# Updated automatically by aml/update_mainline_tags.sh"
 
 source "${vars_path}/aml"
+if [ -f "$aml_tags_path" ]; then
+  source "$aml_tags_path"
+fi
 
 ## HELP MESSAGE (USAGE INFO)
 # TODO
@@ -43,7 +46,7 @@ source "${vars_path}/aml"
 get_all_aml_tags_sorted() {
   # Sorted with the assumption that newer versions have version numbers that are
   # alphanumerically greater.
-  git ls-remote --refs --tags "$android_manifest_url" 'aml_*' | cut -d$'\t' -f2- | \
+  git ls-remote --refs --tags "$android_manifest_url" '*_*' | cut -d$'\t' -f2- | \
     sed -e 's!^refs/tags/!!' | sort
 }
 
@@ -61,7 +64,13 @@ main() {
   local -a modules_and_tags_lines=()
 
   for module in "${!modules_to_apps[@]}"; do
-    local tag="$(printf "%s" "$all_aml_tags" | grep -- "^aml_${module}_" | tail -n1)" || err=$?
+    local last_tag="${modules_to_tags[$module]:-}"
+    if [ -n "$last_tag" ]; then
+      last_tag="${last_tag%_*}"
+    else
+      last_tag="aml_${module}"
+    fi
+    local tag="$(printf "%s" "$all_aml_tags" | grep -- "^${last_tag}_" | tail -n1)" || err=$?
     if [ -z "$tag" -o $err -ne 0 ]; then
       [ $err -ne 0 ] || err=1
       echo "Failed to determine tag for $module; quitting..." >&2
