@@ -16,6 +16,24 @@
       "message": "aml_go_odp_33* doesn\u0027t even build...\n\nSee https://gitlab.com/CalyxOS/calyxos/-/issues/298?work_item_iid\u003d1834",
       "revId": "cab11d9137ad1d852d79ed1ff472e9dbfda69dfc",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fbd0396f_aa8ebf1d",
+        "filename": "vars/aml",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2023-09-27T23:48:01Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "747cd66e_5e5e63a0",
+      "revId": "cab11d9137ad1d852d79ed1ff472e9dbfda69dfc",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
