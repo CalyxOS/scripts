@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b64bcb8d_88f07cd7",
+        "filename": "aml/update_mainline_tags.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-09-28T09:39:54Z",
+      "side": 1,
+      "message": "nit: We typically use prev_ naming",
+      "revId": "e602b44c41ab7a57df99e35dfff22df5c11f2dfc",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
