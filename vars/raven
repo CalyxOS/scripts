@@ -24,7 +24,7 @@ readonly fbpk_version="v2"
 
 # Updated semi-manually via pixel/update-any-var.sh
 
-readonly build_id="TQ3A.230901.001"
+readonly build_id="UP1A.231005.007"
 
 # Updated automatically via pixel/update-device-vars.sh
 
