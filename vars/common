@@ -2,17 +2,17 @@
 readonly android_version=14 # For build-desc-fingerprint.sh
 readonly aosp_tag_match=android-14.0 # For update-device-vars.sh
 
-readonly os_branch=android14
-readonly device_branch=android14
+readonly os_branch=android14-d1
+readonly device_branch=android14-d1
 
-readonly common_aosp_branch=android14-release # Oct 2023
+readonly common_aosp_branch=android14-d1-release # Oct 2023, Pixel 8/8 Pro
 
-readonly prev_common_aosp_tag=NA # NA
-readonly common_aosp_tag=android-14.0.0_r1 # Oct 2023
+readonly prev_common_aosp_tag=android-14.0.0_r1 # Oct 2023, Pixel 4a (5G) - 7a
+readonly common_aosp_tag=android-14.0.0_r11 # Oct 2023, Pixel 8/8 Pro
 
-readonly common_aosp_build_id=UP1A.231005.007 # Oct 2023, Pixel 4a (5G) - 7a
+readonly common_aosp_build_id=UD1A.230803.041 # Oct 2023, Pixel 8/8 Pro
 
-readonly topic=fourteen
+readonly topic=shusky
 
 readonly lineageos_branch=lineage-21.0
 readonly lineageos_device_branch=lineage-21
