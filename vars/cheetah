@@ -17,7 +17,6 @@ readonly firmware_partitions=(
 device_repos=(
   device/google/gs201
   device/google/gs201-sepolicy
-  device/google/gs-common
   device/google/pantah
 )
 
