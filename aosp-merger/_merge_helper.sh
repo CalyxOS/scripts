@@ -7,7 +7,7 @@
 #
 
 usage() {
-    echo "Usage ${0} -p <projectpath> -o <merge|rebase> -c <old-tag> -n <new-tag> -b <branch-suffix>"
+    echo "Usage ${0} -p <projectpath> -o <merge|rebase> -c <old-tag> -n <new-tag> -b <branch-suffix> --lineage"
 }
 
 # Verify argument count
@@ -15,6 +15,8 @@ if [ "${#}" -eq 0 ]; then
     usage
     exit 1
 fi
+
+LINEAGE=false
 
 while [ "${#}" -gt 0 ]; do
     case "${1}" in
@@ -32,6 +34,9 @@ while [ "${#}" -gt 0 ]; do
                 ;;
         -b | --branch-suffix )
                 BRANCHSUFFIX="${2}"; shift
+                ;;
+        -l | --lineage )
+                LINEAGE=true; shift
                 ;;
         * )
                 usage
@@ -68,7 +73,7 @@ cd "${TOP}/${PROJECTPATH}"
 # Ditch any existing staging branches
 repo abandon "${STAGINGBRANCH}" .
 repo start "${STAGINGBRANCH}" .
-if [ -f ".gitupstream-lineage" ]; then
+if [ -f ".gitupstream-lineage" ] && [ "${LINEAGE}" = true ]; then
     if grep -q "${lineageos_device_branch}" .gitupstream-lineage; then
         LINEAGEBRANCH="$(cat .gitupstream-lineage | cut -d ' ' -f 2)"
     else
@@ -106,7 +111,7 @@ fi
 
 if [[ "${OPERATION}" == "merge" ]]; then
     echo "#### Merging ${NEWTAG} into ${PROJECTPATH} ####"
-    if [ -f ".gitupstream-lineage" ]; then
+    if [ -f ".gitupstream-lineage" ] && [ "${LINEAGE}" = true ]; then
         git merge --no-commit --log lineage/"${LINEAGEBRANCH}" && git commit --no-edit
     else
         git merge --no-commit --log "${NEWTAG}" && git commit --no-edit
