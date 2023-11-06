@@ -25,7 +25,7 @@ device_repos=(
 
 # Updated semi-manually via pixel/update-any-var.sh
 
-readonly build_id="UP1A.231005.007"
+readonly build_id="UP1A.231105.003"
 
 # Updated automatically via pixel/update-device-vars.sh
 
@@ -44,4 +44,4 @@ readonly flash_url="https://flash.android.com/build/10754064?target=barbet-user&
 readonly ota_url="https://dl.google.com/dl/android/aosp/barbet-ota-up1a.231005.007-5932cd00.zip"
 readonly ota_sha256="5932cd006310f8d0ccab15db866115cb2ab7d0c5667d4847e411d3769e5c60b5"
 
-readonly security_patch="2023-10-05"
+readonly security_patch="2023-11-05"

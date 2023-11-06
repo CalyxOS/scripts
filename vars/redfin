@@ -26,7 +26,7 @@ device_repos=(
 
 # Updated semi-manually via pixel/update-any-var.sh
 
-readonly build_id="UP1A.231005.007"
+readonly build_id="UP1A.231105.003"
 
 # Updated automatically via pixel/update-device-vars.sh
 
@@ -45,4 +45,4 @@ readonly flash_url="https://flash.android.com/build/10754064?target=redfin-user&
 readonly ota_url="https://dl.google.com/dl/android/aosp/redfin-ota-up1a.231005.007-4593d7c6.zip"
 readonly ota_sha256="4593d7c611b0712b0b508f41363bcc44d0247ce7396d79afc9fb395185e6a960"
 
-readonly security_patch="2023-10-05"
+readonly security_patch="2023-11-05"

@@ -25,7 +25,7 @@ device_repos=(
 
 # Updated semi-manually via pixel/update-any-var.sh
 
-readonly build_id="UP1A.231005.007"
+readonly build_id="UP1A.231105.003"
 
 # Updated automatically via pixel/update-device-vars.sh
 
@@ -44,4 +44,4 @@ readonly flash_url="https://flash.android.com/build/10754064?target=bramble-user
 readonly ota_url="https://dl.google.com/dl/android/aosp/bramble-ota-up1a.231005.007-231386fe.zip"
 readonly ota_sha256="231386fedfa64b0456bf0287b485d89bb3cc96955075737d36a64a5d8fc9e5f3"
 
-readonly security_patch="2023-10-05"
+readonly security_patch="2023-11-05"
