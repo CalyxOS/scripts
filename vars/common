@@ -7,12 +7,12 @@ readonly device_branch=android14-d1
 
 readonly common_aosp_branch=android14-d1-release # Oct 2023, Pixel 8/8 Pro
 
-readonly prev_common_aosp_tag=android-14.0.0_r1 # Oct 2023, Pixel 4a (5G) - 7a
-readonly common_aosp_tag=android-14.0.0_r11 # Oct 2023, Pixel 8/8 Pro
+readonly prev_common_aosp_tag=android-14.0.0_r11 # Oct 2023, Pixel 8/8 Pro
+readonly common_aosp_tag=android-14.0.0_r12 # Nov 2023, Pixel 8/8 Pro
 
-readonly common_aosp_build_id=UD1A.230803.041 # Oct 2023, Pixel 8/8 Pro
+readonly common_aosp_build_id=UD1A.231105.004 # Nov 2023, Pixel 8/8 Pro
 
-readonly topic=shusky
+readonly topic=nov23
 
 readonly lineageos_branch=lineage-21.0
 readonly lineageos_device_branch=lineage-21
