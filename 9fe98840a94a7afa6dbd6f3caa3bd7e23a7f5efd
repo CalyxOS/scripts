@@ -51,6 +51,24 @@
       "parentUuid": "1dbb3c34_1859635f",
       "revId": "9fe98840a94a7afa6dbd6f3caa3bd7e23a7f5efd",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "34e58115_e67e2801",
+        "filename": "vars/husky",
+        "patchSetId": 3
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2023-11-08T22:22:44Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f231648d_4484d69e",
+      "revId": "9fe98840a94a7afa6dbd6f3caa3bd7e23a7f5efd",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
