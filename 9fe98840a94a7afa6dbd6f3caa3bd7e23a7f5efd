@@ -69,6 +69,24 @@
       "parentUuid": "f231648d_4484d69e",
       "revId": "9fe98840a94a7afa6dbd6f3caa3bd7e23a7f5efd",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8865da03_db183f0c",
+        "filename": "vars/husky",
+        "patchSetId": 3
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-11-08T22:22:49Z",
+      "side": 1,
+      "message": "android13/tools/extract-utils/extract_ota.py -l raven-ota-up1a.231105.003-f616529c.zip\nabl\nbl1\nbl2\nbl31\nboot\ndtbo\ngsa\nldfw\nmodem\npbl\nproduct\nsystem\nsystem_ext\ntzsw\nvbmeta\nvbmeta_system\nvbmeta_vendor\nvendor\nvendor_boot\nvendor_dlkm",
+      "parentUuid": "f231648d_4484d69e",
+      "revId": "9fe98840a94a7afa6dbd6f3caa3bd7e23a7f5efd",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
