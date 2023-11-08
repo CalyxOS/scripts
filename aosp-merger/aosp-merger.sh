@@ -157,7 +157,7 @@ push_clo_merge() {
 
 # Merge LineageOS to forks
 merge_lineage() {
-  "${script_path}"/_merge_helper.sh --project-path "${repo}" --new-tag "${1}" --branch-suffix "${os_branch}_merge-${1}"
+  "${script_path}"/_merge_helper.sh --project-path "${repo}" --new-tag "${1}" --branch-suffix "${os_branch}_merge-${1}" --lineage
 }
 
 post_lineage_merge() {

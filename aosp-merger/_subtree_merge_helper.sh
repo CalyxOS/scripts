@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # SPDX-FileCopyrightText: 2017, 2020-2022 The LineageOS Project
-# SPDX-FileCopyrightText: 2021-2022 The Calyx Institute
+# SPDX-FileCopyrightText: 2021-2023 The Calyx Institute
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -66,7 +66,9 @@ STAGINGBRANCH="staging/${BRANCHSUFFIX}"
 
 cd "${TOP}/${PROJECTPATH}"
 # Ditch any existing staging branches
-repo abandon "${STAGINGBRANCH}" .
+if [[ "$(git show-ref --verify --quiet refs/heads/${STAGINGBRANCH})" ]]; then
+    repo abandon "${STAGINGBRANCH}" .
+fi
 repo start "${STAGINGBRANCH}" .
 if [ -f ".gitupstream" ]; then
     git fetch -q --force --tags "$(cat .gitupstream)" "${NEWTAG}"
@@ -98,7 +100,7 @@ fi
 
 CONFLICT=""
 
-echo "#### Merging ${NEWTAG} into ${PROJECTPATH} ####"
+echo -e "\n#### Merging ${NEWTAG} into ${PROJECTPATH} ####"
 git merge --no-commit --log "${NEWTAG}"
 
 if [[ -z "$(git diff --no-ext-diff HEAD)" ]]; then
