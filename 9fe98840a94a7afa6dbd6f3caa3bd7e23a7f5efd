@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c089af35_cee1ca57",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-11-08T21:10:41Z",
+      "side": 1,
+      "message": "There are some new partitions",
+      "revId": "9fe98840a94a7afa6dbd6f3caa3bd7e23a7f5efd",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1dbb3c34_1859635f",
+        "filename": "vars/husky",
+        "patchSetId": 3
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2023-11-08T21:10:41Z",
+      "side": 1,
+      "message": "android13/tools/extract-utils/extract_ota.py -l shiba-ota-ud1a.230803.041-6bbb528c.zip\nabl\nbl1\nbl2\nbl31\nboot\ndtbo\ngcf\ngsa\ngsa_bl1\ninit_boot\nldfw\nmodem\npbl\nproduct\npvmfw\nsystem\nsystem_dlkm\nsystem_ext\ntzsw\nvbmeta\nvbmeta_system\nvbmeta_vendor\nvendor\nvendor_boot\nvendor_dlkm\nvendor_kernel_boot",
+      "revId": "9fe98840a94a7afa6dbd6f3caa3bd7e23a7f5efd",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
