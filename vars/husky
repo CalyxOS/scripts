@@ -1,20 +1,5 @@
 # Pixel 8 Pro
 
-# Usage: ${firmware_partitions[@]}
-readonly firmware_partitions=(
-  bl1
-  pbl
-  bl2
-  abl
-  bl31
-  tzsw
-  gcf
-  gsa
-  gsa_bl1
-  ldfw
-  modem
-)
-
 # Usage: ${device_repos[@]}
 device_repos=(
   device/google/gs-common

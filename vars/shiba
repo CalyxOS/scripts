@@ -1,20 +1,5 @@
 # Pixel 8
 
-# Usage: ${firmware_partitions[@]}
-readonly firmware_partitions=(
-  bl1
-  pbl
-  bl2
-  abl
-  bl31
-  tzsw
-  gcf
-  gsa
-  gsa_bl1
-  ldfw
-  modem
-)
-
 # Usage: ${device_repos[@]}
 device_repos=(
   # common repos in husky
