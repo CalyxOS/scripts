@@ -18,8 +18,7 @@ readonly firmware_partitions=(
 
 # Usage: ${device_repos[@]}
 device_repos=(
-  device/google/redbull
-  device/google/redbull-sepolicy
+  # common repos in barbet
   device/google/redfin
   device/google/redfin-sepolicy
 )
