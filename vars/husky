@@ -21,6 +21,7 @@ device_repos=(
   device/google/zuma
   device/google/zuma-sepolicy
   device/google/shusky
+  device/google/shusky-sepolicy
 )
 
 readonly fbpk_version="v2"
