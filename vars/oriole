@@ -9,7 +9,7 @@ readonly fbpk_version="v2"
 
 # Updated semi-manually via pixel/update-any-var.sh
 
-readonly build_id="UQ1A.231205.015"
+readonly build_id="UQ1A.240105.002"
 
 # Updated automatically via pixel/update-device-vars.sh
 
