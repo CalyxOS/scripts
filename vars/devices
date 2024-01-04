@@ -15,12 +15,9 @@ readonly devices=(
   redfin
   bramble
   sunfish
-  coral
-  flame
   bonito
   sargo
   crosshatch
   blueline
   FP4
-  axolotl
 )
