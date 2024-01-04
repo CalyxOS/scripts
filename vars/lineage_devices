@@ -1,9 +1,5 @@
 # LineageOS supported devices (excluding Pixels)
 # Usage: ${lineage_devices[@]}
 readonly lineage_devices=(
-  FP4
   axolotl
-  devon
-  hawao
-  rhode
 )
