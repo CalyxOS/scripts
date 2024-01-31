@@ -16,6 +16,29 @@
       "message": "This would probably be better off broken up, refactored, etc., but I\u0027ve been working on it with no change control, and it\u0027s better to at least have it somewhere.",
       "revId": "6d33c148a664af8cc467801c9fef3e6f58623be0",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "be30d480_cbf0834d",
+        "filename": "aml/aml_build.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 153,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-01-31T14:36:07Z",
+      "side": 1,
+      "message": "All of this is to work around duplicate manifest lines like this: https://android.googlesource.com/platform/manifest/+/refs/heads/aml_neu_341010000/default.xml#211",
+      "range": {
+        "startLine": 144,
+        "startChar": 0,
+        "endLine": 153,
+        "endChar": 4
+      },
+      "revId": "6d33c148a664af8cc467801c9fef3e6f58623be0",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
