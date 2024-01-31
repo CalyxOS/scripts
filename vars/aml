@@ -1,6 +1,7 @@
 readonly android_manifest_url="https://android.googlesource.com/platform/manifest"
 
-# Updated manually
+# Mapping of mainline module short names to their app names. Module can contain multiple app names.
+# Updated manually.
 readonly -A modules_to_apps=(
   [adb]="com.android.adbd"
   [ads]="com.android.adservices"
@@ -28,4 +29,71 @@ readonly -A modules_to_apps=(
   [tz4]="com.android.tzdata"
   [uwb]="com.android.uwb"
   [wif]="com.android.wifi"
+)
+
+# Mapping of mainline module short names to SDK directories under prebuilts/module_sdk.
+# Updated manually.
+readonly -A modules_to_sdks=(
+  [ads]="AdServices"
+  [art]="art"
+  [ase]="AppSearch"
+  [con]="conscrypt"
+  [ips]="IPsec"
+  [med]="Media"
+  [mpr]="MediaProvider"
+  [odp]="OnDevicePersonalization"
+  [per]="Permission"
+  [sch]="Scheduling"
+  [sdk]="SdkExtensions"
+  [sta]="StatsD"
+  [tet]="Connectivity"
+  [uwb]="Uwb"
+  [wif]="Wifi"
+)
+
+# Mapping of mainline module short names to local repository paths.
+# Updated manually.
+readonly -A modules_to_repos=(
+  [adb]="packages/modules/adb"
+  [ads]="packages/modules/AdServices"
+  [art]="art"
+  [ase]="packages/modules/AppSearch"
+# Bluetooth has no known short name yet.
+  [Bluetooth]="packages/modules/Bluetooth"
+  [cbr]="packages/modules/CellBroadcastService"
+# ConfigInfrastructure has no known short name yet.
+  [ConfigInfrastructure]="packages/modules/ConfigInfrastructure"
+  [con]="external/conscrypt"
+# DeviceLock has no known short name yet.
+  [DeviceLock]="packages/modules/DeviceLock"
+# DocumentsUI is not currently provided as a prebuilt.
+#  [doc]="com.android.documentsui"
+  [ext]="packages/modules/ExtServices"
+  [hef]="packages/modules/HealthFitness"
+  [ips]="packages/modules/IPsec"
+  [med]="packages/modules/Media"
+  [mpr]="packages/providers/MediaProvider"
+  [net]="packages/modules/NetworkStack packages/modules/CaptivePortalLogin"
+  [neu]="packages/modules/NeuralNetworks"
+  [odp]="packages/modules/OnDevicePersonalization"
+  [per]="packages/modules/Permission"
+  [res]="packages/modules/DnsResolver"
+  [rkp]="packages/modules/RemoteKeyProvisioning"
+  [sch]="packages/modules/Scheduling"
+  [sdk]="packages/modules/SdkExtensions"
+  [sta]="packages/modules/StatsD"
+  [swc]="frameworks/av"
+  [tet]="packages/modules/Connectivity"
+# Google uses numbered tzdata package names for different Android versions. AOSP does not.
+# TimezoneData has no known short name yet, but we can safely assume it will be tz5.
+  [tz5]="system/timezone"
+  [uwb]="packages/modules/Uwb"
+  [wif]="packages/modules/Wifi"
+)
+
+# Mapping of mainline module short names to prebuilts directories under prebuilts/calyx/aml.
+# Updated manually.
+readonly -A modules_to_prebuilts=(
+# This short name changes every major release. We don't want to rename the repo every time.
+  [tz5]="TimezoneData",
 )
