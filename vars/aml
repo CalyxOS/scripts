@@ -1,6 +1,7 @@
 readonly android_manifest_url="https://android.googlesource.com/platform/manifest"
 
-# Updated manually
+# Mapping of mainline module short names to their app names. Module can contain multiple app names.
+# Updated manually.
 readonly -A modules_to_apps=(
   [adb]="com.android.adbd"
   [ads]="com.android.adservices"
@@ -28,4 +29,31 @@ readonly -A modules_to_apps=(
   [tz4]="com.android.tzdata"
   [uwb]="com.android.uwb"
   [wif]="com.android.wifi"
+)
+
+# Mapping of mainline module short names to SDK directories under prebuilts/module_sdk.
+# Updated manually.
+readonly -A modules_to_sdks=(
+  [ads]="AdServices"
+  [art]="art"
+  [ase]="AppSearch"
+  [con]="conscrypt"
+  [ips]="IPsec"
+  [med]="Media"
+  [mpr]="MediaProvider"
+  [odp]="OnDevicePersonalization"
+  [per]="Permission"
+  [sch]="Scheduling"
+  [sdk]="SdkExtensions"
+  [sta]="StatsD"
+  [tet]="Connectivity"
+  [uwb]="Uwb"
+  [wif]="Wifi"
+)
+
+# Mapping of mainline module short names to prebuilts directories under prebuilts/calyx/aml.
+# Updated manually.
+readonly -A modules_to_prebuilts=(
+# tzdata's short name changes every major release. We don't want to rename the repo every time.
+  [tz5]="com.android.tzdata",
 )
