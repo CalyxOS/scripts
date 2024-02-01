@@ -37,6 +37,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "d8707433_c74a0333",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-02-01T16:34:10Z",
+      "side": 1,
+      "message": "Unhandled modules not specified elsewhere:\n- Bluetooth\n- ConfigInfrastructure\n- DeviceLock\n- HealthFitness\n- RemoteKeyProvisioning\n\nBluetooth supposedly hasn\u0027t been truly modular until now, maybe the same for RemoteKeyProvisioning but not sure.",
+      "parentUuid": "b0fbe4f0_ae456031",
+      "revId": "dd49877167712fb7749b601f8db66f7ff46f42bb",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "bd1b436b_922e8a6f",
         "filename": "vars/aml_tags",
         "patchSetId": 1
@@ -88,6 +106,24 @@
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e98f00ad_7f850178",
+        "filename": "vars/aml_tags",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-02-01T16:34:10Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "babbae62_c66cdcb9",
+      "revId": "dd49877167712fb7749b601f8db66f7ff46f42bb",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "af1e809f_5aa2f35e",
@@ -119,6 +155,24 @@
       "side": 1,
       "message": "Same as above.",
       "parentUuid": "af1e809f_5aa2f35e",
+      "revId": "dd49877167712fb7749b601f8db66f7ff46f42bb",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9df284d5_7f452096",
+        "filename": "vars/aml_tags",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-02-01T16:34:10Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8033d108_8af5ce89",
       "revId": "dd49877167712fb7749b601f8db66f7ff46f42bb",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }

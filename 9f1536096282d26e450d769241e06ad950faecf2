@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9a6d1a1a_e57e3957",
+        "filename": "vars/aml_tags",
+        "patchSetId": 2
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-02-01T16:34:10Z",
+      "side": 1,
+      "message": "There are currently no tags containing `tz5`, but this is tzdata5, and we want to match tz5 tags should they appear, so change this.",
+      "revId": "9f1536096282d26e450d769241e06ad950faecf2",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
