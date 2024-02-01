@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d29062cb_6c530963",
+        "filename": "vars/aml",
+        "patchSetId": 1
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-02-01T15:52:18Z",
+      "side": 1,
+      "message": "`[hef]`",
+      "revId": "970edf80e09f9be1bb48b93cadb37e623ddd2450",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
