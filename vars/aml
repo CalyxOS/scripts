@@ -7,11 +7,20 @@ readonly -A modules_to_apps=(
   [ads]="com.android.adservices"
   [art]="com.android.art"
   [ase]="com.android.appsearch"
+# Bluetooth does not currently have any relevant tags.
+# Bluetooth has no known short name yet.
+#  [Bluetooth]="com.android.btservices"
   [cbr]="com.android.cellbroadcast"
+# ConfigInfrastructure has no known short name yet.
+  [ConfigInfrastructure]="com.android.configinfrastructure"
   [con]="com.android.conscrypt"
+# DeviceLock is not updatable yet.
+# DeviceLock has no known short name yet.
+#  [DeviceLock]="com.android.devicelock"
 # DocumentsUI is not currently provided as a prebuilt.
 #  [doc]="com.android.documentsui"
   [ext]="com.android.extservices"
+  [hef]="com.android.healthfitness"
   [ips]="com.android.ipsec"
   [med]="com.android.media"
   [mpr]="com.android.mediaprovider"
@@ -20,13 +29,15 @@ readonly -A modules_to_apps=(
   [odp]="com.android.ondevicepersonalization"
   [per]="com.android.permission"
   [res]="com.android.resolv"
+  [rkp]="com.android.rkpd"
   [sch]="com.android.scheduling"
   [sdk]="com.android.sdkext"
   [sta]="com.android.os.statsd"
   [swc]="com.android.media.swcodec"
   [tet]="com.android.tethering"
 # Google uses numbered tzdata package names for different Android versions. AOSP does not.
-  [tz4]="com.android.tzdata"
+# TimezoneData has no known short name yet, but we can safely assume it will be tz5.
+  [tz5]="com.android.tzdata"
   [uwb]="com.android.uwb"
   [wif]="com.android.wifi"
 )
@@ -37,12 +48,22 @@ readonly -A modules_to_sdks=(
   [ads]="AdServices"
   [art]="art"
   [ase]="AppSearch"
+# Bluetooth does not currently have any relevant tags.
+# Bluetooth has no known short name yet.
+#  [Bluetooth]="Bluetooth"
   [con]="conscrypt"
+# ConfigInfrastructure has no known short name yet.
+  [ConfigInfrastructure]="ConfigInfrastructure"
+# DeviceLock is not updatable yet.
+# DeviceLock has no known short name yet.
+#  [DeviceLock]="DeviceLock"
+  [hef]="HealthFitness"
   [ips]="IPsec"
   [med]="Media"
   [mpr]="MediaProvider"
   [odp]="OnDevicePersonalization"
   [per]="Permission"
+  [rkp]="RemoteKeyProvisioning"
   [sch]="Scheduling"
   [sdk]="SdkExtensions"
   [sta]="StatsD"
@@ -58,14 +79,16 @@ readonly -A modules_to_repos=(
   [ads]="packages/modules/AdServices"
   [art]="art"
   [ase]="packages/modules/AppSearch"
+# Bluetooth does not currently have any relevant tags.
 # Bluetooth has no known short name yet.
-  [Bluetooth]="packages/modules/Bluetooth"
+#  [Bluetooth]="packages/modules/Bluetooth"
   [cbr]="packages/modules/CellBroadcastService"
 # ConfigInfrastructure has no known short name yet.
   [ConfigInfrastructure]="packages/modules/ConfigInfrastructure"
   [con]="external/conscrypt"
+# DeviceLock is not updatable yet.
 # DeviceLock has no known short name yet.
-  [DeviceLock]="packages/modules/DeviceLock"
+#  [DeviceLock]="packages/modules/DeviceLock"
 # DocumentsUI is not currently provided as a prebuilt.
 #  [doc]="com.android.documentsui"
   [ext]="packages/modules/ExtServices"
