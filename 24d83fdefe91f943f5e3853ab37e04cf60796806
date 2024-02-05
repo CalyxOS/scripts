@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "eb25ed31_200aa0c4",
+        "filename": "vars/aml",
+        "patchSetId": 3
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-02-05T17:27:48Z",
+      "side": 1,
+      "message": "For this short name and the others, when we don\u0027t know what it is, I would rather not make something up and possibly grow accustomed to the wrong name, in case Google chooses/chose something different. I would prefer to use something we *do* know, like the package name, until we know what the true short name is. Otherwise we set ourselves up for later confusion if e.g. we choose `blu` for Bluetooth but Google chooses `bts`.",
+      "revId": "24d83fdefe91f943f5e3853ab37e04cf60796806",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
