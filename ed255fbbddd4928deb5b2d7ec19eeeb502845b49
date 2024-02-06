@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "cea9317b_7e3bba34",
+        "filename": "vars/aml_tags",
+        "patchSetId": 8
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-02-06T16:57:53Z",
+      "side": 1,
+      "message": "There is no such public tag `341112060`. There isn\u0027t a branch *or* tag for Bluetooth that has a version in apex/apex_manifest.json which even starts with `341`.\n\nThis is all there is:\n```\nfrc_340818110\nfrc_340819020\nfrc_340818170\nfrc_340821000\nfrc_340819190\nfrc_340819220\nfrc_340819010\nfrc_340819030\nfrc_340819280\n```\n\nWe should probably just not include Bluetooth for now, or tie it to an android- tag instead.",
+      "parentUuid": "d3fe2705_e230024a",
+      "revId": "ed255fbbddd4928deb5b2d7ec19eeeb502845b49",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "a43bcc71_ccbf1360",
         "filename": "vars/aml_tags",
         "patchSetId": 8
