@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d3fe2705_e230024a",
+        "filename": "vars/aml_tags",
+        "patchSetId": 8
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-02-06T16:12:38Z",
+      "side": 1,
+      "message": "This can\u0027t be right.\n- Stock with a Play System Update has version `341112060` for btservices, much different than `340821000`.\n- Doing a `git merge android-14.0.0_r5` on packages/modules/Bluetooth brought in a lot more than r5 alone introduced, suggesting this version of Bluetooth might be pretty stale.\n- `frc_340821000`\u0027s subject is: `Manifest for frc_340821000 (10681524,com.google.android.go.tzdata5,com.google.android.tzdata5)`\n\nThis needs to be figured out and fixed in the script that updates tags.",
+      "revId": "ed255fbbddd4928deb5b2d7ec19eeeb502845b49",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a43bcc71_ccbf1360",
+        "filename": "vars/aml_tags",
+        "patchSetId": 8
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-02-06T16:12:38Z",
+      "side": 1,
+      "message": "Stock with a Play System Update has `340819220` for ConfigInfrastructure, which is older, but the PSU is also pretty old and refuses to update. Still... Compare them and compare the tags\u0027 commit subjects.",
+      "revId": "ed255fbbddd4928deb5b2d7ec19eeeb502845b49",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "05ee599e_032f83b1",
+        "filename": "vars/aml_tags",
+        "patchSetId": 8
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-02-06T16:12:38Z",
+      "side": 1,
+      "message": "`DeviceLock` isn\u0027t even updatable yet. We should comment it out in `vars/aml`.",
+      "revId": "ed255fbbddd4928deb5b2d7ec19eeeb502845b49",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5b997a8e_160bc9ff",
+        "filename": "vars/aml_tags",
+        "patchSetId": 8
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-02-06T16:12:38Z",
+      "side": 1,
+      "message": "Stock with a Play System Update has `340821000` for odp. Compare them and compare the tags\u0027 commit subjects.",
+      "revId": "ed255fbbddd4928deb5b2d7ec19eeeb502845b49",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "130b15ff_7a38451c",
+        "filename": "vars/aml_tags",
+        "patchSetId": 8
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-02-06T16:12:38Z",
+      "side": 1,
+      "message": "Stock with a Play System Update has `340819220` for sch. Compare them and compare the tags\u0027 commit subjects.",
+      "revId": "ed255fbbddd4928deb5b2d7ec19eeeb502845b49",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4a000f88_2391523e",
+        "filename": "vars/aml_tags",
+        "patchSetId": 8
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-02-06T16:12:38Z",
+      "side": 1,
+      "message": "Stock with a Play System Update has `340818110` for tz5. Compare them and compare the tags\u0027 commit subjects, to be thorough.",
+      "revId": "ed255fbbddd4928deb5b2d7ec19eeeb502845b49",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
