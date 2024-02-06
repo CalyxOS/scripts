@@ -53,6 +53,24 @@
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "6e4db0cd_c58e1aea",
+        "filename": "vars/aml_tags",
+        "patchSetId": 8
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-02-06T18:53:08Z",
+      "side": 1,
+      "message": "The only difference in the ConfigInfrastructure module between these frc_ tags is the version code in the apex manifest, nothing else. So this should be fine.",
+      "parentUuid": "a43bcc71_ccbf1360",
+      "revId": "ed255fbbddd4928deb5b2d7ec19eeeb502845b49",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "05ee599e_032f83b1",
@@ -87,6 +105,24 @@
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "44037bc3_9b252c30",
+        "filename": "vars/aml_tags",
+        "patchSetId": 8
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-02-06T18:53:08Z",
+      "side": 1,
+      "message": "These numbers are already the same!",
+      "parentUuid": "5b997a8e_160bc9ff",
+      "revId": "ed255fbbddd4928deb5b2d7ec19eeeb502845b49",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "130b15ff_7a38451c",
@@ -104,6 +140,24 @@
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f49da538_2c6206c6",
+        "filename": "vars/aml_tags",
+        "patchSetId": 8
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-02-06T18:53:08Z",
+      "side": 1,
+      "message": "The only difference in the Scheduling module between these frc_ tags is the version code in apex/manifest.json, nothing else. So this should be fine.",
+      "parentUuid": "130b15ff_7a38451c",
+      "revId": "ed255fbbddd4928deb5b2d7ec19eeeb502845b49",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4a000f88_2391523e",
@@ -117,6 +171,24 @@
       "writtenOn": "2024-02-06T16:12:38Z",
       "side": 1,
       "message": "Stock with a Play System Update has `340818110` for tz5. Compare them and compare the tags\u0027 commit subjects, to be thorough.",
+      "revId": "ed255fbbddd4928deb5b2d7ec19eeeb502845b49",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6d7e03d1_ea4a50eb",
+        "filename": "vars/aml_tags",
+        "patchSetId": 8
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-02-06T18:53:08Z",
+      "side": 1,
+      "message": "The only difference in system/timezone between these frc_ tags is the version code in apex/manifest.json, nothing else. So this should be fine.",
+      "parentUuid": "4a000f88_2391523e",
       "revId": "ed255fbbddd4928deb5b2d7ec19eeeb502845b49",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
