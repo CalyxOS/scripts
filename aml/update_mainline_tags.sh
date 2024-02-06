@@ -31,24 +31,37 @@ readonly script_path="$(cd "$(dirname "$0")";pwd -P)"
 readonly vars_path="${script_path}/../vars"
 readonly top="${script_path}/../../.."
 readonly aml_tags_path="${vars_path}/aml_tags"
-readonly tags_header="# Updated automatically by aml/update_mainline_tags.sh"
+readonly tags_header="# Entire file updated automatically by aml/update_mainline_tags.sh"
 
 source "${vars_path}/aml"
 if [ -f "$aml_tags_path" ]; then
   source "$aml_tags_path"
 fi
 
+cached_tags=
+
 ## HELP MESSAGE (USAGE INFO)
 # TODO
 
 ### FUNCTIONS ###
 
+get_all_tags() {
+  if [ -z "$cached_tags" ]; then
+    cached_tags="$(git ls-remote --sort=v:refname --refs --tags "$android_manifest_url" '*_*' \
+      | cut -d$'\t' -f2- | sed -e 's:^refs/tags/::')"
+  fi
+  printf "%s\n" "$cached_tags"
+}
+
 get_all_aml_tags_sorted() {
   # Sorted with the assumption that newer versions have version numbers that are
   # alphanumerically greater.
-  git ls-remote --refs --tags "$android_manifest_url" '*_*' | cut -d$'\t' -f2- \
-    | sed -e 's:^refs/tags/::' | sed -n -r -e 's/^(.*_([0-9]+{9,}))$/\2 \1/p' \
+  get_all_tags | sed -n -r -e 's/^(.*_([0-9]+{9,}))$/\2 \1/p' \
     | sort | cut -d' ' -f2-
+}
+
+get_latest_security_tag() {
+  get_all_tags | grep '^android-security-' | tail -n1
 }
 
 main() {
@@ -81,10 +94,12 @@ main() {
     modules_and_tags_lines+=("  [$module]=\"$tag\"")
   done
 
+  local latest_security_tag="$(get_latest_security_tag)"
   local sorted_modules_and_tags="$(printf "%s\n" "${modules_and_tags_lines[@]}" | sort)"
 
-  printf "%s\nreadonly -A modules_to_tags=(\n%s\n)\n" "$tags_header" "$sorted_modules_and_tags" \
-    | tee "$aml_tags_path"
+  printf "%s\nreadonly android_security_tag=%q\n\nreadonly -A modules_to_tags=(\n%s\n)\n" \
+   "$tags_header" "$latest_security_tag" "$sorted_modules_and_tags" \
+   | tee "$aml_tags_path"
 
   echo "Successfully updated $aml_tags_path"
 }
