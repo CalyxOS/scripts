@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "43662253_c09e0726",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-02-06T15:32:12Z",
+      "side": 1,
+      "message": "The `--dry-run` feature is helpful, but it is an absolute mess and does not map one-to-one with actual-run behavior. It\u0027s prone to errors when updating the script. That needs to be addressed.",
+      "revId": "80a5782ac3a9fd7fc16cb76da093b1d49ad650fc",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
