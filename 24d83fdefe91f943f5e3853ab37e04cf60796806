@@ -69,6 +69,24 @@
       "parentUuid": "eb25ed31_200aa0c4",
       "revId": "24d83fdefe91f943f5e3853ab37e04cf60796806",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9febaba1_33004771",
+        "filename": "vars/aml",
+        "patchSetId": 3
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-02-07T19:47:13Z",
+      "side": 1,
+      "message": "I think it\u0027s more accurate to consider NetworkStack and CaptivePortalLogin as separate modules. They are presented as separate modules in `cmd transparency` output, and they are treated as separate modules. What they share is a common tag, `net`.\n\nUltimately I\u0027ve decided to restructure how this is handled in a follow-up change \"aml: Use longer module names in vars\", which takes care of this: https://review.calyxos.org/c/CalyxOS/scripts/+/24327",
+      "parentUuid": "b8d47cd5_14a66e71",
+      "revId": "24d83fdefe91f943f5e3853ab37e04cf60796806",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
