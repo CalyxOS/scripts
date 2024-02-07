@@ -38,6 +38,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "c4ff6067_b7cb55dc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-02-07T19:55:40Z",
+      "side": 1,
+      "message": "Not actually found on stock. `cmd transparency get apex_info` shows `com.google.android.networkstack.permissionconfig,ERROR:Unable to find PackageInfo for this module.`",
+      "parentUuid": "d50e2fb6_84622771",
+      "revId": "24d83fdefe91f943f5e3853ab37e04cf60796806",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "eb25ed31_200aa0c4",
         "filename": "vars/aml",
         "patchSetId": 3
