@@ -36,6 +36,24 @@
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "d19a5a30_22e93446",
+        "filename": "vars/aml_tags",
+        "patchSetId": 8
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-02-07T20:09:42Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "cea9317b_7e3bba34",
+      "revId": "ed255fbbddd4928deb5b2d7ec19eeeb502845b49",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "a43bcc71_ccbf1360",
@@ -84,6 +102,24 @@
       "writtenOn": "2024-02-06T16:12:38Z",
       "side": 1,
       "message": "`DeviceLock` isn\u0027t even updatable yet. We should comment it out in `vars/aml`.",
+      "revId": "ed255fbbddd4928deb5b2d7ec19eeeb502845b49",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "235e97d1_c6eac986",
+        "filename": "vars/aml_tags",
+        "patchSetId": 8
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-02-07T20:09:42Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "05ee599e_032f83b1",
       "revId": "ed255fbbddd4928deb5b2d7ec19eeeb502845b49",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
