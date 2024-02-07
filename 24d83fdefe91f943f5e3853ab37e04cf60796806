@@ -54,6 +54,24 @@
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "ffee16d1_3f7b0849",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-02-07T19:57:36Z",
+      "side": 1,
+      "message": "The tags are all old, SDK 31, e.g. `aml_pco_311011000`. Let\u0027s just skip it.",
+      "parentUuid": "c4ff6067_b7cb55dc",
+      "revId": "24d83fdefe91f943f5e3853ab37e04cf60796806",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "eb25ed31_200aa0c4",
