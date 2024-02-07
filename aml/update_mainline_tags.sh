@@ -69,9 +69,10 @@ main() {
     if [ -n "$prev_tag" ]; then
       prev_tag="^${prev_tag%_*}_\|"
     fi
+    module_abbreviation="${modules_to_abbreviations[$module]:-NOPE_NO_ABBREVIATION}"
     # Eligible tags start the same way as the previous tag, or start with aml_mod, or start with frc_.
     # Whichever among these has the highest version number wins.
-    local tag="$(printf "%s" "$all_aml_tags" | grep -- "${prev_tag}^aml_${module}\|^frc_[0-9]" | tail -n1)" || err=$?
+    local tag="$(printf "%s" "$all_aml_tags" | grep -- "${prev_tag}^aml_${module_abbreviation}\|^frc_[0-9]" | tail -n1)" || err=$?
     if [ -z "$tag" -o $err -ne 0 ]; then
       [ $err -ne 0 ] || err=1
       echo "Failed to determine tag for $module; quitting..." >&2
