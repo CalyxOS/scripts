@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c3785b72_f881ccb2",
+        "filename": "aml/aml_build.sh",
+        "patchSetId": 18
+      },
+      "lineNbr": 312,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-02-13T14:58:38Z",
+      "side": 1,
+      "message": "Merging is never supposed to be part of the build process itself. We should be building from our own tags as we always do.\n\nThis is just temporary, as is the case for the majority of this build script. My primary goal is something that works repeatably, first, and then we can use it to develop a clean process.",
+      "range": {
+        "startLine": 311,
+        "startChar": 0,
+        "endLine": 312,
+        "endChar": 45
+      },
+      "revId": "58936aa60647b7673118a3a7d69ce3495ee7702c",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
