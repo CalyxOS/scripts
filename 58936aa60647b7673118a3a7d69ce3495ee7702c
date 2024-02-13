@@ -3,6 +3,23 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "52ebd910_d2cdfd22",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 18
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-02-13T15:06:18Z",
+      "side": 1,
+      "message": "Modules with the same tag can conceivably be built together in the same `TARGET_BUILD_APPS` to save time. The script could be updated to do this.",
+      "revId": "58936aa60647b7673118a3a7d69ce3495ee7702c",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "c3785b72_f881ccb2",
         "filename": "aml/aml_build.sh",
         "patchSetId": 18
