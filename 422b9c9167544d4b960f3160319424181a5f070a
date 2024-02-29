@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b5c79597_b68f3293",
+        "filename": "aml/generate_mainline_manifest.sh",
+        "patchSetId": 7
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-02-29T23:04:34Z",
+      "side": 1,
+      "message": "It\u0027s not just to know the manifest is functional, but `repo manifest -r -o` also can\u0027t find certain directories if you don\u0027t, and it errors out.",
+      "revId": "422b9c9167544d4b960f3160319424181a5f070a",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
