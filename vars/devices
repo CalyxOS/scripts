@@ -21,6 +21,7 @@ readonly devices=(
   sargo
   crosshatch
   blueline
+  FP5
   FP4
   axolotl
   devon
