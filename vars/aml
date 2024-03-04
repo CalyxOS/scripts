@@ -1,7 +1,14 @@
+# Entire file updated manually.
+
+# AOSP manfest URL.
 readonly android_manifest_url="https://android.googlesource.com/platform/manifest"
 
+# Version of generated module SDK to use, when applicable.
+# Valid values at time of writing: R, S, Tiramisu, UpsideDownCake, latest.
+# This varies depending on module.
+readonly module_sdk_build=UpsideDownCake
+
 # Mapping of module names to their abbreviations used in mainline tags, if any.
-# Updated manually.
 readonly -A modules_to_abbreviations=(
   [adb]="adb"
   [AdServices]="ads"
@@ -35,7 +42,6 @@ readonly -A modules_to_abbreviations=(
 )
 
 # Mapping of module names to their app names.
-# Updated manually.
 readonly -A modules_to_apps=(
   [adb]="com.android.adbd"
   [AdServices]="com.android.adservices"
@@ -75,7 +81,6 @@ readonly -A modules_to_apps=(
 
 # Mapping of module names to SDK directories under prebuilts/module_sdk.
 # When absent, there is no module SDK for the module.
-# Updated manually.
 readonly -A modules_to_sdks=(
   [AdServices]="AdServices"
   [art]="art"
@@ -102,7 +107,6 @@ readonly -A modules_to_sdks=(
 )
 
 # Mapping of module names to local repository paths.
-# Updated manually.
 readonly -A modules_to_repos=(
   [adb]="packages/modules/adb"
   [AdServices]="packages/modules/AdServices"
