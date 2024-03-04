@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a376ceb7_82d3cfcd",
+        "filename": "aml/build_from_manifest.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-03-04T20:05:22Z",
+      "side": 1,
+      "message": "What should the prebuilt commit message be? Should we even do this here?",
+      "revId": "9d314a072681c177a508a69934b4e0c84eeb9267",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "babd51c0_349dec56",
+        "filename": "aml/build_from_manifest.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-03-04T20:05:22Z",
+      "side": 1,
+      "message": "Somewhere (I think for building module SDKs), there is an auto-generated version that includes the username for the build account and such. We may want to figure out how to control this, if we want to control it, and how. It may be tied to BUILD_NUMBER.",
+      "revId": "9d314a072681c177a508a69934b4e0c84eeb9267",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "752c9ea5_5e516c6c",
+        "filename": "aml/build_from_manifest.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-03-04T20:05:22Z",
+      "side": 1,
+      "message": "Use CalyxOS-specific manifest, where applicable.",
+      "revId": "9d314a072681c177a508a69934b4e0c84eeb9267",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2c0e5c2c_ce18b8c2",
+        "filename": "aml/build_from_manifest.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 147,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-03-04T20:05:22Z",
+      "side": 1,
+      "message": "Build and copy module SDK, where applicable.",
+      "revId": "9d314a072681c177a508a69934b4e0c84eeb9267",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
