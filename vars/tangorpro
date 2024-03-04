@@ -11,7 +11,7 @@ readonly wifi_only=true
 
 # Updated semi-manually via pixel/update-any-var.sh
 
-readonly build_id="UQ1A.240205.002"
+readonly build_id="AP1A.240305.019.A1"
 
 # Updated automatically via pixel/update-device-vars.sh
 
