@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fc95abb9_18bd72e9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-03-04T22:07:03Z",
+      "side": 1,
+      "message": "Compress APEX",
+      "revId": "2b3eaaafafb916550022afa919b767ed8f3c4924",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
