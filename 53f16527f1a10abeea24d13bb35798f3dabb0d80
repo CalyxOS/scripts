@@ -16,6 +16,24 @@
       "message": "`\"${last_output_files[@]}\"`",
       "revId": "53f16527f1a10abeea24d13bb35798f3dabb0d80",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "43b08c85_8fc6f4c0",
+        "filename": "aml/build_from_manifest.sh",
+        "patchSetId": 5
+      },
+      "lineNbr": 123,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-03-04T22:22:28Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c73665f3_699efb89",
+      "revId": "53f16527f1a10abeea24d13bb35798f3dabb0d80",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
