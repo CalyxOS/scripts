@@ -16,6 +16,40 @@
       "message": "Compress APEX",
       "revId": "2b3eaaafafb916550022afa919b767ed8f3c4924",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bba72f02_2f7c3df5",
+        "filename": "aml/build_from_manifest.sh",
+        "patchSetId": 4
+      },
+      "lineNbr": 193,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-03-04T22:09:32Z",
+      "side": 1,
+      "message": "No `-a`, but we also need to handle files that were potentailly removed in `copy_output_files`.",
+      "revId": "2b3eaaafafb916550022afa919b767ed8f3c4924",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a5f59535_ce96db0e",
+        "filename": "aml/build_from_manifest.sh",
+        "patchSetId": 4
+      },
+      "lineNbr": 198,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-03-04T22:09:32Z",
+      "side": 1,
+      "message": "No `-a`",
+      "revId": "2b3eaaafafb916550022afa919b767ed8f3c4924",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
