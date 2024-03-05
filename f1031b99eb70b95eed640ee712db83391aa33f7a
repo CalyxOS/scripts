@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "60613198_9dc32bad",
+        "filename": "aml/generate_mainline_manifest.sh",
+        "patchSetId": 11
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-03-05T15:44:26Z",
+      "side": 1,
+      "message": "This should be https://gitlab.com I think, once ready.",
+      "revId": "f1031b99eb70b95eed640ee712db83391aa33f7a",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "293ae242_071ea7da",
+        "filename": "aml/generate_mainline_manifest.sh",
+        "patchSetId": 11
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-03-05T15:44:26Z",
+      "side": 1,
+      "message": "In order to work for now, this should be `CalyxOS/tmp/` I think, but will eventually be `CalyxOS/`.",
+      "range": {
+        "startLine": 79,
+        "startChar": 30,
+        "endLine": 79,
+        "endChar": 38
+      },
+      "revId": "f1031b99eb70b95eed640ee712db83391aa33f7a",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
