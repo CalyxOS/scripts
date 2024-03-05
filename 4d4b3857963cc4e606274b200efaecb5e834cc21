@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "06fe9422_9acf651e",
+        "filename": "aml/build_from_manifest.sh",
+        "patchSetId": 10
+      },
+      "lineNbr": 224,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-03-05T16:07:29Z",
+      "side": 1,
+      "message": "Fail: calyxos_$module.xml includes aosp_$module.xml which resides in the same directory; however, when running `repo init -m calyxos_$module.xml`, it cannot find aosp_$module.xml, because it looks for it inside .repo/manifests.",
+      "revId": "4d4b3857963cc4e606274b200efaecb5e834cc21",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
