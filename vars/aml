@@ -143,3 +143,11 @@ readonly -A modules_to_repos=(
   [Uwb]="packages/modules/Uwb"
   [Wifi]="packages/modules/Wifi"
 )
+
+# Mapping of mainline modules to space-separated repos we have changed.
+# "." is a special path representing the module's repo path defined above.
+readonly -A modules_with_repo_changes=(
+  [Connectivity]=". frameworks/base"
+  [Permission]="."
+  [Wifi]="."
+)
