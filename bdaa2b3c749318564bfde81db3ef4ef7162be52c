@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "019a52c3_8e2e829b",
+        "filename": "aml/build_from_manifest.sh",
+        "patchSetId": 7
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-03-05T14:38:40Z",
+      "side": 1,
+      "message": "not readonly",
+      "revId": "bdaa2b3c749318564bfde81db3ef4ef7162be52c",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
