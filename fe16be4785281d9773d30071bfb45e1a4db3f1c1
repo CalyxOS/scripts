@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ece8d869_370d8410",
+        "filename": "vars/aml",
+        "patchSetId": 2
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-03-05T22:24:23Z",
+      "side": 1,
+      "message": "Remove this line, we have it at the top",
+      "revId": "fe16be4785281d9773d30071bfb45e1a4db3f1c1",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
