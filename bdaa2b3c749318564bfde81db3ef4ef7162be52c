@@ -16,6 +16,24 @@
       "message": "not readonly",
       "revId": "bdaa2b3c749318564bfde81db3ef4ef7162be52c",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "442f2810_5c1f0f85",
+        "filename": "aml/build_from_manifest.sh",
+        "patchSetId": 7
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-03-05T19:11:59Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "019a52c3_8e2e829b",
+      "revId": "bdaa2b3c749318564bfde81db3ef4ef7162be52c",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
