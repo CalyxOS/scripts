@@ -106,6 +106,17 @@ readonly -A modules_to_sdks=(
   [Wifi]="Wifi"
 )
 
+# List of modules that require us to build and include an updated SDK for successful inclusion.
+readonly -a modules_requiring_updated_sdk=(
+  art
+  AdServices
+  AppSearch
+  Connectivity
+  IPsec
+  Uwb
+  Wifi
+)
+
 # Mapping of module names to local repository paths.
 readonly -A modules_to_repos=(
   [adb]="packages/modules/adb"
