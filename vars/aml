@@ -79,6 +79,40 @@ readonly -A modules_to_apps=(
   [Wifi]="com.android.wifi"
 )
 
+# Mapping of module names to whether or not they produce compressible APEX (1=yes).
+# TODO: Determine this via bazel? It is in Android.bp files and/or has defaults per major release.
+readonly -A modules_to_compressible_apex=(
+  [adb]=1
+  [AdServices]=1
+  [art]=1
+  [AppSearch]=1
+  [CellBroadcastService]=1
+  [ConfigInfrastructure]=1
+  [Connectivity]=1
+  [conscrypt]=1
+  [DnsResolver]=1
+  [ExtServices]=1
+  [IPsec]=1
+  [Media]=1
+  [MediaProvider]=1
+  [MediaSwCodec]=1
+  [NeuralNetworks]=1
+  [OnDevicePersonalization]=1
+  [Permission]=1
+  [Scheduling]=1
+  [Uwb]=1
+  [Wifi]=1
+# Bluetooth does not currently have any relevant tags.
+#  [Bluetooth]=0
+# DeviceLock is not updatable yet.
+#  [DeviceLock]=0
+  [HealthFitness]=0
+  [RemoteKeyProvisioning]=0
+  [SdkExtensions]=0
+  [StatsD]=0
+  [TimezoneData]=0
+)
+
 # Mapping of module names to SDK directories under prebuilts/module_sdk.
 # When absent, there is no module SDK for the module.
 readonly -A modules_to_sdks=(
