@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c0e4e109_7931134c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2024-03-07T18:32:57Z",
+      "side": 1,
+      "message": "Sourcing in envsetup only works once due to the vars being readonly",
+      "revId": "41bf14f523b4141d39cfae68b2850fa24feb3682",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
