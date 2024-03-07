@@ -18,6 +18,24 @@
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e5250d99_99b4ede5",
+        "filename": "aml/generate_mainline_manifest.sh",
+        "patchSetId": 11
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-03-07T20:51:41Z",
+      "side": 1,
+      "message": "Done, this is now an environment variable, so it can be overridden for testing.",
+      "parentUuid": "60613198_9dc32bad",
+      "revId": "f1031b99eb70b95eed640ee712db83391aa33f7a",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "293ae242_071ea7da",
@@ -55,6 +73,30 @@
       "side": 1,
       "message": "Updated now. Keeping unresolved for changing it back.",
       "parentUuid": "293ae242_071ea7da",
+      "range": {
+        "startLine": 79,
+        "startChar": 30,
+        "endLine": 79,
+        "endChar": 38
+      },
+      "revId": "f1031b99eb70b95eed640ee712db83391aa33f7a",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "91e49ab3_43e5b35d",
+        "filename": "aml/generate_mainline_manifest.sh",
+        "patchSetId": 11
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-03-07T20:51:41Z",
+      "side": 1,
+      "message": "Done, this is now an environment variable, so it can be overridden for testing.",
+      "parentUuid": "5e24a165_53ee9299",
       "range": {
         "startLine": 79,
         "startChar": 30,
