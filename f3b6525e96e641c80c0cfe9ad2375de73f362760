@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "939c8d45_009ad7e8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 18
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-03-07T20:56:25Z",
+      "side": 1,
+      "message": "To generate CalyxOS manifests that reference our private testing repos (and skip the AOSP ones):\n```\nCALYXOS_MANIFESTS_ONLY\u003dy \\\nCALYXOS_REMOTE\u003dssh://git@gitlab.com \\\nCALYXOS_PROJECT_FORMAT\u003dCalyxOS/tmp/platform_%s \\\naml/generate_mainline_manifest.sh ~/android/android-mainline all\n```",
+      "revId": "f3b6525e96e641c80c0cfe9ad2375de73f362760",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
