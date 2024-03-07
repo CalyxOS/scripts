@@ -16,6 +16,24 @@
       "message": "Sourcing in envsetup only works once due to the vars being readonly",
       "revId": "41bf14f523b4141d39cfae68b2850fa24feb3682",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a1c6e3f1_d79d5118",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-03-07T18:36:25Z",
+      "side": 1,
+      "message": "Could create a new file with this, and not mark that readonly",
+      "parentUuid": "c0e4e109_7931134c",
+      "revId": "41bf14f523b4141d39cfae68b2850fa24feb3682",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
