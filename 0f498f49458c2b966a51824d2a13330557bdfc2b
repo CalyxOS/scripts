@@ -16,6 +16,23 @@
       "message": "Check if output directories (for copying to) exist before even building the module and/or SDK.",
       "revId": "0f498f49458c2b966a51824d2a13330557bdfc2b",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2ce9597e_244b6d9a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 21
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-03-07T21:10:02Z",
+      "side": 1,
+      "message": "Support copying extra files like permissions files somehow, e.g. for NetworkStack. Maybe vars/aml can have a mapping.",
+      "revId": "0f498f49458c2b966a51824d2a13330557bdfc2b",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
