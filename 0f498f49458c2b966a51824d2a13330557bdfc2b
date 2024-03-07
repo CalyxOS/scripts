@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8c5e95e1_559c54f2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 21
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-03-07T20:59:35Z",
+      "side": 1,
+      "message": "Check if output directories (for copying to) exist before even building the module and/or SDK.",
+      "revId": "0f498f49458c2b966a51824d2a13330557bdfc2b",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
