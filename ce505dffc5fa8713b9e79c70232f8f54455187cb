@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c859f507_ac780e5a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-03-11T15:59:15Z",
+      "side": 1,
+      "message": "Squashed from:\n- generate: https://review.calyxos.org/c/CalyxOS/scripts/+/24665/20\n- build: https://review.calyxos.org/c/CalyxOS/scripts/+/24802/22\n\nUnresolved comments copied over.",
+      "revId": "ce505dffc5fa8713b9e79c70232f8f54455187cb",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "74ac4ecd_1be70fc3",
