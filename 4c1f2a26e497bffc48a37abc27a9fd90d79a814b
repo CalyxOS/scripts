@@ -1,5 +1,23 @@
 {
-  "comments": [],
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1cada777_1601a4ad",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 19
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-03-11T15:14:42Z",
+      "side": 1,
+      "message": "Superseded by new scripts:\n- https://review.calyxos.org/c/CalyxOS/scripts/+/24665/19\n- https://review.calyxos.org/c/CalyxOS/scripts/+/24802/21",
+      "revId": "4c1f2a26e497bffc48a37abc27a9fd90d79a814b",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ],
   "submitRequirementResults": [
     {
       "submitRequirement": {
