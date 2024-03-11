@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "74ac4ecd_1be70fc3",
+        "filename": "aml/build_from_manifest.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 248,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-03-11T15:58:15Z",
+      "side": 1,
+      "message": "Support copying extra files like permissions files somehow, e.g. for NetworkStack. Maybe vars/aml can have a mapping.",
+      "revId": "ce505dffc5fa8713b9e79c70232f8f54455187cb",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cefeab01_55b6ae2e",
+        "filename": "aml/build_from_manifest.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 369,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-03-11T15:58:15Z",
+      "side": 1,
+      "message": "Check if output directories (for copying to) exist before even building the module and/or SDK.",
+      "revId": "ce505dffc5fa8713b9e79c70232f8f54455187cb",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8a794f10_5ad804c1",
+        "filename": "aml/build_from_manifest.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 378,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-03-11T15:58:15Z",
+      "side": 1,
+      "message": "There is an auto-generated version that includes the username for the build account and such. We may want to figure out how to control this, if we want to control it, and how. It may be tied to BUILD_NUMBER...?",
+      "revId": "ce505dffc5fa8713b9e79c70232f8f54455187cb",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a0f11670_e9966f8a",
+        "filename": "aml/build_from_manifest.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 446,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-03-11T15:58:15Z",
+      "side": 1,
+      "message": "What should the prebuilt commit message be? Should we even do this?",
+      "revId": "ce505dffc5fa8713b9e79c70232f8f54455187cb",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
