@@ -33,6 +33,42 @@
       "message": "Support copying extra files like permissions files somehow, e.g. for NetworkStack. Maybe vars/aml can have a mapping.",
       "revId": "0f498f49458c2b966a51824d2a13330557bdfc2b",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8c2b21b8_7167ea4f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 21
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-03-11T15:58:36Z",
+      "side": 1,
+      "message": "Acknowledged, copied into squash",
+      "parentUuid": "2ce9597e_244b6d9a",
+      "revId": "0f498f49458c2b966a51824d2a13330557bdfc2b",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "644dc2db_7dee9a8d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 21
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-03-11T15:58:36Z",
+      "side": 1,
+      "message": "Acknowledged, copied into squash",
+      "parentUuid": "8c5e95e1_559c54f2",
+      "revId": "0f498f49458c2b966a51824d2a13330557bdfc2b",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }

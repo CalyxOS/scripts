@@ -36,6 +36,24 @@
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "2e0d9d9c_0d00a247",
+        "filename": "aml/build_from_manifest.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-03-11T15:58:36Z",
+      "side": 1,
+      "message": "Acknowledged, copied into squash",
+      "parentUuid": "7f37206e_6571d852",
+      "revId": "9d314a072681c177a508a69934b4e0c84eeb9267",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "babd51c0_349dec56",
@@ -49,6 +67,24 @@
       "writtenOn": "2024-03-04T20:05:22Z",
       "side": 1,
       "message": "Somewhere (I think for building module SDKs), there is an auto-generated version that includes the username for the build account and such. We may want to figure out how to control this, if we want to control it, and how. It may be tied to BUILD_NUMBER.",
+      "revId": "9d314a072681c177a508a69934b4e0c84eeb9267",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d458ddbf_e8993c21",
+        "filename": "aml/build_from_manifest.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-03-11T15:58:36Z",
+      "side": 1,
+      "message": "Acknowledged, copied into squash",
+      "parentUuid": "babd51c0_349dec56",
       "revId": "9d314a072681c177a508a69934b4e0c84eeb9267",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
