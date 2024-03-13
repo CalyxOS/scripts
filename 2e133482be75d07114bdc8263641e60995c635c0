@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cf91f2f3_8236ae5f",
+        "filename": "aml/generate_mainline_manifest.sh",
+        "patchSetId": 11
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-03-13T14:02:57Z",
+      "side": 1,
+      "message": "not used",
+      "revId": "2e133482be75d07114bdc8263641e60995c635c0",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
