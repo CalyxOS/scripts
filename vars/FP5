@@ -5,3 +5,9 @@ device_repos=(
   device/fairphone/FP5
   kernel/fairphone/qcm6490
 )
+
+# Updated manually
+readonly build_id="FP5.TT46.A.144"
+
+readonly image_url="https://fairphone-android-builds.ams3.digitaloceanspaces.com/FP5/A13/FP5-TT46-factory.zip"
+readonly image_sha256="da80ea12c4768e2f5dc224ca9ed68ca3ea6884770fab86050844220fe2a27721"
