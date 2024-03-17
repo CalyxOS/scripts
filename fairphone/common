@@ -1,0 +1,6 @@
+### CONSTANTS ###
+readonly vars_path="${script_path}/../vars"
+readonly top="${script_path}/../../.."
+
+readonly work_dir="${WORK_DIR:-/tmp/fairphone}"
+readonly device="${1}"
