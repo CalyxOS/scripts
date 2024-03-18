@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e8a72f76_cd78e3a1",
+        "filename": "vars/aml",
+        "patchSetId": 3
+      },
+      "lineNbr": 144,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-03-18T20:28:30Z",
+      "side": 1,
+      "message": "We need to be able to reference this list in order to do this:\nhttps://review.calyxos.org/c/CalyxOS/scripts/+/25153/comment/085f6c4e_d8e7e611/\n\nBut we *don\u0027t* need to build updated SDKs because we don\u0027t change the APIs. We\u0027d need to update the build script to not reference this; it would only be used by the manifest generation script.",
+      "revId": "208a681d8c2579628c9dff1b91af7141604dea7e",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
