@@ -16,6 +16,24 @@
       "message": "Uh oh, run_cmd writes to stdout, so its \"Running command\" lines end up in the actual manifest. Yikes.",
       "revId": "cd83c04780f7ca667c4f6ff71399c4309334623d",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "92662085_f990e5a6",
+        "filename": "aml/generate_mainline_manifest.sh",
+        "patchSetId": 15
+      },
+      "lineNbr": 322,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-03-18T22:19:05Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c8eee034_763dfac6",
+      "revId": "cd83c04780f7ca667c4f6ff71399c4309334623d",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
