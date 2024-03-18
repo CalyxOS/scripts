@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "81a07845_eb57f308",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-03-18T18:34:30Z",
+      "side": 1,
+      "message": "Thanks!",
+      "revId": "f2fd7e3310a7278b57e924d4059cdc200802f8d9",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "192270df_ec5bebda",
+        "filename": "fairphone/extract-factory-image.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-03-18T18:34:30Z",
+      "side": 1,
+      "message": "Any reason to leave out this block? We added it speed up re-runs, helpful when working on proprietary file changes.",
+      "revId": "f2fd7e3310a7278b57e924d4059cdc200802f8d9",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
