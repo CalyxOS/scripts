@@ -20,6 +20,24 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "f1c8e8a5_d9cbc3c6",
+        "filename": "aml/build_from_manifest.sh",
+        "patchSetId": 14
+      },
+      "lineNbr": 477,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-03-18T21:09:17Z",
+      "side": 1,
+      "message": "I think I was assuming AOSP-tagged SDKs would work without having fully verified that, because right now, I can\u0027t get a build to work (even pre-QPR2). Let\u0027s pause this change for the moment.",
+      "parentUuid": "51e49773_b0da0bc7",
+      "revId": "4e226a00e3dd3e4705548862438611086318f7b0",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "085f6c4e_d8e7e611",
         "filename": "aml/generate_mainline_manifest.sh",
         "patchSetId": 14
