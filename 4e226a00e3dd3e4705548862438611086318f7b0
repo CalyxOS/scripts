@@ -69,6 +69,24 @@
       "message": "If we are going to include prebuilts in CalyxOS builds, then we should also generate a manifest with `\u003cextend-project ... /\u003e` entries for the module SDKs, because we do need to use the AOSP tags for certain of those, or the build fails. (Thankfully, we do not need to generate them ourselves if we do not change the module APIs.) Then, that manifest could be an include in platform/manifest that gets updated regularly.",
       "revId": "4e226a00e3dd3e4705548862438611086318f7b0",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "88af0613_3d864d31",
+        "filename": "aml/generate_mainline_manifest.sh",
+        "patchSetId": 14
+      },
+      "lineNbr": 383,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-03-19T19:48:29Z",
+      "side": 1,
+      "message": "Well, using the AOSP tags doesn\u0027t work, so this probably wouldn\u0027t help us very much.",
+      "parentUuid": "085f6c4e_d8e7e611",
+      "revId": "4e226a00e3dd3e4705548862438611086318f7b0",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
