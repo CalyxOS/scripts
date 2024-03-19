@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7aed2043_ef704be7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 16
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-03-19T12:58:46Z",
+      "side": 1,
+      "message": "From the squashed change (I keep forgetting this):\n\n\u003e To generate CalyxOS manifests that reference our private testing repos (and skip the AOSP ones):\n\u003e ```\n\u003e CALYXOS_MANIFESTS_ONLY\u003dy \\\n\u003e CALYXOS_REMOTE\u003dssh://git@gitlab.com \\\n\u003e CALYXOS_PROJECT_FORMAT\u003dCalyxOS/tmp/platform_%s \\\n\u003e aml/generate_mainline_manifest.sh ~/android/android-mainline all\n\u003e ```",
+      "revId": "43364f641b164fe3d9b2707f167883825f0db22a",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
