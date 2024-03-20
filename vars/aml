@@ -6,7 +6,7 @@ readonly android_manifest_url="https://android.googlesource.com/platform/manifes
 # Version of generated module SDK to use, when applicable.
 # Valid values at time of writing: R, S, Tiramisu, UpsideDownCake, latest.
 # This varies depending on module.
-readonly module_sdk_build=UpsideDownCake
+readonly module_sdk_build=latest
 
 # Mapping of module names to their abbreviations used in mainline tags, if any.
 readonly -A modules_to_abbreviations=(
