@@ -19,8 +19,7 @@ readonly -A modules_to_abbreviations=(
   [Connectivity]="tet"
   [conscrypt]="con"
   [DnsResolver]="res"
-# DocumentsUI is not currently provided as a prebuilt.
-#  [DocumentsUI]="doc"
+  [DocumentsUI]="doc"
   [ExtServices]="ext"
   [HealthFitness]="hef"
   [IPsec]="ips"
@@ -57,8 +56,7 @@ readonly -A modules_to_apps=(
 # DeviceLock is not updatable yet.
 #  [DeviceLock]="com.android.devicelock"
   [DnsResolver]="com.android.resolv"
-# DocumentsUI is not currently provided as a prebuilt.
-#  [DocumentsUI]="com.android.documentsui"
+  [DocumentsUI]="DocumentsUI"
   [ExtServices]="com.android.extservices"
   [HealthFitness]="com.android.healthfitness"
   [IPsec]="com.android.ipsec"
@@ -169,8 +167,7 @@ readonly -A modules_to_repos=(
 # DeviceLock is not updatable yet.
 #  [DeviceLock]="packages/modules/DeviceLock"
   [DnsResolver]="packages/modules/DnsResolver"
-# DocumentsUI is not currently provided as a prebuilt.
-#  [DocumentsUI]="packages/apps/DocumentsUI"
+  [DocumentsUI]="packages/apps/DocumentsUI"
   [ExtServices]="packages/modules/ExtServices"
   [HealthFitness]="packages/modules/HealthFitness"
   [IPsec]="packages/modules/IPsec"
@@ -193,6 +190,7 @@ readonly -A modules_to_repos=(
 # Mapping of mainline modules to space-separated repos we have changed.
 # "." is a special path representing the module's repo path defined above.
 readonly -A modules_with_repo_changes=(
+  [DocumentsUI]="."
   [Connectivity]=". frameworks/base"
   [Permission]="."
   [Wifi]="."
@@ -201,5 +199,6 @@ readonly -A modules_with_repo_changes=(
 # Mapping of mainline modules to extra files to copy.
 # Extra files listings are separated by newlines. Source and destination are separated by colon (:).
 readonly -A modules_extra_files=(
+  [DocumentsUI]="frameworks/base/data/etc/com.android.documentsui.xml:permissions_com.android.documentsui.xml"
   [NetworkStack]="frameworks/base/data/etc/com.android.networkstack.xml:permissions_com.android.networkstack.xml"
 )
