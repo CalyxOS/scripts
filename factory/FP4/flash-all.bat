@@ -58,8 +58,6 @@ fastboot flash frp frp.img || exit /B 1
 fastboot flash devinfo devinfo.img || exit /B 1
 
 fastboot erase misc || exit /B 1
-fastboot erase modemst1 || exit /B 1
-fastboot erase modemst2 || exit /B 1
 
 fastboot --set-active=a reboot-bootloader || exit /B 1
 ping -n 5 127.0.0.1 >nul
