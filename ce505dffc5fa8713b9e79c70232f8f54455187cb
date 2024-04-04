@@ -35,6 +35,24 @@
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c703a40a_c9a0e825",
+        "filename": "aml/build_from_manifest.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 248,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-04-04T13:51:05Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "74ac4ecd_1be70fc3",
+      "revId": "ce505dffc5fa8713b9e79c70232f8f54455187cb",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "cefeab01_55b6ae2e",
@@ -48,6 +66,24 @@
       "writtenOn": "2024-03-11T15:58:15Z",
       "side": 1,
       "message": "Check if output directories (for copying to) exist before even building the module and/or SDK.",
+      "revId": "ce505dffc5fa8713b9e79c70232f8f54455187cb",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b4fa2e80_6be25900",
+        "filename": "aml/build_from_manifest.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 369,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-04-04T13:51:05Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "cefeab01_55b6ae2e",
       "revId": "ce505dffc5fa8713b9e79c70232f8f54455187cb",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
