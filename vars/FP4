@@ -5,3 +5,11 @@ device_repos=(
   device/fairphone/FP4
   kernel/fairphone/sm7225
 )
+
+# Updated manually
+readonly build_id="FP4.TP29.C.0101"
+
+readonly image_url="https://fairphone-android-builds.ams3.digitaloceanspaces.com/FP4/A13/FP4-TP29-factory.zip"
+readonly image_sha256="07ea933771b18558cf5ab379b7ed7e4bc499806ca4321db3a73ef6e4b22de86c"
+
+readonly security_patch="2024-01-05"
