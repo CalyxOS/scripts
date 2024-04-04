@@ -16,6 +16,24 @@
       "message": "This isn\u0027t used for anything right now.",
       "revId": "61d920f5e399f5228142e9467ca649af39321c1d",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "af22e03f_1cab8b59",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 10
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-04-04T18:33:23Z",
+      "side": 1,
+      "message": "It was used in the old build script. See https://review.calyxos.org/c/CalyxOS/scripts/+/24253/comment/c3785b72_f881ccb2/\n\nWe did discuss this a bit. I *think* we were leaning toward doing what Google does, which seems to be not to worry about it, but we should make sure we\u0027re on the same page before abandoning/postponing this idea.",
+      "parentUuid": "19266831_62944bd0",
+      "revId": "61d920f5e399f5228142e9467ca649af39321c1d",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
