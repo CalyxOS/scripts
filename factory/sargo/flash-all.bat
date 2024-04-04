@@ -1,4 +1,5 @@
 @ECHO OFF
+
 :: Copyright 2012 The Android Open Source Project
 ::
 :: Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,16 +17,22 @@
 PATH=%PATH%;"%SYSTEMROOT%\System32"
 fastboot getvar product 2>&1 | findstr /r /c:"^product: sargo" || echo "Factory image and device do not match. Please double check"
 fastboot getvar product 2>&1 | findstr /r /c:"^product: sargo" || exit /B 1
-fastboot flash bootloader bootloader-sargo-b4s4-0.4-8048689.img
-fastboot reboot-bootloader
+fastboot flash --slot=other bootloader bootloader-sargo-b4s4-0.4-8048689.img || exit /B 1
+fastboot --set-active=other reboot-bootloader || exit /B 1
 ping -n 5 127.0.0.1 >nul
-fastboot flash radio radio-sargo-g670-00145-220106-B-8048689.img
-fastboot reboot-bootloader
+fastboot flash --slot=other bootloader bootloader-sargo-b4s4-0.4-8048689.img || exit /B 1
+fastboot --set-active=other reboot-bootloader || exit /B 1
 ping -n 5 127.0.0.1 >nul
-fastboot erase avb_custom_key
-fastboot flash avb_custom_key avb_custom_key.img
-fastboot --skip-reboot -w update image-sargo-uq1a.240205.004.zip
-fastboot reboot-bootloader
+fastboot flash --slot=other radio radio-sargo-g670-00145-220106-B-8048689.img || exit /B 1
+fastboot --set-active=other reboot-bootloader || exit /B 1
+ping -n 5 127.0.0.1 >nul
+fastboot flash --slot=other radio radio-sargo-g670-00145-220106-B-8048689.img || exit /B 1
+fastboot --set-active=other reboot-bootloader || exit /B 1
+ping -n 5 127.0.0.1 >nul
+fastboot erase avb_custom_key || exit /B 1
+fastboot flash avb_custom_key avb_custom_key.img || exit /B 1
+fastboot --skip-reboot -w update image-sargo-ap1a.240405.002.a1.zip || exit /B 1
+fastboot reboot-bootloader || exit /B 1
 ping -n 5 127.0.0.1 >nul
 
 echo Press any key to exit...
