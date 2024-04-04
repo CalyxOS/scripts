@@ -26,17 +26,17 @@ if [ $? -ne 0 ]; then
   echo "Factory image and device do not match. Please double check"
   exit 1
 fi
-fastboot flash --slot=other bootloader bootloader-redfin-r3-0.6-10489834.img || exit $?
-fastboot --set-active=other reboot-bootloader || exit $?
+fastboot flash --slot=other bootloader bootloader-redfin-r3-0.6-10489834.img
+fastboot --set-active=other reboot-bootloader
 sleep 5
-fastboot flash --slot=other bootloader bootloader-redfin-r3-0.6-10489834.img || exit $?
-fastboot --set-active=other reboot-bootloader || exit $?
+fastboot flash --slot=other bootloader bootloader-redfin-r3-0.6-10489834.img
+fastboot --set-active=other reboot-bootloader
 sleep 5
-fastboot flash --slot=other radio radio-redfin-g7250-00264-230619-B-10346159.img || exit $?
-fastboot --set-active=other reboot-bootloader || exit $?
+fastboot flash --slot=other radio radio-redfin-g7250-00264-230619-B-10346159.img
+fastboot --set-active=other reboot-bootloader
 sleep 5
-fastboot flash --slot=other radio radio-redfin-g7250-00264-230619-B-10346159.img || exit $?
-fastboot --set-active=other reboot-bootloader || exit $?
+fastboot flash --slot=other radio radio-redfin-g7250-00264-230619-B-10346159.img
+fastboot --set-active=other reboot-bootloader
 sleep 5
 fastboot erase avb_custom_key
 fastboot flash avb_custom_key avb_custom_key.img

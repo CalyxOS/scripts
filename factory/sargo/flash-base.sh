@@ -26,17 +26,17 @@ if [ $? -ne 0 ]; then
   echo "Factory image and device do not match. Please double check"
   exit 1
 fi
-fastboot flash --slot=other bootloader bootloader-sargo-b4s4-0.4-8048689.img || exit $?
-fastboot --set-active=other reboot-bootloader || exit $?
+fastboot flash --slot=other bootloader bootloader-sargo-b4s4-0.4-8048689.img
+fastboot --set-active=other reboot-bootloader
 sleep 5
-fastboot flash --slot=other bootloader bootloader-sargo-b4s4-0.4-8048689.img || exit $?
-fastboot --set-active=other reboot-bootloader || exit $?
+fastboot flash --slot=other bootloader bootloader-sargo-b4s4-0.4-8048689.img
+fastboot --set-active=other reboot-bootloader
 sleep 5
-fastboot flash --slot=other radio radio-sargo-g670-00145-220106-B-8048689.img || exit $?
-fastboot --set-active=other reboot-bootloader || exit $?
+fastboot flash --slot=other radio radio-sargo-g670-00145-220106-B-8048689.img
+fastboot --set-active=other reboot-bootloader
 sleep 5
-fastboot flash --slot=other radio radio-sargo-g670-00145-220106-B-8048689.img || exit $?
-fastboot --set-active=other reboot-bootloader || exit $?
+fastboot flash --slot=other radio radio-sargo-g670-00145-220106-B-8048689.img
+fastboot --set-active=other reboot-bootloader
 sleep 5
 fastboot erase avb_custom_key
 fastboot flash avb_custom_key avb_custom_key.img

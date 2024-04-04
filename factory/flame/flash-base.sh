@@ -26,17 +26,17 @@ if [ $? -ne 0 ]; then
   echo "Factory image and device do not match. Please double check"
   exit 1
 fi
-fastboot flash --slot=other bootloader bootloader-flame-c2f2-0.5-8906123.img || exit $?
-fastboot --set-active=other reboot-bootloader || exit $?
+fastboot flash --slot=other bootloader bootloader-flame-c2f2-0.5-8906123.img
+fastboot --set-active=other reboot-bootloader
 sleep 5
-fastboot flash --slot=other bootloader bootloader-flame-c2f2-0.5-8906123.img || exit $?
-fastboot --set-active=other reboot-bootloader || exit $?
+fastboot flash --slot=other bootloader bootloader-flame-c2f2-0.5-8906123.img
+fastboot --set-active=other reboot-bootloader
 sleep 5
-fastboot flash --slot=other radio radio-flame-g8150-00123-220708-B-8810441.img || exit $?
-fastboot --set-active=other reboot-bootloader || exit $?
+fastboot flash --slot=other radio radio-flame-g8150-00123-220708-B-8810441.img
+fastboot --set-active=other reboot-bootloader
 sleep 5
-fastboot flash --slot=other radio radio-flame-g8150-00123-220708-B-8810441.img || exit $?
-fastboot --set-active=other reboot-bootloader || exit $?
+fastboot flash --slot=other radio radio-flame-g8150-00123-220708-B-8810441.img
+fastboot --set-active=other reboot-bootloader
 sleep 5
 fastboot erase avb_custom_key
 fastboot flash avb_custom_key avb_custom_key.img

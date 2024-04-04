@@ -17,7 +17,7 @@
 PATH=%PATH%;"%SYSTEMROOT%\System32"
 fastboot getvar product 2>&1 | findstr /r /c:"^product: FP4" || echo "Factory image and device do not match. Please double check"
 fastboot getvar product 2>&1 | findstr /r /c:"^product: FP4" || exit /B 1
-fastboot flash abl_a abl.img || { echo 'WARNING: Use device-flasher or be sure to unlock critical to avoid bricking your device!'; exit $?; } || exit /B 1
+fastboot flash abl_a abl.img || exit /B 1
 fastboot flash abl_b abl.img || exit /B 1
 fastboot flash aop_a aop.img || exit /B 1
 fastboot flash aop_b aop.img || exit /B 1
