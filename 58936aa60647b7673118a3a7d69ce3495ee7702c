@@ -39,6 +39,30 @@
       },
       "revId": "58936aa60647b7673118a3a7d69ce3495ee7702c",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "68ba537e_945e7b41",
+        "filename": "aml/aml_build.sh",
+        "patchSetId": 18
+      },
+      "lineNbr": 312,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-04-04T18:31:38Z",
+      "side": 1,
+      "message": "Ack, see https://review.calyxos.org/c/CalyxOS/scripts/+/24309 (not used for anything as of this writing)",
+      "parentUuid": "c3785b72_f881ccb2",
+      "range": {
+        "startLine": 311,
+        "startChar": 0,
+        "endLine": 312,
+        "endChar": 45
+      },
+      "revId": "58936aa60647b7673118a3a7d69ce3495ee7702c",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
