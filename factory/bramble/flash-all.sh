@@ -21,25 +21,25 @@ if ! [ "${fastboot_version:-0}" -ge 3301 ]; then
   echo "fastboot too old; please download the latest version at https://developer.android.com/studio/releases/platform-tools.html"
   exit 1
 fi
-fastboot getvar product 2>&1 | grep "^product: bramble$"
+fastboot getvar product 2>&1 | grep "^product: blueline$"
 if [ $? -ne 0 ]; then
   echo "Factory image and device do not match. Please double check"
   exit 1
 fi
-fastboot flash --slot=other bootloader bootloader-bramble-b5-0.6-10489838.img || exit $?
-fastboot --set-active=other reboot-bootloader || exit $?
+fastboot flash --slot=other bootloader bootloader-blueline-b1c1-0.4-7617406.img
+fastboot --set-active=other reboot-bootloader
 sleep 5
-fastboot flash --slot=other bootloader bootloader-bramble-b5-0.6-10489838.img || exit $?
-fastboot --set-active=other reboot-bootloader || exit $?
+fastboot flash --slot=other bootloader bootloader-blueline-b1c1-0.4-7617406.img
+fastboot --set-active=other reboot-bootloader
 sleep 5
-fastboot flash --slot=other radio radio-bramble-g7250-00264-230619-B-10346159.img || exit $?
-fastboot --set-active=other reboot-bootloader || exit $?
+fastboot flash --slot=other radio radio-blueline-g845-00194-210812-B-7635520.img
+fastboot --set-active=other reboot-bootloader
 sleep 5
-fastboot flash --slot=other radio radio-bramble-g7250-00264-230619-B-10346159.img || exit $?
-fastboot --set-active=other reboot-bootloader || exit $?
+fastboot flash --slot=other radio radio-blueline-g845-00194-210812-B-7635520.img
+fastboot --set-active=other reboot-bootloader
 sleep 5
 fastboot erase avb_custom_key
 fastboot flash avb_custom_key avb_custom_key.img
-fastboot --skip-reboot -w update image-bramble-ap1a.240405.002.a1.zip
+fastboot --skip-reboot -w update image-blueline-ap1a.240405.002.a1.zip
 fastboot reboot-bootloader
 sleep 5
