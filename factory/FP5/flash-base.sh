@@ -26,7 +26,7 @@ if [ $? -ne 0 ]; then
   echo "Factory image and device do not match. Please double check"
   exit 1
 fi
-fastboot flash abl_a abl.img || { echo 'WARNING: Use device-flasher or be sure to unlock critical to avoid bricking your device!'; exit $?; }
+fastboot flash abl_a abl.img
 fastboot flash abl_b abl.img
 fastboot flash aop_a aop.img
 fastboot flash aop_b aop.img

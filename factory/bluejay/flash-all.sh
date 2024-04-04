@@ -26,17 +26,17 @@ if [ $? -ne 0 ]; then
   echo "Factory image and device do not match. Please double check"
   exit 1
 fi
-fastboot flash --slot=other bootloader bootloader-bluejay-bluejay-1.3-11403664.img || exit $?
-fastboot --set-active=other reboot-bootloader || exit $?
+fastboot flash --slot=other bootloader bootloader-bluejay-bluejay-1.3-11403664.img
+fastboot --set-active=other reboot-bootloader
 sleep 5
-fastboot flash --slot=other bootloader bootloader-bluejay-bluejay-1.3-11403664.img || exit $?
-fastboot --set-active=other reboot-bootloader || exit $?
+fastboot flash --slot=other bootloader bootloader-bluejay-bluejay-1.3-11403664.img
+fastboot --set-active=other reboot-bootloader
 sleep 5
-fastboot flash --slot=other radio radio-bluejay-g5123b-130914-240205-B-11405587.img || exit $?
-fastboot --set-active=other reboot-bootloader || exit $?
+fastboot flash --slot=other radio radio-bluejay-g5123b-130914-240205-B-11405587.img
+fastboot --set-active=other reboot-bootloader
 sleep 5
-fastboot flash --slot=other radio radio-bluejay-g5123b-130914-240205-B-11405587.img || exit $?
-fastboot --set-active=other reboot-bootloader || exit $?
+fastboot flash --slot=other radio radio-bluejay-g5123b-130914-240205-B-11405587.img
+fastboot --set-active=other reboot-bootloader
 sleep 5
 fastboot erase avb_custom_key
 fastboot flash avb_custom_key avb_custom_key.img
