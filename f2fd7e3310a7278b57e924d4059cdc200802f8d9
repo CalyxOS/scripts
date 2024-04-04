@@ -51,6 +51,24 @@
       "parentUuid": "192270df_ec5bebda",
       "revId": "f2fd7e3310a7278b57e924d4059cdc200802f8d9",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ea1488bc_d380c6ff",
+        "filename": "fairphone/extract-factory-image.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-04-04T19:24:49Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "26cbc87a_5f1c95a9",
+      "revId": "f2fd7e3310a7278b57e924d4059cdc200802f8d9",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
