@@ -15,58 +15,23 @@
 :: limitations under the License.
 
 PATH=%PATH%;"%SYSTEMROOT%\System32"
-fastboot getvar product 2>&1 | findstr /r /c:"^product: rhode" || echo "Factory image and device do not match. Please double check"
-fastboot getvar product 2>&1 | findstr /r /c:"^product: rhode" || exit /B 1
-fastboot oem fb_mode_set || exit /B 1
-
-fastboot flash partition partition.img || exit /B 1
-
-fastboot flash keymaster_a keymaster.img || exit /B 1
-fastboot flash keymaster_b keymaster.img || exit /B 1
-fastboot flash hyp_a hyp.img || exit /B 1
-fastboot flash hyp_b hyp.img || exit /B 1
-fastboot flash tz_a tz.img || exit /B 1
-fastboot flash tz_b tz.img || exit /B 1
-fastboot flash devcfg_a devcfg.img || exit /B 1
-fastboot flash devcfg_b devcfg.img || exit /B 1
-fastboot flash storsec_a storsec.img || exit /B 1
-fastboot flash storsec_b storsec.img || exit /B 1
-fastboot flash prov_a prov.img || exit /B 1
-fastboot flash prov_b prov.img || exit /B 1
-fastboot flash rpm_a rpm.img || exit /B 1
-fastboot flash rpm_b rpm.img || exit /B 1
-fastboot flash abl_a abl.img || exit /B 1
-fastboot flash abl_b abl.img || exit /B 1
-fastboot flash uefisecapp_a uefisecapp.img || exit /B 1
-fastboot flash uefisecapp_b uefisecapp.img || exit /B 1
-fastboot flash qupfw_a qupfw.img || exit /B 1
-fastboot flash qupfw_b qupfw.img || exit /B 1
-fastboot flash xbl_config_a xbl_config.img || exit /B 1
-fastboot flash xbl_config_b xbl_config.img || exit /B 1
-fastboot flash xbl_a xbl.img || exit /B 1
-fastboot flash xbl_b xbl.img || exit /B 1
-
-fastboot flash modem_a modem.img || exit /B 1
-fastboot flash modem_b modem.img || exit /B 1
-fastboot flash fsg_a fsg.img || exit /B 1
-fastboot flash fsg_b fsg.img || exit /B 1
-
-fastboot flash bluetooth_a bluetooth.img || exit /B 1
-fastboot flash bluetooth_b bluetooth.img || exit /B 1
-fastboot flash dsp_a dsp.img || exit /B 1
-fastboot flash dsp_b dsp.img || exit /B 1
-fastboot flash logo_a logo.img || exit /B 1
-fastboot flash logo_b logo.img || exit /B 1
-
-fastboot erase ddr || exit /B 1
-
-fastboot oem fb_mode_clear || exit /B 1
-
-fastboot --set-active=a reboot-bootloader || exit /B 1
+fastboot getvar product 2>&1 | findstr /r /c:"^product: blueline" || echo "Factory image and device do not match. Please double check"
+fastboot getvar product 2>&1 | findstr /r /c:"^product: blueline" || exit /B 1
+fastboot flash --slot=other bootloader bootloader-blueline-b1c1-0.4-7617406.img || exit /B 1
+fastboot --set-active=other reboot-bootloader || exit /B 1
+ping -n 5 127.0.0.1 >nul
+fastboot flash --slot=other bootloader bootloader-blueline-b1c1-0.4-7617406.img || exit /B 1
+fastboot --set-active=other reboot-bootloader || exit /B 1
+ping -n 5 127.0.0.1 >nul
+fastboot flash --slot=other radio radio-blueline-g845-00194-210812-B-7635520.img || exit /B 1
+fastboot --set-active=other reboot-bootloader || exit /B 1
+ping -n 5 127.0.0.1 >nul
+fastboot flash --slot=other radio radio-blueline-g845-00194-210812-B-7635520.img || exit /B 1
+fastboot --set-active=other reboot-bootloader || exit /B 1
 ping -n 5 127.0.0.1 >nul
 fastboot erase avb_custom_key || exit /B 1
 fastboot flash avb_custom_key avb_custom_key.img || exit /B 1
-fastboot --skip-reboot -w update image-rhode-ap1a.240405.002.a1.zip || exit /B 1
+fastboot --skip-reboot -w update image-blueline-ap1a.240405.002.a1.zip || exit /B 1
 fastboot reboot-bootloader || exit /B 1
 ping -n 5 127.0.0.1 >nul
 
