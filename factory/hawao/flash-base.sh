@@ -14,7 +14,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-if ! [ $("$(which fastboot)" --version | grep "version" | cut -c18-23 | sed 's/\.//g' ) -ge 3301 ]; then
+set -eu
+
+fastboot_version="$("$(which fastboot)" --version | grep "^fastboot version" | cut -c18-23 | sed 's/\.//g' )"
+if ! [ "${fastboot_version:-0}" -ge 3301 ]; then
   echo "fastboot too old; please download the latest version at https://developer.android.com/studio/releases/platform-tools.html"
   exit 1
 fi
@@ -68,9 +71,7 @@ fastboot erase ddr
 
 fastboot oem fb_mode_clear
 
-fastboot --set-active=a
-
-fastboot reboot-bootloader
+fastboot --set-active=a reboot-bootloader
 sleep 5
 fastboot erase avb_custom_key
 fastboot flash avb_custom_key avb_custom_key.img

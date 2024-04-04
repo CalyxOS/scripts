@@ -14,7 +14,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-if ! [ $("$(which fastboot)" --version | grep "version" | cut -c18-23 | sed 's/\.//g' ) -ge 3301 ]; then
+set -eu
+
+fastboot_version="$("$(which fastboot)" --version | grep "^fastboot version" | cut -c18-23 | sed 's/\.//g' )"
+if ! [ "${fastboot_version:-0}" -ge 3301 ]; then
   echo "fastboot too old; please download the latest version at https://developer.android.com/studio/releases/platform-tools.html"
   exit 1
 fi
@@ -23,14 +26,20 @@ if [ $? -ne 0 ]; then
   echo "Factory image and device do not match. Please double check"
   exit 1
 fi
-fastboot flash bootloader bootloader-sargo-b4s4-0.4-8048689.img
-fastboot reboot-bootloader
+fastboot flash --slot=other bootloader bootloader-sargo-b4s4-0.4-8048689.img || exit $?
+fastboot --set-active=other reboot-bootloader || exit $?
 sleep 5
-fastboot flash radio radio-sargo-g670-00145-220106-B-8048689.img
-fastboot reboot-bootloader
+fastboot flash --slot=other bootloader bootloader-sargo-b4s4-0.4-8048689.img || exit $?
+fastboot --set-active=other reboot-bootloader || exit $?
+sleep 5
+fastboot flash --slot=other radio radio-sargo-g670-00145-220106-B-8048689.img || exit $?
+fastboot --set-active=other reboot-bootloader || exit $?
+sleep 5
+fastboot flash --slot=other radio radio-sargo-g670-00145-220106-B-8048689.img || exit $?
+fastboot --set-active=other reboot-bootloader || exit $?
 sleep 5
 fastboot erase avb_custom_key
 fastboot flash avb_custom_key avb_custom_key.img
-fastboot --skip-reboot -w update image-sargo-uq1a.240205.004.zip
+fastboot --skip-reboot -w update image-sargo-ap1a.240405.002.a1.zip
 fastboot reboot-bootloader
 sleep 5

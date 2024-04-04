@@ -1,4 +1,5 @@
 @ECHO OFF
+
 :: Copyright 2012 The Android Open Source Project
 ::
 :: Licensed under the Apache License, Version 2.0 (the "License");
@@ -28,10 +29,10 @@ ping -n 5 127.0.0.1 >nul
 fastboot flash --slot=other radio radio-barbet-g7250-00296-231207-B-11190276.img || exit /B 1
 fastboot --set-active=other reboot-bootloader || exit /B 1
 ping -n 5 127.0.0.1 >nul
-fastboot erase avb_custom_key
-fastboot flash avb_custom_key avb_custom_key.img
-fastboot --skip-reboot -w update image-barbet-ap1a.240405.002.a1.zip
-fastboot reboot-bootloader
+fastboot erase avb_custom_key || exit /B 1
+fastboot flash avb_custom_key avb_custom_key.img || exit /B 1
+fastboot --skip-reboot -w update image-barbet-ap1a.240405.002.a1.zip || exit /B 1
+fastboot reboot-bootloader || exit /B 1
 ping -n 5 127.0.0.1 >nul
 
 echo Press any key to exit...
