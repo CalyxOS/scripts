@@ -16,6 +16,24 @@
       "message": "Love this idea, should make it way easier to compare things when we change device-common\u0027s factory generation script",
       "revId": "bfb5e3b2013e224ee8c4cd66cfec1ef3151143b1",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f20f4c18_077bc037",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-04-04T15:14:46Z",
+      "side": 1,
+      "message": "Another thought I had was that we could in the future just use this directly.\n\nThe generation script simply updates these, and is run before hand. Reviewed.\n\nThen the actual factory image creation just copies these over.\n\nHowever, I quickly see an issue with that - due to the bootloader version contained in the filenames and thus the scripts, and also the image filename - it\u0027d have to be updated every single time. \n\nOh well, we\u0027ll just use it for comparison",
+      "parentUuid": "611531f6_3208fd89",
+      "revId": "bfb5e3b2013e224ee8c4cd66cfec1ef3151143b1",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
