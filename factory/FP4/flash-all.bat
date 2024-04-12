@@ -52,8 +52,14 @@ fastboot flash xbl_b xbl.img || exit /B 1
 fastboot flash xbl_config_a xbl_config.img || exit /B 1
 fastboot flash xbl_config_b xbl_config.img || exit /B 1
 
+fastboot flash apdp apdp.img || exit /B 1
+fastboot flash ddr ddr.img || exit /B 1
+fastboot flash logfs logfs.img || exit /B 1
+fastboot flash storsec storsec.img || exit /B 1
+fastboot flash toolsfv toolsfv.img || exit /B 1
+fastboot flash tunning tunning.img || exit /B 1
+
 fastboot flash frp frp.img || exit /B 1
-fastboot flash devinfo devinfo.img || exit /B 1
 
 fastboot erase misc || exit /B 1
 fastboot erase modemst1 || exit /B 1
