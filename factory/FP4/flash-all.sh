@@ -61,8 +61,14 @@ fastboot flash xbl_b xbl.img
 fastboot flash xbl_config_a xbl_config.img
 fastboot flash xbl_config_b xbl_config.img
 
+fastboot flash apdp apdp.img
+fastboot flash ddr ddr.img
+fastboot flash logfs logfs.img
+fastboot flash storsec storsec.img
+fastboot flash toolsfv toolsfv.img
+fastboot flash tunning tunning.img
+
 fastboot flash frp frp.img
-fastboot flash devinfo devinfo.img
 
 fastboot erase misc
 fastboot erase modemst1
