@@ -12,7 +12,7 @@ readonly common_aosp_tag=android-14.0.0_r31 # Apr 2024, Pixel Fold
 
 readonly common_aosp_build_id=AP1A.240405.002.A1 # Apr 2024, Pixel Fold
 
-readonly topic=apr24
+readonly topic=apr24-2
 
 readonly lineageos_branch=lineage-21.0
 readonly lineageos_device_branch=lineage-21
