@@ -1,0 +1,32 @@
+# Pixel 8a
+
+# Usage: ${device_repos[@]}
+device_repos=(
+  device/google/akita
+  device/google/akita-sepolicy
+)
+
+readonly fbpk_version="v2"
+
+# Updated semi-manually via pixel/update-any-var.sh
+
+readonly build_id="UD2A.240505.001.W1"
+
+# Updated automatically via pixel/update-device-vars.sh
+
+readonly aosp_branch="unknown"
+
+readonly prev_aosp_tag="unknown"
+readonly aosp_tag="unknown"
+
+readonly build_number="11631178"
+
+readonly image_url="https://dl.google.com/dl/android/aosp/akita-ud2a.240505.001.w1-factory-338cdfc1.zip"
+readonly image_sha256="338cdfc1b7085a976b16ca2300c685ea47caa81bb6b209780f5098eab70f3307"
+
+readonly flash_url="https://flash.android.com/build/11715222?target=akita-user&signed"
+
+readonly ota_url="https://dl.google.com/dl/android/aosp/akita-ota-ud2a.240505.001.w1-1d2e032d.zip"
+readonly ota_sha256="1d2e032d4ad7aef9b0918809a4edc8f48188783cfd55a0bae39979babacbc149"
+
+readonly security_patch="2024-05-05"
