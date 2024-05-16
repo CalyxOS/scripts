@@ -5,14 +5,14 @@ readonly aosp_tag_match=android-14.0 # For update-device-vars.sh
 readonly os_branch=android14
 readonly device_branch=android14
 
-readonly common_aosp_branch=android14-qpr1-release # Feb 2024
+readonly common_aosp_branch=android14-d2-release # May 2024, Pixel 8
 
-readonly prev_common_aosp_tag=android-14.0.0_r20 # Jan 2024, Pixel 7 - 8
-readonly common_aosp_tag=android-14.0.0_r25 # Feb 2024, Pixel 8
+readonly prev_common_aosp_tag=android-14.0.0_r25 # Feb 2024, Pixel 8
+readonly common_aosp_tag=android-14.0.0_r41 # May 2024, Pixel 8a
 
-readonly common_aosp_build_id=UQ1A.240205.004 # Feb 2024, Pixel 8
+readonly common_aosp_build_id=UD2A.240505.001 # May 2024, Pixel 8a
 
-readonly topic=feb24
+readonly topic=akita2
 
 readonly lineageos_branch=lineage-21.0
 readonly lineageos_device_branch=lineage-21
