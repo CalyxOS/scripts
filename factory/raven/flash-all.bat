@@ -17,21 +17,21 @@
 PATH=%PATH%;"%SYSTEMROOT%\System32"
 fastboot getvar product 2>&1 | findstr /r /c:"^product: raven" || echo "Factory image and device do not match. Please double check"
 fastboot getvar product 2>&1 | findstr /r /c:"^product: raven" || exit /B 1
-fastboot flash --slot=other bootloader bootloader-raven-slider-1.3-11403664.img || exit /B 1
+fastboot flash --slot=other bootloader bootloader-raven-slider-14.5-11677881.img || exit /B 1
 fastboot --set-active=other reboot-bootloader || exit /B 1
 ping -n 5 127.0.0.1 >nul
-fastboot flash --slot=other bootloader bootloader-raven-slider-1.3-11403664.img || exit /B 1
+fastboot flash --slot=other bootloader bootloader-raven-slider-14.5-11677881.img || exit /B 1
 fastboot --set-active=other reboot-bootloader || exit /B 1
 ping -n 5 127.0.0.1 >nul
-fastboot flash --slot=other radio radio-raven-g5123b-130914-240205-B-11405587.img || exit /B 1
+fastboot flash --slot=other radio radio-raven-g5123b-135085-240517-B-11857288.img || exit /B 1
 fastboot --set-active=other reboot-bootloader || exit /B 1
 ping -n 5 127.0.0.1 >nul
-fastboot flash --slot=other radio radio-raven-g5123b-130914-240205-B-11405587.img || exit /B 1
+fastboot flash --slot=other radio radio-raven-g5123b-135085-240517-B-11857288.img || exit /B 1
 fastboot --set-active=other reboot-bootloader || exit /B 1
 ping -n 5 127.0.0.1 >nul
 fastboot erase avb_custom_key || exit /B 1
 fastboot flash avb_custom_key avb_custom_key.img || exit /B 1
-fastboot --skip-reboot -w update image-raven-ap1a.240405.002.a1.zip || exit /B 1
+fastboot --skip-reboot -w update image-raven-ap2a.240605.024.zip || exit /B 1
 fastboot reboot-bootloader || exit /B 1
 ping -n 5 127.0.0.1 >nul
 

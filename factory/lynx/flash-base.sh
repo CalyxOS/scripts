@@ -26,16 +26,16 @@ if [ $? -ne 0 ]; then
   echo "Factory image and device do not match. Please double check"
   exit 1
 fi
-fastboot flash --slot=other bootloader bootloader-lynx-lynx-14.4-11458464.img
+fastboot flash --slot=other bootloader bootloader-lynx-lynx-14.5-11677884.img
 fastboot --set-active=other reboot-bootloader
 sleep 5
-fastboot flash --slot=other bootloader bootloader-lynx-lynx-14.4-11458464.img
+fastboot flash --slot=other bootloader bootloader-lynx-lynx-14.5-11677884.img
 fastboot --set-active=other reboot-bootloader
 sleep 5
-fastboot flash --slot=other radio radio-lynx-g5300q-231218-240202-B-11396366.img
+fastboot flash --slot=other radio radio-lynx-g5300q-240308-240517-B-11857457.img
 fastboot --set-active=other reboot-bootloader
 sleep 5
-fastboot flash --slot=other radio radio-lynx-g5300q-231218-240202-B-11396366.img
+fastboot flash --slot=other radio radio-lynx-g5300q-240308-240517-B-11857457.img
 fastboot --set-active=other reboot-bootloader
 sleep 5
 fastboot erase avb_custom_key

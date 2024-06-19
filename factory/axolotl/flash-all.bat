@@ -51,12 +51,12 @@ fastboot flash xbl_config_a xbl_config.img || exit /B 1
 fastboot flash xbl_config_b xbl_config.img || exit /B 1
 
 fastboot flash frp frp.img || exit /B 1
-fastboot flash devinfo devinfo.bin || exit /B 1
+fastboot flash devinfo devinfo.img || exit /B 1
 
 fastboot --set-active=a reboot-bootloader || exit /B 1
 ping -n 5 127.0.0.1 >nul
 fastboot erase avb_custom_key || exit /B 1
-fastboot --skip-reboot -w update image-axolotl-ap1a.240405.002.a1.zip || exit /B 1
+fastboot --skip-reboot -w update image-axolotl-ap2a.240605.024.zip || exit /B 1
 fastboot reboot-bootloader || exit /B 1
 ping -n 5 127.0.0.1 >nul
 

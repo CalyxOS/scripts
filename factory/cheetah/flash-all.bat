@@ -17,21 +17,21 @@
 PATH=%PATH%;"%SYSTEMROOT%\System32"
 fastboot getvar product 2>&1 | findstr /r /c:"^product: cheetah" || echo "Factory image and device do not match. Please double check"
 fastboot getvar product 2>&1 | findstr /r /c:"^product: cheetah" || exit /B 1
-fastboot flash --slot=other bootloader bootloader-cheetah-cloudripper-14.4-11458464.img || exit /B 1
+fastboot flash --slot=other bootloader bootloader-cheetah-cloudripper-14.5-11677884.img || exit /B 1
 fastboot --set-active=other reboot-bootloader || exit /B 1
 ping -n 5 127.0.0.1 >nul
-fastboot flash --slot=other bootloader bootloader-cheetah-cloudripper-14.4-11458464.img || exit /B 1
+fastboot flash --slot=other bootloader bootloader-cheetah-cloudripper-14.5-11677884.img || exit /B 1
 fastboot --set-active=other reboot-bootloader || exit /B 1
 ping -n 5 127.0.0.1 >nul
-fastboot flash --slot=other radio radio-cheetah-g5300q-231218-240202-B-11396366.img || exit /B 1
+fastboot flash --slot=other radio radio-cheetah-g5300q-240308-240517-B-11857457.img || exit /B 1
 fastboot --set-active=other reboot-bootloader || exit /B 1
 ping -n 5 127.0.0.1 >nul
-fastboot flash --slot=other radio radio-cheetah-g5300q-231218-240202-B-11396366.img || exit /B 1
+fastboot flash --slot=other radio radio-cheetah-g5300q-240308-240517-B-11857457.img || exit /B 1
 fastboot --set-active=other reboot-bootloader || exit /B 1
 ping -n 5 127.0.0.1 >nul
 fastboot erase avb_custom_key || exit /B 1
 fastboot flash avb_custom_key avb_custom_key.img || exit /B 1
-fastboot --skip-reboot -w update image-cheetah-ap1a.240405.002.a1.zip || exit /B 1
+fastboot --skip-reboot -w update image-cheetah-ap2a.240605.024.zip || exit /B 1
 fastboot reboot-bootloader || exit /B 1
 ping -n 5 127.0.0.1 >nul
 

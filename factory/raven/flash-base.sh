@@ -26,16 +26,16 @@ if [ $? -ne 0 ]; then
   echo "Factory image and device do not match. Please double check"
   exit 1
 fi
-fastboot flash --slot=other bootloader bootloader-raven-slider-1.3-11403664.img
+fastboot flash --slot=other bootloader bootloader-raven-slider-14.5-11677881.img
 fastboot --set-active=other reboot-bootloader
 sleep 5
-fastboot flash --slot=other bootloader bootloader-raven-slider-1.3-11403664.img
+fastboot flash --slot=other bootloader bootloader-raven-slider-14.5-11677881.img
 fastboot --set-active=other reboot-bootloader
 sleep 5
-fastboot flash --slot=other radio radio-raven-g5123b-130914-240205-B-11405587.img
+fastboot flash --slot=other radio radio-raven-g5123b-135085-240517-B-11857288.img
 fastboot --set-active=other reboot-bootloader
 sleep 5
-fastboot flash --slot=other radio radio-raven-g5123b-130914-240205-B-11405587.img
+fastboot flash --slot=other radio radio-raven-g5123b-135085-240517-B-11857288.img
 fastboot --set-active=other reboot-bootloader
 sleep 5
 fastboot erase avb_custom_key

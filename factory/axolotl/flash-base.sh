@@ -60,7 +60,7 @@ fastboot flash xbl_config_a xbl_config.img
 fastboot flash xbl_config_b xbl_config.img
 
 fastboot flash frp frp.img
-fastboot flash devinfo devinfo.bin
+fastboot flash devinfo devinfo.img
 
 fastboot --set-active=a reboot-bootloader
 sleep 5

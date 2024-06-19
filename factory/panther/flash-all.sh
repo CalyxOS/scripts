@@ -26,20 +26,20 @@ if [ $? -ne 0 ]; then
   echo "Factory image and device do not match. Please double check"
   exit 1
 fi
-fastboot flash --slot=other bootloader bootloader-panther-cloudripper-14.4-11458464.img
+fastboot flash --slot=other bootloader bootloader-panther-cloudripper-14.5-11677884.img
 fastboot --set-active=other reboot-bootloader
 sleep 5
-fastboot flash --slot=other bootloader bootloader-panther-cloudripper-14.4-11458464.img
+fastboot flash --slot=other bootloader bootloader-panther-cloudripper-14.5-11677884.img
 fastboot --set-active=other reboot-bootloader
 sleep 5
-fastboot flash --slot=other radio radio-panther-g5300q-231218-240202-B-11396366.img
+fastboot flash --slot=other radio radio-panther-g5300q-240308-240517-B-11857457.img
 fastboot --set-active=other reboot-bootloader
 sleep 5
-fastboot flash --slot=other radio radio-panther-g5300q-231218-240202-B-11396366.img
+fastboot flash --slot=other radio radio-panther-g5300q-240308-240517-B-11857457.img
 fastboot --set-active=other reboot-bootloader
 sleep 5
 fastboot erase avb_custom_key
 fastboot flash avb_custom_key avb_custom_key.img
-fastboot --skip-reboot -w update image-panther-ap1a.240405.002.a1.zip
+fastboot --skip-reboot -w update image-panther-ap2a.240605.024.zip
 fastboot reboot-bootloader
 sleep 5

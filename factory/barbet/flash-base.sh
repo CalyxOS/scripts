@@ -26,16 +26,16 @@ if [ $? -ne 0 ]; then
   echo "Factory image and device do not match. Please double check"
   exit 1
 fi
-fastboot flash --slot=other bootloader bootloader-barbet-b9-0.6-11259359.img
+fastboot flash --slot=other bootloader bootloader-barbet-b9-0.6-10898944.img
 fastboot --set-active=other reboot-bootloader
 sleep 5
-fastboot flash --slot=other bootloader bootloader-barbet-b9-0.6-11259359.img
+fastboot flash --slot=other bootloader bootloader-barbet-b9-0.6-10898944.img
 fastboot --set-active=other reboot-bootloader
 sleep 5
-fastboot flash --slot=other radio radio-barbet-g7250-00296-231207-B-11190276.img
+fastboot flash --slot=other radio radio-barbet-g7250-00299-240229-B-11514324.img
 fastboot --set-active=other reboot-bootloader
 sleep 5
-fastboot flash --slot=other radio radio-barbet-g7250-00296-231207-B-11190276.img
+fastboot flash --slot=other radio radio-barbet-g7250-00299-240229-B-11514324.img
 fastboot --set-active=other reboot-bootloader
 sleep 5
 fastboot erase avb_custom_key

@@ -60,11 +60,11 @@ fastboot flash xbl_config_a xbl_config.img
 fastboot flash xbl_config_b xbl_config.img
 
 fastboot flash frp frp.img
-fastboot flash devinfo devinfo.bin
+fastboot flash devinfo devinfo.img
 
 fastboot --set-active=a reboot-bootloader
 sleep 5
 fastboot erase avb_custom_key
-fastboot --skip-reboot -w update image-axolotl-ap1a.240405.002.a1.zip
+fastboot --skip-reboot -w update image-axolotl-ap2a.240605.024.zip
 fastboot reboot-bootloader
 sleep 5

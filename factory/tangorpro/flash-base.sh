@@ -26,10 +26,10 @@ if [ $? -ne 0 ]; then
   echo "Factory image and device do not match. Please double check"
   exit 1
 fi
-fastboot flash --slot=other bootloader bootloader-tangorpro-tangorpro-14.4-11458464.img
+fastboot flash --slot=other bootloader bootloader-tangorpro-tangorpro-14.5-11707788.img
 fastboot --set-active=other reboot-bootloader
 sleep 5
-fastboot flash --slot=other bootloader bootloader-tangorpro-tangorpro-14.4-11458464.img
+fastboot flash --slot=other bootloader bootloader-tangorpro-tangorpro-14.5-11707788.img
 fastboot --set-active=other reboot-bootloader
 sleep 5
 fastboot erase avb_custom_key
