@@ -14,6 +14,8 @@
 :: See the License for the specific language governing permissions and
 :: limitations under the License.
 
+if "%DEVICE_FLASHER_VERSION%"=="" choice /M "Use device-flasher to flash your device properly! See install guide at https://calyxos.org for more info. Enter Y to continue anyway."
+if not %ERRORLEVEL%==1 if "%DEVICE_FLASHER_VERSION%"=="" exit /B 1
 PATH=%PATH%;"%SYSTEMROOT%\System32"
 fastboot getvar product 2>&1 | findstr /r /c:"^product: lynx" || echo "Factory image and device do not match. Please double check"
 fastboot getvar product 2>&1 | findstr /r /c:"^product: lynx" || exit /B 1
