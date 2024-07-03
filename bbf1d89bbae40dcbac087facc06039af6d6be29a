@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fc274fa5_2411e1be",
+        "filename": "vars/lynx",
+        "patchSetId": 5
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2024-07-03T03:58:16Z",
+      "side": 1,
+      "message": "r52?",
+      "revId": "bbf1d89bbae40dcbac087facc06039af6d6be29a",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
