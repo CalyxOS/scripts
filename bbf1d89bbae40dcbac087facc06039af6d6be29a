@@ -16,6 +16,24 @@
       "message": "r52?",
       "revId": "bbf1d89bbae40dcbac087facc06039af6d6be29a",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "35d14ace_62e293b3",
+        "filename": "vars/lynx",
+        "patchSetId": 5
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-07-03T04:00:26Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "fc274fa5_2411e1be",
+      "revId": "bbf1d89bbae40dcbac087facc06039af6d6be29a",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
