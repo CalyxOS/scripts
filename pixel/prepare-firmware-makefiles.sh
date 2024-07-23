@@ -53,13 +53,15 @@ setup_makefiles() {
   printf '\n%s\n' "TARGET_BOARD_INFO_FILE := vendor/google/${device}/android-info.txt" >> "${boardmk}"
 
   local bootloader_version=$(cat "${vendor_path}/android-info.txt" | grep version-bootloader | cut -d = -f 2)
+  local bootloader_sha1=$(sha1sum "${vendor_path}/factory/bootloader-${device}-${bootloader_version,,}.img" | cut -d" " -f 1))
   if [[ "${_wifi_only}" != "true" ]]; then
     local radio_version=$(cat "${vendor_path}/android-info.txt" | grep version-baseband | cut -d = -f 2)
+    local radio_sha1=$(sha1sum "${vendor_path}/factory/radio-${device}-${radio_version,,}.img" | cut -d" " -f 1))
   fi
 
-  printf '\n%s\n' "\$(call add-radio-file,factory/bootloader-${device}-${bootloader_version,,}.img,version-bootloader)" >> "${androidmk}"
+  printf '\n%s\n' "\$(call add-radio-file-sha1-board-info-checked,factory/bootloader-${device}-${bootloader_version,,}.img,version-bootloader,${bootloader_sha1})" >> "${androidmk}"
   if [[ "${_wifi_only}" != "true" ]]; then
-    printf '%s\n' "\$(call add-radio-file,factory/radio-${device}-${radio_version,,}.img,version-baseband)" >> "${androidmk}"
+    printf '%s\n' "\$(call add-radio-file-sha1-board-info-checked,factory/radio-${device}-${radio_version,,}.img,version-baseband,${radio_sha1})" >> "${androidmk}"
   fi
   printf '\n' >> "${androidmk}"
 }
