@@ -16,6 +16,24 @@
       "message": "Should we do this after September ASB?",
       "revId": "a21c25f825a31747bbdccdb94c5df1614e63f06d",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "56e07e20_4d539aa4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2024-08-30T21:15:16Z",
+      "side": 1,
+      "message": "All device tree changes are up, if they are merged then this will run 2 times on each extract",
+      "parentUuid": "3dd3e34e_f21e3d9c",
+      "revId": "a21c25f825a31747bbdccdb94c5df1614e63f06d",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
