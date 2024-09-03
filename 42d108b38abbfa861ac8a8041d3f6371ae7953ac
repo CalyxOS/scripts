@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "605186ff_e1d2ab33",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2024-09-03T15:47:11Z",
+      "side": 1,
+      "message": "These zips have a different structure, they have a subfolder so current fairphone device.sh fails to automatically extract 😞",
+      "revId": "42d108b38abbfa861ac8a8041d3f6371ae7953ac",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
