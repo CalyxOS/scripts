@@ -57,9 +57,9 @@ setup_makefiles() {
     local radio_version=$(cat "${vendor_path}/android-info.txt" | grep version-baseband | cut -d = -f 2)
   fi
 
-  printf '\n%s\n' "\$(call add-radio-file,factory/bootloader-${device}-${bootloader_version,,}.img,version-bootloader)" >> "${androidmk}"
+  printf '\n%s\n' "\$(call add-radio-file,factory/bootloader-${device}_beta-${bootloader_version,,}.img,version-bootloader)" >> "${androidmk}"
   if [[ "${_wifi_only}" != "true" ]]; then
-    printf '%s\n' "\$(call add-radio-file,factory/radio-${device}-${radio_version,,}.img,version-baseband)" >> "${androidmk}"
+    printf '%s\n' "\$(call add-radio-file,factory/radio-${device}_beta-${radio_version,,}.img,version-baseband)" >> "${androidmk}"
   fi
   printf '\n' >> "${androidmk}"
 }
