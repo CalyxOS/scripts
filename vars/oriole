@@ -9,7 +9,7 @@ readonly fbpk_version="v2"
 
 # Updated semi-manually via pixel/update-any-var.sh
 
-readonly build_id="AP2A.240805.005.F1"
+readonly build_id="AP31.240617.015"
 
 # Updated automatically via pixel/update-device-vars.sh
 
@@ -20,8 +20,8 @@ readonly aosp_tag="android-14.0.0_r61"
 
 readonly build_number="12043167"
 
-readonly image_url="https://dl.google.com/dl/android/aosp/oriole-ap2a.240805.005.f1-factory-a0d64730.zip"
-readonly image_sha256="a0d64730ba40a3ccb6089cf42bdffd836b645d88aa236f647ef604b571d0df22"
+readonly image_url="https://dl.google.com/developers/android/vic/images/factory/oriole_beta-ap31.240617.015-factory-16013a00.zip"
+readonly image_sha256="16013a00a10322a272f1b44e5588ce700f84733bbcc2434495a43c11e24eb234"
 
 readonly flash_url="https://flash.android.com/build/12043167?target=oriole-user&signed"
 

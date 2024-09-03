@@ -11,7 +11,7 @@ readonly fbpk_version="v2"
 
 # Updated semi-manually via pixel/update-any-var.sh
 
-readonly build_id="AP2A.240805.005.F1"
+readonly build_id="AP31.240617.015"
 
 # Updated automatically via pixel/update-device-vars.sh
 
@@ -22,8 +22,8 @@ readonly aosp_tag="android-14.0.0_r61"
 
 readonly build_number="12043167"
 
-readonly image_url="https://dl.google.com/dl/android/aosp/raven-ap2a.240805.005.f1-factory-28b5398f.zip"
-readonly image_sha256="28b5398fc5f24c88e0a6f3ab4e716d538f6790b7a96dad77a55a476ee271b96a"
+readonly image_url="https://dl.google.com/developers/android/vic/images/factory/raven_beta-ap31.240617.015-factory-234f695b.zip"
+readonly image_sha256="234f695b62796a5249d338e55509bc2ff5d036b3983485b3d6b53ef73f7549cb"
 
 readonly flash_url="https://flash.android.com/build/12043167?target=raven-user&signed"
 

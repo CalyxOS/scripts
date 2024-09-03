@@ -11,7 +11,7 @@ readonly wifi_only=true
 
 # Updated semi-manually via pixel/update-any-var.sh
 
-readonly build_id="AP2A.240805.005"
+readonly build_id="AP31.240617.015"
 
 # Updated automatically via pixel/update-device-vars.sh
 
@@ -22,8 +22,8 @@ readonly aosp_tag="android-14.0.0_r55"
 
 readonly build_number="12025142"
 
-readonly image_url="https://dl.google.com/dl/android/aosp/tangorpro-ap2a.240805.005-factory-0ba88569.zip"
-readonly image_sha256="0ba8856904bcefd259176c11e849db166669ae5368748b85af86edb3bf1bc8c2"
+readonly image_url="https://dl.google.com/developers/android/vic/images/factory/tangorpro_beta-ap31.240617.015-factory-31d6113c.zip"
+readonly image_sha256="31d6113c78f8efca5082a99c9db4b2247d79adad19794f4d605215bf1d8eaa16"
 
 readonly flash_url="https://flash.android.com/build/12025142?target=tangorpro-user&signed"
 

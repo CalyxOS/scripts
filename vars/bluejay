@@ -10,7 +10,7 @@ readonly fbpk_version="v2"
 
 # Updated semi-manually via pixel/update-any-var.sh
 
-readonly build_id="AP2A.240805.005.F1"
+readonly build_id="AP31.240617.015"
 
 # Updated automatically via pixel/update-device-vars.sh
 
@@ -21,8 +21,8 @@ readonly aosp_tag="android-14.0.0_r61"
 
 readonly build_number="12043167"
 
-readonly image_url="https://dl.google.com/dl/android/aosp/bluejay-ap2a.240805.005.f1-factory-5ff0002b.zip"
-readonly image_sha256="5ff0002b1c49a88071162a6ce11a21c7ccdfa8f14dc3f0361c8e140ddef3978f"
+readonly image_url="https://dl.google.com/developers/android/vic/images/factory/bluejay_beta-ap31.240617.015-factory-99e4d38c.zip"
+readonly image_sha256="99e4d38cf8d48bd97c044074efb73936426796cda32a9626189af52eb01f2a59"
 
 readonly flash_url="https://flash.android.com/build/12043167?target=bluejay-user&signed"
 

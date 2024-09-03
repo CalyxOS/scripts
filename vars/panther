@@ -9,7 +9,7 @@ readonly fbpk_version="v2"
 
 # Updated semi-manually via pixel/update-any-var.sh
 
-readonly build_id="AP2A.240805.005"
+readonly build_id="AP31.240617.015"
 
 # Updated automatically via pixel/update-device-vars.sh
 
@@ -20,8 +20,8 @@ readonly aosp_tag="android-14.0.0_r55"
 
 readonly build_number="12025142"
 
-readonly image_url="https://dl.google.com/dl/android/aosp/panther-ap2a.240805.005-factory-b789fc80.zip"
-readonly image_sha256="b789fc80d17f29a51f78ee34a61c09333596ba93f79e1bb010e3a9b29bca0d3b"
+readonly image_url="https://dl.google.com/developers/android/vic/images/factory/panther_beta-ap31.240617.015-factory-001001a9.zip"
+readonly image_sha256="001001a9daccd2334bcd594dc5c0531784575432ea3c76e4f7c8dc49681cb179"
 
 readonly flash_url="https://flash.android.com/build/12025142?target=panther-user&signed"
 

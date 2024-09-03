@@ -9,7 +9,7 @@ readonly fbpk_version="v2"
 
 # Updated semi-manually via pixel/update-any-var.sh
 
-readonly build_id="AP2A.240805.005"
+readonly build_id="AP31.240617.015"
 
 # Updated automatically via pixel/update-device-vars.sh
 
@@ -20,8 +20,8 @@ readonly aosp_tag="android-14.0.0_r55"
 
 readonly build_number="12025142"
 
-readonly image_url="https://dl.google.com/dl/android/aosp/shiba-ap2a.240805.005-factory-47c02ead.zip"
-readonly image_sha256="47c02ead914cca59832a20bc477e88fc969127e277eec1f34fe9edd1cee293a3"
+readonly image_url="https://dl.google.com/developers/android/vic/images/factory/shiba_beta-ap31.240617.015-factory-fbb9f550.zip"
+readonly image_sha256="fbb9f55066451cbb13157f0d61aa7a2249369eddafb8a8fb32be717157fa2ce7"
 
 readonly flash_url="https://flash.android.com/build/12025142?target=shiba-user&signed"
 

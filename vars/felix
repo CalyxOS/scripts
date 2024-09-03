@@ -10,7 +10,7 @@ readonly fbpk_version="v2"
 
 # Updated semi-manually via pixel/update-any-var.sh
 
-readonly build_id="AP2A.240805.005"
+readonly build_id="AP31.240617.015"
 
 # Updated automatically via pixel/update-device-vars.sh
 
@@ -21,8 +21,8 @@ readonly aosp_tag="android-14.0.0_r55"
 
 readonly build_number="12025142"
 
-readonly image_url="https://dl.google.com/dl/android/aosp/felix-ap2a.240805.005-factory-955134df.zip"
-readonly image_sha256="955134df6a69481e8b65f486bc393a8717aa07af1a0635f34f440735e339ddf0"
+readonly image_url="https://dl.google.com/developers/android/vic/images/factory/felix_beta-ap31.240617.015-factory-eb65ceb5.zip"
+readonly image_sha256="eb65ceb5896b852e2f2a99f137536787dfd7608d39e0f572cc08fce919f9f94f"
 
 readonly flash_url="https://flash.android.com/build/12025142?target=felix-user&signed"
 
