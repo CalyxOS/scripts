@@ -16,6 +16,24 @@
       "message": "TODO: Verify SPL",
       "revId": "9685e86e5c19621585c5530c251099659c8087fd",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "dab4f589_50c8981b",
+        "filename": "vars/akita",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-09-03T20:49:38Z",
+      "side": 1,
+      "message": "I flashed this on shiba, so I just checked now and I see it says \"August 5, 2024\" for Android security update under Android version in Settings \u003e About phone.",
+      "parentUuid": "3b673d7d_c3b691ae",
+      "revId": "9685e86e5c19621585c5530c251099659c8087fd",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
