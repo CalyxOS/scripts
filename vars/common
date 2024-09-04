@@ -1,20 +1,20 @@
 # Entire file updated manually
-readonly android_version=14 # For build-desc-fingerprint.sh
-readonly aosp_tag_match=android-14.0 # For update-device-vars.sh
+readonly android_version=15 # For build-desc-fingerprint.sh
+readonly aosp_tag_match=android-15.0 # For update-device-vars.sh
 
-readonly os_branch=android14
-readonly device_branch=android14
+readonly os_branch=staging/android15
+readonly device_branch=staging/android15
 
-readonly common_aosp_branch=android14-qpr3-release # Sep 2024
+readonly common_aosp_branch=android15-release # Sep 2024
 
-readonly prev_common_aosp_tag=android-14.0.0_r55 # Aug 2024, Pixel 5a, 7, 8
-readonly common_aosp_tag=android-14.0.0_r67 # Sep 2024, Pixel 7, 8
+readonly prev_common_aosp_tag=android-14.0.0_r67 # Sep 2024, Pixel 7, 8
+readonly common_aosp_tag=android-15.0.0_r1 # Sep 2024
 
-readonly common_aosp_build_id=AP2A.240905.003 # Sep 2024, Pixel 7, 8
+readonly common_aosp_build_id=AP3A.240905.015.A2 # Sep 2024
 
 readonly topic=sep24
 
-readonly lineageos_branch=lineage-21.0
-readonly lineageos_device_branch=lineage-21
+readonly lineageos_branch=lineage-22.0
+readonly lineageos_device_branch=lineage-22.0
 
 readonly merge_method="merge"
