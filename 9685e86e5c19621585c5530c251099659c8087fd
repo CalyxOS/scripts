@@ -34,6 +34,24 @@
       "parentUuid": "3b673d7d_c3b691ae",
       "revId": "9685e86e5c19621585c5530c251099659c8087fd",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "01f1440f_55d45b13",
+        "filename": "vars/akita",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-09-12T23:04:42Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "dab4f589_50c8981b",
+      "revId": "9685e86e5c19621585c5530c251099659c8087fd",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ],
   "submitRequirementResults": [
