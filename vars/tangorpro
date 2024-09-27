@@ -6,9 +6,6 @@ device_repos=(
   device/google/tangorpro-sepolicy
 )
 
-readonly fbpk_version="v2"
-readonly wifi_only=true
-
 # Updated semi-manually via pixel/update-any-var.sh
 
 readonly build_id="AP2A.240905.003"
