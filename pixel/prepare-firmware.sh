@@ -45,10 +45,13 @@ readonly src_dir="${2}"
 # Firmware included in our factory images,
 # typically bootloader and radio
 copy_factory_firmware() {
-  cp "${src_dir}"/bootloader-*.img "${vendor_path}/factory/"
-  if [[ "${_wifi_only}" != "true" ]]; then
-    cp "${src_dir}"/radio-*.img "${vendor_path}/factory/"
+  radio_img=$(compgen -G "${src_dir}/radio-*.img")
+  if [ -n "${radio_img}" ]; then
+    cp "${radio_img}" "${vendor_path}/factory/"
   fi
+
+  cp "${src_dir}"/bootloader-*.img "${vendor_path}/factory/"
+
   cp "${src_dir}"/android-info.txt "${vendor_path}/android-info.txt"
 }
 

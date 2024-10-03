@@ -27,17 +27,9 @@ trap 'error_m interrupted!' SIGINT
 
 ### CONSTANTS ###
 readonly script_path="$(cd "$(dirname "$0")";pwd -P)"
-readonly vars_path="${script_path}/../vars"
 readonly top="${script_path}/../../.."
 
-readonly work_dir="${WORK_DIR:-/tmp/pixel}"
-
-source "${vars_path}/pixels"
-
 readonly device="${1}"
-source "${vars_path}/${device}"
-
-readonly _wifi_only="${wifi_only:-false}"
 
 readonly vendor_path="${top}/vendor/google/${device}"
 
@@ -49,16 +41,17 @@ readonly vendor_path="${top}/vendor/google/${device}"
 setup_makefiles() {
   local androidmk="${2}"
   local boardmk="${3}"
+  local radio_img=$(compgen -G "${vendor_path}/factory/radio-*.img")
 
   printf '\n%s\n' "TARGET_BOARD_INFO_FILE := vendor/google/${device}/android-info.txt" >> "${boardmk}"
 
   local bootloader_version=$(cat "${vendor_path}/android-info.txt" | grep version-bootloader | cut -d = -f 2)
-  if [[ "${_wifi_only}" != "true" ]]; then
+  if [ -n "${radio_img}" ]; then
     local radio_version=$(cat "${vendor_path}/android-info.txt" | grep version-baseband | cut -d = -f 2)
   fi
 
   printf '\n%s\n' "\$(call add-radio-file,factory/bootloader-${device}-${bootloader_version,,}.img,version-bootloader)" >> "${androidmk}"
-  if [[ "${_wifi_only}" != "true" ]]; then
+  if [ -n "${radio_img}" ]; then
     printf '%s\n' "\$(call add-radio-file,factory/radio-${device}-${radio_version,,}.img,version-baseband)" >> "${androidmk}"
   fi
   printf '\n' >> "${androidmk}"
