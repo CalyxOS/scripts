@@ -27,9 +27,4 @@ readonly devices=(
   sunfish
   coral
   flame
-  bonito
-  sargo
-  crosshatch
-  blueline
-  axolotl
 )
