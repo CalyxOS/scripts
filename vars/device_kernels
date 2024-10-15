@@ -1,11 +1,5 @@
 # Usage: ${device_kernels[@]}
 readonly device_kernels=(
-  felix
-  tangorpro
-  lynx
-  pantah
-  bluejay
-  raviole
   redbull
   sunfish
   coral
