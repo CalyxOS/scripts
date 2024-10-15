@@ -7,10 +7,10 @@ readonly device_branch=staging/android15
 
 readonly common_aosp_branch=android15-release # Sep 2024
 
-readonly prev_common_aosp_tag=android-14.0.0_r67 # Sep 2024, Pixel 7, 8
-readonly common_aosp_tag=android-15.0.0_r1 # Sep 2024
+readonly prev_common_aosp_tag=android-15.0.0_r1 # Sep 2024, AOSP
+readonly common_aosp_tag=android-15.0.0_r2 # Oct 2024, Pixel 6 - 9
 
-readonly common_aosp_build_id=AP3A.240905.015.A2 # Sep 2024
+readonly common_aosp_build_id=AP3A.241005.015 # Oct 2024, Pixel 6 - 9
 
 readonly topic=sep24
 
