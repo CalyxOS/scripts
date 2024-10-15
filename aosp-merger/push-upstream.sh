@@ -47,6 +47,8 @@ TOP="${script_path}/../../.."
 
 # Source build environment (needed for calyxremote)
 source "${TOP}/build/envsetup.sh"
+export ANDROID_BUILD_TOP=$(gettop)
+source "${TOP}/vendor/calyx/build/envsetup.sh"
 
 # List of merged repos
 PROJECTPATHS=$(cat ${MERGEDREPOS} | grep -w merge | awk '{printf "%s\n", $2}')
