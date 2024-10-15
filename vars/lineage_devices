@@ -3,7 +3,6 @@
 readonly lineage_devices=(
   FP5
   FP4
-  axolotl
   devon
   hawao
   rhode
