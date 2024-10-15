@@ -1,7 +1,0 @@
-# SHIFT6mq
-
-# Usage: ${device_repos[@]}
-device_repos=(
-  device/shift/axolotl
-  kernel/shift/sdm845
-)
