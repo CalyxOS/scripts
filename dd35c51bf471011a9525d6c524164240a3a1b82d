@@ -16,6 +16,24 @@
       "message": "2024-08-05\n\nSomething to keep in mind with vendor, although that defaults to platform so it should match and boot (and just be incorect otherwise)",
       "revId": "dd35c51bf471011a9525d6c524164240a3a1b82d",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6d95739a_4f1fccbf",
+        "filename": "vars/akita",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-10-15T17:52:40Z",
+      "side": 1,
+      "message": "Acknowledged",
+      "parentUuid": "72a08953_f731e2aa",
+      "revId": "dd35c51bf471011a9525d6c524164240a3a1b82d",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ],
   "submitRequirementResults": [
