@@ -16,6 +16,24 @@
       "message": "`aosp_branch`",
       "revId": "54d0a981960dc11226ca366e13f8293eccb0bf94",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "223847a7_7dedda73",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2024-10-17T17:48:25Z",
+      "side": 1,
+      "message": "Reuse android15-release?",
+      "parentUuid": "a8ca6a86_c15847f9",
+      "revId": "54d0a981960dc11226ca366e13f8293eccb0bf94",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
