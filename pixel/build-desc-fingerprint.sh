@@ -65,9 +65,9 @@ main() {
       local dv="${vars_path}/${d}"
       source "${dv}"
       local mk="$(ls ${top}/device/google/*/calyx_${d}.mk)"
-      desc="${d}-user[[:space:]]${android_version}[[:space:]]${build_id}[[:space:]]${build_number}[[:space:]]release-keys"
+      desc="${d}-user ${android_version} ${build_id} ${build_number} release-keys"
       fingerprint="google/${d}/${d}:${android_version}/${build_id}/${build_number}:user/release-keys"
-      sed -i "/BuildDesc/c\    BuildDesc=${desc} \\\\" "${mk}"
+      sed -i "/BuildDesc/c\    BuildDesc=\"${desc}\" \\\\" "${mk}"
       sed -i "/BuildFingerprint/c\    BuildFingerprint=${fingerprint} \\\\" "${mk}"
     )
   done
