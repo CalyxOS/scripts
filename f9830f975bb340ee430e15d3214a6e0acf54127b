@@ -16,6 +16,23 @@
       "message": "Improvements if any can be done in a followup",
       "revId": "f9830f975bb340ee430e15d3214a6e0acf54127b",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2e626b2e_0df61e79",
+        "filename": "misc/check_keys.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-11-06T20:19:37Z",
+      "side": 1,
+      "message": "This would also need CHECK_MODE\u003ddenylist and some other changes. Sorry, I hadn\u0027t tested it yet.\n\nI will fix it and test it in the coming minutes.",
+      "revId": "f9830f975bb340ee430e15d3214a6e0acf54127b",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
