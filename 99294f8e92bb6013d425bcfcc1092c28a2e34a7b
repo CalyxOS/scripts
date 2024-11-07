@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e22a5c00_638dd8f7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-11-07T14:20:55Z",
+      "side": 1,
+      "message": "I was thinking we could bump common to r5 too and merge it (only repo changed is build/make) to get build id matching stock.\n\nBut meh, doesn\u0027t matter that much.",
+      "revId": "99294f8e92bb6013d425bcfcc1092c28a2e34a7b",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
