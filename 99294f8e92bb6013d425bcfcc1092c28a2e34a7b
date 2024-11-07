@@ -16,6 +16,24 @@
       "message": "I was thinking we could bump common to r5 too and merge it (only repo changed is build/make) to get build id matching stock.\n\nBut meh, doesn\u0027t matter that much.",
       "revId": "99294f8e92bb6013d425bcfcc1092c28a2e34a7b",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2a57b232_d27e4f07",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2024-11-07T15:36:15Z",
+      "side": 1,
+      "message": "On lineage I merged r5 so we can do it here as well. but first all the pixel 9 changes need to be merged and then r5 needs to be merged to pixel 9 devices",
+      "parentUuid": "e22a5c00_638dd8f7",
+      "revId": "99294f8e92bb6013d425bcfcc1092c28a2e34a7b",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
