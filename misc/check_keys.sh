@@ -11,7 +11,7 @@ help() {
   # DEVICE and BUILD_NUMBER when available. When not available, they'll appear as variables.
   local DEVICE="${DEVICE:-\$DEVICE}"
   local BUILD_NUMBER="${BUILD_NUMBER:-\$BUILD_NUMBER}"
-  echo "Usage: $0 (app|gen_allowlist|target_files) path [path...]"
+  echo "Usage: $0 (app|gen_allowlist|target_files|extracted_zip) path [path...]"
   echo
   echo "This tool checks the signing keys used for the given path(s) against a user-provided "
   echo "list of allowed or denied fingerprints. This list can be generated with gen_allowlist, "
@@ -51,24 +51,24 @@ if [ -z "${IGNORE_PATTERNS:-}" ]; then
   # Default ignore patterns
   ignore_patterns=(
     # F-Droid repo apps are pre-signed
-    'PRODUCT/fdroid/repo/*'
+    '*/fdroid/repo/*'
 
     # cts shim is always test key
-    'SYSTEM/apex/com.android.apex.cts.shim.apex'
+    '*/apex/com.android.apex.cts.shim.apex'
 
     # vendor-provided apps are pre-signed
-    'PRODUCT/priv-app/EuiccGoogle/*'
-    'PRODUCT/priv-app/PixelCameraServices/*'
-    'SYSTEM_EXT/priv-app/EuiccSupportPixel/*'
-    'SYSTEM_EXT/priv-app/EuiccSupportPixelPermissions/*'
-    'SYSTEM_EXT/priv-app/OemRilService/*'
-    'SYSTEM_EXT/priv-app/ShannonIms/*'
-    'SYSTEM_EXT/priv-app/ShannonQualifiedNetworksService/*'
-    'SYSTEM_EXT/priv-app/ShannonRcs/*'
-    'VENDOR/apex/com.google.android.widevine*'
-    'VENDOR/apex/com.google.pixel.euicc.update.apex'
-    'VENDOR/apex/com.google.pixel.wifi.ext.apex'
-    'VENDOR/apex/com.google.pixel.camera.hal.apex'
+    '*/priv-app/EuiccGoogle/*'
+    '*/priv-app/PixelCameraServices/*'
+    '*/priv-app/EuiccSupportPixel/*'
+    '*/priv-app/EuiccSupportPixelPermissions/*'
+    '*/priv-app/OemRilService/*'
+    '*/priv-app/ShannonIms/*'
+    '*/priv-app/ShannonQualifiedNetworksService/*'
+    '*/priv-app/ShannonRcs/*'
+    '*/apex/com.google.android.widevine*'
+    '*/apex/com.google.pixel.euicc.update.apex'
+    '*/apex/com.google.pixel.wifi.ext.apex'
+    '*/apex/com.google.pixel.camera.hal.apex'
   )
 fi
 
@@ -190,6 +190,10 @@ main() {
       shift 1
       handle_target_files "$@" || return $?
       ;;
+    extracted_zip)
+      shift 1
+      handle_extracted_zip "$@" || return $?
+      ;;
     gen_allowlist)
       shift 1
       local allowed_fingerprints_per_dir=()
@@ -202,7 +206,7 @@ main() {
       ;;
     *)
       help >&2
-      error "Mode must be one of: app, gen_allowlist, target_files"
+      error "Mode must be one of: app, gen_allowlist, target_files, extracted_zip"
       ;;
   esac
 
@@ -423,6 +427,63 @@ handle_target_files() {
   check_subapps="$check_subapps" \
     handle_app "$app" "" "$tmpfile" || err=$?
   rm -f "$tmpfile"
+  return $err
+}
+
+handle_extracted_zip() {
+  local extracted_zip="$1"
+  shift 1
+  local -a apps=()
+  if [ $# -eq 0 ]; then
+    readarray -t apps < <(printf "%s\n" "${SIGNED_TYPES[@]}" | parallel find "$extracted_zip" -name {} 2>/dev/null)
+    #readarray -t apps < <(zipinfo -1 "$target_files_zip" "SYSTEM/apex/com.android.appsearch.capex" 2>/dev/null)
+  else
+    local apps=("$@")
+  fi
+  local -a failed_apps=()
+
+  if [ "${#apps[@]}" -gt 1 ]; then
+    local output=$(printf "%s\n" "${apps[@]}" | parallel "$0" extracted_zip "$extracted_zip" || return $?)
+    # the presence of any output from parallel is considered an error, because stdout lists failed apps.
+    # stderr includes more details and is not inhibited by the above capture.
+    if [ -n "$output" ]; then
+      echo >&2
+      echo "FINGERPRINT ISSUES FOUND WITH:" >&2
+      printf "%s\n" "$output"
+      return 1
+    fi
+    return $?
+  fi
+
+  local app="${apps[0]}"
+  local err=0
+  local check_subapps=
+  #local tmpfile="$(mktemp_with_extension "${app##*.}")"
+  local ignored_path=
+  for ignored_path in "${ignore_patterns[@]}"; do
+    case "$app" in
+      $ignored_path)
+        #echo "Ignored path, boom: $app $ignored_path" >&2
+        break
+        ;;
+    esac
+    ignored_path=
+  done
+  if [ -n "$ignored_path" ]; then
+    return 0
+  fi
+  #unzip -p "$target_files_zip" "$app" > "$tmpfile" || { rm "$tmpfile"; continue; }
+  case "$app" in
+    *.capex|*.apex)
+      check_subapps=y
+      ;;
+    *)
+      check_subapps=n
+      ;;
+  esac
+  check_subapps="$check_subapps" \
+    handle_app "$app" "" "$app" || err=$?
+  #rm -f "$tmpfile"
   return $err
 }
 
