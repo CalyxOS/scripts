@@ -16,6 +16,24 @@
       "message": "Main change here.",
       "revId": "a0930e915150392b251220ffad62eb59d587c1f3",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e241e70f_53bcf798",
+        "filename": "misc/check_keys.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 438,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-11-12T15:26:41Z",
+      "side": 1,
+      "message": "Usually I put quotation marks around the \"{}\" since those have another purpose in bash, but it looks like it\u0027s smart enough to figure it out. This looks good to me, then. Simpler than what I did on lines 336-345.\n\n(Unrelatedly, I see a copy to ~/blah.apk which I accidentally left in from debugging, ugh.)",
+      "parentUuid": "c8065739_df58dcee",
+      "revId": "a0930e915150392b251220ffad62eb59d587c1f3",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
