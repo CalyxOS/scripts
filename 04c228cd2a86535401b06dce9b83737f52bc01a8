@@ -34,6 +34,24 @@
       "parentUuid": "b670946c_e346cd9d",
       "revId": "04c228cd2a86535401b06dce9b83737f52bc01a8",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ee9ab4b6_5fa65005",
+        "filename": "pixel/device.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2024-12-01T19:16:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "caa41581_e52fc8b7",
+      "revId": "04c228cd2a86535401b06dce9b83737f52bc01a8",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
