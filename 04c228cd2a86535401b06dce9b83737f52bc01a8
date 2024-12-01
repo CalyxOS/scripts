@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b670946c_e346cd9d",
+        "filename": "pixel/device.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-12-01T13:31:12Z",
+      "side": 1,
+      "message": "`android15/calyx/scripts/pixel/device.sh: line 49: KEEP_DUMP: unbound variable`",
+      "revId": "04c228cd2a86535401b06dce9b83737f52bc01a8",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
