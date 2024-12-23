@@ -22,6 +22,30 @@
       },
       "revId": "c0eac3d1f2720977b78646da8a28f005dc3fecda",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b74d857b_0b5b0f84",
+        "filename": "aml/generate_mainline_manifest.sh",
+        "patchSetId": 22
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2024-12-23T20:29:04Z",
+      "side": 1,
+      "message": "In some ways that\u0027s ok because this repo is branched per-version anyways.\n\nIn the future we can and should revisit that, but so far it hasn\u0027t really been needed since we typically end up sticking to one version.",
+      "parentUuid": "a6cd7177_18de9daa",
+      "range": {
+        "startLine": 32,
+        "startChar": 46,
+        "endLine": 32,
+        "endChar": 55
+      },
+      "revId": "c0eac3d1f2720977b78646da8a28f005dc3fecda",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
