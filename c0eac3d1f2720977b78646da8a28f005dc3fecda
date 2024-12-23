@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a6cd7177_18de9daa",
+        "filename": "aml/generate_mainline_manifest.sh",
+        "patchSetId": 22
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2024-12-23T20:23:37Z",
+      "side": 1,
+      "message": "Would be nice not to depend on a particular Android version here, or anywhere else, when possible. (Might not be possible; will see if/when this is revisited.)",
+      "range": {
+        "startLine": 32,
+        "startChar": 46,
+        "endLine": 32,
+        "endChar": 55
+      },
+      "revId": "c0eac3d1f2720977b78646da8a28f005dc3fecda",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
