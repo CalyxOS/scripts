@@ -27,7 +27,10 @@ trap 'error_m interrupted!' SIGINT
 
 ### CONSTANTS ###
 readonly script_path="$(cd "$(dirname "$0")";pwd -P)"
+readonly vars_path="${script_path}/../vars"
 readonly top="${script_path}/../../.."
+
+source "${vars_path}/common"
 
 if [[ -e "${top}/build_kernel.sh" ]]; then
   readonly excluded_repos='CalyxOS/kernel_manifest'
@@ -66,7 +69,34 @@ tag_repo() {
 push_repo() {
   local repo="${1}"
   local version="${2}"
-  git -C "${repo}" push calyx "${version}"
+  pushd "${repo}"
+
+  if [ -f ".lfsconfig" ]; then
+    # Pushing a LFS tag from a remote-tracking branch is MUCH, MUCH faster
+    # than the alternative
+    # Fetch because this remote isn't fetched by default
+    git fetch calyx "${os_branch}:refs/remotes/calyx/${os_branch}"
+    # This should match the tag
+    git checkout -b "lfs_${topic}" "${version}"
+    git branch --set-upstream-to="calyx/${os_branch}"
+  fi
+
+  git push calyx "${version}"
+
+  if [ -f ".lfsconfig" ]; then
+    # Cleanup
+    git checkout "${version}"
+    git branch -D "lfs_${topic}"
+  fi
+
+  popd
+}
+
+cleanup_repo() {
+  local repo="${1}"
+  local version="${2}"
+  pushd "${repo}"
+  popd
 }
 
 export -f push_repo
