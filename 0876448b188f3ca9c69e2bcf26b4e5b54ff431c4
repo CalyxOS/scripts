@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "21f1ffbc_765d8ef1",
+        "filename": "carriersettings-extractor/carriersettings_extractor.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2024-12-27T20:27:36Z",
+      "side": 1,
+      "message": "Need to be alphabetically sorted",
+      "range": {
+        "startLine": 65,
+        "startChar": 0,
+        "endLine": 70,
+        "endChar": 45
+      },
+      "revId": "0876448b188f3ca9c69e2bcf26b4e5b54ff431c4",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
