@@ -66,7 +66,16 @@ tag_repo() {
 push_repo() {
   local repo="${1}"
   local version="${2}"
-  git -C "${repo}" push calyx "${version}"
+  pushd "${repo}"
+  # Fetch because this remote isn't fetched by default
+  git fetch calyx
+  # This should match the tag
+  # Pushing a LFS tag from a remote-tracking branch is MUCH, MUCH faster
+  # than the alternative
+  git checkout -b "lfs_${version}" calyx/staging/android15 "${version}"
+  git push calyx "${version}"
+  git branch -D "lfs_${version}"
+  popd
 }
 
 export -f push_repo
