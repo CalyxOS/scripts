@@ -24,8 +24,14 @@ set -euo pipefail
 trap 'exit $?' EXIT
 trap 'error_m interrupted!' SIGINT
 
-readonly script_path="$(dirname "$(realpath "$0")")"
-source "${script_path}/common"
+### CONSTANTS ###
+readonly script_path="$(cd "$(dirname "$0")";pwd -P)"
+readonly vars_path="${script_path}/../vars"
+readonly top="${script_path}/../../.."
+
+readonly work_dir="${WORK_DIR:-/tmp/fairphone}"
+
+KEEP_DUMP=${KEEP_DUMP:-false}
 
 ## HELP MESSAGE (USAGE INFO)
 # TODO
@@ -33,15 +39,24 @@ source "${script_path}/common"
 ### FUNCTIONS ###
 
 device() {
+  local device="${1}"
   source "${vars_path}/${device}"
-  local factory_dir="${work_dir}/${device}/${build_id}/factory"
+  local factory_zip="${work_dir}/${device}/${build_id}/$(basename ${image_url})"
+  local extract_args="${factory_zip}"
 
   "${script_path}/download.sh" "${device}"
-  "${script_path}/extract-factory-image.sh" "${device}"
+
+  if [ "$KEEP_DUMP" == "true" ] || [ "$KEEP_DUMP" == "1" ]; then
+    extract_args+=" --keep-dump"
+  fi
+
+  extract_args+=" --extract-factory"
 
   pushd "${top}"
-  device/fairphone/${device}/extract-files.sh "${factory_dir}/images"
+  device/fairphone/${device}/extract-files.py "${extract_args}"
   popd
+
+  echo "${build_id}" > "${top}/vendor/fairphone/${device}/build_id.txt"
 }
 
 # error message
@@ -59,7 +74,7 @@ help_message() {
 
 main() {
   if [[ $# -eq 1 ]] ; then
-    device
+    device "${1}"
   else
     error_m
   fi

@@ -25,8 +25,13 @@ set -euo pipefail
 trap 'exit $?' EXIT
 trap 'error_m interrupted!' SIGINT
 
-readonly script_path="$(dirname "$(realpath "$0")")"
-source "${script_path}/common"
+### CONSTANTS ###
+readonly script_path="$(cd "$(dirname "$0")";pwd -P)"
+readonly vars_path="${script_path}/../vars"
+
+readonly work_dir="${WORK_DIR:-/tmp/fairphone}"
+
+readonly device="${1}"
 source "${vars_path}/${device}"
 
 ## HELP MESSAGE (USAGE INFO)
