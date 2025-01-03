@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6a4f0575_c27a3473",
+        "filename": "release/tag.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-01-03T20:29:20Z",
+      "side": 1,
+      "message": "TODO: Figure out the branch name here.",
+      "revId": "d52d64cacf2ad71539aedc5e0b4a7e1b2b5e38f6",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "10c63951_32a3c750",
+        "filename": "release/tag.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-01-03T20:29:20Z",
+      "side": 1,
+      "message": "can delete branch afterward",
+      "revId": "d52d64cacf2ad71539aedc5e0b4a7e1b2b5e38f6",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
