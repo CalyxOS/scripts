@@ -7,12 +7,12 @@ readonly device_branch=android14
 
 readonly common_aosp_branch=android14-security-release # 14 Security
 
-readonly prev_common_aosp_tag=android-security-14.0.0_r14 # Nov 2024 Security
-readonly common_aosp_tag=android-security-14.0.0_r15 # Dec 2024 Security
+readonly prev_common_aosp_tag=android-security-14.0.0_r15 # Dec 2024 Security
+readonly common_aosp_tag=android-security-14.0.0_r16 # Jan 2025 Security
 
 readonly common_aosp_build_id=AP2A.240905.003 # Sep 2024, Pixel 7, 8
 
-readonly topic=dec24
+readonly topic=jan25
 
 readonly lineageos_branch=lineage-21.0
 readonly lineageos_device_branch=lineage-21
