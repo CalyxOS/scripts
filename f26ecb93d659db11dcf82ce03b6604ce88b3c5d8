@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fa9e4df0_154deb63",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 7
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-01-08T16:22:10Z",
+      "side": 1,
+      "message": "Tagged `6.3.0` with this, much faster!",
+      "revId": "f26ecb93d659db11dcf82ce03b6604ce88b3c5d8",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
