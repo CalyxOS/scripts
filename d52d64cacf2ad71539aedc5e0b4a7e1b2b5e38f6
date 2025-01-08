@@ -36,6 +36,24 @@
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "e1565bb9_416569c4",
+        "filename": "release/tag.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-01-08T15:41:08Z",
+      "side": 1,
+      "message": "Better yet, reading it from `vars/common` now",
+      "parentUuid": "5c4e3e9e_648b6244",
+      "revId": "d52d64cacf2ad71539aedc5e0b4a7e1b2b5e38f6",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "10c63951_32a3c750",
