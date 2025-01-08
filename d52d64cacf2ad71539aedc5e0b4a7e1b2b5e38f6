@@ -18,6 +18,24 @@
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "5c4e3e9e_648b6244",
+        "filename": "release/tag.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-01-08T15:39:04Z",
+      "side": 1,
+      "message": "I just hardcoded it for now, not ideal but will do the job.",
+      "parentUuid": "6a4f0575_c27a3473",
+      "revId": "d52d64cacf2ad71539aedc5e0b4a7e1b2b5e38f6",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "10c63951_32a3c750",
@@ -31,6 +49,24 @@
       "writtenOn": "2025-01-03T20:29:20Z",
       "side": 1,
       "message": "can delete branch afterward",
+      "revId": "d52d64cacf2ad71539aedc5e0b4a7e1b2b5e38f6",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "713df398_3ccc1771",
+        "filename": "release/tag.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-01-08T15:39:04Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "10c63951_32a3c750",
       "revId": "d52d64cacf2ad71539aedc5e0b4a7e1b2b5e38f6",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
