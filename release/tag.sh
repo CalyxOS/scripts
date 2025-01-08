@@ -55,7 +55,7 @@ handle_repos() {
    tag_repo "${repo}" "${version}" "${msgfile}"
   done
   read -p "Press enter to start pushing"
-  parallel push_repo {} "${version}" "${os_branch}" "${topic}" ::: "${repos}"
+  parallel -j8 push_repo {} "${version}" "${os_branch}" "${topic}" ::: "${repos}"
   popd
 }
 
