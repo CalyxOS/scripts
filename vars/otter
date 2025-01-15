@@ -1,0 +1,15 @@
+# SHIFTphone 8
+
+# Usage: ${device_repos[@]}
+device_repos=(
+  device/shift/otter
+  kernel/shift/qcm6490
+)
+
+# Updated manually
+readonly build_id="SOS.6.0.20241128"
+
+readonly image_url="https://downloads.shiftphones.com/builds/OTTER.SOS.6.0.G-RELEASE-20241128-OTA.zip"
+readonly image_sha256="72ac3572b6de152563107afef1e5f1f7e63ed4dd79bb98df50ad5af6ec89ac20"
+
+readonly security_patch="2024-10-05"

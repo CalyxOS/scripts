@@ -6,4 +6,5 @@ readonly lineage_devices=(
   devon
   hawao
   rhode
+  otter
 )
