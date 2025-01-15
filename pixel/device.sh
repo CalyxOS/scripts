@@ -54,8 +54,8 @@ device() {
 
   extract_args+=" --extract-factory --regenerate"
 
-  pushd "${top}"
-  device/google/${device}/extract-files.py "${extract_args}"
+  pushd "${top}/device/google/${device}"
+  ./extract-files.py ${extract_args}
   popd
 
   echo "${build_id}" > "${top}/vendor/google/${device}/build_id.txt"

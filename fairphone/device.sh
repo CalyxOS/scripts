@@ -52,8 +52,8 @@ device() {
 
   extract_args+=" --extract-factory"
 
-  pushd "${top}"
-  device/fairphone/${device}/extract-files.py "${extract_args}"
+  pushd "${top}/device/fairphone/${device}"
+  ./extract-files.py ${extract_args}
   popd
 
   echo "${build_id}" > "${top}/vendor/fairphone/${device}/build_id.txt"
