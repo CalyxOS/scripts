@@ -1,0 +1,7 @@
+# SHIFTphone 8
+
+# Usage: ${device_repos[@]}
+device_repos=(
+  device/shift/otter
+  kernel/shift/qcm6490
+)
