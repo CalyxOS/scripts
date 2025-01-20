@@ -3,8 +3,8 @@
 readonly lineage_devices=(
   FP5
   FP4
-  devon
-  hawao
   rhode
+  hawao
+  devon
   otter
 )
