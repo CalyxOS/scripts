@@ -3,9 +3,9 @@
 readonly devices=(
   FP5
   FP4
-  devon
-  hawao
   rhode
+  hawao
+  devon
   comet
   komodo
   caiman
@@ -21,11 +21,11 @@ readonly devices=(
   bluejay
   raven
   oriole
+  otter
   barbet
   redfin
   bramble
   sunfish
   coral
   flame
-  otter
 )
