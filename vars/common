@@ -2,8 +2,8 @@
 readonly android_version=15 # For build-desc-fingerprint.sh
 readonly aosp_tag_match=android-15.0 # For update-device-vars.sh
 
-readonly os_branch=staging/android15
-readonly device_branch=staging/android15
+readonly os_branch=android15-qpr1
+readonly device_branch=android15-qpr1
 
 readonly common_aosp_branch=android15-qpr1-release # Jan 2025
 
