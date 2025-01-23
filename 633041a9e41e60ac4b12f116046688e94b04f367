@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ab23e323_c38812ea",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-01-23T20:55:41Z",
+      "side": 1,
+      "message": "Let\u0027s use the variable to avoid having to update scripts everytime, we said.\n\nStill gotta remember to update the variable, though!",
+      "revId": "633041a9e41e60ac4b12f116046688e94b04f367",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
