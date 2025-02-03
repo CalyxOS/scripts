@@ -7,9 +7,9 @@ device_repos=(
 )
 
 # Updated manually
-readonly build_id="FP4.TP2N.C.0128"
+readonly build_id="FP4.TP2P.C.0130"
 
-readonly image_url="https://fairphone-android-builds.ams3.digitaloceanspaces.com/FP4/A13/FP4-TP2N-factory.zip"
-readonly image_sha256="19320102d2d36cef2096e205ad85955da081510656329de34e2511d9c40ea832"
+readonly image_url="https://fairphone-android-builds.ams3.digitaloceanspaces.com/FP4/A13/FP4-TP2P-factory.zip"
+readonly image_sha256="a7dee94f3e3e2e42f3f41b12c682837dafe1ee34fc1aef08aa2b0a7753d985e2"
 
-readonly security_patch="2024-11-05"
+readonly security_patch="2025-01-05"
