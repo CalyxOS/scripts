@@ -73,7 +73,9 @@ STAGINGBRANCH="staging/${BRANCHSUFFIX}"
 
 cd "${TOP}/${PROJECTPATH}"
 # Ditch any existing staging branches
-repo abandon "${STAGINGBRANCH}" .
+if git show-ref --verify --quiet refs/heads/"${STAGINGBRANCH}"; then
+    repo abandon "${STAGINGBRANCH}" .
+fi
 repo start "${STAGINGBRANCH}" .
 if [ -f ".gitupstream-lineage" ] && [ "${LINEAGE}" = true ]; then
     if grep -q "${lineageos_device_branch}" .gitupstream-lineage; then
