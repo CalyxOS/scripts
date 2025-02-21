@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3219b146_0b2bf93b",
+        "filename": "aosp-merger/aosp-merger.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-02-21T14:44:16Z",
+      "side": 1,
+      "message": "What\u0027s ${1} here? Should it be passed below?\n\nApplicable for all.",
+      "revId": "d8872f7703e31dc86a6bf35779340ecb14b0ee88",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5347578d_14fae023",
+        "filename": "aosp-merger/aosp-merger.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 226,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-02-21T14:44:16Z",
+      "side": 1,
+      "message": "Should the below be done?\n\n```suggestion\n      merge_pixel_device ${device}\n```\n\nApplicable for all.",
+      "revId": "d8872f7703e31dc86a6bf35779340ecb14b0ee88",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
