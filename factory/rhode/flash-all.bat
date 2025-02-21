@@ -68,7 +68,7 @@ fastboot --set-active=a reboot-bootloader || exit /B 1
 ping -n 5 127.0.0.1 >nul
 fastboot erase avb_custom_key || exit /B 1
 fastboot flash avb_custom_key avb_custom_key.img || exit /B 1
-fastboot --skip-reboot -w update image-rhode-ap2a.240605.024.zip || exit /B 1
+fastboot --skip-reboot -w update image-rhode-ap4a.250205.002.zip || exit /B 1
 fastboot reboot-bootloader || exit /B 1
 ping -n 5 127.0.0.1 >nul
 

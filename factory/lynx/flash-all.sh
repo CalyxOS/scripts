@@ -32,20 +32,20 @@ if ! fastboot getvar product 2>&1 | grep "^product: lynx$"; then
   echo "Factory image and device do not match. Please double check"
   exit 1
 fi
-fastboot flash --slot=other bootloader bootloader-lynx-lynx-14.5-11677884.img
+fastboot flash --slot=other bootloader bootloader-lynx-lynx-15.1-12292122.img
 fastboot --set-active=other reboot-bootloader
 sleep 5
-fastboot flash --slot=other bootloader bootloader-lynx-lynx-14.5-11677884.img
+fastboot flash --slot=other bootloader bootloader-lynx-lynx-15.1-12292122.img
 fastboot --set-active=other reboot-bootloader
 sleep 5
-fastboot flash --slot=other radio radio-lynx-g5300q-240308-240517-B-11857457.img
+fastboot flash --slot=other radio radio-lynx-g5300q-240919-241106-B-12612898.img
 fastboot --set-active=other reboot-bootloader
 sleep 5
-fastboot flash --slot=other radio radio-lynx-g5300q-240308-240517-B-11857457.img
+fastboot flash --slot=other radio radio-lynx-g5300q-240919-241106-B-12612898.img
 fastboot --set-active=other reboot-bootloader
 sleep 5
 fastboot erase avb_custom_key
 fastboot flash avb_custom_key avb_custom_key.img
-fastboot --skip-reboot -w update image-lynx-ap2a.240605.024.zip
+fastboot --skip-reboot -w update image-lynx-ap4a.250205.002.zip
 fastboot reboot-bootloader
 sleep 5
