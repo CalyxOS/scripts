@@ -32,16 +32,16 @@ if ! fastboot getvar product 2>&1 | grep "^product: shiba$"; then
   echo "Factory image and device do not match. Please double check"
   exit 1
 fi
-fastboot flash --slot=other bootloader bootloader-shiba-ripcurrent-14.5-11693900.img
+fastboot flash --slot=other bootloader bootloader-shiba-ripcurrent-15.1-12474670.img
 fastboot --set-active=other reboot-bootloader
 sleep 5
-fastboot flash --slot=other bootloader bootloader-shiba-ripcurrent-14.5-11693900.img
+fastboot flash --slot=other bootloader bootloader-shiba-ripcurrent-15.1-12474670.img
 fastboot --set-active=other reboot-bootloader
 sleep 5
-fastboot flash --slot=other radio radio-shiba-g5300i-240308-240517-B-11857457.img
+fastboot flash --slot=other radio radio-shiba-g5300i-240919-241106-B-12612898.img
 fastboot --set-active=other reboot-bootloader
 sleep 5
-fastboot flash --slot=other radio radio-shiba-g5300i-240308-240517-B-11857457.img
+fastboot flash --slot=other radio radio-shiba-g5300i-240919-241106-B-12612898.img
 fastboot --set-active=other reboot-bootloader
 sleep 5
 fastboot erase avb_custom_key

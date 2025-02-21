@@ -19,21 +19,21 @@ if not %ERRORLEVEL%==1 if "%DEVICE_FLASHER_VERSION%"=="" exit /B 1
 PATH=%PATH%;"%SYSTEMROOT%\System32"
 fastboot getvar product 2>&1 | findstr /r /c:"^product: shiba" || echo "Factory image and device do not match. Please double check"
 fastboot getvar product 2>&1 | findstr /r /c:"^product: shiba" || exit /B 1
-fastboot flash --slot=other bootloader bootloader-shiba-ripcurrent-14.5-11693900.img || exit /B 1
+fastboot flash --slot=other bootloader bootloader-shiba-ripcurrent-15.1-12474670.img || exit /B 1
 fastboot --set-active=other reboot-bootloader || exit /B 1
 ping -n 5 127.0.0.1 >nul
-fastboot flash --slot=other bootloader bootloader-shiba-ripcurrent-14.5-11693900.img || exit /B 1
+fastboot flash --slot=other bootloader bootloader-shiba-ripcurrent-15.1-12474670.img || exit /B 1
 fastboot --set-active=other reboot-bootloader || exit /B 1
 ping -n 5 127.0.0.1 >nul
-fastboot flash --slot=other radio radio-shiba-g5300i-240308-240517-B-11857457.img || exit /B 1
+fastboot flash --slot=other radio radio-shiba-g5300i-240919-241106-B-12612898.img || exit /B 1
 fastboot --set-active=other reboot-bootloader || exit /B 1
 ping -n 5 127.0.0.1 >nul
-fastboot flash --slot=other radio radio-shiba-g5300i-240308-240517-B-11857457.img || exit /B 1
+fastboot flash --slot=other radio radio-shiba-g5300i-240919-241106-B-12612898.img || exit /B 1
 fastboot --set-active=other reboot-bootloader || exit /B 1
 ping -n 5 127.0.0.1 >nul
 fastboot erase avb_custom_key || exit /B 1
 fastboot flash avb_custom_key avb_custom_key.img || exit /B 1
-fastboot --skip-reboot -w update image-shiba-ap2a.240605.024.zip || exit /B 1
+fastboot --skip-reboot -w update image-shiba-ap4a.250205.002.zip || exit /B 1
 fastboot reboot-bootloader || exit /B 1
 ping -n 5 127.0.0.1 >nul
 

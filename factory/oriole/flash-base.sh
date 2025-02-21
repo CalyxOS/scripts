@@ -32,16 +32,16 @@ if ! fastboot getvar product 2>&1 | grep "^product: oriole$"; then
   echo "Factory image and device do not match. Please double check"
   exit 1
 fi
-fastboot flash --slot=other bootloader bootloader-oriole-slider-14.5-11677881.img
+fastboot flash --slot=other bootloader bootloader-oriole-slider-15.1-12292109.img
 fastboot --set-active=other reboot-bootloader
 sleep 5
-fastboot flash --slot=other bootloader bootloader-oriole-slider-14.5-11677881.img
+fastboot flash --slot=other bootloader bootloader-oriole-slider-15.1-12292109.img
 fastboot --set-active=other reboot-bootloader
 sleep 5
-fastboot flash --slot=other radio radio-oriole-g5123b-135085-240517-B-11857288.img
+fastboot flash --slot=other radio radio-oriole-g5123b-143112-241107-B-12620021.img
 fastboot --set-active=other reboot-bootloader
 sleep 5
-fastboot flash --slot=other radio radio-oriole-g5123b-135085-240517-B-11857288.img
+fastboot flash --slot=other radio radio-oriole-g5123b-143112-241107-B-12620021.img
 fastboot --set-active=other reboot-bootloader
 sleep 5
 fastboot erase avb_custom_key

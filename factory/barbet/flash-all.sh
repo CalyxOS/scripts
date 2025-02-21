@@ -46,6 +46,6 @@ fastboot --set-active=other reboot-bootloader
 sleep 5
 fastboot erase avb_custom_key
 fastboot flash avb_custom_key avb_custom_key.img
-fastboot --skip-reboot -w update image-barbet-ap2a.240605.024.zip
+fastboot --skip-reboot -w update image-barbet-ap4a.250205.002.zip
 fastboot reboot-bootloader
 sleep 5
