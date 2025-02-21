@@ -78,6 +78,7 @@ push_aosp_merge() {
 
 # Merge AOSP to pixel device forks
 merge_pixel_device() {
+  source "${vars_path}/${1}"
   for repo in ${device_repos[@]}; do
     if [ "${merge_method}" = "merge" ]; then
       "${script_path}"/_merge_helper.sh --project-path "${repo}" --old-tag "${prev_aosp_tag}" --new-tag "${aosp_tag}" --branch-suffix "${device_branch}_merge-${aosp_tag}"
@@ -88,6 +89,7 @@ merge_pixel_device() {
 }
 
 post_pixel_device_merge() {
+  source "${vars_path}/${1}"
   if [ "${merge_method}" = "merge" ]; then
     "${script_path}"/push-upstream.sh --new-tag "${aosp_tag}" --upstream-branch "${aosp_branch}"
   else
@@ -96,6 +98,7 @@ post_pixel_device_merge() {
 }
 
 upload_pixel_device_to_review() {
+  source "${vars_path}/${1}"
   if [ "${merge_method}" = "merge" ]; then
     "${script_path}"/upload-merge.sh --branch-suffix "${device_branch}_merge-${aosp_tag}"
   else
@@ -104,11 +107,13 @@ upload_pixel_device_to_review() {
 }
 
 push_device_merge() {
+  source "${vars_path}/${1}"
   "${script_path}"/push-merge.sh --branch-suffix "${device_branch}_merge-${aosp_tag}" --pixel
 }
 
 # Merge AOSP to pixel kernel forks
 merge_pixel_kernel() {
+  source "${vars_path}/${1}"
   for repo in ${device_kernel_repos}; do
     if [ "${merge_method}" = "merge" ]; then
       "${script_path}"/_merge_helper.sh --project-path "${repo}" --old-tag "${prev_kernel_tag}" --new-tag "${kernel_tag}" --branch-suffix "${device_branch}_merge-${kernel_tag}"
@@ -119,6 +124,7 @@ merge_pixel_kernel() {
 }
 
 post_pixel_kernel_merge() {
+  source "${vars_path}/${1}"
   if [ "${merge_method}" = "merge" ]; then
     "${script_path}"/push-upstream.sh --new-tag "${kernel_tag}" --upstream-branch "${kernel_branch}"
   else
@@ -127,6 +133,7 @@ post_pixel_kernel_merge() {
 }
 
 upload_pixel_kernel_to_review() {
+  source "${vars_path}/${1}"
   if [ "${merge_method}" = "merge" ]; then
     "${script_path}"/upload-merge.sh --branch-suffix "${device_branch}_merge-${kernel_tag}"
   else
@@ -135,6 +142,7 @@ upload_pixel_kernel_to_review() {
 }
 
 push_kernel_merge() {
+  source "${vars_path}/${1}"
   "${script_path}"/push-merge.sh --branch-suffix "${device_branch}_merge-${kernel_tag}" --pixel
 }
 
@@ -209,24 +217,33 @@ main() {
 
     unset MERGEDREPOS
   elif [ "${1}" = "devices" ]; then
+    export MERGEDREPOS="${TOP}/merged_repos_devices.txt"
+    # Remove any existing list of merged repos file
+    rm -f "${MERGEDREPOS}"
+
     for device in ${devices[@]}; do
       (
-      source "${vars_path}/${device}"
-      export MERGEDREPOS="${TOP}/merged_repos_${device}.txt"
-      # Remove any existing list of merged repos file
-      rm -f "${MERGEDREPOS}"
-
       merge_pixel_device
-      # Run this to print list of conflicting repos
-      cat "${MERGEDREPOS}" | grep -w conflict-merge || true
-      read -p "Waiting for conflict resolution. Press enter when done."
-      post_pixel_device_merge
-      upload_pixel_device_to_review
-
-      unset MERGEDREPOS
       )
     done
+
+    # Run this to print list of conflicting repos
+    cat "${MERGEDREPOS}" | grep -w conflict-merge || true
+    read -p "Waiting for conflict resolution. Press enter when done."
+
+    for device in ${devices[@]}; do
+      (
+      post_pixel_device_merge
+      upload_pixel_device_to_review
+      )
+    done
+
+    unset MERGEDREPOS
   elif [ "${1}" = "kernels" ]; then
+    export MERGEDREPOS="${TOP}/merged_repos_kernels.txt"
+    # Remove any existing list of merged repos file
+    rm -f "${MERGEDREPOS}"
+
     for kernel in ${kernel_repos[@]}; do
       (
       readonly kernel_short="$(echo ${kernel} | cut -d / -f 3)"
@@ -240,20 +257,22 @@ main() {
         readonly device_kernel_repos="${kernel}"
       fi
 
-      export MERGEDREPOS="${TOP}/merged_repos_${kernel_short}_kernel.txt"
-      # Remove any existing list of merged repos file
-      rm -f "${MERGEDREPOS}"
-
       merge_pixel_kernel
-      # Run this to print list of conflicting repos
-      cat "${MERGEDREPOS}" | grep -w conflict-merge || true
-      read -p "Waiting for conflict resolution. Press enter when done."
-      post_pixel_kernel_merge
-      upload_pixel_kernel_to_review
-
-      unset MERGEDREPOS
       )
     done
+
+    # Run this to print list of conflicting repos
+    cat "${MERGEDREPOS}" | grep -w conflict-merge || true
+    read -p "Waiting for conflict resolution. Press enter when done."
+
+    for kernel in ${kernel_repos[@]}; do
+      (
+      post_pixel_kernel_merge
+      upload_pixel_kernel_to_review
+      )
+    done
+
+    unset MERGEDREPOS
   elif [ "${1}" = "clo" ]; then
     qcom_tag="${qcom_group_revision[${2}]}"
 
@@ -293,28 +312,32 @@ main() {
 
     unset MERGEDREPOS
   elif [ "${1}" = "lineage-devices" ]; then
+    export MERGEDREPOS="${TOP}/merged_repos_lineage_devices.txt"
+    # Remove any existing list of merged repos file
+    rm -f "${MERGEDREPOS}"
+
     for device in ${lineage_devices[@]}; do
       (
-      source "${vars_path}/${device}"
-      export MERGEDREPOS="${TOP}/merged_repos_${device}.txt"
-      # Remove any existing list of merged repos file
-      rm -f "${MERGEDREPOS}"
-
       for repo in ${device_repos[@]}; do
         (
         merge_lineage "${lineageos_device_branch}"
         )
       done
-
-      # Run this to print list of conflicting repos
-      cat "${MERGEDREPOS}" | grep -w conflict-merge || true
-      read -p "Waiting for conflict resolution. Press enter when done."
-      post_lineage_merge
-      upload_lineage_merge_to_review "${lineageos_device_branch}"
-
-      unset MERGEDREPOS
       )
     done
+
+    # Run this to print list of conflicting repos
+    cat "${MERGEDREPOS}" | grep -w conflict-merge || true
+    read -p "Waiting for conflict resolution. Press enter when done."
+
+    for device in ${lineage_devices[@]}; do
+      (
+      post_lineage_merge
+      upload_lineage_merge_to_review "${lineageos_device_branch}"
+      )
+    done
+
+    unset MERGEDREPOS
   elif [ "${1}" = "submit-platform" ]; then
     export MERGEDREPOS="${TOP}/merged_repos.txt"
 
@@ -322,28 +345,25 @@ main() {
 
     unset MERGEDREPOS
   elif [ "${1}" = "submit-devices" ]; then
+    export MERGEDREPOS="${TOP}/merged_repos_devices.txt"
+
     for device in ${devices[@]}; do
       (
-      source "${vars_path}/${device}"
-      export MERGEDREPOS="${TOP}/merged_repos_${device}.txt"
-
       push_device_merge
-
-      unset MERGEDREPOS
       )
     done
+
+    unset MERGEDREPOS
   elif [ "${1}" = "submit-kernels" ]; then
+    export MERGEDREPOS="${TOP}/merged_repos_kernels.txt"
+
     for kernel in ${kernel_repos[@]}; do
       (
-      readonly kernel_short="$(echo ${kernel} | cut -d / -f 3)"
-      source "${vars_path}/${kernel_short}"
-      export MERGEDREPOS="${TOP}/merged_repos_${kernel_short}_kernel.txt"
-
       push_kernel_merge
-
-      unset MERGEDREPOS
       )
     done
+
+    unset MERGEDREPOS
   elif [ "${1}" = "submit-clo" ]; then
     qcom_tag="${qcom_group_revision[${2}]}"
 
@@ -359,16 +379,15 @@ main() {
 
     unset MERGEDREPOS
   elif [ "${1}" = "submit-lineage-devices" ]; then
+    export MERGEDREPOS="${TOP}/merged_repos_lineage_devices.txt"
+
     for device in ${lineage_devices[@]}; do
       (
-      source "${vars_path}/${device}"
-      export MERGEDREPOS="${TOP}/merged_repos_${device}.txt"
-
       push_lineage_merge "${lineageos_device_branch}"
-
-      unset MERGEDREPOS
       )
     done
+
+    unset MERGEDREPOS
   fi
 }
 
