@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0f8ff2f0_1d84f7f5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2025-03-04T21:23:34Z",
+      "side": 1,
+      "message": "Platform and lineage merges worked. Can try this on QPR2 for devices and I think it\u0027s good to go for now",
+      "revId": "63051ca85e5b4e667c720054680ff8a02e229b77",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
