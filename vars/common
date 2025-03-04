@@ -2,19 +2,19 @@
 readonly android_version=15 # For build-desc-fingerprint.sh
 readonly aosp_tag_match=android-15.0 # For update-device-vars.sh
 
-readonly os_branch=android15-qpr1
-readonly device_branch=android15-qpr1
+readonly os_branch=android15-qpr2
+readonly device_branch=android15-qpr2
 
-readonly common_aosp_branch=android15-qpr1-release # Feb 2025
+readonly common_aosp_branch=android15-qpr2-release? # Mar 2025
 
-readonly prev_common_aosp_tag=android-15.0.0_r10 # Jan 2025, Pixel 6-9
-readonly common_aosp_tag=android-15.0.0_r14 # Feb 2025, Pixel 6-9
+readonly prev_common_aosp_tag=android-15.0.0_r14 # Feb 2025, Pixel 6-9
+readonly common_aosp_tag=android-15.0.0_r? # Mar 2025, Pixel 9
 
-readonly common_aosp_build_id=AP4A.250205.002 # Feb 2025, Pixel 6-9
+readonly common_aosp_build_id=BP1A.250305.020.T2 # Mar 2025, Pixel 6-9
 
-readonly topic=feb25
+readonly topic=mar25
 
-readonly lineageos_branch=lineage-22.1
-readonly lineageos_device_branch=lineage-22.1
+readonly lineageos_branch=lineage-22.2
+readonly lineageos_device_branch=lineage-22.2
 
 readonly merge_method="merge"
