@@ -18,6 +18,24 @@
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "df53f78b_6bdbb9f7",
+        "filename": "aosp-merger/aosp-merger.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-03-04T21:36:56Z",
+      "side": 1,
+      "message": "Fixed in next commit",
+      "parentUuid": "3219b146_0b2bf93b",
+      "revId": "d8872f7703e31dc86a6bf35779340ecb14b0ee88",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "5347578d_14fae023",
