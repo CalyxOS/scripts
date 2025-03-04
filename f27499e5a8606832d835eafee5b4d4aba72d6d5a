@@ -16,6 +16,24 @@
       "message": "maybe say Feb since this is r5? or even a part 1 or something",
       "revId": "f27499e5a8606832d835eafee5b4d4aba72d6d5a",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "85beec76_02909995",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2025-03-04T21:21:13Z",
+      "side": 1,
+      "message": "It\u0027s part 1, the previous tag contains fixes for this month, part 2:\nhttps://review.calyxos.org/c/CalyxOS/scripts/+/36472",
+      "parentUuid": "6eb24abd_aa68bc33",
+      "revId": "f27499e5a8606832d835eafee5b4d4aba72d6d5a",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
