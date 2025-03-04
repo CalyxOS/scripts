@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8ea09e48_4d7be5bd",
+        "filename": "aosp-merger/_merge_helper.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2025-03-04T21:22:00Z",
+      "side": 1,
+      "message": "This is necessary to not discard the previous branch changes, but it assumes you start from a clean synced tree (aka `repo sync -d`)",
+      "revId": "2b3b65c698eee5bbd590a86d73e83ca33d85f223",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
