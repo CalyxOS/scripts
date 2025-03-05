@@ -51,10 +51,7 @@ source "${TOP}/vendor/calyx/build/envsetup.sh"
 # List of merged repos
 PROJECTPATHS=$(cat ${MERGEDREPOS} | grep -w merge | awk '{printf "%s\n", $2}')
 
-echo -e "\n#### Staging branch = ${STAGINGBRANCH} ####"
-
 # Make sure manifest and forked repos are in a consistent state
-echo -e "\n#### Verifying there are no uncommitted changes on forked AOSP projects ####"
 for PROJECTPATH in ${PROJECTPATHS} .repo/manifests; do
     cd "${TOP}/${PROJECTPATH}"
     if [[ -n "$(git status --porcelain)" ]]; then
@@ -62,7 +59,6 @@ for PROJECTPATH in ${PROJECTPATHS} .repo/manifests; do
         exit 1
     fi
 done
-echo "#### Verification complete - no uncommitted changes found ####"
 
 echo -e "\n#### $(basename ${MERGEDREPOS}) ####"
 read -p "Pushing ${STAGINGBRANCH}. Press enter to confirm."
