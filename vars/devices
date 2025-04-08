@@ -25,7 +25,4 @@ readonly devices=(
   barbet
   redfin
   bramble
-  sunfish
-  coral
-  flame
 )
