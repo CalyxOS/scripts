@@ -1,0 +1,7 @@
+# moto g84
+
+# Usage: ${device_repos[@]}
+device_repos=(
+  device/motorola/bangkk
+  # common repos in fogos
+)

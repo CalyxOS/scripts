@@ -1,0 +1,8 @@
+# moto g34/g45
+
+# Usage: ${device_repos[@]}
+device_repos=(
+  device/motorola/fogos
+  device/motorola/sm6375-common
+  kernel/motorola/sm6375
+)
