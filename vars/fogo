@@ -1,0 +1,7 @@
+# moto g 5G - 2024
+
+# Usage: ${device_repos[@]}
+device_repos=(
+  device/motorola/fogo
+  # common repos in fogos
+)

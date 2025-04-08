@@ -1,7 +1,10 @@
 # Motorola devices
 # Usage: ${devices[@]}
 readonly devices=(
-  devon
-  hawao
+  bangkk
+  fogos
+  fogo
   rhode
+  hawao
+  devon
 )
