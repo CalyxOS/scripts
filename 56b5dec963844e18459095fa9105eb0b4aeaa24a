@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ee865cac_fba8d05b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2025-04-08T16:20:02Z",
+      "side": 1,
+      "message": "Appears to work. I left [notes on the issue](https://gitlab.com/CalyxOS/calyxos/-/issues/2895#note_2440483176).",
+      "revId": "56b5dec963844e18459095fa9105eb0b4aeaa24a",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
