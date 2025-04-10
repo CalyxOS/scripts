@@ -9,7 +9,7 @@ device_repos=(
 
 # Updated semi-manually via pixel/update-any-var.sh
 
-readonly build_id="BP1A.250305.019"
+readonly build_id="BP1A.250405.007.B1"
 
 # Updated automatically via pixel/update-device-vars.sh
 
