@@ -15,7 +15,7 @@ readonly build_id="BP1A.250305.020"
 
 # Updated automatically via pixel/update-device-vars.sh
 
-readonly aosp_branch="android15-qpr2-release"
+readonly aosp_branch="unknown"
 
 readonly prev_aosp_tag="android-15.0.0_r14"
 readonly aosp_tag="android-15.0.0_r21"
