@@ -1,0 +1,16 @@
+# All supported devices except Google Pixels currently supported in AOSP
+# Usage: ${devices[@]}
+readonly devices=(
+  FP4
+  FP5
+  fogo
+  bangkk
+  fogos
+  rhode
+  hawao
+  devon
+  otter
+  barbet
+  redfin
+  bramble
+)
