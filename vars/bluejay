@@ -27,4 +27,4 @@ readonly flash_url="https://flash.android.com/build/13240079?target=bluejay-user
 readonly ota_url="https://dl.google.com/dl/android/aosp/bluejay-ota-bp1a.250405.007-e5d6863a.zip"
 readonly ota_sha256="e5d6863abed61b0247413c2797d4546585ba343d77e8e1001d14021ff81e4cda"
 
-readonly security_patch="2025-03-05"
+readonly security_patch="2025-04-05"

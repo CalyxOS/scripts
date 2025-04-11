@@ -27,4 +27,4 @@ readonly flash_url="https://flash.android.com/build/13240079?target=comet-user&s
 readonly ota_url="https://dl.google.com/dl/android/aosp/comet-ota-bp1a.250405.007-3b5a62aa.zip"
 readonly ota_sha256="3b5a62aab3c6d61f455025b40f166e8146339061b54bacc51cdc277a923cfc0a"
 
-readonly security_patch="2025-03-05"
+readonly security_patch="2025-04-05"

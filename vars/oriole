@@ -26,4 +26,4 @@ readonly flash_url="https://flash.android.com/build/13240079?target=oriole-user&
 readonly ota_url="https://dl.google.com/dl/android/aosp/oriole-ota-bp1a.250405.007-2c7a83a9.zip"
 readonly ota_sha256="2c7a83a95f62efab8b525f2c2246b9657e965fd8ca2f0c87428e77ba0404b161"
 
-readonly security_patch="2025-03-05"
+readonly security_patch="2025-04-05"

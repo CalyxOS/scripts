@@ -27,4 +27,4 @@ readonly flash_url="https://flash.android.com/build/13240308?target=akita-user&s
 readonly ota_url="https://dl.google.com/dl/android/aosp/akita-ota-bp1a.250405.007.b1-41104100.zip"
 readonly ota_sha256="41104100f4a8cec4d929312344da9ca618d43ce35ab1c9b04d612c417bd9fc21"
 
-readonly security_patch="2025-03-05"
+readonly security_patch="2025-04-05"

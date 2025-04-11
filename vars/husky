@@ -29,4 +29,4 @@ readonly flash_url="https://flash.android.com/build/13240308?target=husky-user&s
 readonly ota_url="https://dl.google.com/dl/android/aosp/husky-ota-bp1a.250405.007.b1-d034f12f.zip"
 readonly ota_sha256="d034f12f0fb47528232dbd61445d92773a9bfc2d82e5d5063e2c5b0b893147aa"
 
-readonly security_patch="2025-03-05"
+readonly security_patch="2025-04-05"

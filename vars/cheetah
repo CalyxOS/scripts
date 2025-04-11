@@ -28,4 +28,4 @@ readonly flash_url="https://flash.android.com/build/13240308?target=cheetah-user
 readonly ota_url="https://dl.google.com/dl/android/aosp/cheetah-ota-bp1a.250405.007.b1-b8f8c3a3.zip"
 readonly ota_sha256="b8f8c3a358182a95ac22b66cc9d986236bf40c4d636566448be29666fafb9c39"
 
-readonly security_patch="2025-03-05"
+readonly security_patch="2025-04-05"

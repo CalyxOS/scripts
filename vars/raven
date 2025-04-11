@@ -28,4 +28,4 @@ readonly flash_url="https://flash.android.com/build/13240079?target=raven-user&s
 readonly ota_url="https://dl.google.com/dl/android/aosp/raven-ota-bp1a.250405.007-5a4948f7.zip"
 readonly ota_sha256="5a4948f71317c8b48211d82fe5d6de204ceb5d517ba31e5732f1cbb41945628b"
 
-readonly security_patch="2025-03-05"
+readonly security_patch="2025-04-05"

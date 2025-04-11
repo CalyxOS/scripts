@@ -27,4 +27,4 @@ readonly flash_url="https://flash.android.com/build/13240308?target=lynx-user&si
 readonly ota_url="https://dl.google.com/dl/android/aosp/lynx-ota-bp1a.250405.007.b1-6cb487eb.zip"
 readonly ota_sha256="6cb487eb3c138334a1095e16ed80e92855da5779d9d853c327bcbf874c5d24f2"
 
-readonly security_patch="2025-03-05"
+readonly security_patch="2025-04-05"

@@ -26,4 +26,4 @@ readonly flash_url="https://flash.android.com/build/13240308?target=shiba-user&s
 readonly ota_url="https://dl.google.com/dl/android/aosp/shiba-ota-bp1a.250405.007.b1-1e0873e1.zip"
 readonly ota_sha256="1e0873e13caf6c9413971299223ae9420b284339eb468852032c7c0258d0fb17"
 
-readonly security_patch="2025-03-05"
+readonly security_patch="2025-04-05"

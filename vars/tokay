@@ -26,4 +26,4 @@ readonly flash_url="https://flash.android.com/build/13240079?target=tokay-user&s
 readonly ota_url="https://dl.google.com/dl/android/aosp/tokay-ota-bp1a.250405.007-2eebf294.zip"
 readonly ota_sha256="2eebf294075a6ac08520b14b3eb3f85eaf4dcd592ee02dd837752dcf2fd53154"
 
-readonly security_patch="2025-03-05"
+readonly security_patch="2025-04-05"

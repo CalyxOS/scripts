@@ -27,4 +27,4 @@ readonly flash_url="https://flash.android.com/build/13240079?target=tangorpro-us
 readonly ota_url="https://dl.google.com/dl/android/aosp/tangorpro-ota-bp1a.250405.007-1f45c9ae.zip"
 readonly ota_sha256="1f45c9ae13a234fae62c23a2dd16ca6c7548419f2113cdadd1db640cf41af347"
 
-readonly security_patch="2025-03-05"
+readonly security_patch="2025-04-05"

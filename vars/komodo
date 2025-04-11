@@ -30,4 +30,4 @@ readonly flash_url="https://flash.android.com/build/13240079?target=komodo-user&
 readonly ota_url="https://dl.google.com/dl/android/aosp/komodo-ota-bp1a.250405.007-9cdf83da.zip"
 readonly ota_sha256="9cdf83dab94da9c40c7a4ba5c4f67c6fe11cb98882c7acbf71919b41b7ada470"
 
-readonly security_patch="2025-03-05"
+readonly security_patch="2025-04-05"

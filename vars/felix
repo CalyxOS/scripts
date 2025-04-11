@@ -27,4 +27,4 @@ readonly flash_url="https://flash.android.com/build/13240308?target=felix-user&s
 readonly ota_url="https://dl.google.com/dl/android/aosp/felix-ota-bp1a.250405.007.b1-47a063fc.zip"
 readonly ota_sha256="47a063fcdd6fc3b9806e88198c5ae2af209e128644f980ddf9e49a03bdc56cf8"
 
-readonly security_patch="2025-03-05"
+readonly security_patch="2025-04-05"
