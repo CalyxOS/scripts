@@ -5,14 +5,14 @@ readonly aosp_tag_match=android-15.0 # For update-device-vars.sh
 readonly os_branch=android15-qpr1
 readonly device_branch=android15-qpr1
 
-readonly common_aosp_branch=android15-security-release # Mar 2025, security
+readonly common_aosp_branch=android15-d4-release # Apr 2025, Pixel 9a
 
-readonly prev_common_aosp_tag=android-security-15.0.0_r5 # Feb 2025, security
-readonly common_aosp_tag=android-security-15.0.0_r6 # Mar 2025, security
+readonly prev_common_aosp_tag=android-security-15.0.0_r6 # Mar 2025, security
+readonly common_aosp_tag=android-15.0.0_r25 # Apr 2025, Pixel 9a
 
-readonly common_aosp_build_id=AP4A.250205.002 # Feb 2025, Pixel 6-9
+readonly common_aosp_build_id=BD4A.250405.003 # Apr 2025, Pixel 9a
 
-readonly topic=mar25
+readonly topic=tegu
 
 readonly lineageos_branch=lineage-22.1
 readonly lineageos_device_branch=lineage-22.1
