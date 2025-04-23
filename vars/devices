@@ -1,8 +1,8 @@
 # All supported devices
 # Usage: ${devices[@]}
 readonly devices=(
-  FP5
   FP4
+  FP5
   fogo
   bangkk
   fogos
