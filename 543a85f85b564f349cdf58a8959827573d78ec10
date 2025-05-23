@@ -16,6 +16,24 @@
       "message": "may is 2025-05-05 and r31",
       "revId": "543a85f85b564f349cdf58a8959827573d78ec10",
       "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cbca1cce_3366dcc8",
+        "filename": "vars/tegu",
+        "patchSetId": 2
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2025-05-23T13:29:29Z",
+      "side": 1,
+      "message": "https://review.calyxos.org/c/CalyxOS/scripts/+/39342",
+      "parentUuid": "875e9fc2_7fe2bab0",
+      "revId": "543a85f85b564f349cdf58a8959827573d78ec10",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
     }
   ]
 }
