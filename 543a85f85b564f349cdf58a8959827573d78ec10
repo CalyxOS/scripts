@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "875e9fc2_7fe2bab0",
+        "filename": "vars/tegu",
+        "patchSetId": 2
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 1000000
+      },
+      "writtenOn": "2025-05-23T12:51:56Z",
+      "side": 1,
+      "message": "may is 2025-05-05 and r31",
+      "revId": "543a85f85b564f349cdf58a8959827573d78ec10",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
