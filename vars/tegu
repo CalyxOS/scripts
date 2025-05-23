@@ -11,23 +11,23 @@ device_repos=(
 
 # Updated semi-manually via pixel/update-any-var.sh
 
-readonly build_id="BD4A.250405.003"
+readonly build_id="BD4A.250505.003"
 
 # Updated automatically via pixel/update-device-vars.sh
 
 readonly aosp_branch="android15-d4-release"
 
-readonly prev_aosp_tag="unknown"
-readonly aosp_tag="android-15.0.0_r25"
+readonly prev_aosp_tag="android-15.0.0_r25"
+readonly aosp_tag="android-15.0.0_r31"
 
-readonly build_number="13238919"
+readonly build_number="13285625"
 
-readonly image_url="https://dl.google.com/dl/android/aosp/tegu-bd4a.250405.003-factory-6dba30b4.zip"
-readonly image_sha256="6dba30b45d2339eae49c7223e276a2ed006d04af157edaaaf9de8e828cb5752d"
+readonly image_url="https://dl.google.com/dl/android/aosp/tegu-bd4a.250505.003-factory-c76c3c0d.zip"
+readonly image_sha256="c76c3c0dda300a58625e7b3694946e2757e7e629e3ee5b3e00aded7c7b56bad4"
 
-readonly flash_url="https://flash.android.com/build/13238919?target=tegu-user&signed"
+readonly flash_url="https://flash.android.com/build/13285625?target=tegu-user&signed"
 
-readonly ota_url="https://dl.google.com/dl/android/aosp/tegu-ota-bd4a.250405.003-9387d8f0.zip"
-readonly ota_sha256="9387d8f01bd877da9a78f2890c6e58b4014e1a3c12105b73590a80e00aba649e"
+readonly ota_url="https://dl.google.com/dl/android/aosp/tegu-ota-bd4a.250505.003-06eb56e8.zip"
+readonly ota_sha256="06eb56e8bbaf4c593e730b74285519a82bcc5727ea309d1815c944e5f259d18d"
 
-readonly security_patch="2025-04-05"
+readonly security_patch="2025-05-05"

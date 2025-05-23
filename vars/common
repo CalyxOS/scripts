@@ -7,10 +7,10 @@ readonly device_branch=android15-qpr1
 
 readonly common_aosp_branch=android15-d4-release # Apr 2025, Pixel 9a
 
-readonly prev_common_aosp_tag=android-security-15.0.0_r6 # Mar 2025, security
-readonly common_aosp_tag=android-15.0.0_r25 # Apr 2025, Pixel 9a
+readonly prev_common_aosp_tag=android-15.0.0_r25 # Apr 2025, Pixel 9a
+readonly common_aosp_tag=android-15.0.0_r31 # May 2025, Pixel 9a
 
-readonly common_aosp_build_id=BD4A.250405.003 # Apr 2025, Pixel 9a
+readonly common_aosp_build_id=BD4A.250505.003 # May 2025, Pixel 9a
 
 readonly topic=tegu
 
