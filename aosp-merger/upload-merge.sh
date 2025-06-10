@@ -48,6 +48,11 @@ else
     TOPIC="${topic}"
 fi
 
+# Source build environment (needed for calyxremote)
+source "${TOP}/build/envsetup.sh"
+export ANDROID_BUILD_TOP=$(gettop)
+source "${TOP}/vendor/calyx/build/envsetup.sh"
+
 # List of merged repos
 PROJECTPATHS=$(cat ${MERGEDREPOS} | grep -w merge | awk '{printf "%s\n", $2}')
 
@@ -67,6 +72,14 @@ echo "#### Verification complete - no uncommitted changes found ####"
 # Iterate over each forked project
 for PROJECTPATH in ${PROJECTPATHS}; do
     cd "${TOP}/${PROJECTPATH}"
+
+    BRANCH=$(git config --get branch.${STAGINGBRANCH}.merge | sed 's|refs/heads/||')
+    if [ -z "${BRANCH}" ]; then
+        BRANCH="${os_branch}"
+    fi
+
     echo -e "\n#### Pushing ${PROJECTPATH} merge to review ####"
-    repo upload -c -y --no-verify -o topic="${TOPIC}" .
+    git checkout "${STAGINGBRANCH}"
+    calyxremote | grep -v "Remote 'calyx' created"
+    git push calyx HEAD:refs/for/"${BRANCH}"%topic="${TOPIC}"
 done
