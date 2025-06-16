@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7c81f7ac_5e056c94",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000062
+      },
+      "writtenOn": "2025-06-16T21:55:26Z",
+      "side": 1,
+      "message": "`export OFFICIAL_BUILD\u003dtrue; source build/envsetup.sh` was failing before this. Also, the calculations from the issue / [comments](https://review.calyxos.org/c/CalyxOS/vendor_calyx/+/40178) were not giving the expected build numbers, so they were adjusted. (Will edit the issue too.)",
+      "revId": "2273fe169007c0790b0960870f93b1fc40b6cfc0",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
