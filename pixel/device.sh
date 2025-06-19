@@ -44,6 +44,8 @@ device() {
   local device="${1}"
   source "${vars_path}/${device}"
   local factory_zip="${work_dir}/${device}/${build_id}/$(basename ${image_url})"
+  local factory_dir="${factory_zip%.zip}"
+  local vendor_dir="${top}/vendor/google/${device}"
   local extract_args="${factory_zip}"
 
   "${script_path}/download.sh" "${device}"
@@ -52,13 +54,19 @@ device() {
     extract_args+=" --keep-dump"
   fi
 
-  extract_args+=" --extract-factory --regenerate"
-
   pushd "${top}/device/google/${device}"
-  ./extract-files.py ${extract_args}
+  ./extract-files.py ${extract_args} --extract-factory --regenerate
+  ./extract-files.py ${extract_args} --extract-factory --regenerate_makefiles
   popd
 
-  echo "${build_id}" > "${top}/vendor/google/${device}/build_id.txt"
+  cp "${factory_dir}/boot.img" "${vendor_dir}/kernel/"
+  cp "${factory_dir}/dtbo.img" "${vendor_dir}/kernel/"
+
+  "${top}"/system/tools/mkbootimg/unpack_bootimg.py --boot_img "${factory_dir}/vendor_boot.img" --out "${factory_dir}/boot"
+  lz4 -dc "${factory_dir}/boot/vendor-ramdisk-by-name/ramdisk_dlkm" | cpio -ivdm --directory "${vendor_dir}/kernel/vendor_ramdisk" lib/modules/modules.load
+  sed -i '/^fips140.ko$/d' "${vendor_dir}/kernel/vendor_ramdisk/lib/modules/modules.load"
+
+  echo "${build_id}" > "${vendor_dir}/build_id.txt"
 }
 
 # error message
