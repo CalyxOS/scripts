@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ce2c7c03_f3293ee7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2025-06-20T20:52:00Z",
+      "side": 1,
+      "message": "Only works for vendor_boot atm (gs101), doesn\u0027t handle vendor_kernel_boot (gs201, zuma, zumapro)",
+      "revId": "c057654f405dde92a3f5d0bfbe36dfbc2ffc88f1",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
