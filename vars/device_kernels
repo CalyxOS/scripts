@@ -1,4 +1,14 @@
 # Usage: ${device_kernels[@]}
 readonly device_kernels=(
-  redbull
+  tegu
+  comet
+  caimito
+  akita
+  shusky
+  felix
+  tangorpro
+  lynx
+  pantah
+  bluejay
+  raviole
 )
