@@ -7,9 +7,9 @@ device_repos=(
 )
 
 # Updated manually
-readonly build_id="FP5.UT2P.B.122"
+readonly build_id="FP5.VT28.C.042"
 
-readonly image_url="https://fairphone-android-builds.ams3.digitaloceanspaces.com/FP5/A14/FP5-UT2P-factory.zip"
-readonly image_sha256="cc62ed82039580b921d8300331015dd01be034c0d3c9f170603aa46ee99fd849"
+readonly image_url="https://fairphone-android-builds.ams3.digitaloceanspaces.com/FP5/A15/FP5-VT28-factory.zip"
+readonly image_sha256="3f50414b84d87c35b7db22e03839faef372fc991a2137ce99c925f65fc834a44"
 
-readonly security_patch="2025-05-05"
+readonly security_patch="2025-06-05"
