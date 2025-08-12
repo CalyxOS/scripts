@@ -14,7 +14,7 @@ readonly common_aosp_build_id=BP2A.250605.031.A2 # June 2025, Android 16
 
 readonly topic=baklava
 
-readonly lineageos_branch=lineage-22.2
-readonly lineageos_device_branch=lineage-22.2
+readonly lineageos_branch=lineage-23.0
+readonly lineageos_device_branch=lineage-23.0
 
 readonly merge_method="merge"
