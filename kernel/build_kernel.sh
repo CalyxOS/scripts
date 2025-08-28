@@ -59,6 +59,7 @@ clean_kernel() {
 }
 
 copy_kernel() {
+  mkdir "${top}/device/google/${kernel}-kernels/calyx/"
   cp -a "${OUT_DIR}/dist/"* "${top}/device/google/${kernel}-kernels/calyx/"
   chmod -x "${top}/device/google/${kernel}-kernels/calyx/"*
   echo " Files copied to ${top}/device/google/${kernel}-kernels/calyx/"
