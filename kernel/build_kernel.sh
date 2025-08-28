@@ -55,10 +55,13 @@ build_kernel() {
 
 clean_kernel() {
   local dir="${top}/device/google/${kernel}-kernels/calyx/"
-  find "${dir}" -maxdepth 1 ! \( -name .gitreview -o -name .gitignore \) -type f -exec rm -f {} +
+  if [ -d "$dir" ]; then
+    find "${dir}" -maxdepth 1 ! \( -name .gitreview -o -name .gitignore \) -type f -exec rm -f {} +
+  fi
 }
 
 copy_kernel() {
+  mkdir -p "${top}/device/google/${kernel}-kernels/calyx/"
   cp -a "${OUT_DIR}/dist/"* "${top}/device/google/${kernel}-kernels/calyx/"
   chmod -x "${top}/device/google/${kernel}-kernels/calyx/"*
   echo " Files copied to ${top}/device/google/${kernel}-kernels/calyx/"
