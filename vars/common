@@ -2,8 +2,8 @@
 readonly android_version=16 # For build-desc-fingerprint.sh
 readonly aosp_tag_match=android-16.0 # For update-device-vars.sh
 
-readonly os_branch=staging/android16
-readonly device_branch=staging/android16
+readonly os_branch=android16
+readonly device_branch=android16
 
 readonly common_aosp_branch=android16-release # June 2025, Android 16
 
