@@ -3,7 +3,6 @@
 # Usage: ${device_repos[@]}
 device_repos=(
   device/google/akita
-  device/google/akita-sepolicy
 )
 
 # Updated semi-manually via pixel/update-any-var.sh

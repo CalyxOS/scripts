@@ -3,9 +3,7 @@
 # Usage: ${device_repos[@]}
 device_repos=(
   device/google/zuma
-  device/google/zuma-sepolicy
   device/google/shusky
-  device/google/shusky-sepolicy
 )
 
 # Updated semi-manually via pixel/update-any-var.sh

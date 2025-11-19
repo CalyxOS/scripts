@@ -3,7 +3,6 @@
 # Usage: ${device_repos[@]}
 device_repos=(
   device/google/gs201
-  device/google/gs201-sepolicy
   device/google/pantah
 )
 

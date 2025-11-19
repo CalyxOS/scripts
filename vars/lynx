@@ -3,7 +3,6 @@
 # Usage: ${device_repos[@]}
 device_repos=(
   device/google/lynx
-  device/google/lynx-sepolicy
 )
 
 # Updated semi-manually via pixel/update-any-var.sh

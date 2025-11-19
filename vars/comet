@@ -3,7 +3,6 @@
 # Usage: ${device_repos[@]}
 device_repos=(
   device/google/comet
-  device/google/comet-sepolicy
 )
 
 # Updated semi-manually via pixel/update-any-var.sh
