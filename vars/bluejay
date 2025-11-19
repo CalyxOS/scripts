@@ -5,6 +5,8 @@ device_repos=(
   device/google/bluejay
 )
 
+readonly kernel_version="6.1"
+
 # Updated semi-manually via pixel/update-any-var.sh
 
 readonly build_id="BP2A.250705.008.A1"

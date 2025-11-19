@@ -5,6 +5,8 @@ device_repos=(
   device/google/comet
 )
 
+readonly kernel_version="6.1"
+
 # Updated semi-manually via pixel/update-any-var.sh
 
 readonly build_id="BP2A.250805.005"
