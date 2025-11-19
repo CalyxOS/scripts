@@ -42,6 +42,8 @@ fi
 export KERNEL_OUT_DIR="${OUT_DIR}"
 export OUT_DIR
 
+source "${vars_path}/${kernel}"
+
 ## HELP MESSAGE (USAGE INFO)
 # TODO
 
@@ -54,17 +56,17 @@ build_kernel() {
 }
 
 clean_kernel() {
-  local dir="${top}/device/google/${kernel}-kernels/calyx/"
+  local dir="${top}/device/google/${kernel}-kernels/${kernel_version}/"
   if [ -d "$dir" ]; then
     find "${dir}" -maxdepth 1 ! \( -name .gitreview -o -name .gitignore \) -type f -exec rm -f {} +
   fi
 }
 
 copy_kernel() {
-  mkdir -p "${top}/device/google/${kernel}-kernels/calyx/"
-  cp -a "${OUT_DIR}/dist/"* "${top}/device/google/${kernel}-kernels/calyx/"
-  chmod -x "${top}/device/google/${kernel}-kernels/calyx/"*
-  echo " Files copied to ${top}/device/google/${kernel}-kernels/calyx/"
+  mkdir -p "${top}/device/google/${kernel}-kernels/${kernel_version}/"
+  cp -a "${OUT_DIR}/dist/"* "${top}/device/google/${kernel}-kernels/${kernel_version}/"
+  chmod -x "${top}/device/google/${kernel}-kernels/${kernel_version}/"*
+  echo " Files copied to ${top}/device/google/${kernel}-kernels/${kernel_version}/"
 }
 
 # error message
