@@ -31,7 +31,6 @@ readonly vars_path="${script_path}/../vars"
 
 source "${vars_path}/common"
 source "${vars_path}/pixels"
-source "${vars_path}/kernel_repos"
 source "${vars_path}/qcom"
 source "${vars_path}/lineage_devices"
 
@@ -105,37 +104,6 @@ upload_pixel_device_to_review() {
 
 push_device_merge() {
   "${script_path}"/push-merge.sh --branch-suffix "${device_branch}_merge-${aosp_tag}" --pixel
-}
-
-# Merge AOSP to pixel kernel forks
-merge_pixel_kernel() {
-  for repo in ${device_kernel_repos}; do
-    if [ "${merge_method}" = "merge" ]; then
-      "${script_path}"/_merge_helper.sh --project-path "${repo}" --old-tag "${prev_kernel_tag}" --new-tag "${kernel_tag}" --branch-suffix "${device_branch}_merge-${kernel_tag}"
-    else
-      "${script_path}"/_subtree_merge_helper.sh --project-path "${repo}" --old-tag "${prev_kernel_tag}" --new-tag "${kernel_tag}" --branch-suffix "${device_branch}_merge-${kernel_tag}"
-    fi
-  done
-}
-
-post_pixel_kernel_merge() {
-  if [ "${merge_method}" = "merge" ]; then
-    "${script_path}"/push-upstream.sh --new-tag "${kernel_tag}" --upstream-branch "${kernel_branch}"
-  else
-    "${script_path}"/squash.sh --new-tag "${kernel_tag}" --branch-suffix "${device_branch}_merge-${kernel_tag}" --pixel
-  fi
-}
-
-upload_pixel_kernel_to_review() {
-  if [ "${merge_method}" = "merge" ]; then
-    "${script_path}"/upload-merge.sh --branch-suffix "${device_branch}_merge-${kernel_tag}"
-  else
-    "${script_path}"/upload-squash.sh --branch-suffix "${device_branch}_merge-${kernel_tag}" --pixel
-  fi
-}
-
-push_kernel_merge() {
-  "${script_path}"/push-merge.sh --branch-suffix "${device_branch}_merge-${kernel_tag}" --pixel
 }
 
 # Merge CLO to forks
@@ -226,34 +194,6 @@ main() {
       unset MERGEDREPOS
       )
     done
-  elif [ "${1}" = "kernels" ]; then
-    for kernel in ${kernel_repos[@]}; do
-      (
-      readonly kernel_short="$(echo ${kernel} | cut -d / -f 3)"
-      source "${vars_path}/${kernel_short}"
-
-      if [ "${merge_method}" = "merge" ]; then
-        readonly manifest="${TOP}"/.repo/manifests/snippets/${kernel_short}.xml
-        readonly device_kernel_repos=$(grep "name=\"CalyxOS/" "${manifest}" \
-            | sed -n 's/.*path="\([^"]\+\)".*/\1/p')
-      else
-        readonly device_kernel_repos="${kernel}"
-      fi
-
-      export MERGEDREPOS="${TOP}/merged_repos_${kernel_short}_kernel.txt"
-      # Remove any existing list of merged repos file
-      rm -f "${MERGEDREPOS}"
-
-      merge_pixel_kernel
-      # Run this to print list of conflicting repos
-      cat "${MERGEDREPOS}" | grep -w conflict-merge || true
-      read -p "Waiting for conflict resolution. Press enter when done."
-      post_pixel_kernel_merge
-      upload_pixel_kernel_to_review
-
-      unset MERGEDREPOS
-      )
-    done
   elif [ "${1}" = "clo" ]; then
     qcom_tag="${qcom_group_revision[${2}]}"
 
@@ -328,18 +268,6 @@ main() {
       export MERGEDREPOS="${TOP}/merged_repos_${device}.txt"
 
       push_device_merge
-
-      unset MERGEDREPOS
-      )
-    done
-  elif [ "${1}" = "submit-kernels" ]; then
-    for kernel in ${kernel_repos[@]}; do
-      (
-      readonly kernel_short="$(echo ${kernel} | cut -d / -f 3)"
-      source "${vars_path}/${kernel_short}"
-      export MERGEDREPOS="${TOP}/merged_repos_${kernel_short}_kernel.txt"
-
-      push_kernel_merge
 
       unset MERGEDREPOS
       )
