@@ -7,7 +7,7 @@
 #
 
 usage() {
-    echo "Usage ${0} -b <branch-suffix> --pixel --lineage"
+    echo "Usage ${0} -b <branch-suffix> --lineage"
 }
 
 # Verify argument count
@@ -16,16 +16,12 @@ if [ "${#}" -eq 0 ]; then
     exit 1
 fi
 
-PIXEL=false
 LINEAGE=false
 
 while [ "${#}" -gt 0 ]; do
     case "${1}" in
         -b | --branch-suffix )
                 BRANCHSUFFIX="${2}"; shift
-                ;;
-        -p | --pixel )
-                PIXEL=true; shift
                 ;;
         -l | --lineage )
                 LINEAGE=true; shift
@@ -75,13 +71,9 @@ read -p "Pushing ${STAGINGBRANCH}. Press enter to confirm."
 for PROJECTPATH in ${PROJECTPATHS}; do
     cd "${TOP}/${PROJECTPATH}"
 
-    if [ "${PIXEL}" = true ]; then
-        BRANCH="${device_branch}"
-    else
-        BRANCH=$(git config --get branch.${STAGINGBRANCH}.merge | sed 's|refs/heads/||')
-        if [ -z "${BRANCH}" ]; then
-            BRANCH="${os_branch}"
-        fi
+    BRANCH=$(git config --get branch.${STAGINGBRANCH}.merge | sed 's|refs/heads/||')
+    if [ -z "${BRANCH}" ]; then
+        BRANCH="${os_branch}"
     fi
 
     echo -e "\n#### Submitting ${PROJECTPATH} merge ####"
