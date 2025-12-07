@@ -11,5 +11,3 @@ readonly build_id="FP4.QREL.15.14.3"
 
 readonly image_url="https://android-builds.fairphone.com/FP4/A15/FP4.QREL.15.14.3.20250923075848.user-factory.zip"
 readonly image_sha256="9976328f7994b11ccf0b4bf42f75bcdf68cede11bdedadb8e9f5c17c3498dee3"
-
-readonly security_patch="2025-10-05"

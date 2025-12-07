@@ -1,10 +1,5 @@
 # Pixel 9a
 
-# Usage: ${device_repos[@]}
-device_repos=(
-  device/google/tegu
-)
-
 readonly kernel_version="6.1"
 
 # Updated semi-manually via pixel/update-any-var.sh
@@ -12,11 +7,6 @@ readonly kernel_version="6.1"
 readonly build_id="BP3A.251105.015"
 
 # Updated automatically via pixel/update-device-vars.sh
-
-readonly aosp_branch="unknown"
-
-readonly prev_aosp_tag="android-15.0.0_r25"
-readonly aosp_tag="unknown"
 
 readonly build_number="14339231"
 
@@ -27,5 +17,3 @@ readonly flash_url="https://flash.android.com/build/14339231?target=tegu-user&si
 
 readonly ota_url="https://dl.google.com/dl/android/aosp/tegu-ota-bp3a.251105.015-ee6d85ac.zip"
 readonly ota_sha256="ee6d85aca91829d111b714f7146913f25a0e2de1a9d3f33507c6398c23967e71"
-
-readonly security_patch="unknown"
