@@ -1,0 +1,56 @@
+# SPDX-FileCopyrightText: The LineageOS Project
+# SPDX-FileCopyrightText: The Calyx Institute
+# SPDX-License-Identifier: Apache-2.0
+
+version = 1
+SPDX-PackageName = "scripts"
+SPDX-PackageSupplier = "The Calyx Institute"
+SPDX-PackageDownloadLocation = "https://gitlab.com/CalyxOS/scripts"
+
+[[annotations]]
+path = [
+    "dev/.gitignore",
+    "dev/pylintrc.toml",
+    "dev/ruff.toml",
+]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "The LineageOS Project"
+SPDX-License-Identifier = "Apache-2.0"
+
+[[annotations]]
+path = ["carriersettings-extractor/**"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = [
+    "2020 Dara Adib",
+    "2020 Google LLC",
+    "The Calyx Institute",
+    "The LineageOS Project",
+]
+SPDX-License-Identifier = "BSD-3-Clause"
+
+[[annotations]]
+path = ["fbpacktool/.gitignore"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = ["2021 The Android Open Source Project"]
+SPDX-License-Identifier = "Apache-2.0"
+
+[[annotations]]
+path = ["factory/**"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "The Android Open Source Project"
+SPDX-License-Identifier = "Apache-2.0"
+
+[[annotations]]
+path = ["vars/**"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = [
+    "The Calyx Institute",
+    "The LineageOS Project",
+]
+SPDX-License-Identifier = "Apache-2.0"
+
+[[annotations]]
+path = [".gitreview"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = ["The Calyx Institute"]
+SPDX-License-Identifier = "Apache-2.0"
