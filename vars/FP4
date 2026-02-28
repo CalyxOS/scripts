@@ -7,7 +7,7 @@ device_repos=(
 )
 
 # Updated manually
-readonly build_id="FP4.QREL.15.14.3"
+readonly build_id="FP4.SREL.15.14.4"
 
-readonly image_url="https://android-builds.fairphone.com/FP4/A15/FP4.QREL.15.14.3.20250923075848.user-factory.zip"
-readonly image_sha256="9976328f7994b11ccf0b4bf42f75bcdf68cede11bdedadb8e9f5c17c3498dee3"
+readonly image_url="https://android-builds.fairphone.com/FP4/A15/FP4.SREL.15.14.4.20251229152255.user-factory.zip"
+readonly image_sha256="bb441102ccabfb1c2df083b9bf2aa87d1337f2207bac3397aca22dd83a1353d9"

@@ -7,7 +7,7 @@ device_repos=(
 )
 
 # Updated manually
-readonly build_id="FP5.VT2E.C.059"
+readonly build_id="FP5.VT2M.C.084"
 
-readonly image_url="https://android-builds.fairphone.com/FP5/A15/FP5-VT2E-factory.zip"
-readonly image_sha256="a32374a517b062394edf421272ad7bf18cc5c57abcf5a648a06fbcf2fc219d04"
+readonly image_url="https://android-builds.fairphone.com/FP5/A15/FP5-VT2M-factory.zip"
+readonly image_sha256="f7c537530a1b0fb63259416bd5b68bd65c2e131aded6b256619d4117cbd27594"
