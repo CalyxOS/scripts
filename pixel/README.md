@@ -2,7 +2,7 @@
 
 ### Variables
 
-`${TOP}/vendor/lineage/vars/` - This directory stores all variables for repositories that have upstreams that are regularly merged.
+`${TOP}/calyx/scripts/vars/` - This directory stores all variables for repositories that have upstreams that are regularly merged.
 
 Standard Variables:
 
