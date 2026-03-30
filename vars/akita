@@ -1,5 +1,10 @@
 # Pixel 8a
 
+# Usage: ${device_repos[@]}
+device_repos=(
+  device/google/akita
+)
+
 readonly kernel_version="6.1"
 
 # Updated semi-manually via pixel/update-any-var.sh

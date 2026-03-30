@@ -1,5 +1,10 @@
 # Pixel 8
 
+# Usage: ${device_repos[@]}
+device_repos=(
+  device/google/shiba
+)
+
 # Updated semi-manually via pixel/update-any-var.sh
 
 readonly build_id="BP4A.260205.001"

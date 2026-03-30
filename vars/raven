@@ -1,5 +1,12 @@
 # Pixel 6 Pro
 
+# Usage: ${device_repos[@]}
+device_repos=(
+  device/google/gs101
+  device/google/raviole
+  device/google/raven
+)
+
 # Updated semi-manually via pixel/update-any-var.sh
 
 readonly build_id="BP4A.251205.006"

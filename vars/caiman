@@ -1,5 +1,10 @@
 # Pixel 9 Pro
 
+# Usage: ${device_repos[@]}
+device_repos=(
+  device/google/caiman
+)
+
 # Updated semi-manually via pixel/update-any-var.sh
 
 readonly build_id="BP4A.260205.002"

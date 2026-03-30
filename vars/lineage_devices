@@ -1,4 +1,4 @@
-# LineageOS supported devices (excluding Pixels)
+# LineageOS supported devices
 # Usage: ${lineage_devices[@]}
 readonly lineage_devices=(
   FP5
@@ -9,5 +9,21 @@ readonly lineage_devices=(
   rhode
   hawao
   devon
+  tegu
+  comet
+  komodo
+  caiman
+  tokay
+  akita
+  husky
+  shiba
+  felix
+  tangorpro
+  lynx
+  cheetah
+  panther
+  bluejay
+  raven
+  oriole
   otter
 )

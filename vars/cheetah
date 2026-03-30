@@ -1,5 +1,12 @@
 # Pixel 7 Pro
 
+# Usage: ${device_repos[@]}
+device_repos=(
+  device/google/gs201
+  device/google/pantah
+  device/google/cheetah
+)
+
 # Updated semi-manually via pixel/update-any-var.sh
 
 readonly build_id="BP4A.251205.006"

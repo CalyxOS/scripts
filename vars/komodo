@@ -1,5 +1,13 @@
 # Pixel 9 Pro XL
 
+# Usage: ${device_repos[@]}
+device_repos=(
+  device/google/gs-common
+  device/google/zumapro
+  device/google/caimito
+  device/google/komodo
+)
+
 # Updated semi-manually via pixel/update-any-var.sh
 
 readonly build_id="BP4A.260205.002"

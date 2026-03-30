@@ -1,5 +1,10 @@
 # Pixel 9
 
+# Usage: ${device_repos[@]}
+device_repos=(
+  device/google/tokay
+)
+
 # Updated semi-manually via pixel/update-any-var.sh
 
 readonly build_id="BP4A.260205.002"
