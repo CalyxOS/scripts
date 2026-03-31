@@ -1,0 +1,15 @@
+//
+// SPDX-FileCopyrightText: The Calyx Institute
+// SPDX-License-Identifier: Apache-2.0
+//
+
+genrule {
+    name: "otatools_package_calyx_vars",
+    tools: ["soong_zip"],
+    srcs: [
+        "devices",
+    ],
+    cmd: "find calyx/scripts/vars -name devices | sort > $(genDir)/files.txt && " +
+         "$(location soong_zip) -o $(out) -l $(genDir)/files.txt",
+    out: ["otatools_package_calyx_vars.zip"],
+}
