@@ -26,4 +26,7 @@ readonly lineage_devices=(
   raven
   oriole
   otter
+  barbet
+  redfin
+  bramble
 )

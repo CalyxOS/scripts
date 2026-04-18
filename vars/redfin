@@ -1,5 +1,10 @@
 # Pixel 5
 
+# Usage: ${device_repos[@]}
+device_repos=(
+  device/google/redfin
+)
+
 # Updated semi-manually via pixel/update-any-var.sh
 
 readonly build_id="UP1A.231105.001.B2"

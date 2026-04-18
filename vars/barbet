@@ -1,5 +1,12 @@
 # Pixel 5a
 
+# Usage: ${device_repos[@]}
+device_repos=(
+  device/google/redbull
+  device/google/barbet
+  kernel/google/redbull
+)
+
 # Updated semi-manually via pixel/update-any-var.sh
 
 readonly build_id="AP2A.240805.005.S4"
