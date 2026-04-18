@@ -7,7 +7,7 @@ device_repos=(
 )
 
 # Updated manually
-readonly build_id="SOS.6.2.20250624"
+readonly build_id="SOS.6.5.20260306"
 
-readonly image_url="https://downloads.shiftphones.com/builds/OTTER.SOS.6.2.G-RELEASE-20250624-OTA.zip"
-readonly image_sha256="ff112676e4a10817c993c967a6746953add8f39b337c73a5e6fb5ce912ee3956"
+readonly image_url="https://downloads.shiftphones.com/builds/OTTER.SOS.6.5.G-RELEASE-20260306-OTA.zip"
+readonly image_sha256="c236172e1a45bc1c1018e771051bbb0479d8ba4a7535dd9ff70ff743d01efd0f"
