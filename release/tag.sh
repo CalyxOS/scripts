@@ -31,6 +31,7 @@ readonly vars_path="${script_path}/../vars"
 readonly top="${script_path}/../../.."
 
 source "${vars_path}/common"
+source "${top}/vendor/calyx/build/envsetup.sh"
 
 if [[ -e "${top}/build_kernel.sh" ]]; then
   readonly excluded_repos='CalyxOS/kernel_manifest'
@@ -72,6 +73,8 @@ push_repo() {
   local os_branch="${3}"
   local topic="${4}"
   pushd "${repo}"
+
+  calyxremote
 
   if [ -f ".lfsconfig" ]; then
     # Pushing a LFS tag from a remote-tracking branch is MUCH, MUCH faster
