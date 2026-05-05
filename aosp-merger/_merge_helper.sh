@@ -64,8 +64,6 @@ readonly hook="${script_path}/prepare-commit-msg"
 TOP="${script_path}/../../.."
 
 # Source build environment (needed for aospremote/lineageremote)
-source "${TOP}/build/envsetup.sh"
-export ANDROID_BUILD_TOP=$(gettop)
 source "${TOP}/vendor/calyx/build/envsetup.sh"
 
 BRANCH="${os_branch}"
