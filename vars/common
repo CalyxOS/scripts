@@ -1,14 +1,14 @@
 # Entire file updated manually
-readonly android_version=16 # For build-desc-fingerprint.sh
+readonly android_version=17 # For build-desc-fingerprint.sh
 
-readonly os_branch=android16-qpr2
+readonly os_branch=android17
 
-readonly common_aosp_branch=android16-qpr2-release # December 2025, Android 16 QPR2
+readonly common_aosp_branch=android17-release # June 2026, Android 17
 
-readonly prev_common_aosp_tag=android-16.0.0_r3 # September 2025, Android 16 QPR1
-readonly common_aosp_tag=android-16.0.0_r4 # December 2025, Android 16 QPR2
+readonly prev_common_aosp_tag=android-16.0.0_r4 # December 2025, Android 16 QPR2
+readonly common_aosp_tag=android-17.0.0_r1 # June 2026, Android 17
 
-readonly topic=dec25
+readonly topic=jun26
 
-readonly lineageos_branch=lineage-23.2
-readonly lineageos_device_branch=lineage-23.2
+readonly lineageos_branch=lineage-24.0
+readonly lineageos_device_branch=lineage-24.0
