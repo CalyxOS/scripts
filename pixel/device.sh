@@ -44,7 +44,10 @@ device() {
   local device="${1}"
   source "${vars_path}/${device}"
   local download_dir="${work_dir}/${device}/${build_id}"
+  local factory_dir="${download_dir}/$(basename ${image_url} .zip)"
   local extract_args="--download-dir ${download_dir} --download-sha256 ${image_sha256} --regenerate"
+
+  tools/extract-utils/extract.py --pixel-factory --pixel-firmware --all --extra-partition recovery --download-dir ${download_dir} --download-sha256 ${image_sha256} ${image_url}
 
   if [ "$KEEP_DUMP" == "true" ] || [ "$KEEP_DUMP" == "1" ]; then
     extract_args+=" --keep-dump"
@@ -53,7 +56,7 @@ device() {
   extract_args+=" --extract-factory"
 
   pushd "${top}/device/google/${device}"
-  ./extract-files.py ${extract_args} ${image_url}
+  ./extract-files.py ${extract_args} ${factory_dir}
   popd
 
   echo "${build_id}" > "${top}/vendor/google/${device}/build_id.txt"
