@@ -1,0 +1,15 @@
+# Fairphone 6
+
+# Usage: ${device_repos[@]}
+device_repos=(
+  device/fairphone/FP6
+  kernel/fairphone/sm7635
+  kernel/fairphone/sm7635-devicetrees
+  kernel/fairphone/sm7635-modules
+)
+
+# Updated manually
+readonly build_id="FP6.QREL.16.82.0"
+
+readonly image_url="https://android-builds.fairphone.com/FP6/A16/FP6.QREL.16.82.0.20260529172407_WS1F-factory.zip"
+readonly image_sha256="7f67657dcb967847591b04bd15577760b47464582230ab5c62e3841227ba0779"
