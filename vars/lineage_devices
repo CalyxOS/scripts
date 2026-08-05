@@ -1,6 +1,7 @@
 # LineageOS supported devices
 # Usage: ${lineage_devices[@]}
 readonly lineage_devices=(
+  FP6
   FP5
   FP4
   fogo

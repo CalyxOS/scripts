@@ -3,6 +3,7 @@
 readonly devices=(
   FP4
   FP5
+  FP6
   fogo
   bangkk
   fogos
