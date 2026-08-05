@@ -49,7 +49,9 @@ handle_repos() {
   local version="${1}"
   local msgfile="${2}"
   pushd "${top}"
-  repo sync -dj16
+  if [[ -z "${SKIP_SYNC:-}" ]]; then
+    repo sync -dj16
+  fi
   repo manifest -r -o m/tag-${version}.xml
   local repos=`repo list | grep CalyxOS | grep -Ev "${excluded_repos}" | cut -d : -f 1 | tr -d ' '`
   read -p "Press enter to begin tagging"
