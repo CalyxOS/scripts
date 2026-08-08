@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "91710171_1fe8d31c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000004
+      },
+      "writtenOn": "2026-08-08T18:49:40Z",
+      "side": 1,
+      "message": "We\u0027re not using this yet but it\u0027s part of the kernel platform changes, so better add it now than forget about it later.",
+      "revId": "b949abe34241d2dd522e906699ffae6a6396a26d",
+      "serverId": "35266860-6252-469c-a67d-185064479fc0"
+    }
+  ]
+}
