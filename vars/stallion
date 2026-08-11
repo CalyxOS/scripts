@@ -1,0 +1,24 @@
+# Pixel 10a
+
+# Usage: ${device_repos[@]}
+device_repos=(
+  device/google/stallion
+)
+
+readonly kernel_version="6.1"
+
+# Updated semi-manually via pixel/update-any-var.sh
+
+readonly build_id="CP2A.260805.005"
+
+# Updated automatically via pixel/update-device-vars.sh
+
+readonly build_number="15828068"
+
+readonly image_url="https://dl.google.com/dl/android/aosp/stallion-cp2a.260805.005-factory-1504a3b3.zip"
+readonly image_sha256="1504a3b3df9c141cf77fefcb0a40d8e6d87583aa8b58009c73625eba280f5dfd"
+
+readonly flash_url="https://flash.android.com/build/15828068?target=stallion-user&signed"
+
+readonly ota_url="https://dl.google.com/dl/android/aosp/stallion-ota-cp2a.260805.005-65b50337.zip"
+readonly ota_sha256="65b50337bbd451af0eceee60cf725b6b9d1339ac3b72f59512548da2873a0cba"
