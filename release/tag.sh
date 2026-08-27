@@ -45,6 +45,24 @@ fi
 
 ### FUNCTIONS ###
 
+# warn if the given version doesn't match the version defined in version.mk
+check_version() {
+  local version="${1}"
+  local mk="${top}/vendor/calyx/config/version.mk"
+  local major qpr month release
+  major=$(grep ^PRODUCT_VERSION_MAJOR "${mk}" | awk '{printf "%s\n", $3}')
+  qpr=$(grep ^PRODUCT_VERSION_QPR "${mk}" | awk '{printf "%s\n", $3}')
+  month=$(grep ^PRODUCT_VERSION_MONTH "${mk}" | awk '{printf "%s\n", $3}')
+  release=$(grep ^PRODUCT_VERSION_RELEASE "${mk}" | awk '{printf "%s\n", $3}')
+  local mk_version="${major}.${qpr}.${month}.${release}"
+  if [[ "${version}" != "${mk_version}" ]]; then
+    echo "WARNING: ${version} does not match CALYXOS_VERSION ${mk_version} in ${mk}" 1>&2
+    local answer
+    read -p "Continue anyway? [y/N] " -r answer
+    [[ "${answer}" =~ ^[Yy]$ ]] || exit 1
+  fi
+}
+
 handle_repos() {
   local version="${1}"
   local msgfile="${2}"
@@ -127,6 +145,7 @@ help_message() {
 main() {
   if [[ $# -eq 2 ]] ; then
     [[ ! -f "${2}" ]] && error_m "${2} not found"
+    check_version "${1}"
     handle_repos "${@}"
   else
     error_m
