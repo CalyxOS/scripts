@@ -9,7 +9,7 @@ device_repos=(
 )
 
 # Updated manually
-readonly build_id="FP6.QREL.16.111.0"
+readonly build_id="FP6.QREL.16.115.0"
 
-readonly image_url="https://android-builds.fairphone.com/FP6/A16/FP6.QREL.16.111.0.20260831102426_WS1Q-factory.zip"
+readonly image_url="https://android-builds.fairphone.com/FP6/A16/FP6.QREL.16.115.0.20261009120337_WS1R-factory.zip"
 readonly image_sha256="97308062afef34cb6edaa5ba6ae30cf5aa61650f6915457fae1abc5c0b5eb9cc"
